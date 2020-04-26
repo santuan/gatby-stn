@@ -4,14 +4,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
-import Zoom from "react-reveal/Zoom"
+import Fade from "react-reveal/Fade"
 import Particles from "react-particles-js"
 const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
     <Home>
       <MainTitle className="mb-2">
-        <Zoom duration={2000}>
+        <Fade duration={1650}>
           <Title>
             diseño y desarrollo de experiencias para dispositivos.
             <span className="block max-w-sm m-auto mt-2 text-xl opacity-75">
@@ -21,7 +21,7 @@ const IndexPage = () => (
           <Link to="/proyectos/" className="uppercase">
             Ver proyectos
           </Link>
-        </Zoom>
+        </Fade>
       </MainTitle>
       <Particles
         className="fixed inset-0 z-10 opacity-25"
