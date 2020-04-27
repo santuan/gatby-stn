@@ -33,6 +33,8 @@ const Navigation = ({ closeMenu }) => (
           key={i}
           onClick={closeMenu}
           activeClassName="font-bold"
+          alt={route.ariaLabel}
+          title={route.ariaLabel}
           aria-label={route.ariaLabel}
           to={route.slug}
           className="my-2 font-mono text-white cursor-pointer hover:text-blue-100"
