@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
   <Headroom disableInlineStyles>
     <InnerWrapper>
       <Logo>
-        <Link to="/" aria-label="Inicio">
+        <Link to="/" aria-label="Santuan - Volver al inicio" className="block">
           <SVGLogo className="w-full transform scale-50 -translate-x-16" />
         </Link>
       </Logo>
