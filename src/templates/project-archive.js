@@ -68,7 +68,7 @@ export default ProjectArchive
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulWorks(
-      sort: { fields: [id], order: DESC }
+      sort: { fields: [title], order: ASC }
       limit: $limit
       skip: $skip
     ) {

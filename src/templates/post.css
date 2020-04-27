@@ -8,3 +8,7 @@
 .article .post-image img {
   width: 100%;
 }
+
+.button {
+  @apply text-white !important;
+}
