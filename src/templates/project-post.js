@@ -97,31 +97,39 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
               options
             )}
           </div>
-          <PageNav>
-            <div>
-              {prev && (
-                <Link to={`/proyectos/${kebabCase(prev.slug)}/`} rel="prev">
-                  ← {prev.title}
-                </Link>
-              )}
-            </div>
-
-            <div style={{ justifySelf: "flex-end" }}>
-              {next && (
-                <Link to={`/proyectos/${kebabCase(next.slug)}/`} rel="next">
-                  {next.title} →
-                </Link>
-              )}
-            </div>
-          </PageNav>
           <Link
-            className="block max-w-xl m-auto my-12 font-mono font-bold text-center transition-all duration-200 bg-blue-700 hover:bg-blue-800"
+            className="block max-w-xl m-auto my-12 font-mono font-bold text-center transition-all duration-200 bg-red-700 hover:bg-red-800"
             to="/proyectos/"
           >
             <span className="block py-3 text-white">
               Ver todos los proyectos
             </span>
           </Link>
+          <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
+              {prev && (
+                <Link
+                  to={`/proyectos/${kebabCase(prev.slug)}/`}
+                  rel="prev"
+                  className="pr-6 "
+                >
+                  <span className="block">←</span> {prev.title}
+                </Link>
+              )}
+            </div>
+
+            <div
+              style={{ justifySelf: "flex-end" }}
+              className="pl-6 text-right"
+            >
+              {next && (
+                <Link to={`/proyectos/${kebabCase(next.slug)}/`} rel="next">
+                  <span className="block">→</span>
+                  {next.title}
+                </Link>
+              )}
+            </div>
+          </PageNav>
         </ArticleText>
       </Article>
     </Layout>
@@ -129,10 +137,20 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
 }
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-0 py-12`}
+  ${tw`flex justify-between w-full px-0 py-6 mt-12 border-t-2 border-gray-600`}
+
+  div {
+    ${tw`max-w-xs`}
+    transition: all 1s;
+    flex: 1;
+
+    &:hover {
+      ${tw`px-2`}
+    }
+  }
 
   a {
-    ${tw`text-xl text-white hover:underline`}
+    ${tw`block text-xl text-white`}
   }
 `
 

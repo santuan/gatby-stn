@@ -7,11 +7,13 @@ import { Link } from "gatsby"
 
 export default ({ card }) => (
   <CardItem>
-    <Img
-      className="hidden w-full"
-      alt={card.title}
-      fixed={card.featuredImg.fixed}
-    />
+    <Link to={`/blog/${card.slug}`}>
+      <Img
+        className="hidden w-full"
+        alt={card.title}
+        fixed={card.featuredImg.fixed}
+      />
+    </Link>
     <div className="px-6 py-4">
       <Link
         to={`/blog/${card.slug}`}

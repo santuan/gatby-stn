@@ -95,24 +95,29 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             post.childContentfulBlogArticleRichTextNode.json,
             options
           )}
-          <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>
-              {prev && (
-                <Link to={`/blog/${kebabCase(prev.slug)}/`} rel="prev">
-                  ← {prev.title}
-                </Link>
-              )}
-            </div>
-
-            <div style={{ justifySelf: "flex-end" }}>
-              {next && (
-                <Link to={`/blog/${kebabCase(next.slug)}/`} rel="next">
-                  {next.title} →
-                </Link>
-              )}
-            </div>
-          </PageNav>
         </div>
+        <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            {prev && (
+              <Link
+                to={`/blog/${kebabCase(prev.slug)}/`}
+                rel="prev"
+                className="pr-6 "
+              >
+                <span className="block">←</span> {prev.title}
+              </Link>
+            )}
+          </div>
+
+          <div style={{ justifySelf: "flex-end" }} className="pl-6 text-right">
+            {next && (
+              <Link to={`/blog/${kebabCase(next.slug)}/`} rel="next">
+                <span className="block">→</span>
+                {next.title}
+              </Link>
+            )}
+          </div>
+        </PageNav>
       </Article>
     </Layout>
   )
@@ -121,10 +126,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-0 py-12`}
+  ${tw`flex justify-between w-full px-0 py-6 mt-12 border-t-2 border-gray-600`}
+
+  div {
+    ${tw`max-w-xs`}
+    transition: all 1s;
+    flex: 1;
+
+    &:hover {
+      ${tw`px-2`}
+    }
+  }
 
   a {
-    ${tw`text-xl text-white`}
+    ${tw`block text-xl text-white`}
   }
 `
 
