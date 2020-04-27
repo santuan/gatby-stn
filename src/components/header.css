@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 body .st0 {
   @apply transition-all duration-300;
 }
@@ -133,3 +134,5 @@ body.contact .headroom--unpinned {
   transform: translate3d(200%, 0, 0);
   opacity: 1;
 }
+
+/* purgecss end ignore */
