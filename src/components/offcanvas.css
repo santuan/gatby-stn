@@ -5,7 +5,7 @@
   height: 20px;
   right: 15px;
   display: block;
-  top: 35px;
+  top: 28px;
   opacity: 1;
   transform: scale(1);
   transition: all 0.5s;
@@ -62,12 +62,12 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  @apply bg-blue-500;
+  @apply bg-gray-100;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  @apply bg-gray-800;
+  @apply bg-gray-300;
   opacity: 1 !important;
 }
 
@@ -96,9 +96,25 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  @apply bg-blue-700 shadow-sm;
+  @apply bg-gray-800 shadow-sm;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+}
+
+body.blog .bm-menu {
+  @apply bg-blue-700;
+}
+
+body.project .bm-menu {
+  @apply bg-red-700;
+}
+
+body.contact .bm-menu {
+  @apply bg-yellow-700;
+}
+
+body.contact .bm-burger-bars {
+  @apply bg-gray-800;
 }
 
 /* Morph shape necessary with bubble or elastic */

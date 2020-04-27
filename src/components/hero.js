@@ -11,7 +11,7 @@ const Hero = props => (
     <TextContainer>
       <Fade bottom duration={800} delay={600}>
         <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
-          <h1>{props.heading}</h1>
+          <h1 className="font-mono">{props.heading}</h1>
         </AnchorLink>
       </Fade>
     </TextContainer>

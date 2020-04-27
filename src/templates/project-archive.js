@@ -7,6 +7,7 @@ import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import Card from "../components/cardProject"
+import Helmet from "react-helmet"
 
 const ProjectArchive = ({ data, pageContext, location }) => {
   const projects = data.allContentfulWorks.edges
@@ -14,6 +15,9 @@ const ProjectArchive = ({ data, pageContext, location }) => {
   return (
     <Layout location={location}>
       <SEO title="Proyectos y Colaboraciones" />
+      <Helmet>
+        <body className="project" />
+      </Helmet>
       <HeroProjects>
         <Fade bottom cascade duration={1200}>
           <HeroTitle>Proyectos</HeroTitle>
@@ -28,7 +32,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>
-              <Fade cascade>
+              <Fade>
                 <Card card={node} />
               </Fade>
             </Item>
@@ -41,7 +45,8 @@ const ProjectArchive = ({ data, pageContext, location }) => {
 }
 
 const BlogContainer = styled.div`
-  ${tw`flex flex-wrap justify-center max-w-6xl m-auto overflow-hidden`}
+  ${tw`flex flex-wrap justify-center m-auto mb-12 overflow-hidden`}
+  max-width: 1440px;
 `
 
 const Item = styled.div`
@@ -56,11 +61,6 @@ const HeroProjects = styled.div`
 
 const HeroTitle = styled.h1`
   ${tw`font-mono text-5xl font-bold text-white uppercase`}
-`
-
-const Title = styled.h3`
-  ${tw`text-xl `}
-  transition: all .4s;
 `
 
 export default ProjectArchive
@@ -81,7 +81,7 @@ export const pageQuery = graphql`
             fixed(width: 360, height: 200) {
               ...GatsbyContentfulFixed_withWebp_noBase64
             }
-            fluid(maxWidth: 1500) {
+            fluid(maxWidth: 360) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyContentfulFluid_withWebp_noBase64
             }

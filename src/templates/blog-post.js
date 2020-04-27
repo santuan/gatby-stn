@@ -14,7 +14,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Article, HeroContainer, Meta, ArticleText } from "../components/import"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
-const Text = ({ children }) => <ArticleText>{children}</ArticleText>
+const Text = ({ children }) => (
+  <ArticleText className="text-white">{children}</ArticleText>
+)
 const website_url = "https://www.cooparaje.com.ar"
 const options = {
   renderMark: {
@@ -67,7 +69,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { prev, next } = pageContext
   return (
     <Layout location={location}>
-      <SEO title="Post" />
+      <SEO title={`${post.title}`} />
 
       <Article>
         <HeroContainer>

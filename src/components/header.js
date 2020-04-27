@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Headroom from "react-headroom"
-import SVGLogo from "../assets/trinomia.svg"
+import SVGLogo from "../assets/santuan.svg"
 import "./header.css"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
     <InnerWrapper>
       <Logo>
         <Link to="/">
-          <SVGLogo className="w-full" />
+          <SVGLogo className="w-full transform scale-50 -translate-x-16" />
         </Link>
       </Logo>
       <Nav className="menu menu--alonso ">
@@ -54,12 +54,12 @@ Header.defaultProps = {
 }
 
 const InnerWrapper = styled.div`
-  ${tw`flex items-center justify-between max-w-6xl px-3 py-0 m-auto `}
+  ${tw`flex items-center justify-between max-w-6xl px-3 py-0 pb-1 m-auto`}
 `
 
 const Logo = styled.div`
   ${tw`font-mono text-xl font-bold tracking-wider uppercase`}
-  width: 240px;
+  max-width: 280px;
 `
 
 const Nav = styled.nav`

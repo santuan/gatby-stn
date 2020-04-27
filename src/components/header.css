@@ -1,3 +1,19 @@
+body .st0 {
+  @apply transition-all duration-300;
+}
+
+body.contact .st0 {
+  fill: #2d3748;
+}
+
+body.contact .menu--alonso .menu__link {
+  color: #2d3748;
+}
+
+body.project-post .headroom {
+  background-color: rgba(74, 85, 104, 0.5);
+}
+
 .headroom-wrapper {
   position: absolute;
 }
@@ -18,7 +34,7 @@
 }
 .headroom--unpinned {
   position: fixed;
-
+  @apply bg-gray-700;
   transform: translateY(0);
 }
 
@@ -44,6 +60,7 @@
   text-align: center;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  opacity: 0.78;
 }
 
 .menu--alonso .menu__link:hover,
@@ -55,12 +72,13 @@
 .menu--alonso .menu__item--current .menu__link {
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
+  opacity: 1;
 }
 
 .menu--alonso .menu__line {
   position: absolute;
   opacity: 0;
-  top: -32px;
+  top: -19px;
   left: 0;
   width: 8rem;
   height: 4px;

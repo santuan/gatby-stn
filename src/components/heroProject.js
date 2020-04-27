@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade"
 const Hero = props => (
   <Heros>
     <TextContainer>
-      <Fade bottom duration={800} delay={600}>
+      <Fade duration={800} delay={600}>
         <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
           <Img title={props.heading} alt={props.heading} fixed={props.logo} />
         </AnchorLink>
@@ -17,7 +17,7 @@ const Hero = props => (
     </TextContainer>
     <ImgContainer>
       <Fade duration={1200}>
-        <Img title={props.heading} alt={props.heading} fluid={props.image} />
+        <Img title={props.heading} alt={props.heading} fixed={props.image} />
       </Fade>
     </ImgContainer>
   </Heros>
@@ -27,7 +27,7 @@ export default Hero
 
 const Heros = styled.div`
   ${tw`relative overflow-hidden`}
-  max-height: 400px;
+  min-height: 50vh
 `
 const TextContainer = styled.header`
   ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center`}
@@ -37,7 +37,7 @@ const TextContainer = styled.header`
 `
 const ImgContainer = styled.div`
   ${tw`overflow-hidden `}
-  min-height: 200px;
+  max-height: 50vh;
   img {
     height: 200px;
     object-fit: cover;

@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 export default ({ card }) => (
   <CardItemProject>
     <Link to={`/proyectos/${card.slug}`} className="block p-0">
-      <Img className="w-full" alt={card.title} fixed={card.featuredImg.fixed} />
+      <Img className="w-full" alt={card.title} fluid={card.featuredImg.fluid} />
     </Link>
   </CardItemProject>
 )

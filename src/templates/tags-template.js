@@ -39,10 +39,10 @@ const Tags = ({ pageContext, data }) => {
 }
 
 const TagsContainer = styled.div`
-  ${tw`max-w-6xl min-h-screen pt-12 m-auto`}
+  ${tw`max-w-6xl min-h-screen px-3 pt-24 m-auto`}
 
   h1 {
-    ${tw`font-mono text-4xl`}
+    ${tw`font-mono text-4xl text-white`}
   }
 `
 

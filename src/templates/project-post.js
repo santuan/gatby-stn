@@ -7,6 +7,7 @@ import "./post.css"
 import SEO from "../components/seo"
 import { Article, Title } from "../components/import"
 import Hero from "../components/heroProject"
+import Helmet from "react-helmet"
 
 import tw from "tailwind.macro"
 
@@ -16,14 +17,16 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location}>
       <SEO title="Proyecto" />
-
-      <Hero image={post.backgroundImage.fluid} logo={post.logo.fixed} />
+      <Helmet>
+        <body className="project-post" />
+      </Helmet>
+      <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
       <Article css={tw`max-w-6xl min-h-screen`}>
-        <Link className="block pt-12 my-3 text-center" to="/proyectos">
+        <Link className="block pt-12 my-3 text-center" to="/proyectos/">
           Ver todos los proyectos
         </Link>
         <Title css={tw`flex flex-col items-center justify-between`}>
-          {post.title}
+          <h1 className="text-white">{post.title}</h1>
           <a
             href={post.webUrl}
             target="_blank"
@@ -65,7 +68,7 @@ export const pageQuery = graphql`
       title
       webUrl
       logo {
-        fixed(width: 400, height: 170) {
+        fixed(width: 400, height: 180) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
         fluid(maxWidth: 500) {
@@ -74,7 +77,7 @@ export const pageQuery = graphql`
         }
       }
       backgroundImage {
-        fixed(width: 1900, height: 400) {
+        fixed(width: 1900, height: 1000) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
         fluid(maxWidth: 1500) {
