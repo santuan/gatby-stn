@@ -32,9 +32,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>
-              <Fade>
-                <Card card={node} />
-              </Fade>
+              <Card card={node} />
             </Item>
           )
         })}
@@ -78,15 +76,8 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fixed(
-              cropFocus: CENTER
-              quality: 80
-              toFormat: WEBP
-              width: 420
-              height: 300
-            ) {
-              src
-              srcSet
+            fixed(cropFocus: CENTER, quality: 80, width: 450, height: 300) {
+              ...GatsbyContentfulFixed_withWebp_noBase64
             }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
