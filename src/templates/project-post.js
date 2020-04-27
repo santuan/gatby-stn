@@ -12,7 +12,7 @@ import Hero from "../components/heroProject"
 import Helmet from "react-helmet"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { Article, Title, ArticleText } from "../components/import"
+import { Article, ArticleText } from "../components/import"
 import tw from "tailwind.macro"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
@@ -85,7 +85,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="button"
-            css={tw`inline-block px-8 py-2 my-6 text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
+            css={tw`inline-block px-8 py-2 text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
           >
             Acceder al proyecto <GoLinkExternal className="inline-block ml-2" />
           </a>
@@ -151,6 +151,16 @@ const PageNav = styled.nav`
 
   a {
     ${tw`block text-xl text-white`}
+  }
+`
+
+export const Title = styled.h3`
+  ${tw`text-4xl hover:text-blue-400`}
+
+  a {
+    transition: all 0.5s;
+    position: relative;
+    top: -25px;
   }
 `
 
