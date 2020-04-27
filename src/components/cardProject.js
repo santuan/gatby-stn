@@ -8,11 +8,10 @@ import Fade from "react-reveal/Fade"
 export default ({ card }) => (
   <CardItemProject>
     <Link to={`/proyectos/${card.slug}`} className="block p-0">
-      <Fade bottom cascade duration={500} delay={250}>
-        <h1 css={tw`relative z-50 px-8 m-0 font-mono text-3xl text-white`}>
-          {card.title}
-        </h1>
-      </Fade>
+      <h1 css={tw`relative z-50 px-8 m-0 font-mono text-3xl text-white`}>
+        {card.title}
+      </h1>
+
       <Img
         className="absolute inset-0 z-10 w-full work-image"
         alt={card.title}
@@ -23,8 +22,8 @@ export default ({ card }) => (
 )
 
 const CardItemProject = styled.div`
-  ${tw`relative flex items-center justify-center h-64 max-w-md overflow-hidden rounded shadow-lg`}
-  transition: all .2s;
+  ${tw`relative flex items-center justify-center h-64 max-w-md overflow-hidden bg-gray-900 rounded shadow-lg`}
+  transition: all .8s;
   transform: translateY(0.5rem);
 
   &:hover {
@@ -34,14 +33,14 @@ const CardItemProject = styled.div`
 
   .absolute {
     position: absolute !important;
-    transition: all 0.2s;
-    opacity: 0.8;
+    transition: all 0.8s;
+    opacity: 0.6;
     transform: scale(1.05);
   }
 
   &:hover {
     .absolute {
-      opacity: 1;
+      opacity: 0.3;
       transform: scale(1);
     }
   }

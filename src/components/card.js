@@ -15,11 +15,11 @@ export default ({ card }) => (
     <div className="px-6 py-4">
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 text-xl font-bold text-left"
+        className="block mb-2 text-xl font-bold text-left "
       >
         {card.title}
       </Link>
-      <p className="text-base text-left text-gray-700">
+      <p className="text-base text-left text-gray-300">
         {card.excerpt.excerpt}
       </p>
       <Tags>
@@ -47,9 +47,9 @@ const CardItem = styled.div`
 `
 
 const Tags = styled.div`
-  ${tw`flex px-0 py-4`}
+  ${tw`flex flex-wrap px-0 py-4`}
 
   a {
-    ${tw`inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full`}
+    ${tw`inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full`}
   }
 `

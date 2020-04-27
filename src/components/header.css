@@ -10,8 +10,16 @@ body.contact .menu--alonso .menu__link {
   color: #2d3748;
 }
 
+body.contact .menu--alonso .menu__line {
+  background: #2d3748;
+}
+
 body.project-post .headroom {
   background-color: rgba(74, 85, 104, 0.5);
+}
+
+.headroom a:hover span {
+  opacity: 1;
 }
 
 .headroom-wrapper {
@@ -38,16 +46,19 @@ body.project-post .headroom {
   transform: translateY(0);
 }
 
-body.blog .headroom--pinned {
+body.blog .headroom--pinned,
+body.blog .headroom--unpinned {
   @apply bg-blue-800;
 }
 
-body.project .headroom--pinned {
+body.project .headroom--pinned,
+body.project .headroom--unpinned {
   @apply bg-red-800;
 }
 
-body.contact .headroom--pinned {
-  @apply bg-yellow-500;
+body.contact .headroom--pinned,
+body.contact .headroom--unpinned {
+  @apply bg-yellow-600;
 }
 
 @screen md {

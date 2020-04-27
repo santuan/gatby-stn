@@ -7,12 +7,12 @@ const routes = [
     slug: "/",
   },
   {
-    title: "Blog",
-    slug: "/blog/",
-  },
-  {
     title: "Proyectos",
     slug: "/proyectos/",
+  },
+  {
+    title: "Blog",
+    slug: "/blog/",
   },
 
   {
@@ -28,7 +28,7 @@ const Navigation = ({ closeMenu }) => (
         <Link
           key={i}
           onClick={closeMenu}
-          activeClassName="text-bold"
+          activeClassName="font-bold"
           to={route.slug}
           className="my-2 font-mono text-white cursor-pointer hover:text-blue-100"
         >

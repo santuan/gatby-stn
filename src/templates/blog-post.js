@@ -95,7 +95,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             post.childContentfulBlogArticleRichTextNode.json,
             options
           )}
-          <nav style={{ display: "flex", justifyContent: "space-between" }}>
+          <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               {prev && (
                 <Link to={`/blog/${kebabCase(prev.slug)}/`} rel="prev">
@@ -111,7 +111,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 </Link>
               )}
             </div>
-          </nav>
+          </PageNav>
         </div>
       </Article>
     </Layout>
@@ -120,11 +120,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
 export default BlogPostTemplate
 
-const Tags = styled.div`
-  ${tw`relative flex justify-center w-full px-0 py-4`}
+const PageNav = styled.nav`
+  ${tw`flex justify-between w-full px-0 py-12`}
 
   a {
-    ${tw`inline-block px-3 py-1 mr-2 text-sm font-semibold text-white bg-blue-500 rounded-full`}
+    ${tw`text-xl text-white`}
+  }
+`
+
+const Tags = styled.div`
+  ${tw`relative z-50 flex flex-wrap justify-start w-full px-0 py-4 font-mono tracking-widest uppercase `}
+
+  a {
+    ${tw`inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-blue-500 rounded-full text-md hover:bg-blue-600`}
   }
 `
 

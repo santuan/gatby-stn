@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { kebabCase } from "lodash"
 import "./post.css"
 import styled from "@emotion/styled"
-
+import { GoLinkExternal } from "react-icons/go"
 import SEO from "../components/seo"
 import Fade from "react-reveal/Fade"
 import Hero from "../components/heroProject"
@@ -93,7 +93,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             className="button"
             css={tw`inline-block px-8 py-2 my-6 text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
           >
-            Acceder al sitio
+            Acceder al proyecto <GoLinkExternal className="inline-block ml-2" />
           </a>
         </Title>
         <ArticleText>
@@ -102,14 +102,6 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
               post.childContentfulWorksArticleRichTextNode.json,
               options
             )}
-            <Link
-              className="block my-12 font-mono font-bold text-center transition-all duration-200 bg-blue-700 hover:bg-blue-800"
-              to="/proyectos/"
-            >
-              <span className="block py-3 text-white">
-                Ver todos los proyectos
-              </span>
-            </Link>
           </div>
           <PageNav>
             <div>
@@ -128,6 +120,14 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
               )}
             </div>
           </PageNav>
+          <Link
+            className="block max-w-xl m-auto my-12 font-mono font-bold text-center transition-all duration-200 bg-blue-700 hover:bg-blue-800"
+            to="/proyectos/"
+          >
+            <span className="block py-3 text-white">
+              Ver todos los proyectos
+            </span>
+          </Link>
         </ArticleText>
       </Article>
     </Layout>
@@ -138,7 +138,7 @@ const PageNav = styled.nav`
   ${tw`flex justify-between w-full px-0 py-12`}
 
   a {
-    ${tw`text-xl text-white`}
+    ${tw`text-xl text-white hover:underline`}
   }
 `
 

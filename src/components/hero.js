@@ -29,9 +29,9 @@ const Heros = styled.div`
   ${tw`relative `}
 `
 const TextContainer = styled.header`
-  ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center`}
+  ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center px-3`}
   h1 {
-    ${tw`m-0 text-4xl text-center text-white`}
+    ${tw`m-0 text-4xl text-white md:text-center`}
   }
 `
 const ImgContainer = styled.div`
