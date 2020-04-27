@@ -38,6 +38,18 @@ body.project-post .headroom {
   transform: translateY(0);
 }
 
+body.blog .headroom--pinned {
+  @apply bg-blue-800;
+}
+
+body.project .headroom--pinned {
+  @apply bg-red-800;
+}
+
+body.contact .headroom--pinned {
+  @apply bg-yellow-500;
+}
+
 @screen md {
   .headroom--unpinned {
     transform: translateY(-100%);

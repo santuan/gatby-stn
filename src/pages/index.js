@@ -22,7 +22,7 @@ const IndexPage = () => (
           </Title>
           <Link
             to="/proyectos/"
-            className="uppercase transition-all duration-300"
+            className="font-mono uppercase transition-all duration-300"
           >
             últimos proyectos
           </Link>

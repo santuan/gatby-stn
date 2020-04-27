@@ -10,9 +10,12 @@ const Hero = props => (
   <Heros>
     <TextContainer>
       <Fade duration={800} delay={600}>
-        <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
-          <Img title={props.heading} alt={props.heading} fixed={props.logo} />
-        </AnchorLink>
+        <Img
+          className="mt-12"
+          title={props.heading}
+          alt={props.heading}
+          fixed={props.logo}
+        />
       </Fade>
     </TextContainer>
     <ImgContainer>

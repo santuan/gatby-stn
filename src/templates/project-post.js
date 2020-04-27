@@ -97,7 +97,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </a>
         </Title>
         <ArticleText>
-          <div className="max-w-xl m-auto text-white">
+          <div className="max-w-xl px-3 m-auto text-white">
             {documentToReactComponents(
               post.childContentfulWorksArticleRichTextNode.json,
               options
@@ -155,7 +155,7 @@ export const pageQuery = graphql`
         json
       }
       logo {
-        fixed(width: 400, height: 180) {
+        fixed(width: 320, height: 170) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
         fluid(maxWidth: 500) {
