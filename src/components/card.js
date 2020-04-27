@@ -17,7 +17,7 @@ export default ({ card }) => (
     <div className="px-6 py-4">
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 text-xl font-bold text-left "
+        className="block mb-2 text-xl font-bold text-left text-blue-600 "
       >
         {card.title}
       </Link>

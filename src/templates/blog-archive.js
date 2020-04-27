@@ -69,7 +69,7 @@ export default BlogArchive
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulBlog(
-      sort: { fields: [title], order: DESC }
+      sort: { fields: [createdAt], order: DESC }
       limit: $limit
       skip: $skip
     ) {
@@ -81,6 +81,7 @@ export const pageQuery = graphql`
           excerpt {
             excerpt
           }
+          createdAt
           tags
           featuredImg {
             fixed(width: 480, height: 210, cropFocus: CENTER) {

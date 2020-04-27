@@ -48,7 +48,7 @@ const options = {
       return (
         <a
           href={node.data.uri}
-          className="font-bold border-b border-blue-500 hover:bg-blue-700 hover:text-white"
+          className="font-bold hover:text-blue-900"
           target={`${
             node.data.uri.startsWith(website_url) ? "_self" : "_blank"
           }`}
@@ -126,7 +126,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-0 py-6 mt-12 border-t-2 border-gray-600`}
+  ${tw`flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600`}
 
   div {
     ${tw`max-w-xs`}

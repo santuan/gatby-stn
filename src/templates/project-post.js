@@ -46,11 +46,19 @@ const options = {
         </Fade>
       )
     },
+    //[INLINES.ENTRY_HYPERLINK]: node => {
+    //  you html code goes here
+    //  return (
+    //    <Link className="flex flex-col items-start justify-start flex-1 px-6 py-4 ">
+    //     hola
+    //    </Link>
+    //  )
+    //},
     [INLINES.HYPERLINK]: node => {
       return (
         <a
           href={node.data.uri}
-          className="font-bold border-b border-blue-500 hover:bg-blue-700 hover:text-white"
+          className="font-bold hover:text-blue-900"
           target={`${
             node.data.uri.startsWith(website_url) ? "_self" : "_blank"
           }`}
@@ -77,7 +85,9 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
       <Article css={tw`max-w-6xl min-h-screen`}>
-        <Title css={tw`flex flex-col items-center justify-between`}>
+        <Title
+          css={tw`relative z-50 flex flex-col items-center justify-between`}
+        >
           <h1 className="hidden text-white">{post.title}</h1>
 
           <a
@@ -91,7 +101,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </a>
         </Title>
         <ArticleText>
-          <div className="max-w-xl px-3 m-auto text-white">
+          <div className="max-w-xl px-3 m-auto text-white article">
             {documentToReactComponents(
               post.childContentfulWorksArticleRichTextNode.json,
               options
@@ -137,7 +147,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
 }
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-0 py-6 mt-12 border-t-2 border-gray-600`}
+  ${tw`flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600`}
 
   div {
     ${tw`max-w-xs`}

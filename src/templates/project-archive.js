@@ -24,7 +24,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="max-w-2xl my-3 font-mono text-xl text-left text-red-200 md:text-center">
-            Colaboraciones y trabajos en diversidad de espacios
+            Algunas colaboraciones y trabajos realizados&hellip;
           </p>
         </Fade>
       </HeroProjects>
@@ -69,7 +69,7 @@ export default ProjectArchive
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulWorks(
-      sort: { fields: [title], order: ASC }
+      sort: { fields: [updatedAt], order: DESC }
       limit: $limit
       skip: $skip
     ) {
@@ -86,6 +86,7 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
           }
+          updatedAt
           featuredImg {
             fixed(width: 360, height: 200) {
               ...GatsbyContentfulFixed_withWebp_noBase64
