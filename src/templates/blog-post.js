@@ -34,7 +34,7 @@ const options = {
       }
       return (
         <Fade>
-          <div className="post-image">
+          <div className="my-8 post-image">
             <img
               className="w-full"
               alt={node.data.target.fields.title["es-AR"]}
