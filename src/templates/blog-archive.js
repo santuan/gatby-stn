@@ -45,9 +45,8 @@ const BlogArchive = ({ data, pageContext, location }) => {
 }
 
 const BlogContainer = styled.div`
-  ${tw`flex flex-wrap justify-center px-2 py-6 m-auto`}
+  ${tw`flex flex-wrap justify-center max-w-6xl px-2 py-6 m-auto`}
   min-height: 100vh;
-  max-width: 1440px;
 `
 
 const HeroProjects = styled.div`
@@ -84,8 +83,14 @@ export const pageQuery = graphql`
           createdAt
           tags
           featuredImg {
-            fixed(width: 480, height: 210, cropFocus: CENTER) {
-              ...GatsbyContentfulFixed_withWebp_noBase64
+            fixed(
+              cropFocus: CENTER
+              quality: 80
+              toFormat: WEBP
+              width: 420
+              height: 300
+            ) {
+              src
             }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.

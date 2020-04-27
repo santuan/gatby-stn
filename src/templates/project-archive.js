@@ -78,8 +78,14 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fixed(width: 450, height: 450) {
-              ...GatsbyContentfulFixed_withWebp_noBase64
+            fixed(
+              cropFocus: CENTER
+              quality: 80
+              toFormat: WEBP
+              width: 420
+              height: 300
+            ) {
+              src
             }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.

@@ -88,7 +88,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <Title
           css={tw`relative z-50 flex flex-col items-center justify-between`}
         >
-          <h1 className="hidden text-white">{post.title}</h1>
+          <p className="hidden text-white">{post.title}</p>
 
           <a
             href={post.webUrl}

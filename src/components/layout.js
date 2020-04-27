@@ -24,9 +24,14 @@ const Layout = ({ children }) => {
             Hecho con
             <TiHeartFullOutline className="inline-block mx-1 mb-1 text-lg text-red-600" />
             por
-            <span className="ml-1 border-b border-gray-600 hover:text-blue-500 hover:border-blue-500">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/santuan"
+              className="ml-1 border-b border-gray-600 hover:text-blue-500 hover:border-blue-500"
+            >
               santuan
-            </span>
+            </a>
           </div>
         </Footer>
       </App>

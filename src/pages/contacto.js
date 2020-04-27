@@ -1,6 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
-
+import { GoMarkGithub } from "react-icons/go"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from "react-reveal/Fade"
@@ -13,6 +13,15 @@ const ContactPage = () => (
       <body className="contact" />
     </Helmet>
     <HeroProjects>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/santuan"
+        className="flex flex-col items-center justify-center mb-6 font-mono text-xl font-bold"
+      >
+        <GoMarkGithub className="mb-4 text-5xl text-yellow-900" />
+        <span className="block text-yellow-900">Repositorio</span>
+      </a>
       <Fade bottom cascade duration={2000} delay={200}>
         <p className="max-w-4xl px-2 my-3 font-mono text-2xl text-center text-yellow-900 md:text-5xl">
           santuan.bot@gmail.com

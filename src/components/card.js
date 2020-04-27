@@ -9,7 +9,7 @@ export default ({ card }) => (
   <CardItem>
     <Link to={`/blog/${card.slug}`}>
       <Img
-        className="hidden w-full"
+        className="w-full h-56"
         alt={card.title}
         fixed={card.featuredImg.fixed}
       />

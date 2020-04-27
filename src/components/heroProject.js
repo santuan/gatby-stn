@@ -39,6 +39,7 @@ const TextContainer = styled.header`
 const ImgContainer = styled.div`
   ${tw`overflow-hidden `}
   max-height: 50vh;
+  opacity: 0.5;
   img {
     height: 200px;
     object-fit: cover;

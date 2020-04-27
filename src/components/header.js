@@ -11,11 +11,11 @@ const Header = ({ siteTitle }) => (
   <Headroom disableInlineStyles>
     <InnerWrapper>
       <Logo>
-        <Link to="/">
+        <Link to="/" aria-label="Inicio">
           <SVGLogo className="w-full transform scale-50 -translate-x-16" />
         </Link>
       </Logo>
-      <Nav className="menu menu--alonso ">
+      <Nav className="menu menu--alonso">
         <InnerNav className="menu__list">
           <Link
             className=" menu__item"

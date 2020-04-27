@@ -9,7 +9,7 @@ export const Article = styled.article`
   }
 `
 
-export const Title = styled.h3`
+export const Title = styled.div`
   ${tw`text-4xl hover:text-blue-400`}
   transition: all .5s;
 `
@@ -22,7 +22,7 @@ export const Meta = styled.div`
   ${tw`relative flex items-baseline justify-between p-0`}
   top: -40px;
 `
-export const ArticleText = styled.p`
+export const ArticleText = styled.div`
   ${tw`my-3 text-lg`}
 `
 
