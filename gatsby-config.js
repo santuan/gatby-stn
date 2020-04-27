@@ -20,16 +20,17 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `Santuan`,
-    titleTemplate: "%s | Santuan | Web Autobombo",
+    titleTemplate: `%s | Santuan | Web Autobombo`,
     description: `Espacio de colaboración libre`,
-    url: "https://www.santuan.com.ar",
-    image: "/ogimage.jpg",
+    siteUrl: `https://www.santuan.com.ar`,
+    image: `/ogimage.jpg`,
     twitterUsername: `@santuan`,
     author: `@santuan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -73,6 +74,16 @@ module.exports = {
         theme_color: `#2d3748`,
         display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/*.js": ["cache-control: public, max-age=31536000, immutable"],
+          "/*.css": ["cache-control: public, max-age=31536000, immutable"],
+          "/sw.js": ["cache-control: public, max-age=0, must-revalidate"],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
