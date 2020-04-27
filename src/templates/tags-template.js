@@ -30,7 +30,7 @@ const Tags = ({ pageContext, data }) => {
               >
                 <Link
                   to={`/blog/${kebabCase(slug)}/`}
-                  className="block px-1 py-2 border-b-2 border-white hover:bg-blue-800"
+                  className="block px-1 py-2 font-mono text-2xl border-b-2 border-white hover:bg-blue-800"
                 >
                   {title}
                 </Link>
@@ -53,7 +53,8 @@ const TagsContainer = styled.div`
   ${tw`max-w-6xl min-h-screen px-3 pt-24 m-auto`}
 
   a {
-    ${tw`text-white`}
+    ${tw`px-3 text-white`}
+    transition: all .8s;
   }
 
   h1 {

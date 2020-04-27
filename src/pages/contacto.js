@@ -15,7 +15,7 @@ const ContactPage = () => (
     <HeroProjects>
       <Fade bottom cascade duration={2000} delay={200}>
         <p className="max-w-4xl px-2 my-3 font-mono text-2xl text-center text-yellow-900 md:text-5xl">
-          santuan.dg@gmail.com
+          santuan.bot@gmail.com
         </p>
       </Fade>
     </HeroProjects>

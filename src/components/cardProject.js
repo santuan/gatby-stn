@@ -21,7 +21,7 @@ export default ({ card }) => (
 )
 
 const CardItemProject = styled.div`
-  ${tw`relative flex items-center justify-center h-64 max-w-md overflow-hidden bg-gray-900 rounded shadow-lg`}
+  ${tw`relative flex items-center justify-center h-64 max-w-md m-auto overflow-hidden bg-gray-900 rounded shadow-lg`}
   transition: all .8s;
   transform: translateY(0.5rem);
 

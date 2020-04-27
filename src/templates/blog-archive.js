@@ -45,8 +45,9 @@ const BlogArchive = ({ data, pageContext, location }) => {
 }
 
 const BlogContainer = styled.div`
-  ${tw`flex flex-wrap justify-center max-w-6xl px-2 py-6 m-auto`}
+  ${tw`flex flex-wrap justify-center px-2 py-6 m-auto`}
   min-height: 100vh;
+  max-width: 1440px;
 `
 
 const HeroProjects = styled.div`
@@ -82,7 +83,7 @@ export const pageQuery = graphql`
           }
           tags
           featuredImg {
-            fixed(width: 480, height: 150) {
+            fixed(width: 480, height: 210, cropFocus: CENTER) {
               ...GatsbyContentfulFixed_withWebp_noBase64
             }
             fluid(maxWidth: 1500) {

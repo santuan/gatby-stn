@@ -48,7 +48,7 @@ body.project-post .headroom {
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-blue-800;
+  @apply bg-blue-700;
 }
 
 body.project .headroom--pinned,
