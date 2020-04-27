@@ -12,13 +12,7 @@ import Hero from "../components/heroProject"
 import Helmet from "react-helmet"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import {
-  Article,
-  Title,
-  HeroContainer,
-  Meta,
-  ArticleText,
-} from "../components/import"
+import { Article, Title, ArticleText } from "../components/import"
 import tw from "tailwind.macro"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>

@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import Fade from "react-reveal/Fade"
 
 export default ({ card }) => (
   <CardItemProject>
