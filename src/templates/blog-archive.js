@@ -23,7 +23,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
           <HeroTitle>Blog</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-2xl px-2 my-3 text-xl text-center text-blue-200">
+          <p className="max-w-2xl px-2 my-3 font-mono text-xl text-center text-blue-200">
             Ideas, traducciones, tutoriales y cosas sobre el mundo web.
           </p>
         </Fade>
@@ -56,7 +56,7 @@ const HeroProjects = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  ${tw`font-mono text-5xl font-bold text-white uppercase`}
+  ${tw`font-mono text-5xl font-bold text-white `}
 `
 
 const Item = styled.div`

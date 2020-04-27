@@ -23,7 +23,7 @@ const options = {
     [MARKS.BOLD]: text => <Bold>{text}</Bold>,
     [MARKS.CODE]: embedded => (
       <Fade>
-        <div dangerouslySetInnerHTML={{ __html: embedded }} />
+        <div className="my-8" dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },

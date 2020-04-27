@@ -23,7 +23,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
           <HeroTitle>Proyectos</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-2xl px-2 my-3 text-xl text-center text-red-200">
+          <p className="max-w-2xl px-2 my-3 font-mono text-xl text-center text-red-200">
             Colaboraciones y trabajos en diversidad de espacios
           </p>
         </Fade>
@@ -60,7 +60,7 @@ const HeroProjects = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  ${tw`font-mono text-5xl font-bold text-white uppercase`}
+  ${tw`font-mono text-5xl font-bold text-white `}
 `
 
 export default ProjectArchive
@@ -68,7 +68,7 @@ export default ProjectArchive
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulWorks(
-      sort: { fields: [title], order: ASC }
+      sort: { fields: [id], order: DESC }
       limit: $limit
       skip: $skip
     ) {
@@ -76,7 +76,15 @@ export const pageQuery = graphql`
         node {
           id
           title
-
+          backgroundImage {
+            fixed(width: 450, height: 450) {
+              ...GatsbyContentfulFixed_withWebp_noBase64
+            }
+            fluid(maxWidth: 1500) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyContentfulFluid_withWebp_noBase64
+            }
+          }
           featuredImg {
             fixed(width: 360, height: 200) {
               ...GatsbyContentfulFixed_withWebp_noBase64
