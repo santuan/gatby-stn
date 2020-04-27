@@ -83,13 +83,19 @@ export const pageQuery = graphql`
           createdAt
           tags
           featuredImg {
-            fixed(cropFocus: CENTER, quality: 80, width: 420, height: 300) {
+            fixed(
+              cropFocus: CENTER
+              quality: 80
+              toFormat: JPG
+              width: 420
+              height: 300
+            ) {
               src
               srcSet
             }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp_noBase64
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

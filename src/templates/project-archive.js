@@ -32,7 +32,9 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>
-              <Card card={node} />
+              <Fade>
+                <Card card={node} />
+              </Fade>
             </Item>
           )
         })}
@@ -76,22 +78,29 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fixed(cropFocus: CENTER, quality: 80, width: 450, height: 300) {
-              ...GatsbyContentfulFixed_withWebp_noBase64
+            fixed(
+              cropFocus: CENTER
+              quality: 80
+              toFormat: JPG
+              width: 420
+              height: 300
+            ) {
+              src
+              srcSet
             }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp_noBase64
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           updatedAt
           featuredImg {
             fixed(width: 360, height: 200) {
-              ...GatsbyContentfulFixed_withWebp_noBase64
+              ...GatsbyContentfulFixed_withWebp
             }
             fluid(maxWidth: 360) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp_noBase64
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           slug
