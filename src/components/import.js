@@ -23,7 +23,7 @@ export const Meta = styled.div`
   top: -40px;
 `
 export const ArticleText = styled.p`
-  ${tw`max-w-xl m-auto my-3 text-xl text-white`}
+  ${tw`max-w-xl m-auto my-3 font-sans text-xl font-normal text-white`}
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;

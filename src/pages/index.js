@@ -19,7 +19,7 @@ const IndexPage = () => (
           </Title>
           <Link
             to="/proyectos/"
-            className="font-mono uppercase transition-all duration-300"
+            className="font-mono transition-all duration-300"
           >
             últimos proyectos
           </Link>
@@ -37,7 +37,7 @@ const MainTitle = styled.div`
 `
 
 const Title = styled.h1`
-  ${tw`w-full font-mono text-2xl leading-9 text-center text-white md:text-3xl`}
+  ${tw`w-full font-sans text-2xl font-light text-center text-white md:text-3xl`}
 `
 
 

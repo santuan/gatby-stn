@@ -21,13 +21,15 @@ const ContactPage = () => (
           href="https://github.com/santuan"
         >
           <Fade duration={1750} delay={250}>
-            <AiFillGithub className="mb-4 text-6xl text-yellow-700 opacity-75" />
+            <AiFillGithub className="mb-4 text-6xl text-white" />
           </Fade>
           <Fade bottom cascade duration={2000} delay={200}>
-            <span className="block text-xl text-yellow-900">
-              Código disponible
+            <span className="block font-mono text-base text-yellow-900">Github</span>
+          </Fade>
+          <Fade bottom cascade duration={2000} delay={200}>
+            <span className="block mt-4 font-serif text-2xl text-yellow-900">
+              Códigos disponibles
             </span>
-            <span className="block text-xl text-yellow-900">en Github</span>
           </Fade>
         </a>
       </Socials>

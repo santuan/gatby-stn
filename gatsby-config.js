@@ -31,13 +31,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-sitemap`,
-     {
-      resolve: 'gatsby-plugin-crisp-chat',
+    {
+      resolve: "gatsby-plugin-crisp-chat",
       options: {
-        websiteId: '58c7c470-6467-43b5-aef1-a24bae300703',
+        websiteId: "58c7c470-6467-43b5-aef1-a24bae300703",
         enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
         defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
-        enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+        enableImprovedAccessibility: true, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
     },
     {
@@ -96,12 +96,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    //{
+    //resolve: `gatsby-plugin-typography`,
+    //options: {
+    //pathToConfigModule: `src/utils/typography`,
+    //},
+    //},
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

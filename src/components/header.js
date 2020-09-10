@@ -66,7 +66,7 @@ const Nav = styled.nav`
   ${tw`hidden text-right md:block`}
 
   a {
-    ${tw`inline-block w-32 font-mono text-xl text-center text-white`}
+    ${tw`inline-block w-32 font-serif text-xl text-center text-white font-italic`}
   }
 `
 

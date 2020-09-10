@@ -85,9 +85,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
       <Article css={tw`max-w-6xl min-h-screen`}>
-        <Title
-          css={tw`relative z-50 flex flex-col items-center justify-between`}
-        >
+        <Title css={tw`relative z-50 flex items-center justify-center mb-12 -mt-6`}>
           <p className="hidden text-white">{post.title}</p>
 
           <a
@@ -95,10 +93,16 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="button"
-            css={tw`inline-block px-8 py-2 text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
+            css={tw`inline-block px-8 py-2 font-mono text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
           >
-            Acceder al proyecto <GoLinkExternal className="inline-block ml-2" />
+            Ir a la web <GoLinkExternal className="inline-block ml-2" />
           </a>
+          <Link
+            css={tw`inline-block px-8 py-2 ml-3 font-mono text-lg font-bold text-white bg-red-700 border-b-4 border-red-800 rounded hover:bg-red-800 hover:border-red-900`}
+            to="/proyectos/"
+          >
+            Volver a proyectos
+          </Link>
         </Title>
         <ArticleText>
           <div className="max-w-xl px-3 m-auto text-white article">
@@ -107,14 +111,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
               options
             )}
           </div>
-          <Link
-            className="block max-w-xl m-auto my-12 font-mono font-bold text-center transition-all duration-200 bg-red-700 hover:bg-red-800"
-            to="/proyectos/"
-          >
-            <span className="block py-3 text-white">
-              Ver todos los proyectos
-            </span>
-          </Link>
+
           <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               {prev && (
@@ -164,14 +161,8 @@ const PageNav = styled.nav`
   }
 `
 
-export const Title = styled.h3`
+export const Title = styled.div`
   ${tw`text-4xl hover:text-blue-400`}
-
-  a {
-    transition: all 0.5s;
-    position: relative;
-    top: -25px;
-  }
 `
 
 export default ProjectPostTemplate
