@@ -19,9 +19,9 @@ const routes = [
   },
 
   {
-    title: "Contacto",
+    title: "Github",
     slug: "/contacto/",
-    ariaLabel: "Ver formas de contacto",
+    ariaLabel: "Ver repositorio y codigos en Github",
   },
 ]
 

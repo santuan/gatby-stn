@@ -11,14 +11,11 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
     <Home>
-      <MainTitle className="mb-2 text-center">
+      <MainTitle>
         <SVGLogo className="max-w-sm m-auto mb-12 transform scale-150" />
         <Fade duration={1650}>
           <Title>
-            Diseño y desarrollo experiencias para diversidad de dispositivos.
-            <span className="block m-auto mt-2 font-mono text-lg text-white opacity-75">
-              - También colaboro para que puedas hacer lo mismo -
-            </span>
+            Colaboro diseñando y desarrollando experiencias para diversidad de dispositivos.
           </Title>
           <Link
             to="/proyectos/"
@@ -33,15 +30,16 @@ const IndexPage = () => (
 )
 
 const MainTitle = styled.div`
-  ${tw`relative z-50 max-w-xl px-6 m-auto `}
+  ${tw`relative z-50 max-w-xl px-6 m-auto mt-12 mb-2 text-center`}
   a {
     ${tw`inline-block px-5 py-2 my-6 text-lg font-bold text-white bg-red-700 border-b-4 border-red-800 rounded hover:bg-red-800 hover:border-red-900`}
   }
 `
 
 const Title = styled.h1`
-  ${tw`w-full font-mono text-2xl text-center text-white md:text-3xl`}
+  ${tw`w-full font-mono text-2xl leading-9 text-center text-white md:text-3xl`}
 `
+
 
 const Home = styled.div`
   ${tw`flex flex-col items-center justify-center text-center bg-gray-800 shadow-sm`}

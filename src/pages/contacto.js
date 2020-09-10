@@ -1,6 +1,7 @@
 import React from "react"
-import Helmet from "react-helmet"
-import { GoMarkGithub } from "react-icons/go"
+import { Helmet } from "react-helmet"
+import { AiFillGithub } from "react-icons/ai"
+//import { IoLogoInstagram } from "react-icons/io"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from "react-reveal/Fade"
@@ -13,25 +14,36 @@ const ContactPage = () => (
       <body className="contact" />
     </Helmet>
     <HeroProjects>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/santuan"
-        className="flex flex-col items-center justify-center mb-6 font-mono text-xl font-bold"
-      >
-        <GoMarkGithub className="mb-4 text-5xl text-yellow-900" />
-        <span className="block text-yellow-900">Repositorio</span>
-      </a>
-      <Fade bottom cascade duration={2000} delay={200}>
-        <p className="max-w-4xl px-2 my-3 font-mono text-2xl text-center text-yellow-900 md:text-5xl">
-          santuan.bot@gmail.com
-        </p>
-      </Fade>
+      <Socials>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/santuan"
+        >
+          <Fade duration={1750} delay={250}>
+            <AiFillGithub className="mb-4 text-6xl text-yellow-700 opacity-75" />
+          </Fade>
+          <Fade bottom cascade duration={2000} delay={200}>
+            <span className="block text-xl text-yellow-900">
+              Código disponible
+            </span>
+            <span className="block text-xl text-yellow-900">en Github</span>
+          </Fade>
+        </a>
+      </Socials>
     </HeroProjects>
   </Layout>
 )
 
 export default ContactPage
+
+const Socials = styled.div`
+  ${tw`relative flex justify-center w-full px-0 py-4 m-auto my-0`}
+
+  a {
+    ${tw`flex flex-col items-center justify-center mx-6 mb-6 font-mono text-xl font-bold`}
+  }
+`
 
 const HeroProjects = styled.div`
   ${tw`flex flex-col items-center justify-center w-full text-center bg-yellow-600`}

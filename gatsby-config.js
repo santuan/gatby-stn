@@ -20,7 +20,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `Santuan`,
-    titleTemplate: `%s | Santuan | Web Autobombo`,
+    titleTemplate: `%s | Santuan`,
     description: `Espacio de colaboración libre`,
     siteUrl: `https://www.santuan.com.ar`,
     image: `/ogimage.jpg`,
@@ -31,6 +31,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-sitemap`,
+     {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: '58c7c470-6467-43b5-aef1-a24bae300703',
+        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -85,6 +94,12 @@ module.exports = {
           "/*.css": ["cache-control: public, max-age=31536000, immutable"],
           "/sw.js": ["cache-control: public, max-age=0, must-revalidate"],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     {

@@ -52,7 +52,7 @@ const Main = styled.main`
 `
 
 const Footer = styled.footer`
-  ${tw`relative z-50 py-12 text-center text-white bg-gray-900 `}
+  ${tw`relative z-50 py-12 font-mono text-center text-white bg-gray-900`}
 `
 
 export default Layout

@@ -9,7 +9,7 @@ import { GoLinkExternal } from "react-icons/go"
 import SEO from "../components/seo"
 import Fade from "react-reveal/Fade"
 import Hero from "../components/heroProject"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Article, ArticleText } from "../components/import"
@@ -22,15 +22,15 @@ const Text = ({ children }) => (
 const website_url = "https://www.cooparaje.com.ar"
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-    [MARKS.CODE]: embedded => (
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    [MARKS.CODE]: (embedded) => (
       <Fade>
         <div className="my-8" dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },
   renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: node => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target.fields) {
         return <span className="hidden">Embedded asset is broken</span>
       }
@@ -54,7 +54,7 @@ const options = {
     //    </Link>
     //  )
     //},
-    [INLINES.HYPERLINK]: node => {
+    [INLINES.HYPERLINK]: (node) => {
       return (
         <a
           href={node.data.uri}

@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import Card from "../components/cardProject"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const ProjectArchive = ({ data, pageContext, location }) => {
   const projects = data.allContentfulWorks.edges

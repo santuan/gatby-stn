@@ -19,7 +19,7 @@
   text-decoration: none;
   white-space: nowrap;
   padding: 0 2px;
-  @apply relative inline-block overflow-hidden font-bold text-blue-400;
+  @apply relative inline-block overflow-hidden font-bold text-blue-300;
 }
 
 .article a::before,
@@ -39,7 +39,7 @@
   content: "";
   transition: transform 0.2s;
   transform: translateY(95%);
-  @apply bg-blue-400;
+  @apply bg-blue-300;
 }
 
 .article a:hover::before,

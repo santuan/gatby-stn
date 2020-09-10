@@ -7,7 +7,7 @@ import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import Card from "../components/card"
 import Fade from "react-reveal/Fade"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const BlogArchive = ({ data, pageContext, location }) => {
   const posts = data.allContentfulBlog.edges

@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
             activeClassName="menu__item--current text-yellow-600"
             to="/contacto/"
           >
-            <span className="menu__link">Contacto</span>
+            <span className="menu__link">Github</span>
           </Link>
           <span className="menu__line"></span>
         </InnerNav>
