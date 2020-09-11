@@ -14,21 +14,20 @@ export default ({ card }) => (
         fixed={card.featuredImg.fixed}
       />
     </Link>
-    <div className="px-6 py-6 pb-4 ">
+    <div className="w-full px-6 py-6 pb-4">
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-3xl font-bold text-left text-indigo-200 "
+        className="block mb-2 font-serif text-3xl font-bold text-center text-indigo-200 "
       >
         {card.title}
-       
       </Link>
 
-      <p className="mt-2 font-sans text-2xl font-light text-left text-gray-300 ">
+      <p className="mt-2 font-sans text-xl font-light text-center text-gray-300 ">
         {card.excerpt.excerpt}
       </p>
-       <time className="block mt-3 font-mono text-base text-right text-white opacity-50">
-          {card.createdAt}
-        </time>
+      <time className="block mt-3 font-mono text-base text-center text-white opacity-50">
+        {card.createdAt}
+      </time>
       <Tags>
         {card.tags.map((tag, i) => [
           <Link to={`/etiquetas/${kebabCase(tag)}/`} key={i}>

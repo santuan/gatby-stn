@@ -1,8 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { kebabCase } from "lodash"
+import { AwesomeButton } from "react-awesome-button"
+
 import "./post.css"
 import styled from "@emotion/styled"
 import { GoLinkExternal } from "react-icons/go"
@@ -14,6 +16,7 @@ import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Article, ArticleText } from "../components/import"
 import tw from "tailwind.macro"
+import "../components/Aws.css"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 const Text = ({ children }) => (
@@ -85,24 +88,27 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
       <Article css={tw`max-w-6xl min-h-screen`}>
-        <Title css={tw`relative z-50 flex items-center justify-center mb-12 -mt-6`}>
+        <Title
+          css={tw`relative z-50 flex items-center justify-center mb-12 -mt-12`}
+        >
           <p className="hidden text-white">{post.title}</p>
-
-          <a
+          <AwesomeButton
+            action={() => {
+              navigate(`/proyectos/`)
+            }}
+            className="mt-5 mr-6"
+          >
+            volver
+          </AwesomeButton>
+          <AwesomeButton
             href={post.webUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="button"
-            css={tw`inline-block px-8 py-2 font-mono text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
+            className="mt-5"
+            type="secondary"
           >
-            Ir a la web <GoLinkExternal className="inline-block ml-2" />
-          </a>
-          <Link
-            css={tw`inline-block px-8 py-2 ml-3 font-mono text-lg font-bold text-white bg-red-700 border-b-4 border-red-800 rounded hover:bg-red-800 hover:border-red-900`}
-            to="/proyectos/"
-          >
-            Volver a proyectos
-          </Link>
+            web <GoLinkExternal className="inline-block ml-2" />
+          </AwesomeButton>
         </Title>
         <ArticleText>
           <div className="max-w-xl px-3 m-auto text-white article">

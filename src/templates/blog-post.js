@@ -20,15 +20,15 @@ const Text = ({ children }) => (
 const website_url = "https://www.cooparaje.com.ar"
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-    [MARKS.CODE]: embedded => (
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    [MARKS.CODE]: (embedded) => (
       <Fade>
         <div className="my-8" dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },
   renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: node => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target.fields) {
         return <span className="hidden">Embedded asset is broken</span>
       }
@@ -44,7 +44,7 @@ const options = {
         </Fade>
       )
     },
-    [INLINES.HYPERLINK]: node => {
+    [INLINES.HYPERLINK]: (node) => {
       return (
         <a
           href={node.data.uri}
@@ -144,7 +144,7 @@ const PageNav = styled.nav`
 `
 
 const Tags = styled.div`
-  ${tw`relative z-50 flex flex-wrap justify-start w-full px-0 py-4 font-mono tracking-widest uppercase `}
+  ${tw`relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase `}
 
   a {
     ${tw`inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-blue-500 rounded-full text-md hover:bg-blue-600`}

@@ -23,11 +23,15 @@ const ProjectArchive = ({ data, pageContext, location }) => {
           <HeroTitle>Proyectos</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-2xl px-4 my-3 font-sans text-3xl text-left text-red-200 md:text-center">
+          <p className="max-w-2xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
             Algunas colaboraciones y trabajos realizados&hellip;
           </p>
         </Fade>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="absolute bottom-0 w-full"
+        >
           <path
             fill="#2d3748"
             fill-opacity="1"
@@ -68,7 +72,7 @@ const HeroProjects = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  ${tw`px-6 font-serif text-5xl font-bold text-left `}
+  ${tw`px-4 font-serif text-5xl font-bold text-left `}
 `
 
 export default ProjectArchive

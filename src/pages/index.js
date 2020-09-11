@@ -1,10 +1,12 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+import "../components/Aws.css"
+
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import tw from "tailwind.macro"
 import SVGLogo from "../assets/trinomia.svg"
-
+import { AwesomeButton } from "react-awesome-button"
 import styled from "@emotion/styled"
 import Fade from "react-reveal/Fade"
 const IndexPage = () => (
@@ -15,14 +17,18 @@ const IndexPage = () => (
         <SVGLogo className="max-w-sm m-auto mb-12 transform scale-150" />
         <Fade duration={1650}>
           <Title>
-            Colaboro diseñando y desarrollando experiencias para diversidad de dispositivos.
+            Colaboro diseñando y desarrollando experiencias para diversidad de
+            dispositivos.
           </Title>
-          <Link
-            to="/proyectos/"
-            className="font-mono transition-all duration-300"
+
+          <AwesomeButton
+            action={() => {
+              navigate(`/proyectos/`)
+            }}
+            className="mt-5"
           >
-            últimos proyectos
-          </Link>
+            ver proyectos
+          </AwesomeButton>
         </Fade>
       </MainTitle>
     </Home>
@@ -39,7 +45,6 @@ const MainTitle = styled.div`
 const Title = styled.h1`
   ${tw`w-full font-sans text-2xl font-light text-center text-white md:text-3xl`}
 `
-
 
 const Home = styled.div`
   ${tw`flex flex-col items-center justify-center text-center bg-gray-800 shadow-sm`}

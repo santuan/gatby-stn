@@ -1,5 +1,11 @@
 .article p {
-  margin: 0 0 1.125rem 0;
+  @apply text-left text-base leading-relaxed !important;
+}
+
+@screen md {
+  .article p {
+    @apply text-left text-xl leading-loose !important;
+  }
 }
 
 .article .post-image {
