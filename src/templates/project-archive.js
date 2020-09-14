@@ -45,7 +45,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>
-              <Fade>
+              <Fade duration={1200} delay={700}>
                 <Card card={node} />
               </Fade>
             </Item>
