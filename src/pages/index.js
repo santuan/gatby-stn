@@ -1,4 +1,4 @@
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 import "../components/Aws.css"
 
 import React from "react"
@@ -43,7 +43,7 @@ const MainTitle = styled.div`
 `
 
 const Title = styled.h1`
-  ${tw`w-full font-sans text-2xl font-light text-center text-white md:text-3xl`}
+  ${tw`w-full font-sans text-xl font-light text-white md:text-center md:text-3xl`}
 `
 
 const Home = styled.div`

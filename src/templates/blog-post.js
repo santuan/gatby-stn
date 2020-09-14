@@ -126,7 +126,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600`}
+  ${tw`flex justify-between w-full px-0 py-6 mt-12 font-mono border-t-2 border-gray-600 `}
 
   div {
     ${tw`max-w-xs`}
@@ -139,7 +139,7 @@ const PageNav = styled.nav`
   }
 
   a {
-    ${tw`block text-xl text-white`}
+    ${tw`block text-base text-white`}
   }
 `
 
