@@ -17,8 +17,8 @@ const IndexPage = () => (
         <SVGLogo className="max-w-sm m-auto mb-12 transform scale-150" />
         <Fade duration={1650}>
           <Title>
-            Colaboro diseñando y desarrollando experiencias para diversidad de
-            dispositivos.
+            La creatividad más creativa, valga la redundante redundancia, es
+            impulsar la creatividad de los demás.
           </Title>
 
           <AwesomeButton

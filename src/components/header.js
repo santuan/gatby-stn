@@ -19,17 +19,17 @@ const Header = ({ siteTitle }) => (
         <InnerNav className="menu__list">
           <Link
             className=" menu__item"
-            activeClassName="menu__item--current text-red-500"
-            to="/proyectos/"
-          >
-            <span className="menu__link">Proyectos</span>
-          </Link>
-          <Link
-            className=" menu__item"
             activeClassName="menu__item--current text-blue-500"
             to="/blog/"
           >
             <span className="menu__link">Blog</span>
+          </Link>
+          <Link
+            className=" menu__item"
+            activeClassName="menu__item--current text-red-500"
+            to="/proyectos/"
+          >
+            <span className="menu__link">Proyectos</span>
           </Link>
           <Link
             className=" menu__item"

@@ -56,7 +56,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
 }
 
 const BlogContainer = styled.div`
-  ${tw`flex flex-col justify-start max-w-3xl px-2 py-6 m-auto -mt-24`}
+  ${tw`flex flex-col justify-start max-w-3xl px-2 py-6 m-auto -mt-40 md:-mt-32`}
   min-height: 100vh;
 `
 
