@@ -1,18 +1,19 @@
+import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Headroom from "react-headroom"
-import SVGLogo from "../assets/santuan.svg"
-import "./header.css"
 import tw from "tailwind.macro"
-import styled from "@emotion/styled"
+import WelcomeStn from "../animations/welcome"
+import "./header.css"
 
 const Header = ({ siteTitle }) => (
   <Headroom disableInlineStyles>
     <InnerWrapper>
       <Logo>
         <Link to="/" aria-label="Santuan - Volver al inicio" className="block">
-          <SVGLogo className="w-full transform scale-50 -translate-x-16" />
+          {/*<SVGLogo className="w-full transform scale-50 -translate-x-16" />*/}
+          <WelcomeStn />
         </Link>
       </Logo>
       <Nav className="menu menu--alonso">
@@ -54,7 +55,7 @@ Header.defaultProps = {
 }
 
 const InnerWrapper = styled.div`
-  ${tw`flex items-center justify-between max-w-6xl px-3 py-0 pb-1 m-auto`}
+  ${tw`flex items-center justify-between max-w-6xl px-3 py-2 pb-1 m-auto`}
 `
 
 const Logo = styled.div`

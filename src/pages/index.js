@@ -1,20 +1,21 @@
+import styled from "@emotion/styled"
 import { navigate } from "gatsby"
-import "../components/Aws.css"
-
 import React from "react"
+import { AwesomeButton } from "react-awesome-button"
+import Fade from "react-reveal/Fade"
+import tw from "tailwind.macro"
+import IsoStn from "../animations/isoWelcome"
+//import SVGLogo from "../assets/trinomia.svg"
+import "../components/Aws.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import tw from "tailwind.macro"
-import SVGLogo from "../assets/trinomia.svg"
-import { AwesomeButton } from "react-awesome-button"
-import styled from "@emotion/styled"
-import Fade from "react-reveal/Fade"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
     <Home>
       <MainTitle>
-        <SVGLogo className="max-w-sm m-auto mb-12 transform scale-150" />
+        <IsoStn />
         <Fade duration={1650}>
           <Title>
             La creatividad más creativa, valga la redundante redundancia, es

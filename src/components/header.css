@@ -2,7 +2,7 @@
 body .st0 {
   @apply transition-all duration-300;
 }
-
+/*
 body.contact .st0 {
   fill: #2d3748;
 }
@@ -14,7 +14,7 @@ body.contact .menu--alonso .menu__link {
 body.contact .menu--alonso .menu__line {
   background: #2d3748;
 }
-
+*/
 body.project-post .headroom {
   background-color: rgba(74, 85, 104, 0.5);
 }

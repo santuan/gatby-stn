@@ -1,12 +1,13 @@
+import styled from "@emotion/styled"
 import React from "react"
 import { Helmet } from "react-helmet"
 import { AiFillGithub } from "react-icons/ai"
+import Fade from "react-reveal/Fade"
+import tw from "tailwind.macro"
 //import { IoLogoInstagram } from "react-icons/io"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Fade from "react-reveal/Fade"
-import tw from "tailwind.macro"
-import styled from "@emotion/styled"
+
 const ContactPage = () => (
   <Layout>
     <SEO title="Contacto" />
@@ -21,18 +22,18 @@ const ContactPage = () => (
           href="https://github.com/santuan"
         >
           <Fade duration={1750} delay={250}>
-            <AiFillGithub className="mb-4 text-6xl text-white transition-all duration-300 hover:text-yellow-300" />
+            <AiFillGithub className="mb-4 text-6xl text-white transition-all duration-300 hover:text-yellow-500" />
           </Fade>
           <Fade bottom duration={2000} delay={200}>
-            <span className="block font-mono text-base text-yellow-900">
+            <span className="block font-mono text-base text-gray-100">
               Github
             </span>
           </Fade>
           <Fade bottom cascade duration={2000} delay={200}>
-            <span className="block mt-4 font-serif text-2xl text-yellow-900">
+            <span className="block mt-4 font-serif text-2xl text-gray-100">
               Repositorios de
             </span>
-            <span className="block mt-0 font-serif text-2xl text-yellow-900">
+            <span className="block mt-0 font-serif text-2xl text-gray-100">
               Códigos disponibles
             </span>
           </Fade>
