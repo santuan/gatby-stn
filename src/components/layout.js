@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import "./layout.css"
-import tw from "tailwind.macro"
 import styled from "@emotion/styled"
+import PropTypes from "prop-types"
+import React from "react"
 import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode } from "react-icons/hi"
+import tw from "tailwind.macro"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
@@ -19,9 +19,9 @@ const Layout = ({ children }) => {
       <App>
         <Main>{children}</Main>
         <Footer>
-          © {new Date().getFullYear()}, Realizado en Gatsby + Contentful +
-          Netlify{" "}
-          <div className="mt-2 opacity-75">
+          STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
+          Contentful + Netlify{" "}
+          <div className="mt-2 font-mono opacity-75">
             <span className="block mx-1 mb-2">Hecho con</span>
             <HiCode className="inline-block mx-1 mb-1 text-lg text-white" />
             <span className="mx-1">&</span>
@@ -46,7 +46,7 @@ const Main = styled.main`
 `
 
 const Footer = styled.footer`
-  ${tw`relative z-50 py-12 font-mono text-center text-white bg-gray-900`}
+  ${tw`relative z-50 py-12 font-sans text-center text-white bg-gray-900`}
 `
 
 export default Layout

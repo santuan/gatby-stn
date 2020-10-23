@@ -14,7 +14,7 @@ const WelcomeStnCompoent = () => {
   return (
     <>
       <Fade delay={100}>
-        <div className="flex justify-center opacity-100 ">
+        <div className="flex justify-center opacity-100 md:max-w-md md:justify-start ">
           <div id="welcome-stn" style={{ width: 200, height: 50 }} />
         </div>
       </Fade>

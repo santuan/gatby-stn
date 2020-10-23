@@ -11,7 +11,11 @@ const Header = ({ siteTitle }) => (
   <Headroom disableInlineStyles>
     <InnerWrapper>
       <Logo>
-        <Link to="/" aria-label="Santuan - Volver al inicio" className="block">
+        <Link
+          to="/"
+          aria-label="Santuan - Volver al inicio"
+          className="block max-w-md"
+        >
           {/*<SVGLogo className="w-full transform scale-50 -translate-x-16" />*/}
           <WelcomeStn />
         </Link>
@@ -55,12 +59,11 @@ Header.defaultProps = {
 }
 
 const InnerWrapper = styled.div`
-  ${tw`flex items-center justify-between max-w-6xl px-3 py-2 pb-1 m-auto`}
+  ${tw`flex items-center justify-center max-w-6xl px-3 py-3 m-auto`}
 `
 
 const Logo = styled.div`
-  ${tw`font-mono text-xl font-bold tracking-wider uppercase`}
-  max-width: 280px;
+  ${tw`w-full max-w-md font-mono text-xl font-bold tracking-wider uppercase`}
 `
 
 const Nav = styled.nav`
