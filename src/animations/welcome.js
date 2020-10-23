@@ -1,7 +1,7 @@
 import lottie from "lottie-web"
 import React, { useEffect } from "react"
 import Fade from "react-reveal/Fade"
-import welcomeStn from "./santuan-logo.json"
+import welcomeStn from "./iso-santuan-full-color.json"
 
 const WelcomeStnCompoent = () => {
   useEffect(() => {
