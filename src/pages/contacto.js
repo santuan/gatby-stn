@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { AiFillGithub } from "react-icons/ai"
 import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
-//import { IoLogoInstagram } from "react-icons/io"
+import MovingIcons from "../animations/moving-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -40,13 +40,16 @@ const ContactPage = () => (
         </a>
       </Socials>
     </HeroProjects>
+    <div className="fixed inset-0 z-10 opacity-25">
+      <MovingIcons />
+    </div>
   </Layout>
 )
 
 export default ContactPage
 
 const Socials = styled.div`
-  ${tw`relative flex justify-center w-full px-0 py-4 m-auto my-0`}
+  ${tw`relative z-50 flex justify-center w-full px-0 py-4 m-auto my-0`}
 
   a {
     ${tw`flex flex-col items-center justify-center mx-6 mb-6 font-mono text-xl font-bold`}
@@ -54,6 +57,6 @@ const Socials = styled.div`
 `
 
 const HeroProjects = styled.div`
-  ${tw`flex flex-col items-center justify-center w-full text-center`}
+  ${tw`z-20 flex flex-col items-center justify-center w-full text-center`}
   min-height: 100vh;
 `
