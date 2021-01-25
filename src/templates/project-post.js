@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import { Link, navigate } from "gatsby"
 import { kebabCase } from "lodash"
 import { AwesomeButton } from "react-awesome-button"
+import { Player, BigPlayButton } from "video-react"
 
 import "./post.css"
 import styled from "@emotion/styled"
@@ -17,12 +18,13 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Article, ArticleText } from "../components/import"
 import tw from "tailwind.macro"
 import "../components/Aws.css"
+import "../components/VideoReact.css"
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 const Text = ({ children }) => (
   <ArticleText className="text-white">{children}</ArticleText>
 )
-const website_url = "https://www.cooparaje.com.ar"
+const website_url = "https://www.santuan.com.ar"
 const options = {
   renderMark: {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
@@ -36,18 +38,29 @@ const options = {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target.fields) {
         return <span className="hidden">Embedded asset is broken</span>
+      } else {
+        if (node.data.target.fields.file["es-AR"].contentType === "video/mp4") {
+          return (
+            <div>
+              <Player src={node.data.target.fields.file["es-AR"].url} autoPlay >
+                <BigPlayButton position="center" />
+              </Player>
+            </div>
+          )
+        } else {
+          return (
+            <div>
+              <div className="post-image">
+                <img
+                  className="w-full max-w-md mx-auto"
+                  alt={node.data.target.fields.title["es-AR"]}
+                  src={node.data.target.fields.file["es-AR"].url}
+                />
+              </div>
+            </div>
+          )
+        }
       }
-      return (
-        <Fade>
-          <div className="post-image">
-            <img
-              className="w-full"
-              alt={node.data.target.fields.title["es-AR"]}
-              src={node.data.target.fields.file["es-AR"].url}
-            />
-          </div>
-        </Fade>
-      )
     },
     //[INLINES.ENTRY_HYPERLINK]: node => {
     //  you html code goes here
@@ -111,7 +124,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </AwesomeButton>
         </Title>
         <ArticleText>
-          <div className="max-w-xl px-3 m-auto text-white article">
+          <div className="max-w-6xl px-3 m-auto text-white article">
             {documentToReactComponents(
               post.childContentfulWorksArticleRichTextNode.json,
               options

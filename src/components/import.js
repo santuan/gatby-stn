@@ -22,12 +22,19 @@ export const Meta = styled.div`
   ${tw`relative flex items-baseline justify-between p-0`}
   top: -40px;
 `
-export const ArticleText = styled.p`
-  ${tw`max-w-xl mx-auto my-3 font-sans text-xl font-normal text-white`}
+export const ArticleText = styled.div`
+  ${tw`max-w-3xl mx-auto my-3 font-sans text-xl font-normal text-white`}
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+
+  p {
+    ${tw`max-w-2xl mx-auto`}
+  }
+  ul {
+    ${tw`max-w-3xl mx-auto`}
+  }
 `
 
 export const Tags = styled.div`
