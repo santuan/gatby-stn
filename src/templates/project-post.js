@@ -95,7 +95,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
   const { prev, next } = pageContext
   return (
     <Layout location={location}>
-      <SEO title="Proyecto" />
+      <SEO title={`${post.title}`} />
       <Helmet>
         <body className="project-post" />
       </Helmet>
@@ -107,7 +107,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton
             action={() => {
-              navigate(`/proyectos/`)
+              navigate(`/colaboraciones/`)
             }}
             className="mt-5 mr-6"
           >
@@ -130,12 +130,11 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
               options
             )}
           </div>
-
           <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               {prev && (
                 <Link
-                  to={`/proyectos/${kebabCase(prev.slug)}/`}
+                  to={`/colaboraciones/${kebabCase(prev.slug)}/`}
                   rel="prev"
                   className="pr-6 "
                 >
@@ -143,13 +142,12 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
                 </Link>
               )}
             </div>
-
             <div
               style={{ justifySelf: "flex-end" }}
               className="pl-6 text-right"
             >
               {next && (
-                <Link to={`/proyectos/${kebabCase(next.slug)}/`} rel="next">
+                <Link to={`/colaboraciones/${kebabCase(next.slug)}/`} rel="next">
                   <span className="block">→</span>
                   {next.title}
                 </Link>

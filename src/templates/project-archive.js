@@ -14,18 +14,17 @@ const ProjectArchive = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="Proyectos" />
+      <SEO title="colaboraciones" />
       <Helmet>
         <body className="project" />
       </Helmet>
       <HeroProjects>
         <Fade bottom cascade duration={1200}>
-          <HeroTitle>Proyectos</HeroTitle>
+          <HeroTitle>colaboraciones</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-2xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
-            Colaboro diseñando y desarrollando experiencias para diversidad de
-            espacios.
+          <p className="max-w-4xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
+            Diseñar y desarrollar experiencias para diversidad de espacios.
           </p>
         </Fade>
         <svg

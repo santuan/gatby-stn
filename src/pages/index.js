@@ -23,11 +23,11 @@ const IndexPage = () => (
 
           <AwesomeButton
             action={() => {
-              navigate(`/proyectos/`)
+              navigate(`/colaboraciones/`)
             }}
             className="mt-5"
           >
-            ver proyectos
+            ver colaboraciones
           </AwesomeButton>
         </Fade>
       </MainTitle>

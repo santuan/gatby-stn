@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage,
           items: result.data.allContentfulWorks.edges,
           itemsPerPage: 12,
-          pathPrefix: "/proyectos",
+          pathPrefix: "/colaboraciones",
           component: path.resolve("src/templates/project-archive.js"),
         })
 
@@ -79,7 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         works.forEach((work, index) => {
           createPage({
-            path: `/proyectos/${work.node.slug}/`,
+            path: `/colaboraciones/${work.node.slug}/`,
             component: workPost,
             context: {
               slug: work.node.slug,

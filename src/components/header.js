@@ -20,30 +20,17 @@ const Header = ({ siteTitle }) => (
           <WelcomeStn />
         </Link>
       </Logo>
-      <Nav className="menu menu--alonso">
-        <InnerNav className="menu__list">
-          <Link
-            className=" menu__item"
-            activeClassName="menu__item--current text-blue-500"
-            to="/blog/"
-          >
-            <span className="menu__link">Blog</span>
+      <Nav>
+        <InnerNav>
+          <Link to="/blog/" className="opacity-75" activeClassName="opacity-100">
+            <span>Blog</span>
           </Link>
-          <Link
-            className=" menu__item"
-            activeClassName="menu__item--current text-red-500"
-            to="/proyectos/"
-          >
-            <span className="menu__link">Proyectos</span>
+          <Link to="/colaboraciones/" className="opacity-75" activeClassName="opacity-100">
+            <span>Colaboraciones</span>
           </Link>
-          <Link
-            className=" menu__item"
-            activeClassName="menu__item--current text-yellow-600"
-            to="/recursos/"
-          >
-            <span className="menu__link">Recursos</span>
+          <Link to="/recursos/" className="opacity-75" activeClassName="opacity-100">
+            <span>Recursos</span>
           </Link>
-          <span className="menu__line"></span>
         </InnerNav>
       </Nav>
     </InnerWrapper>
@@ -59,23 +46,23 @@ Header.defaultProps = {
 }
 
 const InnerWrapper = styled.div`
-  ${tw`flex items-center justify-center max-w-6xl px-3 py-3 m-auto`}
+  ${tw`flex items-center justify-center px-3 py-3 m-auto`}
 `
 
 const Logo = styled.div`
-  ${tw`w-full max-w-md font-mono text-xl font-bold tracking-wider uppercase`}
+  ${tw`w-full font-mono text-xl font-bold tracking-wider uppercase`}
 `
 
 const Nav = styled.nav`
-  ${tw`hidden text-right md:block`}
+  ${tw`text-right `}
 
   a {
-    ${tw`inline-block w-32 font-serif text-xl text-center text-white font-italic`}
+    ${tw`inline-block w-full mb-3 mr-6 font-mono text-lg font-bold text-right text-white uppercase font-italic`}
   }
 `
 
 const InnerNav = styled.div`
-  ${tw`relative`}
+  ${tw`relative md:flex`}
 `
 
 export default Header
