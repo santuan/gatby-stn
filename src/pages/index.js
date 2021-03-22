@@ -30,7 +30,7 @@ const IndexPage = () => (
           >
             ver colaboraciones
           </AwesomeButton>
-          <CategoryModal/>
+          {/*<CategoryModal/>*/}
         </Fade>
       </MainTitle>
     </Home>
