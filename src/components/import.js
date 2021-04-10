@@ -23,22 +23,10 @@ export const Meta = styled.div`
   top: -40px;
 `
 export const ArticleText = styled.div`
-  ${tw`max-w-3xl mx-auto my-3 font-sans text-xl font-normal text-white`}
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-
-  a {
-    color: #fff !important; 
-  }
-
-  p {
-    ${tw`max-w-2xl mx-auto`}
-  }
-  ul {
-    ${tw`max-w-3xl mx-auto`}
-  }
 `
 
 export const Tags = styled.div`

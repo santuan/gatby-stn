@@ -1,94 +1,16 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link, navigate } from "gatsby"
 import { kebabCase } from "lodash"
 import { AwesomeButton } from "react-awesome-button"
-import { Player, BigPlayButton } from "video-react"
-
-import "./post.css"
 import styled from "@emotion/styled"
 import { GoLinkExternal } from "react-icons/go"
 import SEO from "../components/seo"
-import Fade from "react-reveal/Fade"
 import Hero from "../components/heroProject"
-import { Helmet } from "react-helmet"
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { Article, ArticleText } from "../components/import"
 import tw from "tailwind.macro"
-import "../components/Aws.css"
-import "../components/VideoReact.css"
-
-const Bold = ({ children }) => <span className="font-bold">{children}</span>
-const Text = ({ children }) => (
-  <ArticleText className="text-white">{children}</ArticleText>
-)
-const website_url = "https://www.santuan.com.ar"
-const options = {
-  renderMark: {
-    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-    [MARKS.CODE]: (embedded) => (
-      <Fade>
-        <div className="my-8 aspect-w-16 aspect-h-9" dangerouslySetInnerHTML={{ __html: embedded }} />
-      </Fade>
-    ),
-  },
-  renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      if (!node.data || !node.data.target.fields) {
-        return <span className="hidden">Embedded asset is broken</span>
-      } else {
-        if (node.data.target.fields.file["es-AR"].contentType === "video/mp4") {
-          return (
-            <div className="p-0 mb-12 aspect-h-9 aspect-w-16">
-              <Player src={node.data.target.fields.file["es-AR"].url} autoPlay >
-                <BigPlayButton position="center" />
-              </Player>
-            </div>
-          )
-        } else {
-          return (
-            <div>
-              <div className="post-image">
-                <img
-                  className="w-full max-w-md mx-auto"
-                  alt={node.data.target.fields.title["es-AR"]}
-                  src={node.data.target.fields.file["es-AR"].url}
-                />
-              </div>
-            </div>
-          )
-        }
-      }
-    },
-    //[INLINES.ENTRY_HYPERLINK]: node => {
-    //  you html code goes here
-    //  return (
-    //    <Link className="flex flex-col items-start justify-start flex-1 px-6 py-4 ">
-    //     hola
-    //    </Link>
-    //  )
-    //},
-    [INLINES.HYPERLINK]: (node) => {
-      return (
-        <a
-          href={node.data.uri}
-          className="font-bold text-white hover:text-blue-200"
-          target={`${
-            node.data.uri.startsWith(website_url) ? "_self" : "_blank"
-          }`}
-          rel={`${
-            node.data.uri.startsWith(website_url) ? "" : "noopener noreferrer"
-          }`}
-        >
-          {node.content[0].value}
-        </a>
-      )
-    },
-    [BLOCKS.PARAGRAPH]: (_, children) => <Text>{children}</Text>,
-  },
-}
+import FormatText from "../components/serializer"
 
 const ProjectPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulWorks
@@ -100,10 +22,8 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <body className="project-post" />
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
-      <Article css={tw`max-w-6xl`}>
-        <Title
-          css={tw`relative z-50 flex items-center justify-center mb-12 -mt-24`}
-        >
+      <div className="max-w-6xl mx-auto">
+        <div className="relative z-50 flex items-center justify-center mb-12 -mt-12 text-4xl hover:text-blue-400">
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton
             action={() => {
@@ -122,40 +42,35 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           >
             web <GoLinkExternal className="inline-block ml-2" />
           </AwesomeButton>
-        </Title>
-        <ArticleText>
-          <div className="px-3 prose prose-xl ">
-            {documentToReactComponents(
-              post.childContentfulWorksArticleRichTextNode.json,
-              options
+        </div>
+
+        <div className="max-w-full px-3 font-sans prose prose-xl ">
+          <FormatText
+            FormatText={post.childContentfulWorksArticleRichTextNode}
+          />
+        </div>
+        <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            {prev && (
+              <Link
+                to={`/colaboraciones/${kebabCase(prev.slug)}/`}
+                rel="prev"
+                className="pr-6 "
+              >
+                <span className="block">←</span> {prev.title}
+              </Link>
             )}
           </div>
-          <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
-            <div>
-              {prev && (
-                <Link
-                  to={`/colaboraciones/${kebabCase(prev.slug)}/`}
-                  rel="prev"
-                  className="pr-6 "
-                >
-                  <span className="block">←</span> {prev.title}
-                </Link>
-              )}
-            </div>
-            <div
-              style={{ justifySelf: "flex-end" }}
-              className="pl-6 text-right"
-            >
-              {next && (
-                <Link to={`/colaboraciones/${kebabCase(next.slug)}/`} rel="next">
-                  <span className="block">→</span>
-                  {next.title}
-                </Link>
-              )}
-            </div>
-          </PageNav>
-        </ArticleText>
-      </Article>
+          <div style={{ justifySelf: "flex-end" }} className="pl-6 text-right">
+            {next && (
+              <Link to={`/colaboraciones/${kebabCase(next.slug)}/`} rel="next">
+                <span className="block">→</span>
+                {next.title}
+              </Link>
+            )}
+          </div>
+        </PageNav>
+      </div>
     </Layout>
   )
 }
@@ -174,12 +89,8 @@ const PageNav = styled.nav`
   }
 
   a {
-    ${tw`block text-xl text-white`}
+    ${tw`block font-mono text-xl text-white`}
   }
-`
-
-export const Title = styled.div`
-  ${tw`text-4xl hover:text-blue-400`}
 `
 
 export default ProjectPostTemplate

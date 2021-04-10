@@ -3,66 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import { kebabCase } from "lodash"
-import "./post.css"
 import Hero from "../components/hero"
 import SEO from "../components/seo"
-import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { Article, HeroContainer, Meta, ArticleText } from "../components/import"
+import { Article, HeroContainer, Meta } from "../components/import"
+import FormatText from "../components/serializer"
 
-const Bold = ({ children }) => <span className="font-bold">{children}</span>
-const Text = ({ children }) => (
-  <ArticleText className="text-white">{children}</ArticleText>
-)
-const website_url = "https://www.cooparaje.com.ar"
-const options = {
-  renderMark: {
-    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-    [MARKS.CODE]: (embedded) => (
-      <Fade>
-        <div className="my-8 aspect-w-16 aspect-h-9" dangerouslySetInnerHTML={{ __html: embedded }} />
-      </Fade>
-    ),
-  },
-  renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      if (!node.data || !node.data.target.fields) {
-        return <span className="hidden">Embedded asset is broken</span>
-      }
-      return (
-        <Fade>
-          <div className="my-8 post-image">
-            <img
-              className="w-full"
-              alt={node.data.target.fields.title["es-AR"]}
-              src={node.data.target.fields.file["es-AR"].url}
-            />
-          </div>
-        </Fade>
-      )
-    },
-    [INLINES.HYPERLINK]: (node) => {
-      return (
-        <a
-          href={node.data.uri}
-          className="font-bold hover:text-blue-900"
-          target={`${
-            node.data.uri.startsWith(website_url) ? "_self" : "_blank"
-          }`}
-          rel={`${
-            node.data.uri.startsWith(website_url) ? "" : "noopener noreferrer"
-          }`}
-        >
-          {node.content[0].value}
-        </a>
-      )
-    },
-    [BLOCKS.PARAGRAPH]: (_, children) => <Text>{children}</Text>,
-  },
-}
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulBlog
@@ -91,12 +38,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ])}
             </Tags>
           </Meta>
-          
-          <div className="px-3 prose prose-xl ">
-          {documentToReactComponents(
-            post.childContentfulBlogArticleRichTextNode.json,
-            options
-          )}
+          <div className="max-w-full px-3 font-sans prose prose-xl ">
+            <FormatText
+              FormatText={post.childContentfulBlogArticleRichTextNode}
+            />
           </div>
         </div>
         <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
