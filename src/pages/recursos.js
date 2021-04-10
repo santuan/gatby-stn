@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import React from "react"
 import { Helmet } from "react-helmet"
-import { FaExternalLinkSquareAlt } from "react-icons/fa"
+import { CgExternal } from "react-icons/cg"
 import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
 import MovingIcons from "../animations/moving-icons"
@@ -32,10 +32,10 @@ const RecursosPage = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.cooparaje.com.ar/"
-            className="inline-flex items-center justify-center w-64 px-4 py-2 mx-auto font-mono text-base font-bold text-white bg-yellow-600 border border-transparent rounded-md shadow-sm hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 "
+            className="inline-flex items-center justify-center w-64 px-4 py-2 mx-auto font-mono text-base font-bold text-white bg-yellow-600 border border-transparent rounded-md shadow-sm animate-pulse hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 "
           >
             visitar cooparaje
-            <FaExternalLinkSquareAlt className="ml-2"/>
+            <CgExternal className="ml-2"/>
           </a>
         </Fade>
       </Socials>

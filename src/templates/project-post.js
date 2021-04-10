@@ -102,7 +102,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
       <Article css={tw`max-w-6xl min-h-screen`}>
         <Title
-          css={tw`relative z-50 flex items-center justify-center mb-12 -mt-12`}
+          css={tw`relative z-50 flex items-center justify-center mb-12 -mt-24`}
         >
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton

@@ -13,7 +13,7 @@ const MovingIconsCompoent = () => {
   }, [])
   return (
     <>
-      <Moving>
+      <Moving className="fixed inset-0 flex items-center justify-center w-screen h-screen transform scale-125 opacity-60">
         <div id="moving-icons" style={{ width: "100%", height: "100%" }} />
       </Moving>
     </>
@@ -23,12 +23,9 @@ const MovingIconsCompoent = () => {
 export default MovingIconsCompoent
 
 const Moving = styled.div`
-  ${tw`fixed inset-0 flex items-center justify-center w-screen h-screen `}
 
   svg {
-    ${tw`w-auto h-auto`}
-    width: auto !important;
-    height: auto !important;
+    ${tw`w-screen h-screen mx-auto`}
 
     @screen md {
       width: 100% !important;
