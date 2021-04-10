@@ -270,6 +270,7 @@
 }
 .video-react .video-react-video {
   position: absolute;
+  margin: 0;
   top: 0;
   left: 0;
   width: 100%;

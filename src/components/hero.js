@@ -26,7 +26,7 @@ const Hero = (props) => (
       className="absolute bottom-0 w-full"
     >
       <path
-        fill="#2d3748"
+        className="text-gray-800 fill-current"
         fill-opacity="1"
         d="M0,192L80,213.3C160,235,320,277,480,293.3C640,309,800,299,960,266.7C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
       ></path>

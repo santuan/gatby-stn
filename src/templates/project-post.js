@@ -41,7 +41,7 @@ const options = {
       } else {
         if (node.data.target.fields.file["es-AR"].contentType === "video/mp4") {
           return (
-            <div>
+            <div className="p-0 mb-12 aspect-h-9 aspect-w-16">
               <Player src={node.data.target.fields.file["es-AR"].url} autoPlay >
                 <BigPlayButton position="center" />
               </Player>
@@ -74,7 +74,7 @@ const options = {
       return (
         <a
           href={node.data.uri}
-          className="font-bold hover:text-blue-900"
+          className="font-bold text-white hover:text-blue-200"
           target={`${
             node.data.uri.startsWith(website_url) ? "_self" : "_blank"
           }`}
@@ -124,7 +124,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </AwesomeButton>
         </Title>
         <ArticleText>
-          <div className="max-w-6xl px-3 m-auto text-white article">
+          <div className="px-3 prose prose-xl ">
             {documentToReactComponents(
               post.childContentfulWorksArticleRichTextNode.json,
               options

@@ -1,7 +1,12 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  purge: false,
+  purge: [
+    './src/**/*.js',
+    './src/**/*.jsx',
+    './src/**/*.css',
+  ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ["Josefin Sans", "serif"],
@@ -9,7 +14,9 @@ module.exports = {
       mono: ["Space Mono", "mono"],
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [
     plugin(function({ addUtilities }) {
       const newUtilities = {
@@ -21,13 +28,8 @@ module.exports = {
       }
       addUtilities(newUtilities)
     }),
-    require("postcss-nested"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
   ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
 }

@@ -33,7 +33,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
           className="absolute bottom-0 w-full mt"
         >
           <path
-            fill="#2d3748"
+            className="text-gray-800 fill-current"
             fill-opacity="1"
             d="M0,128L60,138.7C120,149,240,171,360,181.3C480,192,600,192,720,181.3C840,171,960,149,1080,160C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           ></path>
