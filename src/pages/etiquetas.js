@@ -29,7 +29,7 @@ const TagsPage = ({ data }) => {
 }
 
 const Container = styled.div`
-  ${tw`max-w-6xl min-h-screen px-2 pt-24 m-auto`}
+  ${tw`max-w-5xl min-h-screen px-5 pt-24 mx-auto mt-12`}
   h1 {
     ${tw`font-mono text-4xl text-white `}
   }

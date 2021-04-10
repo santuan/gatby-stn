@@ -80,7 +80,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
         </HeroContainer>
 
-        <div className="w-full max-w-2xl m-auto mt-2 article" id={post.slug}>
+        <div className="w-full max-w-2xl m-auto -mt-20 article" id={post.slug}>
           <Meta>
             <Tags>
               {post.tags.map((tag, i) => [

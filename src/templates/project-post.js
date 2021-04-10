@@ -100,7 +100,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <body className="project-post" />
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
-      <Article css={tw`max-w-6xl min-h-screen`}>
+      <Article css={tw`max-w-6xl`}>
         <Title
           css={tw`relative z-50 flex items-center justify-center mb-12 -mt-24`}
         >
@@ -204,7 +204,7 @@ export const pageQuery = graphql`
         }
       }
       backgroundImage {
-        fixed(width: 1900, height: 1000) {
+        fixed(width: 2000, height: 1000) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
         fluid(maxWidth: 1500) {

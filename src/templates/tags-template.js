@@ -1,11 +1,12 @@
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { kebabCase } from "lodash"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
+import { AwesomeButton } from "react-awesome-button"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -21,44 +22,58 @@ const Tags = ({ pageContext, data }) => {
         <h1>{tagHeader}</h1>
         <div>
           {edges.map(({ node }) => {
-            const { title, slug } = node
-
+            const { title, slug, tags } = node
+            const { excerpt } = node.excerpt
             return (
               <div
                 key={slug}
-                css={tw`pb-2 my-3 mb-6 text-4xl font-semibold leading-snug text-blue-500 `}
+                className="relative p-5 my-3 overflow-hidden text-center rounded-md shadow-2xl from-gray-700 via-gray-900 bg-gradient-to-br"
               >
                 <Link
                   to={`/blog/${kebabCase(slug)}/`}
-                  className="block px-1 py-2 font-mono text-2xl border-b-2 border-white hover:bg-blue-800"
+                  className="block font-mono text-2xl text-white"
                 >
                   {title}
                 </Link>
+                <p className="mt-3 mb-6 font-sans text-xl font-semibold leading-snug text-white">
+                  {excerpt}
+                </p>
+                <div className="my-3 ">
+                  {tags.map((tag, i) => [
+                    <Link
+                      to={`/etiquetas/${kebabCase(tag)}/`}
+                      key={i}
+                      className="px-3 py-1 mr-2 font-mono font-bold text-white uppercase bg-blue-400 rounded-full hover:bg-blue-600"
+                    >
+                      {tag}
+                      {i < tags.length - 1 ? "" : ""}
+                    </Link>,
+                  ])}
+                </div>
               </div>
             )
           })}
         </div>
-        <Link
-          to="/etiquetas"
-          css={tw`inline-block px-5 py-2 my-6 text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900 `}
-        >
-          Ver todas las etiquetas
-        </Link>
+        <div className="kush-center">
+          <AwesomeButton
+            action={() => {
+              navigate(`/etiquetas/`)
+            }}
+            className="mt-5"
+          >
+            ver etiquetas
+          </AwesomeButton>
+        </div>
       </TagsContainer>
     </Layout>
   )
 }
 
 const TagsContainer = styled.div`
-  ${tw`max-w-6xl min-h-screen px-3 pt-24 m-auto`}
-
-  a {
-    ${tw`px-3 text-white`}
-    transition: all .8s;
-  }
+  ${tw`max-w-5xl min-h-screen px-4 pt-24 m-auto mt-12`}
 
   h1 {
-    ${tw`font-mono text-4xl text-white`}
+    ${tw`font-serif text-4xl text-center text-white`}
   }
 `
 
@@ -78,6 +93,9 @@ export const pageQuery = graphql`
           title
           slug
           tags
+          excerpt {
+            excerpt
+          }
         }
       }
     }

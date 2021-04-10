@@ -10,3 +10,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   @apply bg-gray-800;
 }
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-yellow-600;
+}

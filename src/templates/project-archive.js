@@ -67,7 +67,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         </div>
       </HeroProjects>
 
-      <div className="grid grid-cols-3 gap-3 mx-auto mb-12 -mt-48 overflow-hidden max-w-7xl md:-mt-64">
+      <div className="grid gap-3 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 md:grid-cols-3 max-w-7xl md:-mt-64">
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>

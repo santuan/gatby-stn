@@ -16,7 +16,7 @@ body.contact .menu--alonso .menu__line {
 }
 */
 body.project-post .headroom {
-  @apply bg-gray-800 bg-opacity-90;
+  @apply bg-gray-800 bg-opacity-40;
   @apply backdrop-blur;
 
 }
@@ -46,23 +46,23 @@ body.project-post .headroom {
 }
 .headroom--unpinned {
   position: fixed;
-  @apply bg-gray-700 bg-opacity-95;
+  @apply bg-gray-700 bg-opacity-80 backdrop-blur;
   transform: translateY(0);
 }
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-blue-700 bg-opacity-95;
+  @apply bg-blue-400 bg-opacity-80 backdrop-blur;
 }
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
-  @apply bg-red-800 bg-opacity-95;
+  @apply bg-red-800 bg-opacity-80 backdrop-blur;
 }
 
 body.contact .headroom--pinned,
 body.contact .headroom--unpinned {
-  @apply bg-yellow-600 bg-opacity-95;
+  @apply bg-yellow-600 bg-opacity-80 backdrop-blur;
 }
 
 @screen md {
