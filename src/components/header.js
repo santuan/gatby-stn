@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </Logo>
       <Nav>
-        <InnerNav>
+        <div className="relative hidden md:flex">
           <Link to="/blog/" className="opacity-75" activeClassName="opacity-100">
             <span>Blog</span>
           </Link>
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/recursos/" className="opacity-75" activeClassName="opacity-100">
             <span>Recursos</span>
           </Link>
-        </InnerNav>
+        </div>
       </Nav>
     </InnerWrapper>
   </Headroom>
@@ -59,10 +59,6 @@ const Nav = styled.nav`
   a {
     ${tw`inline-block w-full mb-3 mr-6 font-mono text-lg font-bold text-right text-white uppercase font-italic`}
   }
-`
-
-const InnerNav = styled.div`
-  ${tw`relative md:flex`}
 `
 
 export default Header

@@ -8,7 +8,7 @@ import IsoStn from "../animations/isoWelcome"
 import "../components/Aws.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import CategoryModal from "../components/modal/CategoryModal"
+//import CategoryModal from "../components/modal/CategoryModal"
 
 const IndexPage = () => (
   <Layout>
