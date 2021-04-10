@@ -2,7 +2,7 @@
   @apply text-center;
 }
 .prose .post-image img {
-  @apply w-full;
+  @apply w-full mx-0 my-2 shadow-xl;
 }
 
 .prose ul {
