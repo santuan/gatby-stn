@@ -23,7 +23,7 @@ const options = {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
     [MARKS.CODE]: (embedded) => (
       <Fade>
-        <div className="my-8" dangerouslySetInnerHTML={{ __html: embedded }} />
+        <div className="my-8 aspect-w-16 aspect-h-9" dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },
@@ -91,10 +91,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ])}
             </Tags>
           </Meta>
+          
+          <div className="px-3 prose prose-xl ">
           {documentToReactComponents(
             post.childContentfulBlogArticleRichTextNode.json,
             options
           )}
+          </div>
         </div>
         <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
           <div>
@@ -126,7 +129,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-0 py-6 mt-12 font-mono border-t-2 border-gray-600 `}
+  ${tw`flex justify-between w-full px-6 py-6 mt-12 font-mono border-t-2 border-gray-600 `}
 
   div {
     ${tw`max-w-xs`}

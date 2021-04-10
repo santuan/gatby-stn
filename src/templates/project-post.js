@@ -30,7 +30,7 @@ const options = {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
     [MARKS.CODE]: (embedded) => (
       <Fade>
-        <div className="my-8" dangerouslySetInnerHTML={{ __html: embedded }} />
+        <div className="my-8 aspect-w-16 aspect-h-9" dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },

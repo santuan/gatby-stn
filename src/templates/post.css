@@ -32,7 +32,7 @@
   content: "";
   transition: transform 0.2s;
   transform: translateY(95%);
-  @apply bg-blue-300;
+  @apply bg-blue-500;
 }
 
 .article a:hover::before,
@@ -42,18 +42,6 @@
 
 .button {
   @apply text-white !important;
-}
-
-@screen sm {
-  .article p {
-    @apply text-left text-xl leading-relaxed px-5 !important;
-  }
-}
-
-@screen md {
-  .article p {
-    @apply text-left text-xl leading-loose px-0 !important;
-  }
 }
 
 body.contact {

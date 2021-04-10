@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            allContentfulWorks {
+            allContentfulWorks(sort: {order: DESC, fields: updatedAt}) {
               edges {
                 node {
                   id
