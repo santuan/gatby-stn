@@ -8,11 +8,6 @@ const routes = [
     ariaLabel: "Santuan - Volver al inicio",
   },
   {
-    title: "Blog",
-    slug: "/blog/",
-    ariaLabel: "Ver las entradas del blog",
-  },
-  {
     title: "Colaboraciones",
     slug: "/colaboraciones/",
     ariaLabel: "Ver las colaboraciones",
@@ -21,6 +16,11 @@ const routes = [
     title: "Recursos",
     slug: "/recursos/",
     ariaLabel: "Ver repositorio y codigos en Github",
+  },
+  {
+    title: "Blog",
+    slug: "/blog/",
+    ariaLabel: "Ver las entradas del blog",
   },
 ]
 

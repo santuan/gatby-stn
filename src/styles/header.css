@@ -16,9 +16,13 @@ body.contact .menu--alonso .menu__line {
 }
 */
 body.project-post .headroom {
-  @apply bg-gray-800 bg-opacity-40;
+  @apply bg-gray-800 bg-opacity-10;
   @apply backdrop-blur;
+}
 
+body.project-post .headroom.headroom--pinned {
+  @apply bg-gray-800 bg-opacity-90;
+  @apply backdrop-blur;
 }
 
 .headroom a:hover span {
@@ -52,7 +56,7 @@ body.project-post .headroom {
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-blue-400 bg-opacity-80 backdrop-blur;
+  @apply bg-indigo-400 bg-opacity-90 backdrop-blur;
 }
 
 body.project .headroom--pinned,

@@ -4,8 +4,6 @@ import React from "react"
 import { AwesomeButton } from "react-awesome-button"
 import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
-import IsoStn from "../animations/isoWelcome"
-import "../components/Aws.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 //import CategoryModal from "../components/modal/CategoryModal"
@@ -15,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Inicio" />
     <Home>
       <MainTitle>
-        <IsoStn />
+        
         <Fade duration={1650}>
           <Title>
             La creatividad más creativa, valga la redundante redundancia, es

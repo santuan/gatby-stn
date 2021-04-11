@@ -102,7 +102,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 body.blog .bm-menu {
-  @apply bg-blue-700;
+  @apply bg-indigo-700;
 }
 
 body.project .bm-menu {

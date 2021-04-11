@@ -1,11 +1,13 @@
 import React from "react"
 import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
-import "./Aws.css"
-import "./VideoReact.css"
 import Fade from "react-reveal/Fade"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import "./post.css"
+
+import "../styles/Aws.css"
+import "../styles/VideoReact.css"
+import "../styles/post.css"
+
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 const Text = ({ children }) => (

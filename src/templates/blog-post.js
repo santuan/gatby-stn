@@ -17,7 +17,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location}>
       <SEO title={`${post.title}`} />
-
       <Article>
         <HeroContainer>
           <Hero
@@ -95,7 +94,7 @@ const Tags = styled.div`
   ${tw`relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase `}
 
   a {
-    ${tw`inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-blue-500 rounded-full text-md hover:bg-blue-600`}
+    ${tw`inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-indigo-500 rounded-full text-md hover:bg-indigo-600`}
   }
 `
 

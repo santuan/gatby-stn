@@ -22,7 +22,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <body className="project-post" />
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
-      <div className="max-w-6xl mx-auto">
+      <div className="p-3 mx-auto ">
         <div className="relative z-50 flex items-center justify-center mb-12 -mt-12 text-4xl hover:text-blue-400">
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton
