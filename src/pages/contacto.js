@@ -14,7 +14,7 @@ const ContactPage = () => (
     <Helmet>
       <body className="contact" />
     </Helmet>
-    <HeroProjects>
+    <HeroProjects className="bg-pattern">
       <Socials>
         <a
           target="_blank"
@@ -38,6 +38,11 @@ const ContactPage = () => (
             </span>
           </Fade>
         </a>
+        <Fade bottom cascade duration={2000} delay={200}>
+          <span className="block p-2 mt-6 font-sans text-2xl font-light tracking-wider text-gray-100 bg-blue-300 select-all bg-opacity-10 cursor-help">
+            santuan.dg@gmail.com
+          </span>
+        </Fade>
       </Socials>
     </HeroProjects>
     <div className="fixed inset-0 z-10 opacity-25">
@@ -49,7 +54,7 @@ const ContactPage = () => (
 export default ContactPage
 
 const Socials = styled.div`
-  ${tw`relative z-50 flex justify-center w-full px-0 py-4 m-auto my-0`}
+  ${tw`relative z-50 flex flex-col justify-center w-full max-w-md px-0 py-4 mx-auto my-0`}
 
   a {
     ${tw`flex flex-col items-center justify-center mx-6 mb-6 font-mono text-xl font-bold`}

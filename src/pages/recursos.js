@@ -1,15 +1,14 @@
-import styled from "@emotion/styled"
 import React from "react"
 import { Helmet } from "react-helmet"
 import { GoLinkExternal } from "react-icons/go"
-import Fade from "react-reveal/Fade"
-import tw from "tailwind.macro"
-import MovingIcons from "../animations/moving-icons"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import SVGLogo from "../assets/cooparaje.svg"
 import { AwesomeButton } from "react-awesome-button"
-
+import SEO from "../components/seo"
+import styled from "@emotion/styled"
+import tw from "tailwind.macro"
+import Fade from "react-reveal/Fade"
+import Layout from "../components/layout"
+import SVGLogo from "../assets/cooparaje.svg"
+import BackgroundSlider from "../components/backgroundSlider"
 
 const RecursosPage = () => (
   <Layout>
@@ -20,9 +19,8 @@ const RecursosPage = () => (
     <HeroProjects>
       <Box>
         <Fade duration={1750} delay={250}>
-          <SVGLogo className="w-32 duration-700 transform -rotate-90 hover:-rotate-45 hover:-translate-y-3" />
+          <SVGLogo className="w-32 duration-1000 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
-
         <Fade duration={1750} delay={250}>
           <AwesomeButton
             href="https://www.cooparaje.com.ar/"
@@ -36,9 +34,7 @@ const RecursosPage = () => (
         </Fade>
       </Box>
     </HeroProjects>
-    <div className="fixed inset-0 z-10 opacity-25">
-      <MovingIcons />
-    </div>
+    <BackgroundSlider/>
   </Layout>
 )
 

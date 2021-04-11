@@ -18,7 +18,7 @@ const Header = () => (
         </Link>
       </div>
       <div className="hidden w-full text-right md:block">
-        <nav className="relative flex items-center justify-end md:space-x-6">
+        <nav className="relative flex items-center justify-end md:space-x-8">
           <Link
             to="/colaboraciones/"
             className="font-mono text-lg font-bold text-white uppercase opacity-80"
@@ -28,9 +28,13 @@ const Header = () => (
           </Link>
           <Link
             to="/recursos/"
-            className="font-mono text-lg font-bold text-white uppercase opacity-80"
+            className="relative font-mono text-lg font-bold text-white uppercase opacity-80"
             activeClassName="opacity-100"
           >
+            <span className="absolute top-0 left-0 right-0 flex justify-center w-3 h-3 -mt-4 transform translate-x-9">
+              <span className="absolute inline-flex w-full h-full bg-yellow-400 rounded-full opacity-75 animate-ping"></span>
+              <span className="relative inline-flex w-3 h-3 bg-yellow-500 rounded-full"></span>
+            </span>
             <span>Recursos</span>
           </Link>
           <Link
@@ -39,6 +43,13 @@ const Header = () => (
             activeClassName="opacity-100"
           >
             <span>Blog</span>
+          </Link>
+          <Link
+            to="/contacto/"
+            className="font-mono text-lg font-bold text-white uppercase opacity-80"
+            activeClassName="opacity-100"
+          >
+            <span>Contacto</span>
           </Link>
         </nav>
       </div>

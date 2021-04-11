@@ -17,11 +17,10 @@ export default ({ card }) => (
     <div className="w-full px-6 py-6 pb-4">
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-3xl font-bold text-center text-indigo-200 "
+        className="block mb-2 font-serif text-3xl font-bold text-center text-indigo-200"
       >
         {card.title}
       </Link>
-
       <p className="mt-2 font-sans text-xl font-light text-center text-gray-300 ">
         {card.excerpt.excerpt}
       </p>
@@ -41,10 +40,8 @@ export default ({ card }) => (
 )
 
 const CardItem = styled.div`
-  ${tw`relative flex w-full overflow-hidden bg-gray-900 rounded shadow-lg`}
+  ${tw`relative top-0 flex w-full overflow-hidden bg-gray-900 rounded shadow-lg`}
   transition: all .2s;
-  top: 0;
-
   &:hover {
     ${tw`shadow-xl`}
     top: 2px;

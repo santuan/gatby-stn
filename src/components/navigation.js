@@ -22,6 +22,11 @@ const routes = [
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
+  {
+    title: "Contacto",
+    slug: "/contacto/",
+    ariaLabel: "Ver como contactar",
+  },
 ]
 
 const Navigation = ({ closeMenu }) => (
