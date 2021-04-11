@@ -8,11 +8,11 @@ import "../styles/header.css"
 const Header = () => (
   <Headroom disableInlineStyles>
     <div className="flex items-center justify-between w-full max-w-5xl px-3 py-3 mx-auto">
-      <div className="w-64 font-mono text-xl font-bold tracking-wider uppercase">
+      <div className="w-40 font-mono text-xl font-bold tracking-wider uppercase md:w-64">
         <Link
           to="/"
           aria-label="Santuan - Volver al inicio"
-          className="block max-w-md transition-all duration-700 ease-in-out transform hover:scale-105"
+          className="block transition-all duration-700 ease-in-out transform hover:scale-105"
         >
           <IsoStn />
         </Link>

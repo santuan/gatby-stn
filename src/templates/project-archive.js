@@ -24,15 +24,16 @@ const ProjectArchive = ({ data, pageContext, location }) => {
           <HeroTitle>colaboraciones</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-4xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
-            Diseñar y desarrollar experiencias para diversidad de espacios.
+          <p className="max-w-2xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
+          La creatividad más creativa, valga la redundante redundancia, es
+            impulsar la creatividad de los demás.
           </p>
         </Fade>
         <Wave/>
 
       </HeroProjects>
 
-      <div className="grid gap-3 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 md:grid-cols-3 max-w-7xl md:-mt-64">
+      <div className="grid gap-3 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 md:grid-cols-3 max-w-7xl md:-mt-72">
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>

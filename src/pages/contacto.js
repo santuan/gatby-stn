@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 import { AiFillGithub } from "react-icons/ai"
 import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
-import MovingIcons from "../animations/moving-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Confetti from "react-dom-confetti"
@@ -92,9 +91,7 @@ export default function BackgroundSlider() {
         </Socials>
       </HeroProjects>
 
-      <div className="fixed inset-0 z-10 opacity-25">
-        <MovingIcons />
-      </div>
+    
     </Layout>
   )
 }

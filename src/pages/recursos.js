@@ -21,6 +21,9 @@ const RecursosPage = () => (
         <Fade duration={1750} delay={250}>
           <SVGLogo className="w-32 duration-1000 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
+        <Fade cascade bottom>
+          <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">Recursos Libres & Gratuitos</h2>
+        </Fade>
         <Fade duration={1750} delay={250}>
           <AwesomeButton
             href="https://www.cooparaje.com.ar/"
@@ -41,7 +44,7 @@ const RecursosPage = () => (
 export default RecursosPage
 
 const Box = styled.div`
-  ${tw`relative z-50 flex flex-col items-center justify-center w-full max-w-sm px-0 py-4 m-auto my-0`}
+  ${tw`relative z-50 flex flex-col items-center justify-center w-full px-0 py-4 m-auto my-0`}
 
   a {
   }
