@@ -5,7 +5,7 @@ const Pager = ({ pageContext }) => {
   console.log(pageContext)
   const { previousPagePath, nextPagePath } = pageContext
   return (
-    <nav style={{ display: "flex", justifyContent: "space-between" }}>
+    <nav className="flex justify-between">
       <div>
         {previousPagePath && (
           <Link to={previousPagePath}>

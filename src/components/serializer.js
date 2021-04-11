@@ -3,18 +3,18 @@ import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import Fade from "react-reveal/Fade"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
 import "../styles/awesomeButton.css"
-import "../styles/videoReact.css"
+import "../styles/VideoReact.css"
 import "../styles/post.css"
 
-
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
+
 const Text = ({ children }) => (
   <p className="text-white">{children}</p>
 )
 
 const website_url = "https://www.santuan.com.ar"
+
 const options = {
   renderMark: {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
@@ -52,14 +52,6 @@ const options = {
         }
       }
     },
-    //[INLINES.ENTRY_HYPERLINK]: node => {
-    //  you html code goes here
-    //  return (
-    //    <Link className="flex flex-col items-start justify-start flex-1 px-6 py-4 ">
-    //     hola
-    //    </Link>
-    //  )
-    //},
     [INLINES.HYPERLINK]: (node) => {
       return (
         <a
