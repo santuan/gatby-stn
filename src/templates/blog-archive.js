@@ -12,7 +12,6 @@ import { Helmet } from "react-helmet"
 
 const BlogArchive = ({ data, pageContext, location }) => {
   const posts = data.allContentfulBlog.edges
-
   return (
     <Layout location={location}>
       <SEO title="Blog" />

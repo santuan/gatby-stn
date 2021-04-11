@@ -58,15 +58,15 @@ export default function BackgroundSlider() {
                 Github
               </span>
             </Fade>
-            <Fade bottom cascade duration={2000} delay={200}>
-              <span className="block mt-4 font-serif text-2xl text-gray-100">
-                Repositorios de
-              </span>
-              <span className="block mt-0 font-serif text-2xl text-gray-100">
-                Códigos disponibles
-              </span>
-            </Fade>
           </a>
+          <Fade bottom cascade duration={2000} delay={200}>
+            <span className="block mt-0 font-serif text-2xl text-gray-100">
+              Repositorios de
+            </span>
+            <span className="block mb-12 font-serif text-2xl text-gray-100">
+              Códigos disponibles
+            </span>
+          </Fade>
 
           <button
             onClick={() => {
@@ -86,7 +86,7 @@ export default function BackgroundSlider() {
             </Fade>
             {isCopied ? "🎉 Copiado!" : "Click para copiar mail"}
             <div className="transform -translate-y-12 translate-x-52">
-            <Confetti active={isCopied} config={config} />
+              <Confetti active={isCopied} config={config} />
             </div>
           </button>
         </Socials>
