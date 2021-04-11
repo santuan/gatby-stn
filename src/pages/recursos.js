@@ -21,7 +21,7 @@ const RecursosPage = () => (
         <Fade duration={1750} delay={250}>
           <SVGLogo className="w-32 duration-1000 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
-        <Fade cascade bottom>
+        <Fade  bottom>
           <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">Recursos Libres & Gratuitos</h2>
         </Fade>
         <Fade duration={1750} delay={250}>

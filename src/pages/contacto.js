@@ -46,7 +46,7 @@ export default function BackgroundSlider() {
         <Socials>
           <a
             target="_blank"
-            className="py-2 duration-700 rounded-md group hover:bg-yellow-800"
+            className="py-2 mx-2 duration-700 rounded-md group hover:bg-yellow-800"
             rel="noopener noreferrer"
             href="https://github.com/santuan/gatby-stn"
           >
@@ -58,7 +58,7 @@ export default function BackgroundSlider() {
                 Github
               </span>
             </Fade>
-            <Fade bottom cascade duration={2000} delay={200}>
+            <Fade bottom  duration={2000} delay={200}>
               <span className="block px-2 mt-0 font-serif text-2xl text-gray-100 duration-700 group-hover:bg-yellow-500 group-hover:text-yellow-900">
                 Descarga el código
               </span>
@@ -74,12 +74,12 @@ export default function BackgroundSlider() {
               setTimeout(() => setIsCopied(false), 3000)
             }}
             className={
-              "relative mt-1 rounded pb-1 font-bold font-sans text-white transform duration-700 " +
-              (isCopied ? "bg-green-800 " + isCopied : "")
+              "relative mt-1 mx-2 rounded-md pb-1 font-bold font-sans text-white  transform duration-700 " +
+              (isCopied ? "bg-green-800 " + isCopied : "hover:bg-gray-900 bg-opacity-10")
             }
           >
             <Fade bottom cascade duration={2000} delay={200}>
-              <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all hover:bg-blue-800 bg-opacity-10">
+              <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
                 santuan.dg@gmail.com
               </span>
             </Fade>
