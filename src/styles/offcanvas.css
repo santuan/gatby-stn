@@ -114,7 +114,7 @@ body.contact .bm-menu {
 }
 
 body.contact .bm-burger-bars {
-  @apply bg-gray-800;
+  @apply bg-gray-100;
 }
 
 /* Morph shape necessary with bubble or elastic */

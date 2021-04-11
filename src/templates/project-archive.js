@@ -59,7 +59,7 @@ const HeroProjects = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  ${tw`px-4 font-serif text-5xl font-bold text-left `}
+  ${tw`px-4 font-serif text-4xl font-bold text-left `}
 `
 
 export default ProjectArchive

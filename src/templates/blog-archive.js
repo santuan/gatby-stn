@@ -58,7 +58,7 @@ const HeroProjects = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  ${tw`px-5 font-serif text-5xl font-bold text-white `}
+  ${tw`px-5 font-serif text-4xl font-bold text-white `}
 `
 
 const Item = styled.div`
