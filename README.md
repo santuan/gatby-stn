@@ -9,31 +9,31 @@ Repositorio del sitio web <a href="https://www.santuan.com.ar">www.santuan.com.a
 
 ## 🧐 JamStack
 
-Para crear el sitio se utilizaron las siguientes herramientas libres
+Para crear el sitio se utilizaron las siguientes herramientas libres.
 
 <a href="https://www.gatsbyjs.com/">**`/Gatsby.js`**</a> Frontend basado en React.
 
-<a href="https://tailwindcss.com/">**`/TailwindCSS`**</a> Utilidades CSS
+<a href="https://tailwindcss.com/">**`/TailwindCSS`**</a> Utilidades CSS.
 
-<a href="https://www.contentful.com/">**`/ContentfulCMS`**</a> Gestor de contenidos
+<a href="https://www.contentful.com/">**`/ContentfulCMS`**</a> Gestor de contenidos.
 
-<a href="https://www.netlify.com/">**`/Netlify`**</a> Hosting
+<a href="https://www.netlify.com/">**`/Netlify`**</a> Hosting.
 
-<a href="https://css-tricks.com/license/">**`/Licencia`**</a> Licencia de Css-Tricks
+<a href="https://css-tricks.com/license/">**`/Licencia`**</a> Licencia de Css-Tricks.
 
 ## 🎓 Dependencias.
 
 Inspiración y artículos usados de referencia.
 
-<a href="https://github.com/pmndrs/react-three-fiber">**`/React Three Fiber`**</a> Para realizar las estrellas y el 3D
+<a href="https://github.com/pmndrs/react-three-fiber">**`/React Three Fiber`**</a> Para realizar las estrellas y el 3D de fondo.
 
-<a href="https://github.com/rcaferati/react-awesome-button">**`/React Awesome Button`**</a> Para crear en After Effects y exportar a SVG animado.
+<a href="https://github.com/rcaferati/react-awesome-button">**`/React Awesome Button`**</a> Botón asombroso de React.
 
 <a href="https://raptis.wtf/blog/gatsby-mdx-copy-code-button-with-confetti/">**`/Copy to clipboard`**</a> Articulo y código para copiar a la papelera y tirar confetis.
 
 <a href="https://airbnb.io/lottie/#/">**`/Lottie`**</a> Para crear en After Effects y exportar a SVG animado.
 
-## 🎵 Tipografías via Typeface
+## 🎵 Tipografías via Typeface.
 
 <a href="https://fonts.google.com/specimen/Josefin+Sans">**`Josefin-sans`**</a>
 <a href="https://fonts.google.com/specimen/Space+Mono">**`Space-mono`**</a>
