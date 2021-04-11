@@ -38,6 +38,7 @@
     "react-awesome-button": "^6.5.1",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^16.14.0",
+    "react-dom-confetti": "^0.2.0",
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
