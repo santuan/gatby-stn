@@ -4,8 +4,8 @@ import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import Fade from "react-reveal/Fade"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "../styles/Aws.css"
-import "../styles/VideoReact.css"
+import "../styles/awesomeButton.css"
+import "../styles/videoReact.css"
 import "../styles/post.css"
 
 

@@ -1,13 +1,15 @@
 import styled from "@emotion/styled"
 import React from "react"
 import { Helmet } from "react-helmet"
-import { CgExternal } from "react-icons/cg"
+import { GoLinkExternal } from "react-icons/go"
 import Fade from "react-reveal/Fade"
 import tw from "tailwind.macro"
 import MovingIcons from "../animations/moving-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SVGLogo from "../assets/cooparaje.svg"
+import { AwesomeButton } from "react-awesome-button"
+
 
 const RecursosPage = () => (
   <Layout>
@@ -16,29 +18,23 @@ const RecursosPage = () => (
       <body className="recursos" />
     </Helmet>
     <HeroProjects>
-      <Socials>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.cooparaje.com.ar/"
-        >
-          <Fade duration={1750} delay={250}>
-            <SVGLogo className="w-32 mb-6" />
-          </Fade>
-        </a>
-      
+      <Box>
         <Fade duration={1750} delay={250}>
-          <a
+          <SVGLogo className="w-32 duration-700 transform -rotate-90 hover:-rotate-45 hover:-translate-y-3" />
+        </Fade>
+
+        <Fade duration={1750} delay={250}>
+          <AwesomeButton
+            href="https://www.cooparaje.com.ar/"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.cooparaje.com.ar/"
-            className="inline-flex items-center justify-center w-64 px-4 py-2 mx-auto font-mono text-base font-bold text-white bg-yellow-600 border border-transparent rounded-md shadow-sm animate-pulse hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 "
+            className="mt-2"
+            type="secondary"
           >
-            visitar cooparaje
-            <CgExternal className="ml-2"/>
-          </a>
+            ir al Cooparaje <GoLinkExternal className="inline-block ml-2" />
+          </AwesomeButton>
         </Fade>
-      </Socials>
+      </Box>
     </HeroProjects>
     <div className="fixed inset-0 z-10 opacity-25">
       <MovingIcons />
@@ -48,7 +44,7 @@ const RecursosPage = () => (
 
 export default RecursosPage
 
-const Socials = styled.div`
+const Box = styled.div`
   ${tw`relative z-50 flex flex-col items-center justify-center w-full max-w-sm px-0 py-4 m-auto my-0`}
 
   a {
