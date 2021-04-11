@@ -46,27 +46,27 @@ export default function BackgroundSlider() {
         <Socials>
           <a
             target="_blank"
+            className="py-2 duration-700 rounded-md group hover:bg-yellow-800"
             rel="noopener noreferrer"
-            href="https://github.com/santuan"
+            href="https://github.com/santuan/gatby-stn"
           >
             <Fade duration={1750} delay={250}>
-              <AiFillGithub className="mb-4 text-6xl text-white transition-all duration-300 hover:text-yellow-500" />
+              <AiFillGithub className="text-6xl text-white transition-all duration-300 group-hover:text-yellow-500" />
             </Fade>
             <Fade bottom duration={2000} delay={200}>
-              <span className="block font-mono text-base text-gray-100">
+              <span className="block mb-4 font-mono text-base text-gray-100">
                 Github
               </span>
             </Fade>
+            <Fade bottom cascade duration={2000} delay={200}>
+              <span className="block px-2 mt-0 font-serif text-2xl text-gray-100 duration-700 group-hover:bg-yellow-500 group-hover:text-yellow-900">
+                Descarga el código
+              </span>
+              <span className="block px-2 mb-6 font-serif text-2xl text-gray-100 duration-700 group-hover:bg-yellow-500 group-hover:text-yellow-900">
+                de este sitio web.
+              </span>
+            </Fade>
           </a>
-          <Fade bottom cascade duration={2000} delay={200}>
-            <span className="block mt-0 font-serif text-2xl text-gray-100">
-              Repositorios de
-            </span>
-            <span className="block mb-12 font-serif text-2xl text-gray-100">
-              Códigos disponibles
-            </span>
-          </Fade>
-
           <button
             onClick={() => {
               copyToClipboard("santuan.dg@gmail.com")
@@ -79,7 +79,7 @@ export default function BackgroundSlider() {
             }
           >
             <Fade bottom cascade duration={2000} delay={200}>
-              <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 bg-blue-300 cursor-pointer select-all bg-opacity-10">
+              <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all hover:bg-blue-800 bg-opacity-10">
                 santuan.dg@gmail.com
               </span>
             </Fade>
@@ -90,8 +90,6 @@ export default function BackgroundSlider() {
           </button>
         </Socials>
       </HeroProjects>
-
-    
     </Layout>
   )
 }
@@ -100,7 +98,7 @@ const Socials = styled.div`
   ${tw`relative z-50 flex flex-col justify-center w-full max-w-md px-0 py-4 mx-auto my-0`}
 
   a {
-    ${tw`flex flex-col items-center justify-center mx-6 mb-6 font-mono text-xl font-bold`}
+    ${tw`flex flex-col items-center justify-center mb-6 font-mono text-xl font-bold`}
   }
 `
 
