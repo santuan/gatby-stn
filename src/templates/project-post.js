@@ -22,7 +22,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <body className="project-post" />
       </Helmet>
       <Hero image={post.backgroundImage.fixed} logo={post.logo.fixed} />
-      <div className="p-3 mx-auto ">
+      <div className="py-3 mx-auto ">
         <div className="relative z-50 flex items-center justify-center mb-12 -mt-12 text-4xl hover:text-blue-400">
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton
@@ -44,7 +44,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </AwesomeButton>
         </div>
 
-        <div className="max-w-full px-3 font-sans prose prose-xl ">
+        <div className="max-w-full font-sans prose prose-xl ">
           <FormatText
             FormatText={post.childContentfulWorksArticleRichTextNode}
           />
