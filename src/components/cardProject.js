@@ -6,8 +6,17 @@ import { Link } from "gatsby"
 
 export default ({ card }) => (
   <CardItemProject>
+    <Link to={`/blog/${card.slug}`} className="hidden">
+      <Img
+        className="w-full h-56"
+        alt={card.title}
+        fixed={card.featuredImg.fixed}
+      />
+    </Link>
     <Link to={`/colaboraciones/${card.slug}`} className="block p-0">
-      <h1 css={tw`relative z-50 px-8 m-0 font-serif text-3xl text-white opacity-50 hover:opacity-100`}>
+      <h1
+        css={tw`relative z-50 px-8 m-0 font-serif text-3xl text-white opacity-50 hover:opacity-100`}
+      >
         {card.title}
       </h1>
       <Img

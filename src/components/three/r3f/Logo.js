@@ -7,7 +7,7 @@ import {useHover} from "react-use-gesture";
 const Logo = ({ children, size = 55, ...props }) => {
   const geometry = useRef();
   const material = useRef();
-  const logo = useLoader(THREE.TextureLoader, process.env.NODE_ENV === "production" ? "/react-three-fibear/logo.png" : "/logo.png");
+  const logo = useLoader(THREE.TextureLoader, process.env.NODE_ENV === "production" ? "/logo.png" : "/logo.png");
   const scaleX = 0.05 * size;
   const scaleY = 0.015 * size;
   const scaleZ = 0.05;

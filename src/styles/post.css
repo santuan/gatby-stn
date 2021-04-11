@@ -5,6 +5,16 @@
   @apply w-full mx-0 my-2 shadow-xl;
 }
 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6
+ {
+  @apply text-white;
+}
+
 .prose ul {
   @apply max-w-3xl mx-auto;
 }
@@ -55,10 +65,8 @@
   @apply text-white !important;
 }
 
-
 body {
   background-size: 550px;
   transition: all 0.8s;
   background-position: center center;
 }
-

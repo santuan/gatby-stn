@@ -6,30 +6,34 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
 export default ({ card }) => (
-  <CardItem>
-    <Link to={`/blog/${card.slug}`} className="hidden">
+  <CardItem className="bg-gray-900">
+    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-10 md:opacity-100 md:w-64 md:relative">
       <Img
-        className="w-full h-56"
+        className="object-cover w-full h-full"
         alt={card.title}
         fixed={card.featuredImg.fixed}
       />
     </Link>
-    <div className="w-full px-6 py-6 pb-4">
+    <div className="relative z-10 w-full px-6 py-6 pb-4 text-left">
+      <time className="block mb-1 font-mono text-base text-white opacity-50">
+        {card.createdAt}
+      </time>
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-3xl font-bold text-center text-indigo-200"
+        className="block mb-2 font-serif text-lg font-bold text-indigo-200 md:text-2xl"
       >
         {card.title}
       </Link>
-      <p className="mt-2 font-sans text-xl font-light text-center text-gray-300 ">
+      <p className="mt-2 font-sans text-xl text-gray-200 ">
         {card.excerpt.excerpt}
       </p>
-      <time className="block mt-3 font-mono text-base text-center text-white opacity-50">
-        {card.createdAt}
-      </time>
-      <Tags>
+      <Tags className="hidden md:block">
         {card.tags.map((tag, i) => [
-          <Link to={`/etiquetas/${kebabCase(tag)}/`} key={i}>
+          <Link
+            to={`/etiquetas/${kebabCase(tag)}/`}
+            key={i}
+            className="bg-blue-700 hover:bg-blue-800 hover:border-blue-900"
+          >
             {tag}
             {i < card.tags.length - 1 ? "" : ""}
           </Link>,
@@ -40,7 +44,7 @@ export default ({ card }) => (
 )
 
 const CardItem = styled.div`
-  ${tw`relative top-0 flex w-full overflow-hidden bg-gray-900 rounded shadow-lg`}
+  ${tw`relative top-0 flex w-full overflow-hidden rounded shadow-lg`}
   transition: all .2s;
   &:hover {
     ${tw`shadow-xl`}
@@ -49,9 +53,9 @@ const CardItem = styled.div`
 `
 
 const Tags = styled.div`
-  ${tw`flex flex-wrap hidden px-0 py-4`}
+  ${tw`flex flex-wrap px-0 py-1`}
 
   a {
-    ${tw`inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full`}
+    ${tw`inline-block px-5 py-2 my-2 mr-2 font-sans text-xs font-bold text-white uppercase rounded-full`}
   }
 `

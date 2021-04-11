@@ -19,8 +19,9 @@ const TagsPage = ({ data }) => {
           <Link
             key={tag.fieldValue}
             to={`/etiquetas/${kebabCase(tag.fieldValue)}/`}
+            className="bg-blue-700 hover:bg-blue-800 hover:border-blue-900"
           >
-            {tag.fieldValue} ({tag.totalCount})
+            <span className="opacity-75">{tag.fieldValue}</span> ({tag.totalCount})
           </Link>
         ))}
       </Container>
@@ -31,10 +32,10 @@ const TagsPage = ({ data }) => {
 const Container = styled.div`
   ${tw`max-w-5xl min-h-screen px-5 pt-24 mx-auto mt-12`}
   h1 {
-    ${tw`font-mono text-4xl text-white `}
+    ${tw`mb-12 font-mono text-4xl text-white `}
   }
   a {
-    ${tw`inline-block px-5 py-2 my-2 mr-2 font-mono text-lg font-bold text-white bg-blue-700 border-b-4 border-blue-800 rounded hover:bg-blue-800 hover:border-blue-900`}
+    ${tw`inline-block px-5 py-2 my-2 mr-2 font-sans text-lg font-bold text-white uppercase rounded-full `}
   }
 `
 
