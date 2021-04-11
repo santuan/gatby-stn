@@ -19,15 +19,19 @@ Para crear el sitio se utilizaron las siguientes herramientas libres
 
 <a href="https://www.netlify.com/">**`/Netlify`**</a> Hosting
 
+<a href="https://css-tricks.com/license/">**`/Licencia`**</a> Licencia de Css-Tricks
 
-## 🎓 Inspiración y articulos de referencias.
+## 🎓 Dependencias.
 
-Articulos y dependencias utilizadas
+Inspiración y artículos usados de referencia.
 
 <a href="https://github.com/pmndrs/react-three-fiber">**`/React Three Fiber`**</a> Para realizar las estrellas y el 3D
 
-<a href="https://raptis.wtf/blog/gatsby-mdx-copy-code-button-with-confetti/">**`/Copy to clipboard`**</a> Articulo y codigo para copiar a la papelera.
+<a href="https://github.com/rcaferati/react-awesome-button">**`/React Awesome Button`**</a> Para crear en After Effects y exportar a SVG animado.
 
+<a href="https://raptis.wtf/blog/gatsby-mdx-copy-code-button-with-confetti/">**`/Copy to clipboard`**</a> Articulo y código para copiar a la papelera y tirar confetis.
+
+<a href="https://airbnb.io/lottie/#/">**`/Lottie`**</a> Para crear en After Effects y exportar a SVG animado.
 
 ## 🎵 Tipografías via Typeface
 
