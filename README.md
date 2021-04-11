@@ -1,5 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
+<p align="left">
   <a href="https://www.gatsbyjs.org">
     <img alt="santuan" src="https://raw.githubusercontent.com/santuan/ember-santuan-io/master/public/img/trinomia.svg" width="360" />
   </a>
