@@ -1,5 +1,5 @@
 .prose .post-image {
-  @apply text-center;
+  @apply text-center duration-700 opacity-50 hover:opacity-80 ;
 }
 .prose .post-image img {
   @apply w-full mx-0 my-2 shadow-xl;

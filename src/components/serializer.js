@@ -31,8 +31,8 @@ const options = {
       } else {
         if (node.data.target.fields.file["es-AR"].contentType === "video/mp4") {
           return (
-            <div className="p-0 mb-12 aspect-h-9 aspect-w-16">
-              <Player src={node.data.target.fields.file["es-AR"].url} autoPlay >
+            <div className="max-w-6xl p-0 mx-auto my-6 mb-12 aspect-h-9 aspect-w-16">
+              <Player src={node.data.target.fields.file["es-AR"].url} loop={true} autoPlay >
                 <BigPlayButton position="center" />
               </Player>
             </div>
@@ -40,7 +40,7 @@ const options = {
         } else {
           return (
             <div>
-              <div className="relative overflow-hidden rounded-md post-image">
+              <div className="relative overflow-hidden rounded-md cursor-pointer post-image">
                 <img
                   className="w-full mx-auto"
                   alt={node.data.target.fields.title["es-AR"]}

@@ -22,11 +22,15 @@ const RecursosPage = () => (
         <Fade duration={1750} delay={250}>
           <SVGLogo className="w-32 duration-1000 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
-        <Fade  bottom>
-          <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">Recursos Libres & Gratuitos</h2>
+        <Fade bottom>
+          <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">
+            Recursos Libres & Gratuitos
+          </h2>
         </Fade>
-        <Fade  bottom>
-          <p className="max-w-lg mt-3 font-sans text-2xl text-center text-gray-100">Repositorio interactivo de herramientas web.</p>
+        <Fade bottom>
+          <p className="max-w-lg mt-3 font-sans text-2xl text-center text-gray-100">
+            Repositorio interactivo de herramientas web.
+          </p>
         </Fade>
         <Fade duration={1750} delay={250}>
           <AwesomeButton
@@ -41,10 +45,10 @@ const RecursosPage = () => (
         </Fade>
       </Box>
     </HeroProjects>
-    <BackgroundSlider/>
+    <BackgroundSlider />
     <div className="fixed inset-0 z-0 opacity-25">
-        <MovingIcons />
-      </div>
+      <MovingIcons />
+    </div>
   </Layout>
 )
 

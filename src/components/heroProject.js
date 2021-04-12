@@ -19,7 +19,7 @@ const Hero = props => (
     </TextContainer>
     <ImgContainer>
       <Fade duration={1200}>
-        <Img title={props.heading} alt={props.heading} fixed={props.image} />
+        <Img title={props.heading} alt={props.heading} fluid={props.image} className="object-cover w-full" style={{minHeight: "70vh"}} />
       </Fade>
     </ImgContainer>
     <Wave/>

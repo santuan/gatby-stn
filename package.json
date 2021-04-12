@@ -49,6 +49,7 @@
     "typeface-josefin-sans": "^1.1.13",
     "typeface-space-mono": "^1.1.13",
     "typeface-yeseva-one": "^1.1.13",
+    "simple-react-lightbox": "^3.3.4",
     "video-react": "^0.14.1"
   },
   "devDependencies": {

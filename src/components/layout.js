@@ -12,17 +12,21 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode } from "react-icons/hi"
 import tw from "tailwind.macro"
 import "./layout.css"
+import SimpleReactLightbox from "simple-react-lightbox"
+
 import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   return (
     <>
       <App>
-        <Main>{children}</Main>
+        <SimpleReactLightbox>
+          <Main>{children}</Main>
+        </SimpleReactLightbox>
         <Footer>
           STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
           Contentful + Netlify{" "}
-          <Link  to="/404/" className="mt-2 font-mono opacity-75">
+          <Link to="/404/" className="mt-2 font-mono opacity-75">
             <span className="block mx-1 mb-2">Hecho con</span>
             <HiCode className="inline-block mx-1 mb-1 text-lg text-white" />
             <span className="mx-1">&</span>

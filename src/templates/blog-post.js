@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Hero
             heading={post.title}
             slug={post.slug}
-            image={post.featuredImg.fixed}
+            image={post.featuredImg.fluid}
           />
         </HeroContainer>
 
@@ -108,10 +108,10 @@ export const pageQuery = graphql`
         json
       }
       featuredImg {
-        fixed(width: 1900, height: 550) {
+        fixed(width: 2000, height: 650) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
-        fluid(maxWidth: 1500) {
+        fluid(maxWidth: 2000) {
           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
           ...GatsbyContentfulFluid_withWebp_noBase64
         }
