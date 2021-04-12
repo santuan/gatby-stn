@@ -15,6 +15,10 @@
   @apply max-w-3xl mx-auto text-white;
 }
 
+.prose a {
+  @apply text-white duration-700 hover:text-blue-300;
+}
+
 .prose ul {
   @apply max-w-3xl mx-auto;
 }
@@ -27,7 +31,7 @@
   @apply max-w-3xl mx-auto;
 }
 
-.prose a {
+.prose a.external-link {
   outline: none;
   vertical-align: bottom;
   text-decoration: none;
@@ -36,14 +40,14 @@
   @apply relative inline-block overflow-hidden font-bold text-blue-300;
 }
 
-.prose a::before,
-.prose a::after {
+.prose a.external-link::before,
+.prose a.external-link::after {
   pointer-events: none;
   backface-visibility: hidden;
   font-smoothing: antialiased;
 }
 
-.prose a::before {
+.prose a.external-link::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,8 +60,8 @@
   @apply bg-blue-500;
 }
 
-.prose a:hover::before,
-.prose a:focus::before {
+.prose a.external-link:hover::before,
+.prose a.external-link:focus::before {
   transform: translateY(0);
 }
 

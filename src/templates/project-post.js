@@ -81,7 +81,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             }}
             className="mt-5 mr-6"
           >
-            volver
+            <span className="hidden mr-2 md:inline-block">ver </span> trabajos
           </AwesomeButton>
           <AwesomeButton
             href={post.webUrl}
@@ -90,11 +90,11 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             className="mt-5"
             type="secondary"
           >
-            web <GoLinkExternal className="inline-block ml-2" />
+            <span className="hidden mr-2 md:inline-block">ir a la </span> web <GoLinkExternal className="inline-block ml-2" />
           </AwesomeButton>
         </div>
         <SRLWrapper options={options}>
-          <div className="max-w-full px-3 font-sans prose prose-xl ">
+          <div className="max-w-full px-3 font-sans prose md:prose-xl ">
             <FormatText
               FormatText={post.childContentfulWorksArticleRichTextNode}
             />

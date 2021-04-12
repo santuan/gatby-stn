@@ -10,14 +10,15 @@ import Wave from "./wave"
 const Hero = (props) => (
   <Heros>
     <TextContainer>
-      <Fade bottom duration={800} delay={600}>
+      <Fade duration={1800} delay={600}>
         <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
-          <h1 className="font-serif text-4xl">{props.heading}</h1>
+          <h1 className="max-w-lg m-0 font-serif text-4xl text-center text-white md:text-6xl">{props.heading}</h1>
+          <h1 className="max-w-lg m-0 mt-3 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">{props.date}</h1>
         </AnchorLink>
       </Fade>
     </TextContainer>
     <ImgContainer>
-      <Fade duration={1200}>
+      <Fade duration={200}>
         <Img title={props.heading} alt={props.heading} fixed={props.image} className="object-cover w-full" style={{minHeight: "70vh"}} />
       </Fade>
     </ImgContainer>
@@ -33,9 +34,6 @@ const Heros = styled.div`
 
 const TextContainer = styled.header`
   ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center`}
-  h1 {
-    ${tw`m-0 text-4xl text-center text-white`}
-  }
 `
 const ImgContainer = styled.div`
   ${tw`overflow-hidden bg-gray-900`}

@@ -69,12 +69,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <HeroContainer>
           <Hero
             heading={post.title}
+            date={post.createdAt  }
             slug={post.slug}
             image={post.featuredImg.fluid}
           />
         </HeroContainer>
 
-        <div className="w-full max-w-2xl m-auto -mt-20 article" id={post.slug}>
+        <div className="w-full m-auto -mt-20 article" id={post.slug}>
           <Meta>
             <Tags>
               {post.tags.map((tag, i) => [
@@ -86,7 +87,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </Tags>
           </Meta>
           <SRLWrapper options={options}>
-            <div className="max-w-full px-3 font-sans prose prose-xl ">
+            <div className="max-w-6xl px-3 mx-auto font-sans prose md:prose-xl ">
               <FormatText
                 FormatText={post.childContentfulBlogArticleRichTextNode}
               />
@@ -153,6 +154,7 @@ export const pageQuery = graphql`
     contentfulBlog(slug: { eq: $slug }) {
       slug
       title
+      createdAt(formatString: "MMMM YYYY", locale: "es")
       tags
       childContentfulBlogArticleRichTextNode {
         json
