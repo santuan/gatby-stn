@@ -1,9 +1,8 @@
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
 import React from "react"
-import { Link, graphql, navigate } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { kebabCase } from "lodash"
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import Card from "../components/card"

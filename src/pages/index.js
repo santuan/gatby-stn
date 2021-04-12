@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ThreeStn from "../components/three/stn"
 import "../styles/bgPattern.css"
-import MovingIcons from "../animations/moving-icons"
 
 const IndexPage = () => (
   <Layout>
@@ -30,9 +29,7 @@ const IndexPage = () => (
       </div>
     </div>
     <ThreeStn />
-    <div className="fixed inset-0 z-0 opacity-25">
-      <MovingIcons />
-    </div>
+
   </Layout>
 )
 

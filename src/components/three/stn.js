@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import { Canvas } from "react-three-fiber"
 import { Lights } from "./r3f/Lights"
 import { Stars } from "./r3f/Stars"
