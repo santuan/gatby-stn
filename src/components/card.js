@@ -6,25 +6,18 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
 export default ({ card }) => (
-  <CardItem className="bg-gray-900">
-    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-10 md:opacity-100 md:w-64 md:relative">
-      <Img
-        className="object-cover w-full h-full"
-        alt={card.title}
-        fixed={card.featuredImg.fixed}
-      />
-    </Link>
-    <div className="relative z-10 w-full px-6 py-6 pb-4 text-left">
-      <time className="block mb-1 font-mono text-base text-white opacity-50">
+  <CardItem className="duration-700 bg-gray-900 hover:-translate-y-4" style={{minHeight: "260px"}}>
+    <div className="relative z-10 w-full px-6 py-6 pb-4 text-left from-indigo-900 bg-gradient-to-br">
+      <time className="block mb-2 font-mono text-sm text-white uppercase opacity-90">
         {card.createdAt}
       </time>
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-lg font-bold text-indigo-200 md:text-2xl"
+        className="block mb-2 font-serif text-xl font-bold text-indigo-200 md:text-3xl"
       >
         {card.title}
       </Link>
-      <p className="mt-2 font-sans text-xl text-gray-200 ">
+      <p className="mt-2 font-sans text-xl text-gray-200 md:pr-16 ">
         {card.excerpt.excerpt}
       </p>
       <Tags className="hidden md:block">
@@ -40,11 +33,18 @@ export default ({ card }) => (
         ])}
       </Tags>
     </div>
+    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-5 md:opacity-10 ">
+      <Img
+        className="object-cover w-full h-full"
+        alt={card.title}
+        fixed={card.featuredImg.fixed}
+      />
+    </Link>
   </CardItem>
 )
 
 const CardItem = styled.div`
-  ${tw`relative top-0 flex w-full overflow-hidden rounded shadow-lg`}
+  ${tw`relative top-0 flex w-full overflow-hidden rounded-md shadow-lg`}
   transition: all .2s;
   &:hover {
     ${tw`shadow-xl`}
@@ -56,6 +56,6 @@ const Tags = styled.div`
   ${tw`flex flex-wrap px-0 py-1`}
 
   a {
-    ${tw`inline-block px-5 py-2 my-2 mr-2 font-sans text-xs font-bold text-white uppercase rounded-full`}
+    ${tw`inline-block px-2 py-1 my-2 mr-2 font-sans text-xs font-bold text-white uppercase rounded-full`}
   }
 `

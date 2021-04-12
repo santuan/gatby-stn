@@ -29,7 +29,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Wave/>
       </HeroProjects>
-      <BlogContainer>
+      <BlogContainer className="grid gap-4 lg:grid-cols-2">
         {posts.map(({ node }) => {
           return (
             <Item key={node.slug}>
@@ -46,8 +46,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
 }
 
 const BlogContainer = styled.div`
-  ${tw`flex flex-col justify-start max-w-3xl px-2 py-6 m-auto -mt-40 md:-mt-64`}
-  min-height: 100vh;
+  ${tw`max-w-6xl px-2 py-6 mx-auto -mt-40 md:-mt-64`}
 `
 
 const HeroProjects = styled.div`
