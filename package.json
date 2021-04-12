@@ -17,6 +17,7 @@
     "gatsby-plugin-layout": "^1.3.13",
     "gatsby-plugin-manifest": "^2.4.35",
     "gatsby-plugin-netlify": "^2.3.21",
+    "gatsby-plugin-nprogress": "^3.2.0",
     "gatsby-plugin-offline": "^3.2.34",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.3.14",
@@ -45,11 +46,11 @@
     "react-icons": "^3.11.0",
     "react-modal": "^3.12.1",
     "react-reveal": "^1.2.2",
+    "simple-react-lightbox": "^3.3.4",
     "tailwind.macro": "^1.0.0-alpha.10",
     "typeface-josefin-sans": "^1.1.13",
     "typeface-space-mono": "^1.1.13",
     "typeface-yeseva-one": "^1.1.13",
-    "simple-react-lightbox": "^3.3.4",
     "video-react": "^0.14.1"
   },
   "devDependencies": {
