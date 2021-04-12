@@ -10,7 +10,7 @@ import "../styles/post.css"
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 
 const Text = ({ children }) => (
-  <p className="text-white">{children}</p>
+  <p className="px-2 text-white">{children}</p>
 )
 
 const website_url = "https://www.santuan.com.ar"

@@ -56,17 +56,17 @@ body.project-post .headroom.headroom--pinned {
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-indigo-400 bg-opacity-90 backdrop-blur;
+  @apply bg-indigo-800 bg-opacity-95 backdrop-blur;
 }
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
-  @apply bg-red-800 bg-opacity-80 backdrop-blur;
+  @apply bg-red-900 bg-opacity-95 backdrop-blur;
 }
 
 body.contact .headroom--pinned,
 body.contact .headroom--unpinned {
-  @apply bg-yellow-600 bg-opacity-80 backdrop-blur;
+  @apply bg-yellow-500 bg-opacity-95 backdrop-blur;
 }
 
 @screen md {

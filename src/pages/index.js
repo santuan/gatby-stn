@@ -14,7 +14,7 @@ const IndexPage = () => (
     <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-800 bg-opacity-50 shadow-sm">
       <div className="relative z-50 max-w-xl px-6 m-auto mt-12 mb-12 text-center">
         <Fade duration={1650}>
-          <h2 className="w-full font-serif text-2xl font-light leading-loose text-white md:text-center md:text-3xl">
+          <h2 className="w-full font-serif text-2xl font-light leading-10 text-white md:text-center md:text-3xl">
             Diseñar y desarrollar experiencias para todos los dispositivos y en
             todas sus posibilidades.
           </h2>

@@ -6,6 +6,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @apply bg-gray-800;
@@ -22,6 +23,8 @@ body {
 *::-webkit-scrollbar-thumb {
   @apply bg-yellow-600;
 }
+
+
 
 .loading {
   position: absolute;
