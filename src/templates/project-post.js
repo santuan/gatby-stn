@@ -19,9 +19,9 @@ const options = {
     iconPadding: "5px",
     showDownloadButton: false,
     backgroundColor: "rgba(0, 0, 0, .5)",
-    iconColor: 'rgba(255, 255, 255, 0.8)',
+    iconColor: "rgba(255, 255, 255, 0.8)",
     showNextButton: true,
-  showPrevButton: true,
+    showPrevButton: true,
   },
   caption: {
     captionFontSize: "15px",
@@ -37,8 +37,8 @@ const options = {
     slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
     slideAnimationType: "fade",
     slideSpringValues: [300, 200],
-    disablePanzoom: true,
     autoplaySpeed: 4000,
+    disablePanzoom: false,
     hideControlsAfter: true,
   },
   translations: {
