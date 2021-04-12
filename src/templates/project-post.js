@@ -19,7 +19,9 @@ const options = {
     iconPadding: "5px",
     showDownloadButton: false,
     backgroundColor: "rgba(0, 0, 0, .5)",
-    iconColor: "rgb(255, 255, 255)",
+    iconColor: 'rgba(255, 255, 255, 0.8)',
+    showNextButton: true,
+  showPrevButton: true,
   },
   caption: {
     captionFontSize: "15px",
@@ -52,7 +54,7 @@ const options = {
   },
   progressBar: {
     height: "4px",
-    fillColor: "rgb(151, 90, 22)",
+    fillColor: "rgb(0, 0, 0)",
     backgroundColor: "rgba(255, 255, 255, 1)",
   },
   thumbnails: {
