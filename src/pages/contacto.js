@@ -80,11 +80,13 @@ export default function BackgroundSlider() {
                 : "hover:bg-gray-900 bg-opacity-10")
             }
           >
-            <Fade bottom cascade duration={2000} delay={200}>
+            <div className="relative overflow-hidden">
+            <Fade bottom cascade  duration={700} delay={200}>
               <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
                 santuan.dg@gmail.com
               </span>
             </Fade>
+            </div>
             {isCopied ? "🎉 Copiado!" : "Click para copiar mail"}
             <div className="transform -translate-y-12 translate-x-52">
               <Confetti active={isCopied} config={config} />
