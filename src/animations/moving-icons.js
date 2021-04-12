@@ -13,8 +13,8 @@ const MovingIconsCompoent = () => {
   }, [])
   return (
     <>
-      <Moving className="fixed inset-0 flex items-center justify-center w-screen h-screen transform scale-125 opacity-60">
-        <div id="moving-icons" style={{ width: "100%", height: "100%" }} />
+      <Moving className="transform scale-125 opacity-40">
+        <div id="moving-icons" className="w-auto h-screen" />
       </Moving>
     </>
   )
