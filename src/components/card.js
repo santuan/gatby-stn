@@ -33,7 +33,7 @@ export default ({ card }) => (
         ])}
       </Tags>
     </div>
-    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-5 md:opacity-10 ">
+    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-5 md:opacity-30 ">
       <Img
         className="object-cover w-full h-full"
         alt={card.title}

@@ -20,7 +20,7 @@ body.project-post .headroom {
 }
 
 body.project-post .headroom.headroom--pinned {
-  @apply bg-gray-800 bg-opacity-90;
+  @apply bg-gray-800 bg-opacity-20;
   @apply backdrop-blur;
 }
 
@@ -60,13 +60,9 @@ body.blog .headroom--unpinned {
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
-  @apply bg-gray-900 bg-opacity-80 backdrop-blur;
+  @apply bg-gray-900 bg-opacity-30 backdrop-blur;
 }
 
-body.contact .headroom--pinned,
-body.contact .headroom--unpinned {
-  @apply bg-yellow-500 bg-opacity-80 backdrop-blur;
-}
 
 @screen md {
   .headroom--unpinned {

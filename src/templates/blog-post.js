@@ -9,7 +9,55 @@ import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 import { Article, HeroContainer, Meta } from "../components/import"
 import FormatText from "../components/serializer"
+import { SRLWrapper } from "simple-react-lightbox"
 
+const options = {
+  buttons: {
+    iconPadding: "5px",
+    showDownloadButton: false,
+    backgroundColor: "rgba(0, 0, 0, .5)",
+    iconColor: "rgba(255, 255, 255, 0.8)",
+    showNextButton: true,
+    showPrevButton: true,
+  },
+  caption: {
+    captionFontSize: "15px",
+    captionAlignment: "center",
+    captionColor: "#a7825f",
+    captionFontWeight: 300,
+    showCaption: false,
+  },
+  settings: {
+    overlayColor: "rgba(0, 0, 0, .9)",
+    transitionTimingFunction: "ease-in-out",
+    slideTransitionSpeed: 0.6,
+    slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
+    slideAnimationType: "fade",
+    slideSpringValues: [300, 200],
+    autoplaySpeed: 4000,
+    disablePanzoom: false,
+    hideControlsAfter: true,
+  },
+  translations: {
+    autoplayText: "Play",
+    closeText: "Cerrar",
+    downloadText: "Descargar",
+    fullscreenText: "Pantalla completa",
+    nextText: "Siguiente",
+    pauseText: "Pausa",
+    previousText: "Anterior",
+    thumbnailsText: "Miniaturas",
+    zoomOutText: "Zoom Out",
+  },
+  progressBar: {
+    height: "4px",
+    fillColor: "rgb(0, 0, 0)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+  },
+  thumbnails: {
+    showThumbnails: true,
+  },
+}
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulBlog
@@ -37,11 +85,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ])}
             </Tags>
           </Meta>
-          <div className="max-w-full px-3 font-sans prose prose-xl ">
-            <FormatText
-              FormatText={post.childContentfulBlogArticleRichTextNode}
-            />
-          </div>
+          <SRLWrapper options={options}>
+            <div className="max-w-full px-3 font-sans prose prose-xl ">
+              <FormatText
+                FormatText={post.childContentfulBlogArticleRichTextNode}
+              />
+            </div>
+          </SRLWrapper>
         </div>
         <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
           <div>
