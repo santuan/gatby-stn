@@ -16,7 +16,6 @@ body.contact .menu--alonso .menu__line {
 }
 */
 body.project-post .headroom {
-  @apply bg-gray-800 bg-opacity-80;
   @apply backdrop-blur;
 }
 
@@ -40,8 +39,6 @@ body.project-post .headroom.headroom--pinned {
   z-index: 999;
   position: fixed !important;
   transition: all 800ms ease-in-out;
-  @apply bg-gray-800 bg-opacity-20;
-
   backdrop-filter: blur(25px);
 }
 .headroom--unfixed {
