@@ -1,11 +1,9 @@
-import styled from "@emotion/styled"
 import React from "react"
 import { Helmet } from "react-helmet"
 import { AiFillGithub } from "react-icons/ai"
 import Fade from "react-reveal/Fade"
-import tw from "tailwind.macro"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Confetti from "react-dom-confetti"
 
 const copyToClipboard = (str) => {
@@ -38,15 +36,15 @@ export default function BackgroundSlider() {
   const [isCopied, setIsCopied] = React.useState(false)
   return (
     <Layout>
-      <SEO title="Contacto" />
+      <Seo title="Contacto" />
       <Helmet>
         <body className="contact" />
       </Helmet>
-      <HeroProjects className="bg-pattern">
-        <Socials>
+      <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pattern text-">
+        <div className="relative z-50 flex flex-col justify-center w-full max-w-md px-0 py-4 mx-auto my-0">
           <a
             target="_blank"
-            className="py-2 mx-2 duration-700 rounded-md group "
+            className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
             rel="noopener noreferrer"
             href="https://github.com/santuan/gatby-stn"
           >
@@ -92,21 +90,8 @@ export default function BackgroundSlider() {
               <Confetti active={isCopied} config={config} />
             </div>
           </button>
-        </Socials>
-      </HeroProjects>
+        </div>
+      </div>
     </Layout>
   )
 }
-
-const Socials = styled.div`
-  ${tw`relative z-50 flex flex-col justify-center w-full max-w-md px-0 py-4 mx-auto my-0`}
-
-  a {
-    ${tw`flex flex-col items-center justify-center mb-6 font-mono text-xl font-bold`}
-  }
-`
-
-const HeroProjects = styled.div`
-  ${tw`relative z-20 flex flex-col items-center justify-center w-full overflow-hidden text-center`}
-  min-height: 100vh;
-`

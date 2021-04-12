@@ -3,13 +3,12 @@ import { navigate } from "gatsby"
 import { AwesomeButton } from "react-awesome-button"
 import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import ThreeStn from "../components/three/stn"
+import Seo from "../components/seo"
 import "../styles/bgPattern.css"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Inicio" />
+    <Seo title="Inicio" />
     <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-800 bg-opacity-50 shadow-sm">
       <div className="relative z-50 max-w-xl px-6 m-auto mt-12 mb-12 text-center">
         <Fade duration={1650}>
@@ -27,9 +26,6 @@ const IndexPage = () => (
           </AwesomeButton>
         </Fade>
       </div>
-    </div>
-    <div className="motion-reduce:hidden">
-      <ThreeStn />
     </div>
   </Layout>
 )

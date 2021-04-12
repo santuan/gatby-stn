@@ -1,12 +1,10 @@
 import React from "react"
 import { kebabCase } from "lodash"
 import Img from "gatsby-image"
-import tw from "tailwind.macro"
-import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
-export default ({ card }) => (
-  <CardItem className="bg-gray-900" style={{minHeight: "260px"}}>
+const Card = ({ card }) => (
+  <div className="relative top-0 flex w-full overflow-hidden duration-700 transform bg-gray-900 rounded-md shadow-lg hover:translate-y-2" style={{minHeight: "260px"}}>
     <div className="relative z-10 w-full px-6 py-6 pb-4 text-left duration-700 bg-opacity-75 from-indigo-900 bg-gradient-to-br hover:bg-indigo-700">
       <time className="block mb-2 font-mono text-sm text-white uppercase opacity-90">
         {card.createdAt}
@@ -20,18 +18,18 @@ export default ({ card }) => (
       <p className="mt-2 font-sans text-xl text-gray-200 md:pr-16 ">
         {card.excerpt.excerpt}
       </p>
-      <Tags className="hidden md:block">
+      <div className="flex-wrap hidden px-0 py-1 md:flex">
         {card.tags.map((tag, i) => [
           <Link
             to={`/etiquetas/${kebabCase(tag)}/`}
             key={i}
-            className="bg-blue-700 hover:bg-blue-800 hover:border-blue-900"
+            className="inline-block px-2 py-1 my-2 mr-2 font-sans text-xs font-bold text-white uppercase bg-blue-700 rounded-full hover:bg-blue-800 hover:border-blue-900"
           >
             {tag}
             {i < card.tags.length - 1 ? "" : ""}
           </Link>,
         ])}
-      </Tags>
+      </div>
     </div>
     <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-5 md:opacity-30 ">
       <Img
@@ -40,22 +38,7 @@ export default ({ card }) => (
         fixed={card.featuredImg.fixed}
       />
     </Link>
-  </CardItem>
+  </div>
 )
 
-const CardItem = styled.div`
-  ${tw`relative top-0 flex w-full overflow-hidden rounded-md shadow-lg `}
-  transition: all .2s;
-  &:hover {
-    ${tw`shadow-xl`}
-    top: 2px;
-  }
-`
-
-const Tags = styled.div`
-  ${tw`flex flex-wrap px-0 py-1`}
-
-  a {
-    ${tw`inline-block px-2 py-1 my-2 mr-2 font-sans text-xs font-bold text-white uppercase rounded-full`}
-  }
-`
+export default Card

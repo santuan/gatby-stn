@@ -3,18 +3,147 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { SRLWrapper } from "simple-react-lightbox"
-
 import { Link, navigate } from "gatsby"
 import { kebabCase } from "lodash"
 import { AwesomeButton } from "react-awesome-button"
-import styled from "@emotion/styled"
 import { GoLinkExternal } from "react-icons/go"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Hero from "../components/heroProject"
-import tw from "tailwind.macro"
-import FormatText from "../components/serializer"
+import { Player, BigPlayButton } from "video-react"
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
+import Fade from "react-reveal/Fade"
+import "../styles/awesomeButton.css"
+import "../styles/VideoReact.css"
+import "../styles/post.css"
+import Card from "../components/cardPost"
+
+const Bold = ({ children }) => <span className="font-bold">{children}</span>
+
+const Text = ({ children }) => <p className="px-2 text-white">{children}</p>
+
+const website_url = "https://www.santuan.com.ar"
 
 const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    [MARKS.CODE]: (embedded) => (
+      <Fade>
+        <div
+          className="my-8 aspect-w-16 aspect-h-9"
+          dangerouslySetInnerHTML={{ __html: embedded }}
+        />
+      </Fade>
+    ),
+  },
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      if (!node.data || !node.data.target) {
+        return <span className="hidden">Embedded asset is broken</span>
+      } else {
+        if (node.data.target.file.contentType === "video/mp4") {
+          return (
+            <div className="max-w-6xl p-0 mx-auto my-6 mb-12 aspect-h-9 aspect-w-16">
+              <Player src={node.data.target.file.url} loop={true} autoPlay>
+                <BigPlayButton position="center" />
+              </Player>
+            </div>
+          )
+        } else {
+          return (
+            <div>
+              <div className="relative overflow-hidden rounded-md cursor-pointer post-image">
+                <img
+                  className="w-full mx-auto"
+                  alt={node.data.target.title}
+                  src={node.data.target.file.url}
+                />
+              </div>
+            </div>
+          )
+        }
+      }
+    },
+
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+      if (!node.data || !node.data.target) {
+        return <span className="hidden">Embedded asset is broken</span>
+      } else {
+        if (node.data.target.webUrl) {
+          return (
+            <div className="flex flex-col-reverse items-center justify-between w-full max-w-3xl p-4 mx-auto mb-3 duration-700 ease-in-out transform border border-gray-900 rounded-md shadow-xl md:flex-row from-gray-900 via-gray-900 bg-gradient-to-br hover:-translate-x-2 hover:bg-gray-900">
+              <div className="relative z-10 flex flex-col text-white">
+                <Link
+                  to={`/colaboraciones/${node.data.target.slug}`}
+                  className="relative z-10 text-white"
+                >
+                  <h3 style={{ margin: "0" }}>{node.data.target.title}</h3>
+
+                  <span>Ver proyecto</span>
+                </Link>
+              </div>
+              <div className="">
+                <img
+                  className="object-cover w-auto h-32 py-2 mx-auto"
+                  style={{ marginTop: "0", marginBottom: "0" }}
+                  alt={node.data.target.title}
+                  src={node.data.target.logo.file.url}
+                />
+              </div>
+            </div>
+          )
+        } else {
+          return (
+            <div className="flex items-center justify-between w-full max-w-3xl mx-auto my-6 duration-700 transform scale-105 translate-y-2 rounded-md hover:scale-100">
+              <Card
+                title={node.data.target.title}
+                slug={node.data.target.slug}
+                excerpt={node.data.target.excerpt.excerpt}
+                featuredImg={node.data.target.featuredImg.file.url}
+              />
+            </div>
+          )
+        }
+      }
+    },
+    [INLINES.EMBEDDED_ENTRY]: (node) => {
+      if (!node.data || !node.data.target) {
+        return <span className="hidden">Embedded asset is broken</span>
+      } else {
+        if (node.data.target.webUrl) {
+          return (
+            <Link to={`/colaboraciones/${node.data.target.slug}`} className="">
+              {node.data.target.title} - proyecto
+            </Link>
+          )
+        } else {
+          return (
+            <Link to={`/blog/${node.data.target.slug}`} className="">
+              {node.data.target.title} - blog
+            </Link>
+          )
+        }
+      }
+    },
+    [INLINES.HYPERLINK]: (node) => {
+      return (
+        <a
+          href={node.data.uri}
+          className="font-bold text-white external-link hover:text-blue-200"
+          target={`${
+            node.data.uri.startsWith(website_url) ? "_self" : "_blank"
+          }`}
+          rel={`${
+            node.data.uri.startsWith(website_url) ? "" : "noopener noreferrer"
+          }`}
+        >
+          {node.content[0].value}
+        </a>
+      )
+    },
+    [BLOCKS.PARAGRAPH]: (_, children) => <Text>{children}</Text>,
+  },
   buttons: {
     iconPadding: "5px",
     showDownloadButton: false,
@@ -64,10 +193,11 @@ const options = {
 
 const ProjectPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulWorks
+  const { article } = data.contentfulWorks
   const { prev, next } = pageContext
   return (
     <Layout location={location}>
-      <SEO title={`${post.title}`} />
+      <Seo title={`${post.title}`} />
       <Helmet>
         <body className="project-post" />
       </Helmet>
@@ -90,59 +220,47 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             className="mt-5"
             type="secondary"
           >
-            <span className="hidden mr-2 md:inline-block">ir a la </span> web <GoLinkExternal className="inline-block ml-2" />
+            <span className="hidden mr-2 md:inline-block">ir a la </span> web{" "}
+            <GoLinkExternal className="inline-block ml-2" />
           </AwesomeButton>
         </div>
         <SRLWrapper options={options}>
           <div className="max-w-full px-3 font-sans prose md:prose-xl ">
-            <FormatText
-              FormatText={post.childContentfulWorksArticleRichTextNode}
-            />
+            {article && renderRichText(article, options)}
           </div>
         </SRLWrapper>
-        <PageNav style={{ display: "flex", justifyContent: "space-between" }}>
-          <div>
+        <div className="flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600">
+          <div className="max-w-xs duration-700">
             {prev && (
               <Link
                 to={`/colaboraciones/${kebabCase(prev.slug)}/`}
                 rel="prev"
-                className="pr-6 "
+                className="block pr-6 font-mono text-xl text-white"
               >
                 <span className="block">←</span> {prev.title}
               </Link>
             )}
           </div>
-          <div style={{ justifySelf: "flex-end" }} className="pl-6 text-right">
+          <div
+            style={{ justifySelf: "flex-end" }}
+            className="max-w-xs pl-6 text-right duration-700"
+          >
             {next && (
-              <Link to={`/colaboraciones/${kebabCase(next.slug)}/`} rel="next">
+              <Link
+                to={`/colaboraciones/${kebabCase(next.slug)}/`}
+                rel="next"
+                className="block font-mono text-xl text-white"
+              >
                 <span className="block">→</span>
                 {next.title}
               </Link>
             )}
           </div>
-        </PageNav>
+        </div>
       </div>
     </Layout>
   )
 }
-
-const PageNav = styled.nav`
-  ${tw`flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600`}
-
-  div {
-    ${tw`max-w-xs`}
-    transition: all 1s;
-    flex: 1;
-
-    &:hover {
-      ${tw`px-2`}
-    }
-  }
-
-  a {
-    ${tw`block font-mono text-xl text-white`}
-  }
-`
 
 export default ProjectPostTemplate
 
@@ -153,8 +271,17 @@ export const pageQuery = graphql`
       slug
       title
       webUrl
-      childContentfulWorksArticleRichTextNode {
-        json
+      article {
+        raw
+        references {
+          contentful_id
+          __typename
+          title
+          file {
+            url
+            contentType
+          }
+        }
       }
       logo {
         fixed(width: 320, height: 170) {

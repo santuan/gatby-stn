@@ -1,10 +1,8 @@
 import React from "react"
-import tw from "tailwind.macro"
-import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
-export default ({ title, slug, excerpt, createdAt, featuredImg }) => (
-  <CardItem className="bg-gray-900">
+const CardPost = ({ title, slug, excerpt, featuredImg }) => (
+  <div className="relative top-0 flex w-full overflow-hidden duration-700 translate-y-2 bg-gray-900 rounded-md shadow-lg hover:shadow-xl">
     <div className="relative z-10 w-full px-6 py-6 pb-4 text-left duration-700 bg-opacity-75 from-indigo-900 bg-gradient-to-br hover:bg-indigo-700">
       <span className="block mb-2 font-mono text-sm text-white uppercase opacity-90">
       blog
@@ -30,14 +28,7 @@ export default ({ title, slug, excerpt, createdAt, featuredImg }) => (
         src={featuredImg}
       />
     </Link>
-  </CardItem>
+  </div>
 )
 
-const CardItem = styled.div`
-  ${tw`relative top-0 flex w-full overflow-hidden rounded-md shadow-lg `}
-  transition: all .2s;
-  &:hover {
-    ${tw`shadow-xl`}
-    top: 2px;
-  }
-`
+export default CardPost

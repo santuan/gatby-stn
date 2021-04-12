@@ -59,6 +59,7 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
   />
 )
 export default SEO
+
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,

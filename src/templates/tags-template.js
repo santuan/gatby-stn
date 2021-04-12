@@ -2,11 +2,8 @@
 import React from "react"
 import { graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import tw from "tailwind.macro"
-import styled from "@emotion/styled"
+import Seo from "../components/seo"
 import Card from "../components/card"
-
 import { AwesomeButton } from "react-awesome-button"
 
 const Tags = ({ pageContext, data }) => {
@@ -17,10 +14,9 @@ const Tags = ({ pageContext, data }) => {
   } para "${tag}"`
   return (
     <Layout>
-      <SEO title="Tags" />
-
-      <TagsContainer>
-        <h1>{tagHeader}</h1>
+      <Seo title="Tags" />
+      <div className="max-w-5xl min-h-screen px-4 py-24 m-auto mt-12" >
+        <h1 className="font-serif text-4xl text-center text-white">{tagHeader}</h1>
         <div className="flex flex-col justify-start max-w-3xl px-2 py-6 m-auto">
           {edges.map(({ node }) => {
             const { slug } = node
@@ -41,18 +37,10 @@ const Tags = ({ pageContext, data }) => {
             ver etiquetas
           </AwesomeButton>
         </div>
-      </TagsContainer>
+      </div>
     </Layout>
   )
 }
-
-const TagsContainer = styled.div`
-  ${tw`max-w-5xl min-h-screen px-4 py-24 m-auto mt-12`}
-
-  h1 {
-    ${tw`font-serif text-4xl text-center text-white`}
-  }
-`
 
 export default Tags
 

@@ -1,13 +1,11 @@
 import React from "react"
 import Img from "gatsby-image"
-import tw from "tailwind.macro"
-import styled from "@emotion/styled"
 import Fade from "react-reveal/Fade"
 import Wave from "./wave"
 
-const Hero = props => (
-  <Heros>
-    <TextContainer>
+const HeroProject = props => (
+  <div className="relative overflow-hidden">
+    <div className="absolute inset-0 z-50 flex flex-col items-center justify-center">
       <Fade duration={800} delay={600}>
         <Img
           className="mt-12"
@@ -16,35 +14,14 @@ const Hero = props => (
           fixed={props.logo}
         />
       </Fade>
-    </TextContainer>
-    <ImgContainer>
+    </div>
+    <div className="overflow-hidden opacity-70">
       <Fade duration={1200}>
         <Img title={props.heading} alt={props.heading} fluid={props.image} className="object-cover w-full" style={{minHeight: "70vh"}} />
       </Fade>
-    </ImgContainer>
+    </div>
     <Wave/>
-  </Heros>
+  </div>
 )
 
-export default Hero
-
-const Heros = styled.div`
-  ${tw`relative overflow-hidden`}
-  min-height: 7vh
-`
-const TextContainer = styled.header`
-  ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center`}
-  h1 {
-    ${tw`m-0 text-4xl text-center text-white`}
-  }
-`
-const ImgContainer = styled.div`
-  ${tw`overflow-hidden `}
-  max-height: 70vh;
-  opacity: 0.5;
-  img {
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-  }
-`
+export default HeroProject

@@ -5,12 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import React from "react"
 import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode } from "react-icons/hi"
-import tw from "tailwind.macro"
 import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
 
@@ -19,11 +17,11 @@ import { Link } from "gatsby"
 const Layout = ({ children }) => {
   return (
     <>
-      <App>
+      <div className="block min-h-screen">
         <SimpleReactLightbox>
-          <Main>{children}</Main>
+          <main className="px-0">{children}</main>
         </SimpleReactLightbox>
-        <Footer>
+        <footer className="relative z-50 py-12 font-sans text-center text-white bg-gray-900">
           STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
           Contentful + Netlify{" "}
           <Link to="/404/" className="mt-2 font-mono opacity-75">
@@ -32,8 +30,8 @@ const Layout = ({ children }) => {
             <span className="mx-1">&</span>
             <AiOutlineHeart className="inline-block mx-1 mb-1 text-lg text-white" />
           </Link>
-        </Footer>
-      </App>
+        </footer>
+      </div>
     </>
   )
 }
@@ -41,17 +39,5 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-const App = styled.div`
-  ${tw`block min-h-screen`}
-`
-
-const Main = styled.main`
-  ${tw`px-0`}
-`
-
-const Footer = styled.footer`
-  ${tw`relative z-50 py-12 font-sans text-center text-white bg-gray-900`}
-`
 
 export default Layout
