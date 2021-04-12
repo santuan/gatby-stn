@@ -15,13 +15,13 @@ const ProjectArchive = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="colaboraciones" />
+      <SEO title="Colaboraciones" />
       <Helmet>
         <body className="project" />
       </Helmet>
       <HeroProjects>
         <Fade bottom cascade duration={1200}>
-          <HeroTitle>colaboraciones</HeroTitle>
+          <HeroTitle>Colaboraciones</HeroTitle>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="max-w-2xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
@@ -30,10 +30,8 @@ const ProjectArchive = ({ data, pageContext, location }) => {
           </p>
         </Fade>
         <Wave/>
-
       </HeroProjects>
-
-      <div className="grid gap-3 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 md:grid-cols-3 max-w-7xl md:-mt-72">
+      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 lg:grid-cols-3 max-w-7xl md:-mt-72">
         {projects.map(({ node }) => {
           return (
             <Item key={node.slug}>
@@ -50,7 +48,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
 }
 
 const Item = styled.div`
-  ${tw`w-full px-3 my-3 overflow-hidden text-center`}
+  ${tw`w-full overflow-hidden`}
 `
 
 const HeroProjects = styled.div`
@@ -94,12 +92,21 @@ export const pageQuery = graphql`
           }
           updatedAt
           featuredImg {
-            fixed(width: 360, height: 200) {
+            fixed(width: 500, height: 500) {
               ...GatsbyContentfulFixed_withWebp
             }
             fluid(maxWidth: 360) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyContentfulFluid_withWebp
+            }
+          }
+          logo {
+            fixed(width: 320, height: 170) {
+              ...GatsbyContentfulFixed_withWebp_noBase64
+            }
+            fluid(maxWidth: 500) {
+              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
           }
           slug

@@ -28,8 +28,9 @@ const IndexPage = () => (
         </Fade>
       </div>
     </div>
-    <ThreeStn />
-
+    <div className="motion-reduce:hidden">
+      <ThreeStn />
+    </div>
   </Layout>
 )
 

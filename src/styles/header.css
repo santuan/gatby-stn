@@ -16,7 +16,7 @@ body.contact .menu--alonso .menu__line {
 }
 */
 body.project-post .headroom {
-  @apply bg-gray-800 bg-opacity-10;
+  @apply bg-gray-800 bg-opacity-80;
   @apply backdrop-blur;
 }
 
@@ -40,7 +40,7 @@ body.project-post .headroom.headroom--pinned {
   z-index: 999;
   position: fixed !important;
   transition: all 800ms ease-in-out;
-  @apply backdrop-blur;
+  backdrop-filter: blur(5px);
 }
 .headroom--unfixed {
   position: relative;
@@ -56,17 +56,17 @@ body.project-post .headroom.headroom--pinned {
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-indigo-800 bg-opacity-95 backdrop-blur;
+  @apply bg-indigo-800 bg-opacity-80 backdrop-blur;
 }
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
-  @apply bg-red-900 bg-opacity-95 backdrop-blur;
+  @apply bg-gray-900 bg-opacity-80 backdrop-blur;
 }
 
 body.contact .headroom--pinned,
 body.contact .headroom--unpinned {
-  @apply bg-yellow-500 bg-opacity-95 backdrop-blur;
+  @apply bg-yellow-500 bg-opacity-80 backdrop-blur;
 }
 
 @screen md {
@@ -77,7 +77,7 @@ body.contact .headroom--unpinned {
 }
 .headroom--pinned {
   position: fixed;
-  @apply bg-gray-700;
+  @apply bg-gray-700 bg-opacity-60;
   transform: translateY(0%);
 }
 

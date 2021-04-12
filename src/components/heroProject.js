@@ -30,7 +30,7 @@ export default Hero
 
 const Heros = styled.div`
   ${tw`relative overflow-hidden`}
-  min-height: 50vh
+  min-height: 7vh
 `
 const TextContainer = styled.header`
   ${tw`absolute inset-0 z-50 flex flex-col items-center justify-center`}
@@ -40,7 +40,7 @@ const TextContainer = styled.header`
 `
 const ImgContainer = styled.div`
   ${tw`overflow-hidden `}
-  max-height: 50vh;
+  max-height: 70vh;
   opacity: 0.5;
   img {
     height: 200px;

@@ -6,16 +6,16 @@ import { Link } from "gatsby"
 
 export default ({ card }) => (
   <CardItemProject>
-    <Link to={`/blog/${card.slug}`} className="hidden">
+    <Link to={`/colaboraciones/${card.slug}`} className="flex items-center justify-center h-32 md:h-56">
       <Img
-        className="w-full h-56"
+        className="relative z-20 object-contain w-full "
         alt={card.title}
-        fixed={card.featuredImg.fixed}
+        fixed={card.logo.fixed}
       />
     </Link>
-    <Link to={`/colaboraciones/${card.slug}`} className="block p-0">
+    <Link to={`/colaboraciones/${card.slug}`} className="p-0 ">
       <h1
-        css={tw`relative z-50 px-8 m-0 font-serif text-3xl text-white opacity-50 hover:opacity-100`}
+        css={tw`relative z-50 hidden px-8 m-0 font-serif text-3xl text-white opacity-50 hover:opacity-100`}
       >
         {card.title}
       </h1>
@@ -29,13 +29,13 @@ export default ({ card }) => (
 )
 
 const CardItemProject = styled.div`
-  ${tw`relative flex items-center justify-center h-64 max-w-md m-auto overflow-hidden bg-gray-900 rounded shadow-lg`}
+  ${tw`relative flex items-center justify-center w-full h-64 m-auto overflow-hidden bg-gray-900 rounded shadow-lg`}
   transition: all .8s;
-  transform: translateY(0.5rem);
+  transform: translateY(0);
 
   &:hover {
     ${tw`shadow-xl `}
-    transform: translateY(0);
+    transform: translateY(0.5rem);
   }
 
   .absolute {

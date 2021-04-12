@@ -6,14 +6,14 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
 export default ({ card }) => (
-  <CardItem className="duration-700 bg-gray-900 hover:-translate-y-4" style={{minHeight: "260px"}}>
-    <div className="relative z-10 w-full px-6 py-6 pb-4 text-left from-indigo-900 bg-gradient-to-br">
+  <CardItem className="bg-gray-900" style={{minHeight: "260px"}}>
+    <div className="relative z-10 w-full px-6 py-6 pb-4 text-left duration-700 bg-opacity-75 from-indigo-900 bg-gradient-to-br hover:bg-indigo-700">
       <time className="block mb-2 font-mono text-sm text-white uppercase opacity-90">
         {card.createdAt}
       </time>
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-xl font-bold text-indigo-200 md:text-3xl"
+        className="block mb-2 font-serif text-xl font-bold text-indigo-200 hover:text-white md:text-3xl"
       >
         {card.title}
       </Link>
@@ -44,7 +44,7 @@ export default ({ card }) => (
 )
 
 const CardItem = styled.div`
-  ${tw`relative top-0 flex w-full overflow-hidden rounded-md shadow-lg`}
+  ${tw`relative top-0 flex w-full overflow-hidden rounded-md shadow-lg `}
   transition: all .2s;
   &:hover {
     ${tw`shadow-xl`}

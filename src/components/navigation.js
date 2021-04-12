@@ -41,7 +41,7 @@ const Navigation = ({ closeMenu }) => (
           title={route.ariaLabel}
           aria-label={route.ariaLabel}
           to={route.slug}
-          className="my-2 font-mono text-white cursor-pointer hover:text-blue-100"
+          className="my-4 font-mono text-white cursor-pointer hover:text-blue-100"
         >
           {route.title}
         </Link>
