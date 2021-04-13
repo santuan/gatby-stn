@@ -34,8 +34,11 @@ function Dolly() {
   return null
 }
 
+const isBrowser = typeof window !== "undefined"
+
 const IntroThree = () => (
   <div className="fixed inset-0 min-h-screen">
+    {isBrowser && (
     <Canvas camera={{ fov: 75, position: [0, 0, 70] }} resize={{ polyfill: ResizeObserver }}>
       <Suspense fallback={<Loader />}>
         <Stage  adjustCamera environment="night">
@@ -55,6 +58,7 @@ const IntroThree = () => (
         fade // Faded dots (default=false)
       />
     </Canvas>
+    )}
   </div>
 )
 
