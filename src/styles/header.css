@@ -16,12 +16,13 @@ body.contact .menu--alonso .menu__line {
 }
 */
 body.project-post .headroom {
-  @apply backdrop-blur;
 }
 
 body.project-post .headroom.headroom--pinned {
-  @apply bg-gray-800 bg-opacity-20;
-  @apply backdrop-blur;
+  @apply bg-gray-800 bg-opacity-40;
+  backdrop-filter: blur(25px);
+
+
 }
 
 .headroom a:hover span {
@@ -39,17 +40,19 @@ body.project-post .headroom.headroom--pinned {
   z-index: 999;
   position: fixed !important;
   transition: all 800ms ease-in-out;
-  backdrop-filter: blur(25px);
 }
 .headroom--unfixed {
   position: relative;
   transform: translateY(0);
 }
 .headroom--scrolled {
+  backdrop-filter: blur(25px);
+
 }
 .headroom--unpinned {
   position: fixed;
-  @apply bg-gray-700 bg-opacity-80 backdrop-blur;
+  backdrop-filter: blur(25px);
+  @apply bg-gray-700 bg-opacity-80;
   transform: translateY(0);
 }
 

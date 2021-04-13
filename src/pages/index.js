@@ -10,23 +10,27 @@ import IntroThree from "../components/three/intro"
 const IndexPage = () => (
   <Layout>
     <Seo title="Inicio" />
-    <IntroThree/>
+    <IntroThree />
     <div className="flex flex-col items-center justify-end min-h-screen text-center bg-gray-900 bg-opacity-50 shadow-sm">
-      <div className="relative z-50 max-w-xl px-6 m-auto mt-12 mb-12 text-center">
-        <Fade duration={1650}>
-          <h2 className="w-full font-serif text-2xl font-light leading-10 text-white md:text-center md:text-3xl">
-            Diseñar y desarrollar experiencias para todos los dispositivos y en
-            todas sus posibilidades.
-          </h2>
+      <div className="relative z-50 max-w-6xl px-6 mx-auto mt-12 mb-12 text-center">
+        
+        <Fade>
           <AwesomeButton
             action={() => {
               navigate(`/colaboraciones/`)
             }}
-            className="mt-5"
+            className="mb-3"
           >
             ver colaboraciones
           </AwesomeButton>
         </Fade>
+        <h2
+          className="w-full font-sans text-xl font-light leading-10 text-white md:text-center md:text-2xl"
+          style={{ opacity: ".6" }}
+        >
+          Diseñar y desarrollar experiencias para todos los dispositivos y en
+          todas sus posibilidades.
+        </h2>
       </div>
     </div>
   </Layout>
