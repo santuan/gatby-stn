@@ -11,21 +11,13 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode } from "react-icons/hi"
 import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
-import AnimatedCursor from "react-animated-cursor"
+
 import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   return (
     <>
       <div className="block min-h-screen">
-        <AnimatedCursor
-          innerSize={12}
-          outerSize={18}
-          color="255, 255, 255"
-          outerAlpha={0.1}
-          innerScale={0.7}
-          outerScale={5}
-        />
         <SimpleReactLightbox>
           <main className="px-0">{children}</main>
         </SimpleReactLightbox>

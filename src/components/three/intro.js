@@ -18,37 +18,30 @@ function Loader() {
     <Html center className="text-white">
       <div className="loading">
         <div className="loading-bar-container">
-          <div className="loading-bar" style={{width: `${progress}%`}}></div>
+          <div className="loading-bar" style={{ width: `${progress}%` }}></div>
         </div>
       </div>
     </Html>
   )
 }
 
-
-function Dolly() {
-  // This one makes the camera move in and out
-  useFrame(({ clock, camera }) => {
-    camera.position.Y = 5 + Math.sin(clock.getElapsedTime()) * 2
-  })
-  return null
-}
-
-const isBrowser = typeof window !== "undefined"
-
 const IntroThree = () => (
-  <div className="fixed inset-0 min-h-screen">
-    {isBrowser && (
-    <Canvas camera={{ fov: 75, position: [0, 0, 70] }} resize={{ polyfill: ResizeObserver }}>
+  <div className="fixed inset-0 min-h-screen cursor-move">
+    <Canvas
+      camera={{ fov: 75, position: [0, 0, 10] }}
+      resize={{ polyfill: ResizeObserver }}
+    >
       <Suspense fallback={<Loader />}>
-        <Stage  adjustCamera environment="night">
+        <Stage adjustCamera environment="night">
           <Cube />
           <Triangle />
-          <Sphere /> 
+          <Sphere />
         </Stage>
       </Suspense>
-      <Dolly />
-      <OrbitControls  />
+      <OrbitControls
+        autoRotate
+        autoRotateSpeed={1}
+      />
       <Stars
         radius={100} // Radius of the inner sphere (default=100)
         depth={50} // Depth of area where stars should fit (default=50)
@@ -58,7 +51,6 @@ const IntroThree = () => (
         fade // Faded dots (default=false)
       />
     </Canvas>
-    )}
   </div>
 )
 
