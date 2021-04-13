@@ -24,6 +24,10 @@ body {
   @apply bg-yellow-600;
 }
 
+canvas {
+  @apply w-screen h-screen !important;
+}
+
 
 
 .loading {

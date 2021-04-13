@@ -17,6 +17,143 @@ import "../styles/VideoReact.css"
 import "../styles/post.css"
 import Card from "../components/cardPost"
 
+const BlogPostTemplate = ({ data, pageContext, location }) => {
+  const post = data.contentfulBlog
+  const { article } = data.contentfulBlog
+  const { prev, next } = pageContext
+  return (
+    <Layout location={location}>
+      <Seo title={`${post.title}`} />
+      <div className="max-w-full m-auto">
+        <div className="bg-blue-900">
+          <Hero
+            heading={post.title}
+            date={post.createdAt}
+            slug={post.slug}
+            image={post.featuredImg.fluid}
+          />
+        </div>
+        <div className="relative z-50 w-full px-2 m-auto -mt-20 article" id={post.slug}>
+          <div className="relative flex items-baseline justify-between p-0 transform -translate-y-6">
+            <div className="relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase ">
+              {post.tags.map((tag, i) => [
+                <Link
+                  to={`/etiquetas/${kebabCase(tag)}/`}
+                  key={i}
+                  className="inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-indigo-500 rounded-full text-md hover:bg-indigo-600"
+                >
+                  {tag}
+                  {i < post.tags.length - 1 ? "" : ""}
+                </Link>,
+              ])}
+            </div>
+          </div>
+          <SRLWrapper options={options}>
+            <div className="max-w-6xl px-3 mx-auto font-sans prose md:prose-xl ">
+              {article && renderRichText(article, options)}
+            </div>
+          </SRLWrapper>
+        </div>
+        <div
+          className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 border-t-2 border-gray-600"
+          style={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <div className="max-w-xs duration-700">
+            {prev && (
+              <Link
+                to={`/blog/${kebabCase(prev.slug)}/`}
+                rel="prev"
+                className="block pr-6 text-base text-white"
+              >
+                <span className="block">←</span> {prev.title}
+              </Link>
+            )}
+          </div>
+
+          <div
+            style={{ justifySelf: "flex-end" }}
+            className="max-w-xs pl-6 text-right duration-700"
+          >
+            {next && (
+              <Link
+                to={`/blog/${kebabCase(next.slug)}/`}
+                rel="next"
+                className="block text-base text-white"
+              >
+                <span className="block">→</span>
+                {next.title}
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default BlogPostTemplate
+
+export const pageQuery = graphql`
+  query PostBySlug($slug: String!) {
+    contentfulBlog(slug: { eq: $slug }) {
+      slug
+      title
+      createdAt(formatString: "MMMM YYYY", locale: "es")
+      tags
+      article {
+        raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            title
+            file {
+              url
+              contentType
+            }
+          }
+          ... on ContentfulWorks {
+            contentful_id
+            __typename
+            title
+            webUrl
+            slug
+            logo {
+              file {
+                url
+              }
+            }
+          }
+          ... on ContentfulBlog {
+            contentful_id
+            __typename
+            title
+            slug
+            excerpt {
+              excerpt
+            }
+            featuredImg {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+      featuredImg {
+        fixed(width: 2000, height: 650) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
+        }
+        fluid(maxWidth: 2000) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
+
+
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 
 const Text = ({ children }) => <p className="px-2 text-white">{children}</p>
@@ -201,140 +338,3 @@ const options = {
     showThumbnails: true,
   },
 }
-
-const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.contentfulBlog
-  const { article } = data.contentfulBlog
-  const { prev, next } = pageContext
-  return (
-    <Layout location={location}>
-      <Seo title={`${post.title}`} />
-      <div className="max-w-full m-auto">
-        <div className="bg-blue-900">
-          <Hero
-            heading={post.title}
-            date={post.createdAt}
-            slug={post.slug}
-            image={post.featuredImg.fluid}
-          />
-        </div>
-
-        <div className="w-full px-2 m-auto -mt-20 article" id={post.slug}>
-          <div className="relative flex items-baseline justify-between p-0 transform -translate-y-6">
-            <div className="relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase ">
-              {post.tags.map((tag, i) => [
-                <Link
-                  to={`/etiquetas/${kebabCase(tag)}/`}
-                  key={i}
-                  className="inline-block px-3 py-1 mb-1 mr-2 font-semibold text-white bg-indigo-500 rounded-full text-md hover:bg-indigo-600"
-                >
-                  {tag}
-                  {i < post.tags.length - 1 ? "" : ""}
-                </Link>,
-              ])}
-            </div>
-          </div>
-          <SRLWrapper options={options}>
-            <div className="max-w-6xl px-3 mx-auto font-sans prose md:prose-xl ">
-              {article && renderRichText(article, options)}
-            </div>
-          </SRLWrapper>
-        </div>
-        <div
-          className="flex justify-between w-full px-6 py-6 mt-12 font-mono border-t-2 border-gray-600 "
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <div className="max-w-xs duration-700">
-            {prev && (
-              <Link
-                to={`/blog/${kebabCase(prev.slug)}/`}
-                rel="prev"
-                className="block pr-6 text-base text-white"
-              >
-                <span className="block">←</span> {prev.title}
-              </Link>
-            )}
-          </div>
-
-          <div
-            style={{ justifySelf: "flex-end" }}
-            className="max-w-xs pl-6 text-right duration-700"
-          >
-            {next && (
-              <Link
-                to={`/blog/${kebabCase(next.slug)}/`}
-                rel="next"
-                className="block text-base text-white"
-              >
-                <span className="block">→</span>
-                {next.title}
-              </Link>
-            )}
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
-}
-
-export default BlogPostTemplate
-
-export const pageQuery = graphql`
-  query PostBySlug($slug: String!) {
-    contentfulBlog(slug: { eq: $slug }) {
-      slug
-      title
-      createdAt(formatString: "MMMM YYYY", locale: "es")
-      tags
-      article {
-        raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            __typename
-            title
-            file {
-              url
-              contentType
-            }
-          }
-          ... on ContentfulWorks {
-            contentful_id
-            __typename
-            title
-            webUrl
-            slug
-            logo {
-              file {
-                url
-              }
-            }
-          }
-          ... on ContentfulBlog {
-            contentful_id
-            __typename
-            title
-            slug
-            excerpt {
-              excerpt
-            }
-            featuredImg {
-              file {
-                url
-              }
-            }
-          }
-        }
-      }
-      featuredImg {
-        fixed(width: 2000, height: 650) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
-        fluid(maxWidth: 2000) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`

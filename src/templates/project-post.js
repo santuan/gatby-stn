@@ -229,7 +229,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             {article && renderRichText(article, options)}
           </div>
         </SRLWrapper>
-        <div className="flex justify-between w-full px-3 py-6 mt-12 border-t-2 border-gray-600">
+        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 border-t-2 border-gray-600">
           <div className="max-w-xs duration-700">
             {prev && (
               <Link

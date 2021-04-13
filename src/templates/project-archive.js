@@ -17,7 +17,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="project" />
       </Helmet>
-      <div className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center">
+      <div className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
         <Fade bottom cascade duration={1200}>
           <h1 className="px-4 font-serif text-4xl font-bold text-left ">Colaboraciones</h1>
         </Fade>
@@ -59,16 +59,6 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fixed(
-              cropFocus: CENTER
-              quality: 80
-              toFormat: JPG
-              width: 420
-              height: 300
-            ) {
-              src
-              srcSet
-            }
             fluid(maxWidth: 1500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyContentfulFluid_withWebp

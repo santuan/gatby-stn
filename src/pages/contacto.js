@@ -40,7 +40,7 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className="contact" />
       </Helmet>
-      <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pattern text-">
+      <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-pattern ">
         <div className="relative z-50 flex flex-col justify-center w-full max-w-md px-0 py-4 mx-auto my-0">
           <a
             target="_blank"

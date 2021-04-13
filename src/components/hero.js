@@ -17,7 +17,7 @@ const Hero = (props) => (
     </div>
     <div className="overflow-hidden bg-gray-900">
       <Fade duration={200}>
-        <Img title={props.heading} alt={props.heading} fixed={props.image} className="object-cover w-full" style={{minHeight: "70vh"}} />
+        <Img title={props.heading} alt={props.heading} fixed={props.image} className="object-cover w-full opacity-30" style={{minHeight: "70vh"}} />
       </Fade>
     </div>
     <Wave/>
