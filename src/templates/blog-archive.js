@@ -16,7 +16,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="blog" />
       </Helmet>
-      <div className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-indigo-800 md:pb-64 md:px-6 md:items-center">
+      <div className="relative flex flex-col items-start justify-center w-full pt-32 pb-20 mb-12 text-center text-white bg-indigo-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
         <Fade cascade bottom duration={1200}>
           <h1 className="px-5 font-serif text-4xl font-bold text-white ">Blog</h1>
         </Fade>

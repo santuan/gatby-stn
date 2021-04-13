@@ -62,7 +62,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </SRLWrapper>
         </div>
-        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono text-2xl font-bold border-t-2 border-gray-600">
+        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono font-bold border-t-2 border-gray-600 md:text-2xl">
           <div className="max-w-xs duration-700">
             {prev && (
               <Link

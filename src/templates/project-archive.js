@@ -10,14 +10,13 @@ import { Helmet } from "react-helmet"
 
 const ProjectArchive = ({ data, pageContext, location }) => {
   const projects = data.allContentfulWorks.edges
-
   return (
     <Layout location={location}>
       <Seo title="Colaboraciones" />
       <Helmet>
         <body className="project" />
       </Helmet>
-      <div className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
+      <div className="relative flex flex-col items-start justify-center w-full pt-32 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
         <Fade bottom cascade duration={1200}>
           <h1 className="px-4 font-serif text-4xl font-bold text-left ">Colaboraciones</h1>
         </Fade>
@@ -29,7 +28,8 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Wave/>
       </div>
-      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 lg:grid-cols-3 max-w-7xl md:-mt-72">
+
+      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
         {projects.map(({ node }) => {
           return (
             <div key={node.slug} className="w-full overflow-hidde">

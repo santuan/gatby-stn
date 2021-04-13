@@ -22,12 +22,12 @@ const RecursosPage = () => (
         </Fade>
         <Fade bottom>
           <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">
-            Recursos Libres & Gratuitos
+            Colección de recursos gratuitos
           </h2>
         </Fade>
         <Fade bottom>
           <p className="max-w-lg mt-3 font-sans text-2xl text-center text-gray-100">
-            Repositorio interactivo de herramientas web.
+            Repositorio interactivo de herramientas libres.
           </p>
         </Fade>
         <Fade duration={1750} delay={250}>

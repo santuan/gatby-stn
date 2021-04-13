@@ -28,7 +28,7 @@ function Loader() {
 const IntroThree = () => (
   <div className="fixed inset-0 min-h-screen cursor-move">
     <Canvas
-      camera={{ fov: 75, position: [0, 0, 10] }}
+      camera={{ fov: 60, position: [0, 0, 0] }}
       resize={{ polyfill: ResizeObserver }}
     >
       <Suspense fallback={<Loader />}>
@@ -39,6 +39,8 @@ const IntroThree = () => (
         </Stage>
       </Suspense>
       <OrbitControls
+        maxPolarAngle={Math.PI / 1}
+        minPolarAngle={Math.PI / 2}
         autoRotate
         autoRotateSpeed={1}
       />
