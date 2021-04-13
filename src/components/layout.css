@@ -28,8 +28,6 @@ canvas {
   @apply w-screen h-screen !important;
 }
 
-
-
 .loading {
   position: absolute;
   top: 0;
@@ -44,8 +42,8 @@ canvas {
 
 .loading-bar-container {
   width: 600px;
-  height: 6px;
-  @apply bg-red-500;
+  height: 3px;
+  @apply bg-yellow-600;
 }
 
 .loading-bar {

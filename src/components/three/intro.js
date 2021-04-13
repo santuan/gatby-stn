@@ -18,7 +18,7 @@ function Loader() {
     <Html center className="text-white">
       <div className="loading">
         <div className="loading-bar-container">
-          <div className="loading-bar" style={{ width: `${progress}%` }}></div>
+          <div className="loading-bar" style={{ width: progress }}></div>
         </div>
       </div>
     </Html>
