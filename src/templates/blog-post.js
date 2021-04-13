@@ -6,6 +6,7 @@ import { kebabCase } from "lodash"
 import Hero from "../components/hero"
 import Seo from "../components/seo"
 //import FormatText from "../components/serializer"
+import { Helmet } from "react-helmet"
 import { SRLWrapper } from "simple-react-lightbox"
 import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
@@ -16,6 +17,7 @@ import "../styles/awesomeButton.css"
 import "../styles/VideoReact.css"
 import "../styles/post.css"
 import Card from "../components/cardPost"
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulBlog
@@ -23,6 +25,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { prev, next } = pageContext
   return (
     <Layout location={location}>
+      <Helmet>
+        <body className="project-post" />
+      </Helmet>
       <Seo title={`${post.title}`} />
       <div className="max-w-full m-auto">
         <div className="bg-blue-900">
@@ -33,7 +38,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             image={post.featuredImg.fluid}
           />
         </div>
-        <div className="relative z-50 w-full px-2 m-auto -mt-20 article" id={post.slug}>
+        <div
+          className="relative z-50 w-full px-2 m-auto -mt-20 article"
+          id={post.slug}
+        >
           <div className="relative flex items-baseline justify-between p-0 transform -translate-y-6">
             <div className="relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase ">
               {post.tags.map((tag, i) => [
@@ -49,23 +57,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </div>
           <SRLWrapper options={options}>
-            <div className="max-w-6xl px-3 mx-auto font-sans prose md:prose-xl ">
+            <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg md:prose-xl ">
               {article && renderRichText(article, options)}
             </div>
           </SRLWrapper>
         </div>
-        <div
-          className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 border-t-2 border-gray-600"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
+        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono text-2xl font-bold border-t-2 border-gray-600">
           <div className="max-w-xs duration-700">
             {prev && (
               <Link
                 to={`/blog/${kebabCase(prev.slug)}/`}
                 rel="prev"
-                className="block pr-6 text-base text-white"
+                className="flex justify-start pr-6 text-white duration-700 transform group hover:-translate-x-2"
               >
-                <span className="block">←</span> {prev.title}
+                <span className="block">
+                  <HiOutlineChevronLeft className="text-5xl duration-700 transform -translate-x-2 translate-y-1 group-hover:text-gray-500" />
+                </span>
+                {prev.title}
               </Link>
             )}
           </div>
@@ -78,10 +86,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <Link
                 to={`/blog/${kebabCase(next.slug)}/`}
                 rel="next"
-                className="block text-base text-white"
+                className="flex justify-end pl-6 text-white duration-700 transform group hover:translate-x-2"
               >
-                <span className="block">→</span>
                 {next.title}
+                <span className="block">
+                  <HiOutlineChevronRight className="text-5xl duration-700 transform translate-x-2 translate-y-1" />
+                </span>
               </Link>
             )}
           </div>
@@ -153,7 +163,6 @@ export const pageQuery = graphql`
   }
 `
 
-
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 
 const Text = ({ children }) => <p className="px-2 text-white">{children}</p>
@@ -180,11 +189,7 @@ const options = {
         if (node.data.target.file.contentType === "video/mp4") {
           return (
             <div className="max-w-6xl p-0 mx-auto my-6 mb-12 aspect-h-9 aspect-w-16">
-              <Player
-                src={node.data.target.file.url}
-                loop={true}
-                autoPlay
-              >
+              <Player src={node.data.target.file.url} loop={true} autoPlay>
                 <BigPlayButton position="center" />
               </Player>
             </div>
@@ -205,24 +210,19 @@ const options = {
       }
     },
 
-
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       if (!node.data || !node.data.target) {
         return <span className="hidden">Embedded asset is broken</span>
       } else {
         if (node.data.target.webUrl) {
           return (
-            <div className="flex flex-col-reverse items-center justify-between w-full max-w-3xl p-4 mx-auto mb-3 duration-700 ease-in-out transform border border-gray-900 rounded-md shadow-xl md:flex-row from-gray-900 via-gray-900 bg-gradient-to-br hover:-translate-x-2 hover:bg-gray-900">
+            <div className="flex flex-col-reverse items-center justify-between w-full max-w-3xl p-4 mx-auto mb-6 duration-700 ease-in-out transform border border-gray-900 rounded-md shadow-xl md:flex-row from-gray-900 via-gray-900 bg-gradient-to-br hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-900">
               <div className="relative z-10 flex flex-col text-white">
                 <Link
                   to={`/colaboraciones/${node.data.target.slug}`}
-                  className="relative z-10 text-white"
+                  className="relative z-10 font-serif text-center text-white"
                 >
-                  <h3 style={{ margin: "0" }}>
-                    {node.data.target.title}
-                  </h3>
-
-                  <span>Ver proyecto</span>
+                  <h3 style={{ margin: "0" }}>{node.data.target.title}</h3>
                 </Link>
               </div>
               <div className="">
@@ -255,19 +255,13 @@ const options = {
       } else {
         if (node.data.target.webUrl) {
           return (
-            <Link
-              to={`/colaboraciones/${node.data.target.slug}`}
-              className=""
-            >
+            <Link to={`/colaboraciones/${node.data.target.slug}`} className="">
               {node.data.target.title} - proyecto
             </Link>
           )
         } else {
           return (
-            <Link
-              to={`/blog/${node.data.target.slug}`}
-              className=""
-            >
+            <Link to={`/blog/${node.data.target.slug}`} className="">
               {node.data.target.title} - blog
             </Link>
           )

@@ -25,19 +25,29 @@ function Loader() {
   )
 }
 
+
+function Dolly() {
+  // This one makes the camera move in and out
+  useFrame(({ clock, camera }) => {
+    camera.position.Y = 5 + Math.sin(clock.getElapsedTime()) * 2
+  })
+  return null
+}
+
 const IntroThree = () => (
-  <div className="fixed inset-0 min-h-screen cursor-move">
-    <Canvas resize={{ polyfill: ResizeObserver }}>
+  <div className="fixed inset-0 min-h-screen">
+    <Canvas camera={{ fov: 75, position: [0, 0, 70] }} resize={{ polyfill: ResizeObserver }}>
       <Suspense fallback={<Loader />}>
-        <Stage   adjustCamera environment="night">
+        <Stage  adjustCamera environment="night">
           <Cube />
           <Triangle />
           <Sphere /> 
         </Stage>
       </Suspense>
-      <OrbitControls autoRotate autoRotateSpeed={1} />
+      <Dolly />
+      <OrbitControls  />
       <Stars
-        radius={200} // Radius of the inner sphere (default=100)
+        radius={100} // Radius of the inner sphere (default=100)
         depth={50} // Depth of area where stars should fit (default=50)
         count={5000} // Amount of stars (default=5000)
         factor={4} // Size factor (default=4)

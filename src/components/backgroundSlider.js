@@ -25,7 +25,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/4i5m0UMlY0mEC0dpJTGG2r/c1cb5205a7fe69a9f16e2a7da79d313b/brave_6MWMv6ZXaK.jpg?w=1920&h=948&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/4i5m0UMlY0mEC0dpJTGG2r/c1cb5205a7fe69a9f16e2a7da79d313b/brave_6MWMv6ZXaK.jpg?w=1920&h=948&q=80"
               />
             </div>
           </Fade>
@@ -36,7 +36,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/2eUYezIGT4m8SXNIkdcSkQ/5a5d953343ebf1a450fb39eb120b10de/image.png?w=2000&h=1126&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/2eUYezIGT4m8SXNIkdcSkQ/5a5d953343ebf1a450fb39eb120b10de/image.png?w=2000&h=1126&q=80"
               />
             </div>
           </Fade>
@@ -47,7 +47,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/2SXonYeyDbY0tRSQggn8EP/d5834bdc3e95886563205881e9239b7d/brave_aGc4ZshfSZ.jpg?w=1293&h=658&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/2SXonYeyDbY0tRSQggn8EP/d5834bdc3e95886563205881e9239b7d/brave_aGc4ZshfSZ.jpg?w=1293&h=658&q=80"
               />
             </div>
           </Fade>

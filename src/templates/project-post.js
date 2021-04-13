@@ -12,12 +12,131 @@ import Hero from "../components/heroProject"
 import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-
 import Fade from "react-reveal/Fade"
 import "../styles/awesomeButton.css"
 import "../styles/VideoReact.css"
 import "../styles/post.css"
 import Card from "../components/cardPost"
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi"
+
+const ProjectPostTemplate = ({ data, pageContext, location }) => {
+  const post = data.contentfulWorks
+  const { article } = data.contentfulWorks
+  const { prev, next } = pageContext
+  return (
+    <Layout location={location}>
+      <Seo title={`${post.title}`} />
+      <Helmet>
+        <body className="project-post" />
+      </Helmet>
+      <Hero image={post.backgroundImage.fluid} logo={post.logo.fixed} />
+      <div className="py-3 mx-auto ">
+        <div className="relative z-50 flex items-center justify-center mb-12 -mt-20 text-4xl md:-mt-24 hover:text-blue-400">
+          <p className="hidden text-white">{post.title}</p>
+          <AwesomeButton
+            action={() => {
+              navigate(`/colaboraciones/`)
+            }}
+            className="mt-5 mr-6"
+          >
+            <span className="hidden mr-2 md:inline-block">ver </span> trabajos
+          </AwesomeButton>
+          <AwesomeButton
+            href={post.webUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5"
+            type="secondary"
+          >
+            <span className="hidden mr-2 md:inline-block">ir a la </span> web{" "}
+            <GoLinkExternal className="inline-block ml-2" />
+          </AwesomeButton>
+        </div>
+        <SRLWrapper options={options}>
+          <div className="max-w-full px-3 font-sans prose prose-lg md:prose-xl ">
+            {article && renderRichText(article, options)}
+          </div>
+        </SRLWrapper>
+        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono text-2xl font-bold border-t-2 border-gray-600">
+          <div className="max-w-xs duration-700">
+            {prev && (
+              <Link
+                to={`/colaboraciones/${kebabCase(prev.slug)}/`}
+                rel="prev"
+                className="flex justify-start pr-6 text-white duration-700 transform group hover:-translate-x-2"
+              >
+                <span className="block">
+                  <HiOutlineChevronLeft className="text-5xl duration-700 transform -translate-x-2 translate-y-1 group-hover:text-gray-500" />
+                </span>
+                {prev.title}
+              </Link>
+            )}
+          </div>
+          <div
+            style={{ justifySelf: "flex-end" }}
+            className="max-w-xs pl-6 text-right duration-700"
+          >
+            {next && (
+              <Link
+                to={`/colaboraciones/${kebabCase(next.slug)}/`}
+                rel="next"
+                className="flex justify-end pl-6 text-white duration-700 transform group hover:translate-x-2"
+              >
+                {next.title}
+                <span className="block">
+                  <HiOutlineChevronRight className="text-5xl duration-700 transform translate-x-2 translate-y-1" />
+                </span>
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default ProjectPostTemplate
+
+export const pageQuery = graphql`
+  query WorkBySlug($slug: String!) {
+    contentfulWorks(slug: { eq: $slug }) {
+      id
+      slug
+      title
+      webUrl
+      article {
+        raw
+        references {
+          contentful_id
+          __typename
+          title
+          file {
+            url
+            contentType
+          }
+        }
+      }
+      logo {
+        fixed(width: 320, height: 170) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
+        }
+        fluid(maxWidth: 500) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+      }
+      backgroundImage {
+        fixed(width: 2000, height: 1000) {
+          ...GatsbyContentfulFixed_withWebp_noBase64
+        }
+        fluid(maxWidth: 2000) {
+          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
 
 const Bold = ({ children }) => <span className="font-bold">{children}</span>
 
@@ -190,117 +309,3 @@ const options = {
     showThumbnails: true,
   },
 }
-
-const ProjectPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.contentfulWorks
-  const { article } = data.contentfulWorks
-  const { prev, next } = pageContext
-  return (
-    <Layout location={location}>
-      <Seo title={`${post.title}`} />
-      <Helmet>
-        <body className="project-post" />
-      </Helmet>
-      <Hero image={post.backgroundImage.fluid} logo={post.logo.fixed} />
-      <div className="py-3 mx-auto ">
-        <div className="relative z-50 flex items-center justify-center mb-12 -mt-20 text-4xl md:-mt-24 hover:text-blue-400">
-          <p className="hidden text-white">{post.title}</p>
-          <AwesomeButton
-            action={() => {
-              navigate(`/colaboraciones/`)
-            }}
-            className="mt-5 mr-6"
-          >
-            <span className="hidden mr-2 md:inline-block">ver </span> trabajos
-          </AwesomeButton>
-          <AwesomeButton
-            href={post.webUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5"
-            type="secondary"
-          >
-            <span className="hidden mr-2 md:inline-block">ir a la </span> web{" "}
-            <GoLinkExternal className="inline-block ml-2" />
-          </AwesomeButton>
-        </div>
-        <SRLWrapper options={options}>
-          <div className="max-w-full px-3 font-sans prose md:prose-xl ">
-            {article && renderRichText(article, options)}
-          </div>
-        </SRLWrapper>
-        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 border-t-2 border-gray-600">
-          <div className="max-w-xs duration-700">
-            {prev && (
-              <Link
-                to={`/colaboraciones/${kebabCase(prev.slug)}/`}
-                rel="prev"
-                className="block pr-6 font-mono text-xl text-white"
-              >
-                <span className="block">←</span> {prev.title}
-              </Link>
-            )}
-          </div>
-          <div
-            style={{ justifySelf: "flex-end" }}
-            className="max-w-xs pl-6 text-right duration-700"
-          >
-            {next && (
-              <Link
-                to={`/colaboraciones/${kebabCase(next.slug)}/`}
-                rel="next"
-                className="block font-mono text-xl text-white"
-              >
-                <span className="block">→</span>
-                {next.title}
-              </Link>
-            )}
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
-}
-
-export default ProjectPostTemplate
-
-export const pageQuery = graphql`
-  query WorkBySlug($slug: String!) {
-    contentfulWorks(slug: { eq: $slug }) {
-      id
-      slug
-      title
-      webUrl
-      article {
-        raw
-        references {
-          contentful_id
-          __typename
-          title
-          file {
-            url
-            contentType
-          }
-        }
-      }
-      logo {
-        fixed(width: 320, height: 170) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
-        fluid(maxWidth: 500) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
-      }
-      backgroundImage {
-        fixed(width: 2000, height: 1000) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
-        fluid(maxWidth: 2000) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`

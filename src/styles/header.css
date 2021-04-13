@@ -19,10 +19,13 @@ body.project-post .headroom {
 }
 
 body.project-post .headroom.headroom--pinned {
-  @apply bg-gray-800 bg-opacity-40;
-  backdrop-filter: blur(25px);
+  @apply bg-gray-800 bg-opacity-90;
+  backdrop-filter: blur(5px);
+}
 
-
+body.project-post .headroom.headroom--unpinned {
+  @apply bg-gray-800 bg-opacity-70;
+  backdrop-filter: blur(15px);
 }
 
 .headroom a:hover span {
@@ -41,29 +44,26 @@ body.project-post .headroom.headroom--pinned {
   position: fixed !important;
   transition: all 800ms ease-in-out;
 }
-.headroom--unfixed {
-  position: relative;
-  transform: translateY(0);
-}
+
 .headroom--scrolled {
-  backdrop-filter: blur(25px);
 
 }
+
 .headroom--unpinned {
   position: fixed;
-  backdrop-filter: blur(25px);
-  @apply bg-gray-700 bg-opacity-80;
   transform: translateY(0);
 }
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-indigo-800 bg-opacity-80 backdrop-blur;
+  @apply bg-indigo-800 bg-opacity-80 ;
+  backdrop-filter: blur(5px);
 }
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
-  @apply bg-gray-900 bg-opacity-30 backdrop-blur;
+  @apply bg-gray-900 bg-opacity-50 ;
+  backdrop-filter: blur(5px);
 }
 
 

@@ -24,8 +24,8 @@ const IndexPage = () => (
           </AwesomeButton>
         </Fade>
         <h2
-          className="w-full font-sans text-xl font-light leading-10 text-white md:text-center md:text-2xl"
-          style={{ opacity: ".6" }}
+          className="w-full font-sans text-base font-light leading-10 text-white md:text-center md:text-xl"
+          style={{ opacity: ".8" }}
         >
           Diseñar y desarrollar experiencias para todos los dispositivos y en
           todas sus posibilidades.

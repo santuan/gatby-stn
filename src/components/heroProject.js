@@ -15,7 +15,7 @@ const HeroProject = (props) => (
         />
       </Fade>
     </div>
-    <div className="overflow-hidden opacity-70" style={{ maxHeight: "60vh" }}>
+    <div className="overflow-hidden opacity-20" style={{ maxHeight: "60vh" }}>
       <Fade duration={1200}>
         <Img
           title={props.heading}
