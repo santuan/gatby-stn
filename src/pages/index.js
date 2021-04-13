@@ -13,7 +13,6 @@ const IndexPage = () => (
     <IntroThree />
     <div className="flex flex-col items-center justify-end min-h-screen text-center bg-gray-900 bg-opacity-50 shadow-sm">
       <div className="relative z-50 max-w-6xl px-6 mx-auto mt-12 mb-12 text-center">
-        
         <Fade>
           <AwesomeButton
             action={() => {

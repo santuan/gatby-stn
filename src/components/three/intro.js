@@ -29,7 +29,7 @@ const IntroThree = () => (
   <div className="fixed inset-0 min-h-screen cursor-move">
     <Canvas resize={{ polyfill: ResizeObserver }}>
       <Suspense fallback={<Loader />}>
-        <Stage contactShadow shadows adjustCamera environment="night">
+        <Stage   adjustCamera environment="night">
           <Cube />
           <Triangle />
           <Sphere /> 
