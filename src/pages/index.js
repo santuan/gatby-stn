@@ -5,7 +5,6 @@ import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "../styles/bgPattern.css"
-import IntroThree from "../components/three/sky"
 
 const IndexPage = () => (
   <Layout>
@@ -16,7 +15,7 @@ const IndexPage = () => (
           className="w-full font-serif text-white md:leading-10 md:text-center md:text-3xl"
           style={{ opacity: ".8" }}
         >
-          Desarrollo y diseño páginas web usando software libre.
+          Desarrollo y diseño páginas web.
         </h2>
         <Fade>
           <div className="hidden sm:block">

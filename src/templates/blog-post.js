@@ -12,6 +12,7 @@ import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
+
 import Fade from "react-reveal/Fade"
 import "../styles/awesomeButton.css"
 import "../styles/VideoReact.css"

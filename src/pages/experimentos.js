@@ -11,6 +11,9 @@ const ExperimentsHomePage = () => (
       <body className="fullpage" />
     </Helmet>
     <Seo title="Inicio" />
+    <div className="fixed bottom-0 left-0 right-0 z-50 my-3 font-mono text-center text-white animate-pulse">
+      En progreso
+    </div>
     <IntroThree />
   </Layout>
 )

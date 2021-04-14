@@ -1,5 +1,5 @@
-import React, { useRef, Suspense, useState } from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
+import React, { Suspense } from "react"
+import { Canvas } from "@react-three/fiber"
 import {
   Stars,
   OrbitControls,
@@ -19,7 +19,6 @@ function Loader() {
       <div className="loading">
         <div className="loading-bar-container">
           <div className="loading-bar" style={{ width: progress }}></div>
-          
         </div>
       </div>
     </Html>
@@ -29,7 +28,7 @@ function Loader() {
 const IntroThree = () => (
   <div className="fixed inset-0 min-h-screen bg-black cursor-move">
     <Canvas
-      camera={{ fov: 30, position: [-5, -5, -25] }}
+      camera={{ fov: 50, position: [-5, -5, -25] }}
       resize={{ polyfill: ResizeObserver }}
     >
       <Suspense fallback={<Loader />}>
@@ -39,8 +38,7 @@ const IntroThree = () => (
           <Sphere />
         </Stage>
       </Suspense>
-      <OrbitControls
-      />
+      <OrbitControls />
       <Stars
         radius={100} // Radius of the inner sphere (default=100)
         depth={50} // Depth of area where stars should fit (default=50)

@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const CardProject = ({ card }) => (
-  <div className="relative flex items-center justify-center w-full h-64 m-auto overflow-hidden duration-700 transform bg-gray-900 rounded shadow-lg group hover:shadow-xl hover:translate-y-1">
+  <div className="relative flex items-center justify-center w-full h-64 m-auto overflow-hidden duration-700 transform bg-gray-900 rounded shadow-lg group hover:shadow-xl hover:-translate-y-2">
     <Link
       to={`/colaboraciones/${card.slug}`}
       className="flex items-center justify-center h-32 md:h-56"

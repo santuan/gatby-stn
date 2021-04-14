@@ -24,7 +24,7 @@ const Header = () => (
             className="relative font-mono text-lg font-bold text-white uppercase group hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
-            <span>3D</span>
+            <span>LAB</span>
             <span class="absolute left-0 top-0  -translate-x-5 transform flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full group-hover:bg-yellow-400 duration-700 bg-white opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-white group-hover:bg-yellow-400 duration-700"></span>

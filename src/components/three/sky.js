@@ -9,9 +9,9 @@ const ThreeSky = () => (
       <OrbitControls adjustCamera autoRotate autoRotateSpeed={1} />
       <Stars
         radius={50}
-        depth={5}
-        count={5000}
-        factor={1}
+        depth={50}
+        count={800}
+        factor={4}
         saturation={1}
         fade
       />
