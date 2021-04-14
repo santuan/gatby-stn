@@ -58,7 +58,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/61T36mBl14fnqAUeQrQ3l3/55db659ec8c364be2de9b69af886f5fd/photo-1523053155959-8de8d942050c?w=1000&h=667&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/61T36mBl14fnqAUeQrQ3l3/55db659ec8c364be2de9b69af886f5fd/photo-1523053155959-8de8d942050c?w=1000&h=667&q=80"
               />
             </div>
           </Fade>
@@ -69,7 +69,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/3N22NTN4bshQnnGnk5xNXn/315b3e8fd984b7ea2df459c0865467cd/color-hunt-palettes-og.png?w=1200&h=628&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/3N22NTN4bshQnnGnk5xNXn/315b3e8fd984b7ea2df459c0865467cd/color-hunt-palettes-og.png?w=1200&h=628&q=80"
               />
             </div>
           </Fade>
@@ -80,7 +80,7 @@ export default function BackgroundSlider(props) {
                 alt=""
                 width="1800"
                 height="800"
-                src="https://images.ctfassets.net/hamax8g2qtd6/2x2Vv1AcALPyhgVVi8ktkY/cd8e7a04b9316eea68f525a979f7592b/wdl-575-md.193f8e72b24c.jpg?w=1920&h=640&q=50&fm=webp"
+                src="https://images.ctfassets.net/hamax8g2qtd6/2x2Vv1AcALPyhgVVi8ktkY/cd8e7a04b9316eea68f525a979f7592b/wdl-575-md.193f8e72b24c.jpg?w=1920&h=640&q=80"
               />
             </div>
           </Fade>

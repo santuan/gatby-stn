@@ -18,7 +18,7 @@ const RecursosPage = () => (
     <div className="z-20 flex flex-col items-center justify-center w-full min-h-screen text-center">
       <div className="relative z-50 flex flex-col items-center justify-center w-full px-0 py-4 m-auto my-0">
         <Fade duration={1750} delay={250}>
-          <SVGLogo className="w-32 duration-1000 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
+          <SVGLogo className="w-32 duration-700 ease-in-out transform -rotate-90 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
         <Fade bottom>
           <h2 className="mt-3 font-serif text-4xl font-bold text-center text-yellow-400">

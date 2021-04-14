@@ -29,7 +29,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         <Wave/>
       </div>
 
-      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
+      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-24 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
         {projects.map(({ node }) => {
           return (
             <div key={node.slug} className="w-full overflow-hidde">

@@ -49,7 +49,7 @@ export default function BackgroundSlider() {
             href="https://github.com/santuan/gatby-stn"
           >
             <Fade duration={1750} delay={250}>
-              <AiFillGithub className="text-6xl text-white transition-all duration-300 group-hover:text-yellow-500" />
+              <AiFillGithub className="text-6xl text-white transition-all duration-700 group-hover:text-yellow-500" />
             </Fade>
             <Fade bottom duration={2000} delay={200}>
               <span className="block mb-4 font-mono text-base text-gray-100">

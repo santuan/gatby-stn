@@ -19,6 +19,7 @@ function Loader() {
       <div className="loading">
         <div className="loading-bar-container">
           <div className="loading-bar" style={{ width: progress }}></div>
+          
         </div>
       </div>
     </Html>
@@ -28,19 +29,17 @@ function Loader() {
 const IntroThree = () => (
   <div className="fixed inset-0 min-h-screen cursor-move">
     <Canvas
-      camera={{ fov: 60, position: [0, 0, 0] }}
+      camera={{ fov: 30, position: [-5, -5, -25] }}
       resize={{ polyfill: ResizeObserver }}
     >
       <Suspense fallback={<Loader />}>
-        <Stage adjustCamera environment="night">
+        <Stage preset="soft" environment="night">
           <Cube />
           <Triangle />
           <Sphere />
         </Stage>
       </Suspense>
       <OrbitControls
-        maxPolarAngle={Math.PI / 1}
-        minPolarAngle={Math.PI / 2}
         autoRotate
         autoRotateSpeed={1}
       />

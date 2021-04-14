@@ -129,7 +129,7 @@ export const pageQuery = graphql`
         fixed(width: 2000, height: 1000) {
           ...GatsbyContentfulFixed_withWebp_noBase64
         }
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 2300) {
           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
           ...GatsbyContentfulFluid_withWebp_noBase64
         }

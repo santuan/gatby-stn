@@ -21,7 +21,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply bg-yellow-600;
+  @apply bg-yellow-300;
 }
 
 canvas {
@@ -57,4 +57,12 @@ canvas {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+body.fullpage footer {
+  @apply hidden;
+}
+
+body.fullpage .inner-wrapper{
+  @apply max-w-full ease-in-out !important;  
 }
