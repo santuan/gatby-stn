@@ -27,21 +27,19 @@ function Loader() {
 }
 
 const IntroThree = () => (
-  <div className="fixed inset-0 min-h-screen cursor-move">
+  <div className="fixed inset-0 min-h-screen bg-black cursor-move">
     <Canvas
       camera={{ fov: 30, position: [-5, -5, -25] }}
       resize={{ polyfill: ResizeObserver }}
     >
       <Suspense fallback={<Loader />}>
-        <Stage preset="soft" environment="night">
+        <Stage preset="soft" environment="forest">
           <Cube />
           <Triangle />
           <Sphere />
         </Stage>
       </Suspense>
       <OrbitControls
-        autoRotate
-        autoRotateSpeed={1}
       />
       <Stars
         radius={100} // Radius of the inner sphere (default=100)

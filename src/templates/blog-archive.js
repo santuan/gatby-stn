@@ -22,7 +22,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="max-w-3xl px-5 my-3 font-sans text-2xl text-left text-indigo-200 md:text-center">
-            Traducciones, recursos y mas allá.
+            Traducciones, recursos y más&hellip;
           </p>
         </Fade>
         <Wave/>

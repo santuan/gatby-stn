@@ -12,19 +12,13 @@ const ProjectArchive = ({ data, pageContext, location }) => {
   const projects = data.allContentfulWorks.edges
   return (
     <Layout location={location}>
-      <Seo title="Colaboraciones" />
+      <Seo title="Proyectos" />
       <Helmet>
         <body className="project" />
       </Helmet>
       <div className="relative flex flex-col items-start justify-center w-full pt-32 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
         <Fade bottom cascade duration={1200}>
-          <h1 className="px-4 font-serif text-4xl font-bold text-left ">Colaboraciones</h1>
-        </Fade>
-        <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-2xl px-4 my-3 font-sans text-2xl text-left text-red-200 md:text-center">
-          La creatividad más creativa, valga la redundante redundancia, es
-            impulsar la creatividad de los demás.
-          </p>
+          <h1 className="px-4 font-serif text-2xl font-bold text-left md:text-6xl ">Colaboraciones</h1>
         </Fade>
         <Wave/>
       </div>
@@ -50,7 +44,7 @@ export default ProjectArchive
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulWorks(
-      sort: { fields: [updatedAt], order: DESC }
+      sort: { fields: [createdAt], order: DESC }
       limit: $limit
       skip: $skip
     ) {
@@ -64,6 +58,7 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_withWebp
             }
           }
+          createdAt
           updatedAt
           featuredImg {
             fixed(width: 500, height: 500) {

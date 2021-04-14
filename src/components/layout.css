@@ -63,6 +63,13 @@ body.fullpage footer {
   @apply hidden;
 }
 
+
+
+body.fullpage .logo {
+  @apply -translate-x-12;
+}
+
+
 body.fullpage .inner-wrapper{
-  @apply max-w-full ease-in-out !important;  
+  @apply max-w-full ease-in-out py-0 !important;  
 }
