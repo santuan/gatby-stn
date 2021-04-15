@@ -8,9 +8,9 @@ const routes = [
     ariaLabel: "Santuan - Volver al inicio",
   },
   {
-    title: "Lab",
-    slug: "/experimentos/",
-    ariaLabel: "Ver experimentos",
+    title: "Blog",
+    slug: "/blog/",
+    ariaLabel: "Ver las entradas del blog",
   },
   {
     title: "Proyectos",
@@ -18,14 +18,14 @@ const routes = [
     ariaLabel: "Ver las colaboraciones",
   },
   {
-    title: "Blog",
-    slug: "/blog/",
-    ariaLabel: "Ver las entradas del blog",
-  },
-  {
     title: "Recursos",
     slug: "/recursos/",
     ariaLabel: "Ver repositorio y codigos en Github",
+  },
+  {
+    title: "Lab",
+    slug: "/lab/",
+    ariaLabel: "Ver laboratorio",
   },
   {
     title: "Contacto",

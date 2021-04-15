@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  //mode: 'jit',
+  mode: 'jit',
   purge: [
     './src/**/*.js',
     './src/**/*.jsx',

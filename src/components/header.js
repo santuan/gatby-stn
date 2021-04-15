@@ -19,17 +19,7 @@ const Header = () => (
       </div>
       <div className="hidden w-full text-right md:block">
         <nav className="relative flex items-center justify-end md:space-x-8">
-          <Link
-            to="/experimentos/"
-            className="relative font-mono text-lg font-bold text-white uppercase group hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>LAB</span>
-            <span class="absolute left-0 top-0  -translate-x-5 transform flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full group-hover:bg-yellow-400 duration-700 bg-white opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-white group-hover:bg-yellow-400 duration-700"></span>
-            </span>
-          </Link>
+
           <Link
             to="/blog/"
             className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
@@ -44,13 +34,23 @@ const Header = () => (
           >
             <span>Proyectos</span>
           </Link>
-          
           <Link
             to="/recursos/"
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
             <span>Recursos</span>
+          </Link>
+          <Link
+            to="/lab/"
+            className="relative font-mono text-lg font-bold text-white uppercase group hover:opacity-100 opacity-80"
+            activeClassName="opacity-100"
+          >
+            <span>LAB</span>
+            {/* <span className="absolute flex w-3 h-3 ml-1 -top-3 left-2">
+              <span className="absolute inline-flex w-full h-full duration-700 bg-yellow-500 rounded-full opacity-75 animate-ping group-hover:bg-yellow-400"></span>
+              <span className="relative inline-flex w-3 h-3 duration-700 bg-yellow-500 rounded-full group-hover:bg-yellow-400"></span>
+            </span> */}
           </Link>
           <Link
             to="/contacto/"

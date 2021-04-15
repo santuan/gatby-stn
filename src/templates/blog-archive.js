@@ -16,25 +16,28 @@ const BlogArchive = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="blog" />
       </Helmet>
-      <div className="relative flex flex-col items-start justify-center w-full pt-32 pb-20 mb-12 text-center text-white bg-indigo-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
+      <div
+        className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-indigo-800 md:pb-64 md:pt-32 md:px-6 md:items-center"
+        style={{ minHeight: "60vh" }}
+      >
         <Fade cascade bottom duration={1200}>
-          <h1 className="px-5 font-serif text-4xl font-bold text-white ">Blog</h1>
+          <h1 className="px-5 font-serif text-4xl font-bold text-white ">
+            Blog
+          </h1>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="max-w-3xl px-5 my-3 font-sans text-2xl text-left text-indigo-200 md:text-center">
             Traducciones, recursos y más&hellip;
           </p>
         </Fade>
-        <Wave/>
+        <Wave />
       </div>
-      <div className="grid max-w-6xl gap-4 px-2 py-6 mx-auto -mt-40 lg:grid-cols-2 md:-mt-64">
+      <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-40 gap-9 lg:grid-cols-2 md:-mt-64">
         {posts.map(({ node }) => {
           return (
-            <div key={node.slug} className="px-3 my-3 duration-700 transform hover:-translate-y-3">
-              <Fade duration={1500}>
-                <Card card={node} />
-              </Fade>
-            </div>
+            <Fade duration={1500}>
+              <Card card={node} key={node.slug} />
+            </Fade>
           )
         })}
       </div>

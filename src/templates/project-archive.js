@@ -16,14 +16,14 @@ const ProjectArchive = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="project" />
       </Helmet>
-      <div className="relative flex flex-col items-start justify-center w-full pt-32 pb-20 mb-12 text-center text-white bg-red-800 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
+      <div className="relative flex flex-col items-start justify-center w-full pt-12 pb-24 mb-12 text-center text-white bg-red-800 md:pt-32 md:pb-64 md:px-6 md:items-center" style={{ minHeight: "70vh" }}>
         <Fade bottom cascade duration={1200}>
-          <h1 className="px-4 font-serif text-2xl font-bold text-left md:text-6xl ">Colaboraciones</h1>
+          <h1 className="px-4 font-serif text-4xl font-bold text-left md:text-6xl ">Colaboraciones</h1>
         </Fade>
         <Wave/>
       </div>
 
-      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-24 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
+      <div className="grid gap-6 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
         {projects.map(({ node }) => {
           return (
             <div key={node.slug} className="w-full overflow-hidde">
