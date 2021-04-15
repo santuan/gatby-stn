@@ -1,23 +1,26 @@
 import React, { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
-import {
-  OrbitControls,
-  Html,
-  useProgress,
-} from "@react-three/drei"
+import { OrbitControls,  useProgress } from "@react-three/drei"
+import { a, useTransition } from "react-spring"
 import Stn from "./Stn"
 import { ResizeObserver } from "@juggle/resize-observer"
 
 function Loader() {
-  const { progress } = useProgress()
-  return (
-    <Html center className="text-white">
-      <div className="loading">
-        <div className="loading-bar-container">
-          <div className="loading-bar" style={{ width: progress }}></div>
-        </div>
-      </div>
-    </Html>
+  const { active, progress } = useProgress()
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  })
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className="loading" style={{ opacity }}>
+          <div className="loading-bar-container">
+            <a.div className="loading-bar" style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
   )
 }
 
@@ -42,6 +45,7 @@ const IntroThree = () => (
         maxDistance={20}
       />
     </Canvas>
+    <Loader />
   </div>
 )
 
