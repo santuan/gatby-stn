@@ -67,7 +67,7 @@ export default function BackgroundSlider() {
           </a>
           <button
             onClick={() => {
-              copyToClipboard("santuan.bot@gmail.com")
+              copyToClipboard("santuan.web@gmail.com")
               setIsCopied(true)
               setTimeout(() => setIsCopied(false), 3000)
             }}
@@ -81,7 +81,7 @@ export default function BackgroundSlider() {
             <div className="relative overflow-hidden">
             <Fade bottom   duration={700} delay={200}>
               <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
-                santuan.bot@gmail.com
+                santuan.web@gmail.com
               </span>
             </Fade>
             </div>
