@@ -25,7 +25,10 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
   const { prev, next } = pageContext
   return (
     <Layout location={location}>
-      <Seo title={`${post.title}`} />
+      <Seo
+        title={`${post.title}`}
+        image={`${post.backgroundImage.file.url}`}
+      />
       <Helmet>
         <body className="project-post" />
       </Helmet>
@@ -128,6 +131,9 @@ export const pageQuery = graphql`
       backgroundImage {
         fixed(width: 2000, height: 1000) {
           ...GatsbyContentfulFixed_withWebp_noBase64
+        }
+        file {
+          url
         }
         fluid(maxWidth: 2300) {
           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.

@@ -12,7 +12,6 @@ import { Player, BigPlayButton } from "video-react"
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
-
 import Fade from "react-reveal/Fade"
 import "../styles/awesomeButton.css"
 import "../styles/VideoReact.css"
@@ -29,7 +28,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="project-post" />
       </Helmet>
-      <Seo title={`${post.title}`} />
+      <Seo
+        title={`${post.title}`}
+        description={`${post.excerpt.excerpt}`}
+        image={`${post.featuredImg.file.url}`}
+      />
       <div className="max-w-full m-auto">
         <div className="bg-blue-900">
           <Hero
@@ -111,6 +114,9 @@ export const pageQuery = graphql`
       title
       createdAt(formatString: "MMMM YYYY", locale: "es")
       tags
+      excerpt {
+        excerpt
+      }
       article {
         raw
         references {
@@ -154,6 +160,9 @@ export const pageQuery = graphql`
       featuredImg {
         fixed(width: 2000, height: 650) {
           ...GatsbyContentfulFixed_withWebp_noBase64
+        }
+        file {
+          url
         }
         fluid(maxWidth: 2000) {
           # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.

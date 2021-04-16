@@ -20,7 +20,7 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
+        image: `${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
       }
       return (
@@ -42,7 +42,11 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
             {seo.description && (
               <meta property="og:description" content={seo.description} />
             )}
-            {seo.image && <meta property="og:image" content={seo.image} />}
+            {seo.image ? (
+              <meta property="og:image" content={`${seo.image}`} />
+            ) : (
+              <meta property="og:image" content={`${siteUrl}/${seo.image}`} />
+            )}
             <meta name="twitter:card" content="summary_large_image" />
             {twitterUsername && (
               <meta name="twitter:creator" content={twitterUsername} />
@@ -51,7 +55,11 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
             {seo.description && (
               <meta name="twitter:description" content={seo.description} />
             )}
-            {seo.image && <meta name="twitter:image" content={seo.image} />}
+            {seo.image ? (
+              <meta name="twitter:image" content={`${seo.image}`} />
+            ) : (
+              <meta name="twitter:image" content={`${siteUrl}/${seo.image}`} />
+            )}
           </Helmet>
         </>
       )
