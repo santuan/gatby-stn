@@ -25,7 +25,7 @@ function Loader() {
 }
 
 const IntroThree = () => (
-  <div className="fixed inset-0 min-h-screen bg-gray-900 cursor-move">
+  <div className="fixed inset-0 min-h-screen bg-gray-900">
     <Canvas
       camera={{ fov: 70, position: [5, 5, 0] }}
       resize={{ polyfill: ResizeObserver }}

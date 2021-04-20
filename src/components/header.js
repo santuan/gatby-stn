@@ -28,13 +28,6 @@ const Header = () => (
             <span>Blog</span>
           </Link>
           <Link
-            to="/colaboraciones/"
-            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>Proyectos</span>
-          </Link>
-          <Link
             to="/recursos/"
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
@@ -51,6 +44,13 @@ const Header = () => (
               <span className="absolute inline-flex w-full h-full duration-700 bg-yellow-500 rounded-full opacity-75 animate-ping group-hover:bg-yellow-400"></span>
               <span className="relative inline-flex w-3 h-3 duration-700 bg-yellow-500 rounded-full group-hover:bg-yellow-400"></span>
             </span> */}
+          </Link>
+          <Link
+            to="/colaboraciones/"
+            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
+            activeClassName="opacity-100"
+          >
+            <span>Colaboraciones</span>
           </Link>
           <Link
             to="/contacto/"
