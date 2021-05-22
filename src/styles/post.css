@@ -2,7 +2,7 @@
   @apply text-center duration-700 opacity-50 hover:opacity-80 ;
 }
 .prose .post-image img {
-  @apply w-full mx-0 my-2 shadow-xl;
+  @apply mx-auto my-2 shadow-xl;
 }
 
 .prose h1,
@@ -12,7 +12,7 @@
 .prose h5,
 .prose h6
  {
-  @apply max-w-3xl mx-auto text-white;
+  @apply max-w-3xl px-2 mx-auto text-white;
 }
 
 .prose a {

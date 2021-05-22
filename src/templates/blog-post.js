@@ -207,9 +207,9 @@ const options = {
         } else {
           return (
             <div>
-              <div className="relative overflow-hidden rounded-md cursor-pointer post-image">
+              <div className="relative flex items-center justify-center overflow-hidden rounded-md cursor-pointer post-image">
                 <img
-                  className="w-full mx-auto"
+                  className="w-auto mx-auto"
                   alt={node.data.target.title}
                   src={node.data.target.file.url}
                 />
@@ -319,7 +319,7 @@ const options = {
     slideAnimationType: "fade",
     slideSpringValues: [300, 200],
     autoplaySpeed: 4000,
-    disablePanzoom: false,
+    disablePanzoom: true,
     hideControlsAfter: true,
   },
   translations: {
