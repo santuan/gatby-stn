@@ -23,11 +23,6 @@ const routes = [
     ariaLabel: "Ver repositorio y codigos en Github",
   },
   {
-    title: "Lab",
-    slug: "/lab/",
-    ariaLabel: "Ver laboratorio",
-  },
-  {
     title: "Contacto",
     slug: "/contacto/",
     ariaLabel: "Ver como contactar",
