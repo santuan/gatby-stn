@@ -28,18 +28,18 @@ const Header = () => (
             <span>Blog</span>
           </Link>
           <Link
+            to="/colaboraciones/"
+            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
+            activeClassName="opacity-100"
+          >
+            <span>Proyectos</span>
+          </Link>
+          <Link
             to="/recursos/"
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
             <span>Recursos</span>
-          </Link>
-          <Link
-            to="/colaboraciones/"
-            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>Colaboraciones</span>
           </Link>
           <Link
             to="/contacto/"

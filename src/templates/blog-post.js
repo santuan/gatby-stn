@@ -39,6 +39,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             heading={post.title}
             date={post.createdAt}
             slug={post.slug}
+            readtime={post.readTime}
             image={post.featuredImg.fluid}
           />
         </div>
@@ -112,6 +113,7 @@ export const pageQuery = graphql`
     contentfulBlog(slug: { eq: $slug }) {
       slug
       title
+      readTime
       createdAt(formatString: "MMMM YYYY", locale: "es")
       tags
       excerpt {

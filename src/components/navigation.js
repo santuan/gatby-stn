@@ -13,14 +13,14 @@ const routes = [
     ariaLabel: "Ver las entradas del blog",
   },
   {
-    title: "Proyectos",
-    slug: "/colaboraciones/",
-    ariaLabel: "Ver las colaboraciones",
-  },
-  {
     title: "Recursos",
     slug: "/recursos/",
-    ariaLabel: "Ver repositorio y codigos en Github",
+    ariaLabel: "Ver recursos cooperativos",
+  },
+  {
+    title: "Proyectos",
+    slug: "/colaboraciones/",
+    ariaLabel: "Ver los proyectos",
   },
   {
     title: "Contacto",
