@@ -62,7 +62,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </div>
           <SRLWrapper options={options}>
-            <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg md:prose-xl ">
+            <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg lg:prose-2xl ">
               {article && renderRichText(article, options)}
             </div>
           </SRLWrapper>
