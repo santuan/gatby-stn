@@ -26,14 +26,14 @@ const BlogArchive = ({ data, pageContext, location }) => {
           </h1>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="max-w-3xl px-5 my-3 font-sans text-2xl text-left text-indigo-200 md:text-center">
-            Articulos en ingles pasados al español. <br/>
-            Historias y recursos relacionados col el diseño y la programación&hellip;
+          <p className="px-5 my-3 font-sans text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
+            Articulos en ingles pasados al español. 
+            Historias y recursos relacionados al mundo del diseño y la programación&hellip;
           </p>
         </Fade>
         <Wave />
       </div>
-      <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-40 gap-9 lg:grid-cols-2 md:-mt-64">
+      <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-32 gap-9 lg:grid-cols-2 md:-mt-64">
         {posts.map(({ node }) => {
           return (
             <Fade duration={1500}>
