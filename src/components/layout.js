@@ -12,8 +12,6 @@ import { HiCode } from "react-icons/hi"
 import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
 
-import { Link } from "gatsby"
-
 const Layout = ({ children }) => {
   return (
     <>
@@ -24,12 +22,17 @@ const Layout = ({ children }) => {
         <footer className="relative z-50 py-12 font-sans text-center text-white bg-gray-900">
           STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
           Contentful + Netlify{" "}
-          <Link to="/404/" className="mt-2 font-mono opacity-75">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/santuan/gatby-stn"
+            className="mt-2 font-mono opacity-90 hover:opacity-50"
+          >
             <span className="block mx-1 mb-2">Hecho con</span>
             <HiCode className="inline-block mx-1 mb-1 text-lg text-white" />
             <span className="mx-1">&</span>
             <AiOutlineHeart className="inline-block mx-1 mb-1 text-lg text-white" />
-          </Link>
+          </a>
         </footer>
       </div>
     </>
