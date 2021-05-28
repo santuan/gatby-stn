@@ -19,7 +19,8 @@
   @apply text-white duration-700 hover:text-blue-300;
 }
 
-.prose ul {
+.prose ul,
+.prose ol {
   @apply max-w-3xl mx-auto;
 }
 

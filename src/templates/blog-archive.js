@@ -27,8 +27,8 @@ const BlogArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="px-5 my-3 font-sans text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
-            Articulos en ingles pasados al español. 
-            Historias y recursos relacionados al mundo del diseño y la programación&hellip;
+            Artículos en inglés buscando su sentido en el castellano. 
+            Historias y recursos relacionados con el mundo del diseño y la programación&hellip;
           </p>
         </Fade>
         <Wave />

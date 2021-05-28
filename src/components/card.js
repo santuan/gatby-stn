@@ -11,7 +11,7 @@ const Card = ({ card }) => (
       </time>
       <Link
         to={`/blog/${card.slug}`}
-        className="block mb-2 font-serif text-xl font-bold text-indigo-200 hover:text-white md:text-3xl"
+        className="block pr-16 mb-2 font-serif text-2xl font-bold text-indigo-200 hover:text-white md:text-3xl"
       >
         {card.title}
       </Link>
