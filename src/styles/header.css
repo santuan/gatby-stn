@@ -66,6 +66,12 @@ body.project .headroom--unpinned {
   backdrop-filter: blur(5px);
 }
 
+body.contact .headroom--pinned,
+body.contact .headroom--unpinned {
+  @apply bg-gray-900 bg-opacity-50 ;
+  backdrop-filter: blur(5px);
+}
+
 
 @screen md {
   .headroom--unpinned {

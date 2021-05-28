@@ -48,12 +48,12 @@ export default function BackgroundSlider() {
         <body className="contact" />
       </Helmet>
       <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen bg-pattern ">
-        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-12 font-mono prose prose-lg text-justify hyphens prose-yellow">
+        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-12 font-mono prose text-justify md:prose-lg hyphens prose-yellow">
           <p className="text-white">
             Soy un apasionado del diseño y la programación y todo lo que tenga
-            que ver con el mundo del software libre. Disfruto pertenecer a una
-            comunidad que se dedica a mejorar el mundo día a día de formas más
-            colaborativas.{" "}
+            que ver con el mundo del software libre. Disfruto y me siento
+            privilegiado de pertenecer a una comunidad que se dedica a
+            mejorar el mundo día a día de formas más colaborativas.{" "}
           </p>
 
           <p className="text-white">
