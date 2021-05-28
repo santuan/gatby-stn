@@ -24,6 +24,10 @@
   @apply max-w-3xl mx-auto;
 }
 
+.prose.hyphens{
+  hyphens: auto;
+}
+
 .prose blockquote {
   @apply max-w-3xl mx-auto;
 }

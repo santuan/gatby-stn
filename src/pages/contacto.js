@@ -48,10 +48,10 @@ export default function BackgroundSlider() {
         <body className="contact" />
       </Helmet>
       <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen bg-pattern ">
-        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-12 font-mono prose prose-xl prose-yellow">
+        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-12 font-mono prose prose-lg text-justify hyphens prose-yellow">
           <p className="text-white">
             Soy un apasionado del diseño y la programación y todo lo que tenga
-            que ver con el mundo del software libre. Disfruto ser parte de una
+            que ver con el mundo del software libre. Disfruto pertenecer a una
             comunidad que se dedica a mejorar el mundo día a día de formas más
             colaborativas.{" "}
           </p>
@@ -66,23 +66,52 @@ export default function BackgroundSlider() {
           </p>
 
           <p className="text-white">
-            Durante los ultimos años me he desarrollado mayoritariamente en el ámbito
-            público como diseñador y desarrollador de aplicaciones y páginas web
-            en el <i>Ministerio Público Fiscal</i> y en la <i>Cámara de Diputados de la
-            Nación.</i>
+            Durante los ultimos años me he desarrollado mayoritariamente en el
+            ámbito público como diseñador y desarrollador de aplicaciones y
+            páginas web en el <i>Ministerio Público Fiscal</i> y en la{" "}
+            <i>Cámara de Diputados de la Nación.</i>
           </p>
 
           <p className="text-white">
-            También mantengo el sitio web <a href="https://cooparaje.com.ar/" target="_blank"
-              rel="noopener noreferrer" className="text-yellow-500">cooparaje.com.ar</a>, donde voy
-            subiendo recursos y herramientas gratuitas que amigas y amigos me van preguntando o compartiendo y se pueden aplicar para todo tipo de
-            espacios.
+            También mantengo el sitio web{" "}
+            <a
+              href="https://cooparaje.com.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-500"
+            >
+              cooparaje.com.ar
+            </a>
+            , donde voy subiendo recursos y herramientas gratuitas que amigas y
+            amigos me van preguntando o compartiendo y se pueden aplicar para
+            todo tipo de espacios.
           </p>
 
           <p className="text-white">
-            Si algo de lo que viste aqui te gusto y te interesa saber más, podés
-            sentirte libre de contactarte y tratare de colaborar dentro de las
-            posibilidades.{" "}
+            Tanto esta web como muchos de los sitios web que realizo tienen la
+            particularidad de tener un costo de mantenimiento de $0. Si que
+            normalmente tener un dominio personal suma y eso inevitablemente
+            tiene que abonarse anualmente (ya sea un .com.ar o un .com).
+          </p>
+          <p className="text-white">
+            La mayoría de los sitios pueden realizarse implementando las mejores
+            herramientas de programación usando su plan gratuito (algo así como
+            usar una red social gratis a cambio de dar nuestra información y
+            atención). Cada uno de estos servicios cuentan con un plan con sus
+            respectivos limitantes pero que en su mayoria suelen ser más de lo
+            necesario para arrancar a una menor escala.
+          </p>
+
+          <p className="text-white">
+            Si algo de lo que viste aqui te gustó y te interesaría saber más,
+            podés sentirte libre de contactarte y trataré de colaborar dentro de
+            las posibilidades.{" "}
+          </p>
+          <p className="text-white">
+            Y desde ya, muchas gracias por su atención{" "}
+            <span role="img" aria-label="confetti">
+              🎉
+            </span>
           </p>
         </div>
         <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-24 md:my-0">
@@ -107,7 +136,7 @@ export default function BackgroundSlider() {
               </Fade>
             </div>
             {isCopied ? "🎉 Copiado!" : "Click para copiar mail"}
-            <div className="transform -translate-y-12 translate-x-52">
+            <div className="transform translate-x-64 -translate-y-12">
               <Confetti active={isCopied} config={config} />
             </div>
           </button>
