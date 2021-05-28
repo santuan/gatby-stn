@@ -50,14 +50,14 @@ exports.createPages = ({ graphql, actions }) => {
         paginate({
           createPage,
           items: result.data.allContentfulBlog.edges,
-          itemsPerPage: 12,
+          itemsPerPage: 24,
           pathPrefix: "/blog",
           component: path.resolve("src/templates/blog-archive.js"),
         })
         paginate({
           createPage,
           items: result.data.allContentfulWorks.edges,
-          itemsPerPage: 12,
+          itemsPerPage: 88,
           pathPrefix: "/colaboraciones",
           component: path.resolve("src/templates/project-archive.js"),
         })
