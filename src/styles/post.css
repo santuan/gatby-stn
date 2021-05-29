@@ -14,6 +14,10 @@
   @apply max-w-3xl px-2 mx-auto text-white;
 }
 
+.prose h3 {
+  @apply md:pr-48
+}
+
 .prose a {
   @apply text-white duration-700 hover:text-blue-300;
 }
@@ -23,8 +27,13 @@
   @apply max-w-3xl mx-auto;
 }
 
-.prose.hyphens {
+.prose.hyphens p {
   hyphens: auto;
+}
+
+.prose p u {
+  @apply text-sm no-underline lg:font-bold lg:text-lg;
+  font-family: "Vollkorn SC";
 }
 
 .prose blockquote {
@@ -32,13 +41,13 @@
 }
 
 .prose blockquote p {
-  font-family: "CabinVariable";
+  font-family: "vollkornVariable";
   font-variation-settings: "wght" 400;
 }
 
 
 .prose i {
-  font-family: "CabinVariable";
+  font-family: "vollkornVariable";
   font-variation-settings: "wght" 400;
 }
 

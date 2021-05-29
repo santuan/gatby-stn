@@ -52,8 +52,8 @@ export default function BackgroundSlider() {
           <p className="text-white">
             Soy un apasionado del diseño y la programación y todo lo que tenga
             que ver con el mundo del software libre. Disfruto y me siento
-            privilegiado de pertenecer a una comunidad que se dedica a
-            mejorar el mundo día a día de formas más colaborativas.{" "}
+            privilegiado de pertenecer a una comunidad que se dedica a mejorar
+            el mundo día a día de formas más colaborativas.{" "}
           </p>
 
           <p className="text-white">
@@ -91,8 +91,16 @@ export default function BackgroundSlider() {
             particularidad de tener un costo de mantenimiento de $0. Si que
             normalmente tener un dominio personal suma y eso inevitablemente
             tiene que abonarse anualmente (ya sea un .com.ar o un .com).
-            Este sitio está alojado gratuitamente en Netlify con el nombre de <a  target="_blank"
-              rel="noopener noreferrer" href="https://jovial-pasteur-d0ebeb.netlify.app/contacto/">jovial-pasteur-d0ebeb.netlify.app/contacto/</a>
+          </p>
+          <p className="text-white">
+            Este sitio está alojado gratuitamente en Netlify con el nombre de{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://jovial-pasteur-d0ebeb.netlify.app/contacto/"
+            >
+              jovial-pasteur-d0ebeb.netlify.app/contacto/
+            </a>
           </p>
           <p className="text-white">
             La mayoría de los sitios pueden realizarse implementando las mejores
@@ -172,7 +180,7 @@ export default function BackgroundSlider() {
                 </span>
               </Fade>
             </a>
-            
+
             <a
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
