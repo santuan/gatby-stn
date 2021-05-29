@@ -38,7 +38,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <Seo title="Inicio" />
-      <div className="flex flex-col items-center justify-center min-h-screen text-center bg-gray-900 shadow-sm bg-pattern">
+      <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
         <div className="relative z-50 w-full max-w-lg px-6 mx-auto mt-12 mb-2 text-center">
           <h2
             className="w-full font-serif text-6xl text-white md:text-center"
@@ -55,10 +55,7 @@ export default function IndexPage() {
                 setTimeout(() => setIsCopied(false), 3000)
               }}
               className={
-                "px-2 ml-1 inline-block py-1 transition-all duration-500 text-blue-500 rounded-md hover:font-serif hover:text-yellow-600 " +
-                (isCopied
-                  ? "bg-green-800 " + isCopied
-                  : "hover:bg-gray-900 bg-opacity-10")
+                "px-2 ml-1 inline-block py-1 transition-all duration-500 text-blue-500 rounded-md hover:font-serif hover:text-yellow-400 "
               }
             >
               Diseño
