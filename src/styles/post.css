@@ -1,5 +1,5 @@
 .prose .post-image {
-  @apply text-center duration-700 opacity-50 hover:opacity-80 ;
+  @apply text-center duration-700 opacity-50 hover:opacity-80;
 }
 .prose .post-image img {
   @apply mx-auto my-2 shadow-xl;
@@ -10,8 +10,7 @@
 .prose h3,
 .prose h4,
 .prose h5,
-.prose h6
- {
+.prose h6 {
   @apply max-w-3xl px-2 mx-auto text-white;
 }
 
@@ -24,12 +23,23 @@
   @apply max-w-3xl mx-auto;
 }
 
-.prose.hyphens{
+.prose.hyphens {
   hyphens: auto;
 }
 
 .prose blockquote {
   @apply max-w-3xl mx-auto;
+}
+
+.prose blockquote p {
+  font-family: "CabinVariable";
+  font-variation-settings: "wght" 400;
+}
+
+
+.prose i {
+  font-family: "CabinVariable";
+  font-variation-settings: "wght" 400;
 }
 
 .prose p {

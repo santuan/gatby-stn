@@ -10,7 +10,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Josefin Sans", "serif"],
+      sans: ["Vollkorn", "serif"],
       serif: ["Yeseva One", "serif"],
       mono: ["Space Mono", "mono"],
     },
