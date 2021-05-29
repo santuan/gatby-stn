@@ -66,10 +66,9 @@ export default function BackgroundSlider() {
           </p>
 
           <p className="text-white">
-            Durante los ultimos años me he desarrollado mayoritariamente en el
+            Durante los ultimos años me he desarrollado laboralmente en el
             ámbito público como diseñador y desarrollador de aplicaciones y
-            páginas web en el <i>Ministerio Público Fiscal</i> y en la{" "}
-            <i>Cámara de Diputados de la Nación.</i>
+            páginas web.
           </p>
 
           <p className="text-white">
@@ -114,7 +113,7 @@ export default function BackgroundSlider() {
             </span>
           </p>
         </div>
-        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-24 md:my-0">
+        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:mt-24 md:my-0">
           <button
             onClick={() => {
               copyToClipboard("santuan.web@gmail.com")
@@ -171,36 +170,7 @@ export default function BackgroundSlider() {
                 </span>
               </Fade>
             </a>
-            <a
-              className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://soundcloud.com/santuuan"
-            >
-              <Fade duration={1750} delay={250}>
-                <ImSoundcloud className="text-3xl text-white transition-all duration-700 group-hover:text-yellow-400" />
-              </Fade>
-              <Fade bottom duration={2000} delay={200}>
-                <span className="block mb-4 font-mono text-base text-gray-100 transition-all duration-700 group-hover:text-yellow-400">
-                  Soundcloud
-                </span>
-              </Fade>
-            </a>
-            <a
-              className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://vimeo.com/user4126121"
-            >
-              <Fade duration={1750} delay={250}>
-                <ImVimeo className="text-3xl text-white transition-all duration-700 group-hover:text-blue-300" />
-              </Fade>
-              <Fade bottom duration={2000} delay={200}>
-                <span className="block mb-4 font-mono text-base text-gray-100 transition-all duration-700 group-hover:text-blue-300">
-                  Vimeo
-                </span>
-              </Fade>
-            </a>
+            
             <a
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
