@@ -145,7 +145,7 @@ export default function BackgroundSlider() {
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/santuan/gatby-stn"
+              href="https://github.com/santuan/"
             >
               <Fade duration={1750} delay={250}>
                 <ImGithub className="text-3xl text-white transition-all duration-700 group-hover:text-yellow-500" />
@@ -160,7 +160,7 @@ export default function BackgroundSlider() {
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/santuan/gatby-stn"
+              href="https://twitter.com/santuuan"
             >
               <Fade duration={1750} delay={250}>
                 <ImTwitter className="text-3xl text-white transition-all duration-700 group-hover:text-blue-500" />
