@@ -91,6 +91,8 @@ export default function BackgroundSlider() {
             particularidad de tener un costo de mantenimiento de $0. Si que
             normalmente tener un dominio personal suma y eso inevitablemente
             tiene que abonarse anualmente (ya sea un .com.ar o un .com).
+            Este sitio está alojado gratuitamente en Netlify con el nombre de <a  target="_blank"
+              rel="noopener noreferrer" href="https://jovial-pasteur-d0ebeb.netlify.app/contacto/">jovial-pasteur-d0ebeb.netlify.app/contacto/</a>
           </p>
           <p className="text-white">
             La mayoría de los sitios pueden realizarse implementando las mejores
