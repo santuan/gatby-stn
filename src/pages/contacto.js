@@ -93,16 +93,6 @@ export default function BackgroundSlider() {
             tiene que abonarse anualmente (ya sea un .com.ar o un .com).
           </p>
           <p className="text-white">
-            Este sitio está alojado gratuitamente en Netlify con el nombre de{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://jovial-pasteur-d0ebeb.netlify.app/contacto/"
-            >
-              jovial-pasteur-d0ebeb.netlify.app/contacto/
-            </a>
-          </p>
-          <p className="text-white">
             La mayoría de los sitios pueden realizarse implementando las mejores
             herramientas de programación usando su plan gratuito (algo así como
             usar una red social gratis a cambio de dar nuestra información y

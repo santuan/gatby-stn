@@ -56,7 +56,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </AwesomeButton>
         </div>
         <SRLWrapper options={options}>
-          <div className="max-w-full px-3 font-sans prose prose-lg md:prose-xl ">
+          <div className="max-w-full px-3 font-sans prose prose-lg hyphens lg:prose-2xl">
             {article && renderRichText(article, options)}
           </div>
         </SRLWrapper>
