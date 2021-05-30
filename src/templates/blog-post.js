@@ -190,13 +190,13 @@ const options = {
     [MARKS.CODE]: (embedded) => (
       <Fade>
         <div
-          className="my-8 aspect-w-16 aspect-h-9"
           dangerouslySetInnerHTML={{ __html: embedded }}
         />
       </Fade>
     ),
   },
   renderNode: {
+    [BLOCKS.HEADING_3]: (node, children) => <h3 id={`${kebabCase(children)}`}>{children}</h3>,
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target) {
         return <span className="hidden">Embedded asset is broken</span>

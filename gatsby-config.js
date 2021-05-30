@@ -20,7 +20,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `Santuan`,
-    titleTemplate: `%s`,
+    titleTemplate: `%s | Santuan`,
     description: `Espacio de colaboración libre`,
     siteUrl: `https://www.santuan.com.ar`,
     image: `https://www.santuan.com.ar/ogimage.jpg`,

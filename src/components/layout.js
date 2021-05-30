@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
         <SimpleReactLightbox>
           <main className="px-0 bg-gray-800">{children}</main>
         </SimpleReactLightbox>
-        <footer className="relative z-50 py-12 font-sans text-center text-white bg-gray-900">
+        <footer className="relative z-50 py-12 font-mono text-center text-white bg-gray-900">
           STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
           Contentful + Netlify{" "}
           <a

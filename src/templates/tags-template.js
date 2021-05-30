@@ -14,7 +14,7 @@ const Tags = ({ pageContext, data }) => {
   } para "${tag}"`
   return (
     <Layout>
-      <Seo title="Tags" />
+      <Seo title="Etiquetas" />
       <div className="max-w-5xl min-h-screen px-4 py-24 m-auto mt-12" >
         <h1 className="font-serif text-4xl text-center text-white">{tagHeader}</h1>
         <div className="flex flex-col justify-start max-w-3xl px-2 py-6 m-auto">
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
   query($tag: String) {
     allContentfulBlog(
       limit: 2000
-      sort: { fields: [id], order: DESC }
+      sort: { fields: [createdAt], order: DESC }
       filter: { tags: { in: [$tag] } }
     ) {
       totalCount

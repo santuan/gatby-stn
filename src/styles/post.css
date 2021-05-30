@@ -15,7 +15,7 @@
 }
 
 .prose h3 {
-  @apply md:pr-48
+  @apply md:pr-40
 }
 
 .prose a {
@@ -37,7 +37,8 @@
 }
 
 .prose blockquote {
-  @apply max-w-3xl mx-auto;
+  @apply max-w-3xl pr-12 mx-auto md:pr-24;
+  @apply transform translate-x-3;
 }
 
 .prose blockquote p {
