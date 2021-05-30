@@ -60,13 +60,13 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             {article && renderRichText(article, options)}
           </div>
         </SRLWrapper>
-        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono font-bold border-t-2 border-gray-600 md:text-2xl">
-          <div className="max-w-xs duration-700">
+        <div className="flex flex-col justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono font-bold border-t-2 border-gray-600 md:flex-row md:text-xl">
+          <div className="pb-6 mb-6 duration-700 border-b border-gray-700 md:border-none md:max-w-xs md:mb-0 md:pb-0">
             {prev && (
               <Link
                 to={`/colaboraciones/${kebabCase(prev.slug)}/`}
                 rel="prev"
-                className="flex justify-start pr-6 text-white duration-700 transform group hover:-translate-x-2"
+                className="flex items-center justify-center pr-6 text-white duration-700 transform md:items-start md:justify-start group hover:-translate-x-2"
               >
                 <span className="block">
                   <HiOutlineChevronLeft className="text-5xl duration-700 transform -translate-x-2 translate-y-1 group-hover:text-gray-500" />
@@ -77,13 +77,13 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           </div>
           <div
             style={{ justifySelf: "flex-end" }}
-            className="max-w-xs pl-6 text-right duration-700"
+            className="pl-6 text-right duration-700 md:max-w-xs"
           >
             {next && (
               <Link
                 to={`/colaboraciones/${kebabCase(next.slug)}/`}
                 rel="next"
-                className="flex justify-end pl-6 text-white duration-700 transform group hover:translate-x-2"
+                className="flex items-center justify-center pl-6 text-white duration-700 transform md:items-start md:justify-end group hover:translate-x-2"
               >
                 {next.title}
                 <span className="block">

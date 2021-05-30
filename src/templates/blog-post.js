@@ -40,15 +40,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             date={post.createdAt}
             slug={post.slug}
             readtime={post.readTime}
+            excerpt={post.excerpt.excerpt}
             image={post.featuredImg.fluid}
           />
         </div>
         <div
-          className="relative z-50 w-full px-2 m-auto -mt-20 article"
+          className="relative z-50 w-full px-2 m-auto mt-6 article"
           id={post.slug}
         >
-          <div className="relative flex items-baseline justify-between p-0 transform -translate-y-6">
-            <div className="relative z-50 flex flex-wrap justify-center w-full px-0 py-4 mt-12 font-mono tracking-widest uppercase ">
+          
+          <SRLWrapper options={options}>
+            <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg hyphens lg:prose-2xl ">
+              {article && renderRichText(article, options)}
+            </div>
+          </SRLWrapper>
+          <div className="relative flex items-baseline justify-between p-0">
+            <div className="relative z-50 flex flex-wrap justify-start w-full max-w-3xl px-0 py-4 mx-auto mt-12 font-mono tracking-widest uppercase ">
+              <span className="inline-block px-3 py-1 mb-1 mr-2 font-semibold text-gray-300 text-md ">etiquetas</span>
               {post.tags.map((tag, i) => [
                 <Link
                   to={`/etiquetas/${kebabCase(tag)}/`}
@@ -61,19 +69,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ])}
             </div>
           </div>
-          <SRLWrapper options={options}>
-            <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg hyphens lg:prose-2xl ">
-              {article && renderRichText(article, options)}
-            </div>
-          </SRLWrapper>
         </div>
-        <div className="flex justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-12 font-mono font-bold border-t-2 border-gray-600 md:text-2xl">
-          <div className="max-w-xs duration-700">
+        <div className="flex flex-col justify-between w-full max-w-3xl px-3 py-6 mx-auto mt-3 font-mono font-bold border-t-2 border-gray-600 md:flex-row md:text-xl">
+          <div className="pb-6 mb-6 duration-700 border-b border-gray-700 md:border-none md:max-w-xs md:mb-0 md:pb-0">
             {prev && (
               <Link
                 to={`/blog/${kebabCase(prev.slug)}/`}
                 rel="prev"
-                className="flex justify-start pr-6 text-white duration-700 transform group hover:-translate-x-2"
+                className="flex items-center justify-center pr-6 text-white duration-700 transform md:items-start md:justify-start group hover:-translate-x-2"
               >
                 <span className="block">
                   <HiOutlineChevronLeft className="text-5xl duration-700 transform -translate-x-2 translate-y-1 group-hover:text-gray-500" />
@@ -85,13 +88,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
           <div
             style={{ justifySelf: "flex-end" }}
-            className="max-w-xs pl-6 text-right duration-700"
+            className="pl-6 text-right duration-700 md:max-w-xs"
           >
             {next && (
               <Link
                 to={`/blog/${kebabCase(next.slug)}/`}
                 rel="next"
-                className="flex justify-end pl-6 text-white duration-700 transform group hover:translate-x-2"
+                className="flex items-center justify-center pl-6 text-white duration-700 transform md:items-start md:justify-end group hover:translate-x-2"
               >
                 {next.title}
                 <span className="block">

@@ -18,6 +18,18 @@ const CardProject = ({ card }) => (
       <h1 className="relative z-50 hidden px-8 m-0 font-serif text-3xl text-white opacity-50 group hover:opacity-100">
         {card.title}
       </h1>
+      {card.techs && (
+        <div className="absolute bottom-0 left-0 right-0 z-50 flex flex-wrap justify-center w-full px-0 py-2 font-mono tracking-widest uppercase ">
+          {card.techs.map((techs, i) => [
+            <Link
+              className="inline-block px-2 py-1 mr-1 text-xs font-semibold text-white bg-black bg-opacity-20"
+              key={i}
+            >
+              {techs.title}
+            </Link>
+          ])}
+        </div>
+      )}
       <div className="absolute inset-0 z-10 duration-700 opacity-40 group-hover:opacity-70 ">
         <Img
           className="object-cover w-full h-full work-image group-hover:scale-110"

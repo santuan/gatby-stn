@@ -7,8 +7,6 @@ import Confetti from "react-dom-confetti"
 import {
   ImGithub,
   ImTwitch,
-  ImVimeo,
-  ImSoundcloud,
   ImTwitter,
   ImLinkedin2,
 } from "react-icons/im"
