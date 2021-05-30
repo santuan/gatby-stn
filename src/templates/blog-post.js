@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </SRLWrapper>
           <div className="relative flex items-baseline justify-between p-0">
             <div className="relative z-50 flex flex-wrap justify-start w-full max-w-3xl px-0 py-4 mx-auto mt-12 font-mono tracking-widest uppercase ">
-              <span className="inline-block px-3 py-1 mb-1 mr-2 font-semibold text-gray-300 text-md ">etiquetas</span>
+              <span className="hidden px-3 py-1 mb-1 mr-2 font-semibold text-gray-300 md:inline-block text-md ">etiquetas</span>
               {post.tags.map((tag, i) => [
                 <Link
                   to={`/etiquetas/${kebabCase(tag)}/`}
