@@ -23,10 +23,10 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         <Wave/>
       </div>
 
-      <div className="grid gap-4 px-2 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
+      <div className="grid gap-6 px-2 pt-6 mx-auto mb-12 -mt-48 overflow-hidden sm:grid-cols-2 xl:grid-cols-3 max-w-7xl md:-mt-64">
         {projects.map(({ node }) => {
           return (
-            <div key={node.slug} className="w-full overflow-hidde">
+            <div key={node.slug} className="w-full overflow-hidden duration-700 transform rounded-md shadow-lg hover:shadow-xl hover:-translate-y-1">
               <Fade duration={1200} delay={700}>
                 <Card card={node} />
               </Fade>
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fluid(maxWidth: 1500) {
+            fluid(maxWidth: 500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyContentfulFluid_withWebp
             }

@@ -31,11 +31,12 @@ const Card = ({ card }) => (
         ])}
       </div>
     </div>
-    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-5 md:opacity-30 ">
+    <Link to={`/blog/${card.slug}`} className="absolute inset-0 z-0 w-full opacity-20 md:opacity-30 ">
       <Img
         className="object-cover w-full h-full"
         alt={card.title}
-        fixed={card.featuredImg.fixed}
+        // fixed={card.featuredImg.fixed}
+        fluid={card.featuredImg.fluid}
       />
     </Link>
   </div>

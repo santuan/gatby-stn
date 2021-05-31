@@ -1,6 +1,6 @@
 require("./src/styles/globals.css")
-require("typeface-yeseva-one")
-require("typeface-space-mono")
+require("@fontsource/yeseva-one")
+require("@fontsource/space-mono")
 require("@fontsource/vollkorn")
 require("@fontsource/vollkorn-sc")
 

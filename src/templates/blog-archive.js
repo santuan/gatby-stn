@@ -78,7 +78,7 @@ export const pageQuery = graphql`
               src
               srcSet
             }
-            fluid(maxWidth: 1500) {
+            fluid(maxWidth: 500) {
               # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
               ...GatsbyContentfulFluid_withWebp
             }

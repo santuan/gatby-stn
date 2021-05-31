@@ -64,7 +64,7 @@ module.exports = {
           titleFont: "title-font.ttf",
           taglineFont: 'tagline-font.ttf',
           titleFontSize: "70",
-          taglineFontSize: "54",
+          taglineFontSize: "44",
           textColor: "ffffff",
           titleBottomOffset: "280",
           textAreaWidth: "1000",
