@@ -27,6 +27,9 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   slug
                   tags
+                  excerpt {
+                    excerpt
+                  }
                 }
               }
             }
@@ -73,6 +76,8 @@ exports.createPages = ({ graphql, actions }) => {
               slug: post.node.slug,
               prev: index === 0 ? null : posts[index - 1].node,
               next: index === posts.length - 1 ? null : posts[index + 1].node,
+              title: post.node.title,
+              tagline: post.node.excerpt.excerpt,
             },
           })
         })

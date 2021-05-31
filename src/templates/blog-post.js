@@ -18,10 +18,10 @@ import "../styles/VideoReact.css"
 import "../styles/post.css"
 import Card from "../components/cardPost"
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi"
-import { GatsbySocialImage } from 'gatsby-plugin-cloudinary-social-cards';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulBlog
+  const social = data.getSocialCard
   const { article } = data.contentfulBlog
   const { prev, next } = pageContext
   return (
@@ -32,8 +32,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Seo
         title={`${post.title}`}
         description={`${post.excerpt.excerpt}`}
+        image={`${social.url}`}
+        article={true}
       />
-      <GatsbySocialImage title={`${post.title}`} tagline={`${post.excerpt.excerpt}`} />
       <div className="max-w-full m-auto">
         <div className="bg-blue-900">
           <Hero
@@ -113,7 +114,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query PostBySlug($slug: String!) {
+  query PostBySlug($slug: String!,$title: String!, $tagline: String) {
+    getSocialCard(title: $title, tagline: $tagline) {
+      url
+    }
     contentfulBlog(slug: { eq: $slug }) {
       slug
       title
