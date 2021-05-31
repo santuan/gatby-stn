@@ -48,9 +48,8 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
               <meta property="og:image" content={`${siteUrl}/${seo.image}`} />
             )}
             <meta name="twitter:card" content="summary_large_image" />
-            {twitterUsername && (
-              <meta name="twitter:creator" content={twitterUsername} />
-            )}
+            <meta name="twitter:site" content={twitterUsername} />
+            <meta name="twitter:creator" content={twitterUsername} />
             <meta property="fb:app_id" content="340642407483909"/>
             {seo.title && <meta name="twitter:title" content={seo.title} />}
             {seo.description && (
