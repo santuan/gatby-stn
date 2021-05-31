@@ -53,6 +53,27 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-cloudinary-social-cards",
+      options: {
+        cloudName: "santuan",
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        imageTemplate: "src/images/social-card-template.jpg",
+        imagePublicID: "santuan/social-card-template",
+        imageOptions: {
+          titleFont: "title-font.ttf",
+          taglineFont: 'tagline-font.ttf',
+          titleFontSize: "88",
+          taglineFontSize: "54",
+          textColor: "ffffff",
+          titleBottomOffset: "280",
+          textAreaWidth: "920",
+          textLeftOffset: "80",
+          taglineLeftOffset: "80",
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.

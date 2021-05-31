@@ -18,6 +18,7 @@ import "../styles/VideoReact.css"
 import "../styles/post.css"
 import Card from "../components/cardPost"
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi"
+import { GatsbySocialImage } from 'gatsby-plugin-cloudinary-social-cards';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.contentfulBlog
@@ -31,8 +32,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <Seo
         title={`${post.title}`}
         description={`${post.excerpt.excerpt}`}
-        image={`${post.featuredImg.file.url}`}
       />
+      <GatsbySocialImage title={`${post.title}`} tagline={`${post.excerpt.excerpt}`} />
       <div className="max-w-full m-auto">
         <div className="bg-blue-900">
           <Hero

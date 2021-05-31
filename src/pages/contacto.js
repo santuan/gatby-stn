@@ -137,7 +137,7 @@ export default function BackgroundSlider() {
               <Confetti active={isCopied} config={config} />
             </div>
           </button>
-          <div className="grid grid-cols-2 gap-3 mt-12 md:grid-cols-2">
+          <div className="grid grid-cols-2 gap-3 mt-12 md:grid-cols-4">
             <a
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
