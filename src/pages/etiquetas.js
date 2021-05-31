@@ -8,7 +8,7 @@ const TagsPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Etiquetas" />
+      <Seo title="Etiquetas" pathname={`/etiquetas/`}/>
 
       <div className="max-w-5xl min-h-screen px-5 pt-24 mx-auto mt-12">
         <h1 className="mb-12 font-mono text-4xl text-white ">Etiquetas</h1>

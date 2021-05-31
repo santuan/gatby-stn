@@ -12,7 +12,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
   const posts = data.allContentfulBlog.edges
   return (
     <Layout location={location}>
-      <Seo title="Blog" />
+      <Seo title="Blog" pathname={`/blog/`} />
       <Helmet>
         <body className="blog" />
       </Helmet>

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Card from "../components/card"
 import { AwesomeButton } from "react-awesome-button"
+import { kebabCase } from "lodash"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -14,7 +15,7 @@ const Tags = ({ pageContext, data }) => {
   } para "${tag}"`
   return (
     <Layout>
-      <Seo title="Etiquetas" />
+      <Seo title="Etiquetas" pathname={`/etiquetas/${kebabCase(tag)}/`} />
       <div className="max-w-5xl min-h-screen px-4 py-24 m-auto mt-12" >
         <h1 className="font-serif text-4xl text-center text-white">{tagHeader}</h1>
         <div className="flex flex-col justify-start max-w-3xl px-2 py-6 m-auto">

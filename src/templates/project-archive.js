@@ -12,7 +12,7 @@ const ProjectArchive = ({ data, pageContext, location }) => {
   const projects = data.allContentfulWorks.edges
   return (
     <Layout location={location}>
-      <Seo title="Proyectos" />
+      <Seo title="Proyectos" pathname={`/colaboraciones/`}/>
       <Helmet>
         <body className="project" />
       </Helmet>

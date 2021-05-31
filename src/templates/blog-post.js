@@ -33,6 +33,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={`${post.title}`}
         description={`${post.excerpt.excerpt}`}
         image={`${social.url}`}
+        pathname={`/blog/${post.slug}`}
         article={true}
       />
       <div className="max-w-full m-auto">

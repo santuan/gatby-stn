@@ -17,7 +17,7 @@ const searchClient = algoliasearch(
 
 const RecursosPage = () => (
   <Layout>
-    <Seo title="Recursos" />
+    <Seo title="Recursos" pathname={`/recursos/`}/>
     <Helmet>
       <body className="blog" />
     </Helmet>

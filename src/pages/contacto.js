@@ -41,7 +41,7 @@ export default function BackgroundSlider() {
   const [isCopied, setIsCopied] = React.useState(false)
   return (
     <Layout>
-      <Seo title="Contacto" />
+      <Seo title="Contacto"  pathname={`/contacto/`}/>
       <Helmet>
         <body className="contact" />
       </Helmet>

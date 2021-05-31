@@ -21,7 +21,7 @@ module.exports = {
   siteMetadata: {
     title: `Santuan`,
     titleTemplate: `%s | Santuan`,
-    description: `Espacio de colaboración libre`,
+    description: `Diseño y Desarrollo de páginas web`,
     siteUrl: `https://www.santuan.com.ar`,
     image: `https://www.santuan.com.ar/ogimage.jpg`,
     twitterUsername: `@santuuan`,

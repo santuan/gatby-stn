@@ -21,7 +21,7 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
         title: title || defaultTitle,
         description: description || defaultDescription,
         image: `${image || defaultImage}`,
-        url: `${siteUrl}${pathname || "/"}`,
+        pathname: `${siteUrl}${pathname || "/"}`,
       }
       return (
         <>
@@ -34,7 +34,9 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
           >
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
-            {seo.url && <meta property="og:url" content={seo.url} />}
+            {seo.pathname && (
+              <meta property="og:url" content={`${seo.pathname}`} />
+            )}
             {(article ? true : null) && (
               <meta property="og:type" content="article" />
             )}
@@ -50,7 +52,7 @@ const SEO = ({ title, description, image, lang, pathname, article }) => (
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content={twitterUsername} />
             <meta name="twitter:creator" content={twitterUsername} />
-            <meta property="fb:app_id" content="340642407483909"/>
+            <meta property="fb:app_id" content="340642407483909" />
             {seo.title && <meta name="twitter:title" content={seo.title} />}
             {seo.description && (
               <meta name="twitter:description" content={seo.description} />

@@ -28,6 +28,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       <Seo
         title={`${post.title}`}
         image={`${post.backgroundImage.file.url}`}
+        pathname={`/colaboraciones/${post.slug}`}
       />
       <Helmet>
         <body className="project-post" />
