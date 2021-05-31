@@ -63,7 +63,7 @@ module.exports = {
         imageOptions: {
           titleFont: "title-font.ttf",
           taglineFont: 'tagline-font.ttf',
-          titleFontSize: "80",
+          titleFontSize: "70",
           taglineFontSize: "54",
           textColor: "ffffff",
           titleBottomOffset: "280",
