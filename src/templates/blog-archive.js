@@ -37,8 +37,8 @@ const BlogArchive = ({ data, pageContext, location }) => {
       <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-32 gap-9 lg:grid-cols-2 md:-mt-64">
         {posts.map(({ node }) => {
           return (
-            <Fade duration={1500}>
-              <Card card={node} key={node.slug} />
+            <Fade key={node.slug} duration={1500}>
+              <Card card={node} />
             </Fade>
           )
         })}

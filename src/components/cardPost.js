@@ -9,7 +9,7 @@ const CardPost = ({ title, slug, excerpt, featuredImg }) => (
       </span>
       <Link
         to={`/blog/${slug}`}
-        className="block mb-2 font-serif text-xl font-bold text-indigo-200 hover:text-white md:text-3xl"
+        className="block mb-2 font-serif text-xl font-bold text-indigo-200 hover:text-white md:text-2xl"
       >
         {title}
       </Link>
@@ -23,7 +23,7 @@ const CardPost = ({ title, slug, excerpt, featuredImg }) => (
       style={{position: "absolute", margin: "0"}}
     >
       <img
-        className="object-cover w-full h-full"
+        className="object-cover !m-0 w-full h-full"
         alt={title}
         src={featuredImg}
       />
