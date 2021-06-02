@@ -46,7 +46,7 @@ export default function BackgroundSlider() {
         <body className="contact" />
       </Helmet>
       <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen bg-pattern ">
-        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-12 font-mono prose text-justify md:prose-lg hyphens prose-yellow">
+        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-6 font-mono prose text-justify md:prose-lg hyphens prose-yellow">
           <p className="text-white">
             Soy un apasionado del diseño y la programación y todo lo que tenga
             que ver con el mundo del software libre. Disfruto y me siento
@@ -68,7 +68,6 @@ export default function BackgroundSlider() {
             ámbito público como diseñador y desarrollador de aplicaciones y
             páginas web.
           </p>
-
           <p className="text-white">
             También mantengo el sitio web{" "}
             <a
@@ -83,7 +82,6 @@ export default function BackgroundSlider() {
             amigos me van preguntando o compartiendo y se pueden aplicar para
             todo tipo de espacios.
           </p>
-
           <p className="text-white">
             Tanto esta web como muchos de los sitios web que realizo tienen la
             particularidad de tener un costo de mantenimiento de $0. Si que
@@ -111,7 +109,7 @@ export default function BackgroundSlider() {
             </span>
           </p>
         </div>
-        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:mt-24 md:my-0">
+        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:mt-6 md:my-0">
           <button
             onClick={() => {
               copyToClipboard("santuan.web@gmail.com")
@@ -137,7 +135,7 @@ export default function BackgroundSlider() {
               <Confetti active={isCopied} config={config} />
             </div>
           </button>
-          <div className="grid grid-cols-2 gap-3 mt-12 md:grid-cols-4">
+          <div className="grid grid-cols-3 gap-3 mt-12">
             <a
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
@@ -181,21 +179,6 @@ export default function BackgroundSlider() {
               <Fade bottom duration={2000} delay={200}>
                 <span className="block mb-4 font-mono text-base text-gray-100 transition-all duration-700 group-hover:text-blue-600">
                   Linkedin
-                </span>
-              </Fade>
-            </a>
-            <a
-              className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.twitch.tv/stn9000"
-            >
-              <Fade duration={1750} delay={250}>
-                <ImTwitch className="text-3xl text-white transition-all duration-700 group-hover:text-purple-500" />
-              </Fade>
-              <Fade bottom duration={2000} delay={200}>
-                <span className="block mb-4 font-mono text-base text-gray-100 transition-all duration-700 group-hover:text-purple-500">
-                  Twitch
                 </span>
               </Fade>
             </a>
