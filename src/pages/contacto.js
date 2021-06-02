@@ -44,7 +44,7 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className="contact" />
       </Helmet>
-      <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen bg-pattern ">
+      <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen overflow-hidden bg-pattern ">
         <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-6 font-mono prose text-justify md:prose-lg hyphens">
           <p className="text-white">
             Soy un apasionado del diseño y la programación y todo lo que tenga
