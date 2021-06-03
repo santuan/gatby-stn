@@ -25,8 +25,6 @@ Para crear el sitio se utilizaron las siguientes herramientas libres.
 
 Inspiración y artículos usados de referencia.
 
-<a href="https://github.com/pmndrs/react-three-fiber">**`/React Three Fiber`**</a> Para realizar las estrellas y el 3D de fondo.
-
 <a href="https://github.com/rcaferati/react-awesome-button">**`/React Awesome Button`**</a> Botón asombroso de React.
 
 <a href="https://raptis.wtf/blog/gatsby-mdx-copy-code-button-with-confetti/">**`/Copy to clipboard`**</a> Articulo y código para copiar a la papelera y tirar confetis.
@@ -35,7 +33,7 @@ Inspiración y artículos usados de referencia.
 
 ## 🎵 Tipografías via Typeface.
 
-<a href="https://fonts.google.com/specimen/Josefin+Sans">**`Josefin-sans`**</a>
+<a href="https://fonts.google.com/specimen/Vollkorn">**`Vollkorn-sans`**</a>
 <a href="https://fonts.google.com/specimen/Space+Mono">**`Space-mono`**</a>
 <a href="https://fonts.google.com/specimen/Yeseva+One">**`Yeseva-one`**</a>
 
