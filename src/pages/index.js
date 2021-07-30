@@ -66,7 +66,7 @@ export default function IndexPage() {
               <TextLoop interval={3000} fade={true}>
                 <Link
                   to={`/colaboraciones/germinacion-del-camino/`}
-                  className="text-purple-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-white hover:underline"
                 >
                   aplicaciones
                 </Link>
