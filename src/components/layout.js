@@ -20,18 +20,22 @@ const Layout = ({ children }) => {
           <main className="px-0 bg-gray-800">{children}</main>
         </SimpleReactLightbox>
         <footer className="relative z-50 py-12 font-mono text-center text-white bg-gray-900">
-          STN ©{new Date().getFullYear()}, Realizado en <br /> Gatsby +
-          Contentful + Netlify{" "}
+          <div>
+            STN ©{new Date().getFullYear()}, Realizado con <br /> Gatsby +
+            Contentful + Netlify{" "}
+          </div>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/santuan/gatby-stn"
-            className="mt-2 font-mono opacity-90 hover:opacity-50"
+            href="https://srcouto.ar/"
+            className="block mt-6 font-mono opacity-80 hover:opacity-50"
           >
-            <span className="block mx-1 mb-2">Hecho con</span>
             <HiCode className="inline-block mx-1 mb-1 text-lg text-white" />
             <span className="mx-1">&</span>
             <AiOutlineHeart className="inline-block mx-1 mb-1 text-lg text-white" />
+            <span className="block mx-1 mt-2 mb-2 text-xs opacity-80">
+              Hecho por srcouto
+            </span>
           </a>
         </footer>
       </div>

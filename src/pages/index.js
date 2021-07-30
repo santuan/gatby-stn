@@ -59,8 +59,8 @@ export default function IndexPage() {
               }
             >
               Diseño
-            </button>{" "}
-            páginas web.
+            </button>{" "}<br />
+            cosas.
           </h2>
           <div className="transform -translate-y-48 translate-x-52">
             <Confetti active={isCopied} config={config} />
