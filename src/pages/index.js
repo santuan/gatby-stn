@@ -46,7 +46,7 @@ export default function IndexPage() {
             className="w-full font-serif text-5xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
-            <span className="inline-block py-1 mr-1 font-mono text-red-500 transition-all duration-500 transform rounded-md md:-translate-x-4 hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
+            <span className="inline-block py-1 mr-1 font-mono font-bold text-red-500 transition-all duration-500 transform rounded-md select-all md:-translate-x-4 hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
               Desarrollo
             </span>
             <br />y
@@ -57,49 +57,55 @@ export default function IndexPage() {
                 setTimeout(() => setIsCopied(false), 3000)
               }}
               className={
-                "px-2 ml-1 inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:underline hover:font-serif hover:text-blue-600 "
+                "px-2 ml-1 hover:underline inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:font-serif hover:text-blue-600 "
               }
             >
-              Diseño
+              diseño
             </button>{" "}
-            <div className="block w-full">
+            <div className="block w-full mt-2 font-sans font-bold">
               <TextLoop interval={3000} fade={true}>
                 <Link
                   to={`/colaboraciones/germinacion-del-camino/`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  aplicaciones
+                  aplicaciones.
                 </Link>
                 <Link
                   to={`/colaboraciones/bomberos-voluntarios-de-lujan-de-cuyo`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  páginas
+                  páginas.
                 </Link>
                 <Link
                   to={`/colaboraciones/alan-sutton/`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  webs
+                  espacios.
                 </Link>
                 <Link
                   to={`/colaboraciones/clinicas-colectivas`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  porfolios
+                  porfolios.
                 </Link>
 
                 <Link
                   to={`/colaboraciones/kallpa-ludica`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  tienditas
+                  tienditas.
+                </Link>
+                <Link
+                  to={`/colaboraciones/bomberos-voluntarios-de-lujan-de-cuyo`}
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
+                >
+                  instituciones.
                 </Link>
                 <Link
                   to={`/colaboraciones/`}
-                  className="text-yellow-400 hover:text-white hover:underline"
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  cosas
+                  cosas.
                 </Link>
               </TextLoop>
             </div>
