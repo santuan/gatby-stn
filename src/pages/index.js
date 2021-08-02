@@ -41,12 +41,12 @@ export default function IndexPage() {
     <Layout>
       <Seo title="Inicio" />
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
-        <div className="relative z-50 w-full max-w-lg px-6 mx-auto mt-12 mb-2 text-center">
+        <div className="relative z-50 w-full max-w-3xl px-6 mx-auto mt-12 mb-2 text-left">
           <h2
-            className="w-full font-serif text-6xl text-white text-left"
+            className="w-full font-serif text-5xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
-            <span className="inline-block py-1 mr-1 font-mono text-red-500 transition-all duration-500 transform -translate-x-4 rounded-md hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
+            <span className="inline-block py-1 mr-1 font-mono text-red-500 transition-all duration-500 transform rounded-md md:-translate-x-4 hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
               Desarrollo
             </span>
             <br />y
@@ -107,13 +107,13 @@ export default function IndexPage() {
           <div className="transform -translate-y-48 translate-x-52">
             <Confetti active={isCopied} config={config} />
           </div>
-          <div className="grid md:gap-3 md:grid-cols-2">
+          <div className="grid max-w-lg md:gap-2 md:grid-cols-2">
             <Fade>
               <AwesomeButton
                 action={() => {
                   navigate(`/colaboraciones/`)
                 }}
-                className="w-full md:mb-3"
+                className="w-full md:mb-1"
               >
                 ver Proyectos
               </AwesomeButton>
