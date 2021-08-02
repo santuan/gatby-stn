@@ -43,7 +43,7 @@ export default function IndexPage() {
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
         <div className="relative z-50 w-full max-w-lg px-6 mx-auto mt-12 mb-2 text-center">
           <h2
-            className="w-full font-serif text-6xl text-white md:text-left"
+            className="w-full font-serif text-6xl text-white text-left"
             style={{ opacity: ".8" }}
           >
             <span className="inline-block py-1 mr-1 font-mono text-red-500 transition-all duration-500 transform -translate-x-4 rounded-md hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
