@@ -41,15 +41,11 @@ export default function IndexPage() {
     <Layout>
       <Seo title="Inicio" />
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
-        <div className="relative z-50 w-full max-w-3xl px-6 mx-auto mt-12 mb-2 text-left">
+        <div className="relative z-50 w-full max-w-5xl px-8 mx-auto mt-12 mb-2 text-left">
           <h2
-            className="w-full font-serif text-5xl text-left text-white md:text-6xl"
+            className="w-full font-mono text-5xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
-            <span className="inline-block py-1 mr-1 font-mono font-bold text-red-500 transition-all duration-500 transform rounded-md select-all md:-translate-x-4 hover:translate-x-0 hover:text-gray-900 md:px-4 hover:bg-gray-800">
-              Desarrollo
-            </span>
-            <br />y
             <button
               onClick={() => {
                 copyToClipboard("santuan.web@gmail.com")
@@ -57,13 +53,23 @@ export default function IndexPage() {
                 setTimeout(() => setIsCopied(false), 3000)
               }}
               className={
-                "px-2 ml-1 hover:underline inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:font-serif hover:text-blue-600 "
+                "hover:underline font-serif inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:font-serif hover:text-blue-600 "
               }
             >
-              diseño
+              Diseño
             </button>{" "}
+            <br />y
+            <span className="inline-block px-4 py-1 mr-1 font-mono font-bold text-red-500 transition-all duration-500 transform rounded-md select-all hover:translate-x-0 hover:text-gray-900 hover:bg-gray-800">
+              desarrollo
+            </span>
             <div className="block w-full mt-2 font-sans font-bold">
-              <TextLoop interval={3000} fade={true}>
+              <TextLoop interval={3500} >
+                <Link
+                  to={`/colaboraciones/`}
+                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
+                >
+                  de todo.
+                </Link>
                 <Link
                   to={`/colaboraciones/germinacion-del-camino/`}
                   className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
@@ -75,12 +81,6 @@ export default function IndexPage() {
                   className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
                   páginas.
-                </Link>
-                <Link
-                  to={`/colaboraciones/alan-sutton/`}
-                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
-                >
-                  espacios.
                 </Link>
                 <Link
                   to={`/colaboraciones/clinicas-colectivas`}
@@ -95,18 +95,6 @@ export default function IndexPage() {
                 >
                   tienditas.
                 </Link>
-                <Link
-                  to={`/colaboraciones/bomberos-voluntarios-de-lujan-de-cuyo`}
-                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
-                >
-                  instituciones.
-                </Link>
-                <Link
-                  to={`/colaboraciones/`}
-                  className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
-                >
-                  cosas.
-                </Link>
               </TextLoop>
             </div>
           </h2>
@@ -117,11 +105,11 @@ export default function IndexPage() {
             <Fade>
               <AwesomeButton
                 action={() => {
-                  navigate(`/colaboraciones/`)
+                  navigate(`/recursos/`)
                 }}
                 className="w-full md:mb-1"
               >
-                ver Proyectos
+                ver Recursos
               </AwesomeButton>
             </Fade>
             <Fade>
@@ -138,6 +126,22 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
+      <video
+        autoPlay
+        loop
+        muted
+        playsinline
+        className="opacity-10 backgroundVideo"
+      >
+        <source
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/0001-0361_ijirov.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/0001-0361_ijirov.webm"
+          type="video/webm"
+        />
+      </video>
     </Layout>
   )
 }

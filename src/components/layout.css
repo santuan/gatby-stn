@@ -75,3 +75,14 @@ body.fullpage .logo {
 body.fullpage .inner-wrapper{
   @apply max-w-full ease-in-out py-0 !important;  
 }
+
+
+.backgroundVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
