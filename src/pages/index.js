@@ -130,7 +130,7 @@ export default function IndexPage() {
         autoPlay
         loop
         muted
-        playsinline
+        playsInline
         className="opacity-10 backgroundVideo"
       >
         <source

@@ -19,7 +19,7 @@ const Header = () => (
       </div>
       <div className="hidden w-full text-right md:block">
         <nav className="relative flex items-center justify-end md:space-x-8">
-        <Link
+          <Link
             to="/recursos/"
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
