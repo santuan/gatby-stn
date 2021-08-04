@@ -43,7 +43,7 @@ export default function IndexPage() {
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
         <div className="relative z-50 w-full max-w-5xl px-8 mx-auto mt-12 mb-2 text-left">
           <h2
-            className="w-full font-mono text-5xl text-left text-white md:text-6xl"
+            className="w-full font-mono text-4xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
             <button
@@ -131,7 +131,7 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-20 backgroundVideo"
+        className="opacity-20 md:opacity-40 backgroundVideo"
       >
         <source
           src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/0001-0360_tqr94j.mp4"

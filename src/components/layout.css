@@ -85,4 +85,13 @@ body.fullpage .inner-wrapper{
   top: 0;
   right: 0;
   z-index: 0;
+  object-position: right;
+}
+
+
+
+@screen md {
+  .backgroundVideo {
+    object-position: center;
+  }
 }
