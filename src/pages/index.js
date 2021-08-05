@@ -43,7 +43,7 @@ export default function IndexPage() {
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
         <div className="relative z-50 w-full max-w-5xl px-8 mx-auto mt-12 mb-2 text-left">
           <h2
-            className="w-full font-mono text-4xl text-left text-white md:text-6xl"
+            className="w-full font-serif text-4xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
             <button
@@ -53,16 +53,16 @@ export default function IndexPage() {
                 setTimeout(() => setIsCopied(false), 3000)
               }}
               className={
-                "hover:underline font-serif inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:font-serif hover:text-blue-600 "
+                "hover:underline  inline-block py-1 transition-all duration-500 text-blue-500 rounded-md cursor-help hover:font-serif hover:text-blue-600 "
               }
             >
               Diseño
             </button>{" "}
             <br />y
-            <span className="inline-block px-4 py-1 mr-1 font-mono font-bold text-red-500 transition-all duration-500 transform rounded-md select-all hover:translate-x-0 hover:text-gray-900 hover:bg-gray-800">
+            <span className="inline-block px-4 py-1 mr-1 font-bold text-red-500 transition-all duration-500 transform rounded-md select-all hover:translate-x-0 hover:text-gray-900 hover:bg-gray-800">
               desarrollo
             </span>
-            <div className="block w-full mt-2 font-sans font-bold">
+            <div className="block w-full mt-2 font-bold">
               <TextLoop interval={3500} >
                 <Link
                   to={`/colaboraciones/`}
@@ -131,14 +131,14 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-20 md:opacity-50 backgroundVideo"
+        className="opacity-20 md:opacity-90 backgroundVideo"
       >
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero_fu1vgq.mp4"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero-stn.mp4"
           type="video/mp4"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero_fu1vgq.webm"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero-stn.webm"
           type="video/webm"
         />
       </video>
