@@ -131,14 +131,14 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-20 md:opacity-40 backgroundVideo"
+        className="opacity-20 md:opacity-50 backgroundVideo"
       >
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/0001-0360_tqr94j.mp4"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero_fu1vgq.mp4"
           type="video/mp4"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/0001-0360_tqr94j.webm"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero_fu1vgq.webm"
           type="video/webm"
         />
       </video>
