@@ -4,11 +4,7 @@ import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Confetti from "react-dom-confetti"
-import {
-  ImGithub,
-  ImTwitter,
-  ImLinkedin2,
-} from "react-icons/im"
+import { ImGithub, ImTwitter, ImLinkedin2 } from "react-icons/im"
 
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
@@ -40,33 +36,27 @@ export default function BackgroundSlider() {
   const [isCopied, setIsCopied] = React.useState(false)
   return (
     <Layout>
-      <Seo title="Contacto"  pathname={`/contacto/`}/>
+      <Seo title="Contacto" pathname={`/contacto/`} />
       <Helmet>
         <body className="contact" />
       </Helmet>
       <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen overflow-hidden bg-pattern ">
         <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-6 font-mono prose text-justify md:prose-lg hyphens">
           <p className="text-white">
-            Soy un apasionado del diseño y la programación y todo lo que tenga
-            que ver con el mundo del software libre. Disfruto y me siento
-            privilegiado de pertenecer a una comunidad que se dedica a mejorar
-            el mundo día a día de formas más colaborativas.{" "}
+            Amo el diseño y la programación y todo lo que tenga que ver con el
+            mundillo del software libre. Disfruto de pertenecer a una comunidad
+            que se dedica a mejorar el mundo día a día de formas más
+            colaborativas.{" "}
           </p>
 
           <p className="text-white">
-            Estudié durante más de 7 años la carrera de diseño gráfico en la
-            Universidad de Buenos Aires. Mientras tanto y paralelamente me fui
-            dedicando cada vez más a investigar las herramientas y conocimientos
-            que la comunidad de software libre ofrece de manera gratuita y
-            dedicandome a implementarlas en los proyectos que me rodean para
-            impulsar su creatividad e ir aprendiendo en el intento.
+            Disfruto de investigar las herramientas y conocimientos que la
+            comunidad de software libre ofrece de manera gratuita y me dedico a
+            implementarlas en los proyectos que me rodean. Impulsar las
+            pulsiones creativas de los demas e ir aprendiendo y mejorando en el
+            intento.
           </p>
 
-          <p className="text-white">
-            Durante los ultimos años me he desarrollado laboralmente en el
-            ámbito público como diseñador y desarrollador de aplicaciones y
-            páginas web.
-          </p>
           <p className="text-white">
             También mantengo el sitio web{" "}
             <a
@@ -83,17 +73,13 @@ export default function BackgroundSlider() {
           </p>
           <p className="text-white">
             Tanto esta web como muchos de los sitios web que realizo tienen la
-            particularidad de tener un costo de mantenimiento de $0. Si que
-            normalmente tener un dominio personal suma y eso inevitablemente
-            tiene que abonarse anualmente (ya sea un .com.ar o un .com).
+            particularidad de tener un costo de mantenimiento de $0.
           </p>
-          <p className="text-white">
-            La mayoría de los sitios pueden realizarse implementando las mejores
-            herramientas de programación usando su plan gratuito (algo así como
-            usar una red social gratis a cambio de dar nuestra información y
-            atención). Cada uno de estos servicios cuentan con un plan con sus
-            respectivos limitantes pero que en su mayoria suelen ser más de lo
-            necesario para arrancar a una menor escala.
+          <p className="pl-12 leading-5 text-right text-white opacity-90">
+            <small>
+              Si que tener un dominio personal suma y eso suele abonarse
+              anualmente (Ej: .com.ar = $270 pesos arg.)
+            </small>
           </p>
 
           <p className="text-white">
@@ -108,7 +94,7 @@ export default function BackgroundSlider() {
             </span>
           </p>
         </div>
-        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:mt-6 md:my-0">
+        <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:my-6">
           <button
             onClick={() => {
               copyToClipboard("santuan.web@gmail.com")
@@ -134,7 +120,7 @@ export default function BackgroundSlider() {
               <Confetti active={isCopied} config={config} />
             </div>
           </button>
-          <div className="grid grid-cols-3 gap-3 mt-12">
+          <div className="hidden grid-cols-3 gap-3 mt-12">
             <a
               className="flex flex-col items-center justify-center py-2 mx-2 mb-6 font-mono text-xl font-bold duration-700 rounded-md group"
               target="_blank"
