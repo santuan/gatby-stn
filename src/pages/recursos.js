@@ -55,7 +55,7 @@ const RecursosPage = () => (
                   Probá con Juegos, arte, plantas, radios, etc
                 </div>
               </div>
-              <div className="relative max-w-full mx-auto mt-6">
+              <div className="relative mx-auto mt-6 max-w-7xl">
                 <Fade duration={1750} delay={1250}>
                   <Hits className="w-full mx-auto" hitComponent={PostPreview} />
                 </Fade>

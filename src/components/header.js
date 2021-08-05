@@ -7,7 +7,7 @@ import "../styles/header.css"
 
 const Header = () => (
   <Headroom disableInlineStyles>
-    <div className="flex items-center justify-between w-full max-w-5xl px-3 py-3 mx-auto duration-1000 transform inner-wrapper">
+    <div className="flex items-center justify-between w-full px-3 py-3 mx-auto duration-1000 transform max-w-7xl inner-wrapper">
       <div className="w-40 font-mono text-xl font-bold tracking-wider uppercase logo md:w-64">
         <Link
           to="/"

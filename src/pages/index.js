@@ -41,7 +41,7 @@ export default function IndexPage() {
     <Layout>
       <Seo title="Inicio" />
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
-        <div className="relative z-50 w-full max-w-5xl px-8 mx-auto mt-12 mb-2 text-left">
+        <div className="relative z-50 w-full px-8 mx-auto mt-24 mb-2 text-left md:mt-8 max-w-7xl">
           <h2
             className="w-full font-serif text-4xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
@@ -101,13 +101,13 @@ export default function IndexPage() {
           <div className="transform -translate-y-48 translate-x-52">
             <Confetti active={isCopied} config={config} />
           </div>
-          <div className="grid max-w-lg md:gap-2 md:grid-cols-2">
+          <div className="grid max-w-xs grid-cols-1">
             <Fade>
               <AwesomeButton
                 action={() => {
                   navigate(`/recursos/`)
                 }}
-                className="w-full md:mb-1"
+                className="w-full "
               >
                 ver Recursos
               </AwesomeButton>
@@ -118,7 +118,7 @@ export default function IndexPage() {
                   navigate(`/blog/`)
                 }}
                 type="secondary"
-                className="w-full md:mb-3"
+                className="w-full !mt-3"
               >
                 ver Blog
               </AwesomeButton>
@@ -131,7 +131,7 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-20 md:opacity-90 backgroundVideo"
+        className="opacity-40 md:opacity-90 backgroundVideo"
       >
         <source
           src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero-stn.mp4"

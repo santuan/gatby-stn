@@ -524,7 +524,7 @@ a[class^="ais-"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; */
-  @apply grid grid-cols-1 gap-3 xl:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2;
+  @apply grid grid-cols-1 gap-3 xl:grid-cols-3 2xl:grid-cols-3 md:grid-cols-2;
 }
 .ais-Panel-body .ais-InfiniteHits-list,
 .ais-Panel-body .ais-InfiniteResults-list,
