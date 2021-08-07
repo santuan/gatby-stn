@@ -63,7 +63,7 @@ export default function IndexPage() {
               desarrollo
             </span>
             <div className="block w-full mt-2 font-bold">
-              <TextLoop interval={3500} >
+              <TextLoop interval={3500}>
                 <Link
                   to={`/colaboraciones/`}
                   className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
@@ -141,6 +141,10 @@ export default function IndexPage() {
         <source
           src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero-stn.webm"
           type="video/webm"
+        />
+        <source
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/hero-stn.ogv"
+          type="video/ogg"
         />
       </video>
     </Layout>
