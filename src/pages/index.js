@@ -59,7 +59,7 @@ export default function IndexPage() {
               Diseño
             </button>{" "}
             <br />y
-            <span className="inline-block px-4 py-1 mr-1 font-bold text-red-500 transition-all duration-500 transform rounded-md select-all hover:translate-x-0 hover:text-gray-900 hover:bg-gray-800">
+            <span className="relative z-10 inline-block px-4 py-1 mr-1 font-bold text-red-500 transition-all duration-500 transform rounded-md select-all hover:translate-x-0 hover:text-gray-900 hover:bg-gray-800">
               desarrollo
             </span>
             <div className="block w-full mt-2 font-bold">
@@ -132,6 +132,7 @@ export default function IndexPage() {
         muted
         playsInline
         className="opacity-40 md:opacity-90 backgroundVideo"
+        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_66,w_3718/v1628128970/encoder/hero-stn.jpg"
       >
         <source
           src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/hero-stn.mp4"

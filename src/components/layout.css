@@ -81,7 +81,7 @@ body.fullpage .inner-wrapper{
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 0;

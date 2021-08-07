@@ -38,23 +38,24 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
         <div className="relative z-50 flex items-center justify-center mb-12 -mt-20 text-4xl md:-mt-24 hover:text-blue-400">
           <p className="hidden text-white">{post.title}</p>
           <AwesomeButton
-            action={() => {
-              navigate(`/colaboraciones/`)
-            }}
-            className="mt-5 mr-6"
-          >
-            <span className="hidden mr-2 md:inline-block">ver </span> trabajos
-          </AwesomeButton>
-          <AwesomeButton
             href={post.webUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5"
+            className="mt-5 mr-6"
             type="secondary"
           >
             <span className="hidden mr-2 md:inline-block">ir a la </span> web{" "}
             <GoLinkExternal className="inline-block ml-2" />
           </AwesomeButton>
+          <AwesomeButton
+            action={() => {
+              navigate(`/colaboraciones/`)
+            }}
+            className="mt-5 "
+          >
+            <span className="hidden mr-2 md:inline-block">más </span> proyectos
+          </AwesomeButton>
+          
         </div>
         <SRLWrapper options={options}>
           <div className="max-w-full px-3 font-sans prose prose-lg hyphens lg:prose-2xl">
