@@ -132,18 +132,18 @@ export default function IndexPage() {
         muted
         playsInline
         className="opacity-40 md:opacity-90 backgroundVideo"
-        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_66,w_3718/v1628128970/encoder/herosantuan0001-0250_d38gq3.jpg"
+        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/herohdsantuan0001-0250_wpgean.jpg"
       >
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herosantuan0001-0250_d38gq3.mp4"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.mp4"
           type="video/mp4"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herosantuan0001-0250_d38gq3.webm"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.webm"
           type="video/webm"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/herosantuan0001-0250_d38gq3.ogv"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/herohdsantuan0001-0250_wpgean.ogv"
           type="video/ogg"
         />
       </video>
