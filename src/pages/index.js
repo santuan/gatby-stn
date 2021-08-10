@@ -41,9 +41,9 @@ export default function IndexPage() {
     <Layout>
       <Seo title="Inicio" />
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
-        <div className="relative z-50 w-full px-8 mx-auto mt-24 mb-2 text-center md:mt-8 max-w-7xl">
+        <div className="relative z-50 w-full px-8 mx-auto mt-24 mb-2 text-left md:mt-8 max-w-7xl">
           <h2
-            className="w-full font-serif text-4xl text-center text-white md:text-6xl"
+            className="w-full font-serif text-4xl text-left text-white md:text-6xl"
             style={{ opacity: ".8" }}
           >
             <button
@@ -101,7 +101,7 @@ export default function IndexPage() {
           <div className="transform -translate-y-48 translate-x-52">
             <Confetti active={isCopied} config={config} />
           </div>
-          <div className="grid max-w-xs grid-cols-1 mx-auto">
+          <div className="grid max-w-xs grid-cols-1">
             <Fade>
               <AwesomeButton
                 action={() => {
@@ -131,19 +131,19 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className=" backgroundVideo"
-        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/sunset0001-0120_osaihl.jpg"
+        className="opacity-40 md:opacity-90 backgroundVideo"
+        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/herohdsantuan0001-0250_wpgean.jpg"
       >
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/sunset0001-0120_osaihl.mp4"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.mp4"
           type="video/mp4"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/sunset0001-0120_osaihl.webm"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.webm"
           type="video/webm"
         />
         <source
-          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/sunset0001-0120_osaihl.ogv"
+          src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/herohdsantuan0001-0250_wpgean.ogv"
           type="video/ogg"
         />
       </video>
