@@ -8,6 +8,11 @@ const routes = [
     ariaLabel: "Santuan - Volver al inicio",
   },
   {
+    title: "3D",
+    slug: "/3d/",
+    ariaLabel: "Ver renders en 3d",
+  },
+  {
     title: "Recursos",
     slug: "/recursos/",
     ariaLabel: "Ver recursos cooperativos",

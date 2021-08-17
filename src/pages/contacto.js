@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Confetti from "react-dom-confetti"
 import { ImGithub, ImTwitter, ImLinkedin2 } from "react-icons/im"
 import HeroSlider from "../components/HeroSlider/HeroSlider"
-
+import { BsArrowDown } from "react-icons/bs";
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
   el.value = str
@@ -43,6 +43,7 @@ export default function BackgroundSlider() {
       </Helmet>
       <div className="relative w-full min-h-screen">
         <HeroSlider />
+        <BsArrowDown className="absolute left-0 right-0 w-full h-10 text-3xl text-white bottom-6 animate-pulse"/>
       </div>
       <div className="relative z-20 flex flex-col items-center justify-start w-full overflow-hidden bg-pattern ">
         <div className="relative z-50 max-w-xl px-4 mx-auto mt-6 mb-6 font-mono prose text-justify md:prose-lg hyphens">

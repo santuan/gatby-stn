@@ -1,13 +1,13 @@
 import React from "react"
 import makeCarousel from "react-reveal/makeCarousel"
 import Fade from "react-reveal/Fade"
-import { StaticImage  } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 import { BiRadioCircle, BiRadioCircleMarked } from "react-icons/bi"
 
 const SliderHomeAboutComponent = (props) => {
   const CarouselUI = ({ position, total, handleClick, children }) => (
-    <div className="absolute inset-0 z-0 w-full h-screen mb-0 overflow-hidden opacity-90">
+    <div className="absolute inset-0 z-0 w-full h-screen mb-0 overflow-hidden opacity-95">
       {props.arrows ? (
         <div className="relative max-w-2xl mx-auto ">
           <button
@@ -60,7 +60,7 @@ const SliderHomeAboutComponent = (props) => {
       >
         <Fade>
           <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage 
+            <StaticImage
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
@@ -68,10 +68,10 @@ const SliderHomeAboutComponent = (props) => {
             />
           </div>
         </Fade>
-        
+
         <Fade>
           <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage 
+            <StaticImage
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
@@ -81,7 +81,7 @@ const SliderHomeAboutComponent = (props) => {
         </Fade>
         <Fade>
           <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage 
+            <StaticImage
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
@@ -91,7 +91,7 @@ const SliderHomeAboutComponent = (props) => {
         </Fade>
         <Fade>
           <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage 
+            <StaticImage
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
