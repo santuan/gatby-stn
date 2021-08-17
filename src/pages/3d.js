@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { SRLWrapper } from "simple-react-lightbox"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { CgInstagram } from "react-icons/cg";
+import { CgInstagram } from "react-icons/cg"
 
 const options = {
   buttons: {
@@ -201,11 +201,22 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
           </div>
-          <div className="flex flex-col items-center justify-center w-full p-3 py-24 font-mono text-6xl text-center text-white duration-200 bg-fixed opacity-80 hover:text-yellow-400 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
-            <a href="https://www.instagram.com/stn9000/" className="flex items-center justify-center px-6 py-3 duration-200 border-4 border-gray-900 rounded hover:border-yellow-400" target="_blank" rel="noopener noreferrer">
-               <CgInstagram className="mr-3"/>
-               STN9000
+          <div className="relative flex flex-col items-center justify-center w-full p-3 py-64 overflow-hidden font-mono text-6xl text-center text-yellow-700 duration-200 bg-fixed opacity-80 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
+            <a
+              href="https://www.instagram.com/stn9000/"
+              className="relative z-20 flex items-center justify-center px-6 py-3 duration-200 border-2 border-yellow-700 rounded-md hover:border-indigo-600 hover:text-indigo-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CgInstagram className="mr-3" />
+              STN9000
             </a>
+            <StaticImage
+              title="instagram @stn9000"
+              className="absolute inset-0 z-10 object-cover w-full h-full duration-200 md:w-full hover:opacity-60"
+              alt="instagram @stn9000"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.png"
+            />
           </div>
         </div>
       </SRLWrapper>
