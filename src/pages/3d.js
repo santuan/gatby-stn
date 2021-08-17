@@ -66,17 +66,17 @@ export default function BackgroundSlider() {
         <div className="relative z-20 w-full bg-black bg-pattern ">
           <div className="grid gap-6 p-6 pt-24 mx-auto md:gap-1 md:grid-cols-3 md:p-0 md:pt-20">
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative cursor-pointer">
                 <StaticImage
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629213764/stn-renders/_h1_vmxxse.png"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -86,7 +86,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -96,7 +96,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -106,7 +106,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -116,7 +116,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -126,7 +126,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -137,7 +137,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -147,7 +147,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-9 aspect-h-9">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -158,7 +158,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:col-span-3 md:w-full md:h-full aspect-w-9 aspect-h-9 md:aspect-w-16 md:aspect-h-6">
+              <div className="relative w-auto h-screen cursor-pointer md:col-span-3 md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -169,7 +169,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-16 aspect-h-8">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -180,7 +180,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-16 aspect-h-8">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -191,7 +191,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full aspect-w-16 aspect-h-8">
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
