@@ -64,7 +64,7 @@ export default function BackgroundSlider() {
       </Helmet>
       <SRLWrapper options={options}>
         <div className="relative z-20 w-full bg-black bg-pattern ">
-          <div className="grid gap-6 p-6 pt-24 mx-auto md:gap-1 md:grid-cols-3 md:p-0 md:pt-20">
+          <div className="grid grid-cols-3 gap-6 p-6 pt-24 mx-auto md:gap-1 md:p-0 md:pt-20">
             <Fade>
               <div className="relative cursor-pointer">
                 <StaticImage
@@ -211,12 +211,14 @@ export default function BackgroundSlider() {
               <CgInstagram className="mr-3" />
               STN9000
             </a>
-            <StaticImage
-              title="instagram @stn9000"
-              className="absolute inset-0 z-10 object-cover w-full h-full duration-200 md:w-full hover:opacity-60"
-              alt="instagram @stn9000"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.png"
-            />
+            <div className="absolute inset-0 z-10">
+              <StaticImage
+                title="instagram @stn9000"
+                className="object-cover w-full h-full duration-200 md:w-full hover:opacity-60"
+                alt="instagram @stn9000"
+                src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.png"
+              />
+            </div>
           </div>
         </div>
       </SRLWrapper>
