@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Confetti from "react-dom-confetti"
 import { ImGithub, ImTwitter, ImLinkedin2 } from "react-icons/im"
+import HeroSlider from "../components/HeroSlider/HeroSlider"
 
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
@@ -40,48 +41,11 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className="contact" />
       </Helmet>
-      <div className="relative z-20 flex flex-col items-center justify-start w-full min-h-screen overflow-hidden bg-pattern ">
-        <div className="relative z-50 max-w-xl px-4 mx-auto mt-32 mb-6 font-mono prose text-justify md:prose-lg hyphens">
-          <p className="text-white">
-            Amo el diseño y la programación y todo lo que tenga que ver con el
-            mundillo del software libre. Disfruto de pertenecer a una comunidad
-            que se dedica a mejorar el mundo día a día de formas más
-            colaborativas.{" "}
-          </p>
-
-          <p className="text-white">
-            Disfruto de investigar las herramientas y conocimientos que la
-            comunidad de software libre ofrece de manera gratuita y me dedico a
-            implementarlas en los proyectos que me rodean. Impulsar las
-            pulsiones creativas de los demas e ir aprendiendo y mejorando en el
-            intento.
-          </p>
-
-          <p className="text-white">
-            También mantengo el sitio web{" "}
-            <a
-              href="https://cooparaje.com.ar/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-500"
-            >
-              cooparaje.com.ar
-            </a>
-            , donde voy subiendo recursos y herramientas gratuitas que amigas y
-            amigos me van preguntando o compartiendo y se pueden aplicar para
-            todo tipo de espacios.
-          </p>
-          <p className="text-white">
-            Tanto esta web como muchos de los sitios web que realizo tienen la
-            particularidad de tener un costo de mantenimiento de $0.
-          </p>
-          <p className="pl-12 leading-5 text-right text-white opacity-90">
-            <small>
-              Si que tener un dominio personal suma y eso suele abonarse
-              anualmente (Ej: .com.ar = $270 pesos arg.)
-            </small>
-          </p>
-
+      <div className="relative w-full min-h-screen">
+        <HeroSlider />
+      </div>
+      <div className="relative z-20 flex flex-col items-center justify-start w-full overflow-hidden bg-pattern ">
+        <div className="relative z-50 max-w-xl px-4 mx-auto mt-6 mb-6 font-mono prose text-justify md:prose-lg hyphens">
           <p className="text-white">
             Si algo de lo que viste aqui te gustó y te interesaría saber más,
             podés sentirte libre de contactarte y trataré de colaborar dentro de
@@ -97,7 +61,7 @@ export default function BackgroundSlider() {
         <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:my-6">
           <button
             onClick={() => {
-              copyToClipboard("santuan.web@gmail.com")
+              copyToClipboard("santuan.dg@gmail.com")
               setIsCopied(true)
               setTimeout(() => setIsCopied(false), 3000)
             }}
@@ -111,7 +75,7 @@ export default function BackgroundSlider() {
             <div className="relative overflow-hidden">
               <Fade bottom duration={700} delay={200}>
                 <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
-                  santuan.web@gmail.com
+                  santuan.dg@gmail.com
                 </span>
               </Fade>
             </div>
