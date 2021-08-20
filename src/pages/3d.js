@@ -65,6 +65,37 @@ export default function BackgroundSlider() {
       <SRLWrapper options={options}>
         <div className="relative z-20 w-full bg-black bg-pattern ">
           <div className="grid grid-cols-3 gap-6 p-6 pt-24 mx-auto md:gap-1 md:p-0 md:pt-20">
+          <Fade>
+              <div className="relative cursor-pointer">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629476562/stn-renders/1_a6qw3t.png"
+                />
+              </div>
+            </Fade>
+            <Fade>
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629476563/stn-renders/2_iutptm.png"
+                />
+              </div>
+            </Fade>
+            <Fade>
+              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629476562/stn-renders/3_nveu2c.png"
+                />
+              </div>
+            </Fade>
+
             <Fade>
               <div className="relative cursor-pointer">
                 <StaticImage
@@ -158,7 +189,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:col-span-3 md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
