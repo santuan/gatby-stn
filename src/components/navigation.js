@@ -13,20 +13,20 @@ const routes = [
     ariaLabel: "Ver renders en 3d",
   },
   {
-    title: "Recursos",
-    slug: "/recursos/",
-    ariaLabel: "Ver recursos cooperativos",
-  },
-  {
-    title: "Blog",
+    title: "Textos",
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
 
   {
-    title: "Proyectos",
+    title: "web",
     slug: "/colaboraciones/",
     ariaLabel: "Ver los proyectos",
+  },
+  {
+    title: "Recursos",
+    slug: "/recursos/",
+    ariaLabel: "Ver recursos cooperativos",
   },
   {
     title: "Contacto",
