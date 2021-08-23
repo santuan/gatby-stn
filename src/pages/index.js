@@ -65,7 +65,7 @@ export default function IndexPage() {
             <div className="block w-full mt-2 font-bold">
               <TextLoop interval={3500}>
                 <Link
-                  to={`/colaboraciones/`}
+                  to={`/3d/`}
                   className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
                   de todo.

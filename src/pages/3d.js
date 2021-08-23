@@ -10,11 +10,12 @@ import { CgInstagram } from "react-icons/cg"
 const options = {
   buttons: {
     iconPadding: "5px",
-    showDownloadButton: false,
+    showDownloadButton: true,
     backgroundColor: "rgba(0, 0, 0, .5)",
     iconColor: "rgba(255, 255, 255, 0.8)",
     showNextButton: true,
     showPrevButton: true,
+    size: "30px",
   },
   caption: {
     captionFontSize: "15px",
@@ -64,9 +65,9 @@ export default function BackgroundSlider() {
       </Helmet>
       <SRLWrapper options={options}>
         <div className="relative z-20 w-full bg-black bg-pattern ">
-          <div className="grid grid-cols-3 gap-6 p-6 pt-24 mx-auto md:gap-1 md:p-0 md:pt-20">
-          <Fade>
-              <div className="relative cursor-pointer">
+          <div className="grid grid-cols-1 gap-6 p-6 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-20">
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
@@ -76,7 +77,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -86,7 +87,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -107,7 +108,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -117,7 +118,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -127,7 +128,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -137,7 +138,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -147,7 +148,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -157,7 +158,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -168,7 +169,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -178,7 +179,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -200,7 +201,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -211,7 +212,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -222,7 +223,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen cursor-pointer md:w-full md:h-full">
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
@@ -232,7 +233,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
           </div>
-          <div className="relative flex flex-col items-center justify-center w-full p-3 py-64 overflow-hidden font-mono text-6xl text-center text-yellow-700 duration-200 bg-fixed opacity-80 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
+          <div className="relative flex flex-col items-center justify-center w-full p-3 py-64 overflow-hidden font-mono text-xl text-center text-yellow-700 duration-200 bg-fixed md:text-6xl opacity-80 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
             <a
               href="https://www.instagram.com/stn9000/"
               className="relative z-20 flex items-center justify-center px-6 py-3 duration-200 border-2 border-yellow-700 rounded-md hover:border-indigo-600 hover:text-indigo-600"
