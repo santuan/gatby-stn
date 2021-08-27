@@ -15,7 +15,6 @@ const searchClient = algoliasearch(
   "K8WTAMXCZT",
   "91627040f2b233f6958fdbdbe2b6193d"
 )
-
 const RecursosPage = () => (
   <Layout>
     <Seo title="cooparaje" pathname={`/cooparaje/`} />
@@ -46,7 +45,7 @@ const RecursosPage = () => (
           <div className="relative w-full min-h-screen py-6 pt-6 mx-auto mt-2 md:mt-6">
             <InstantSearch
               searchClient={searchClient}
-              indexName="netlify_54fb5aee-2bc5-4d65-8da9-b519a0027d2c_master_all"
+              indexName="recursos"
             >
               <div className="max-w-xl mx-auto ">
                 <SearchBox

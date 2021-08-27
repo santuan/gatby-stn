@@ -8,7 +8,7 @@ const PostPreview = ({ hit }) => {
     <div className="relative flex overflow-hidden text-left text-gray-100 bg-gray-900 rounded-md bg-gradient-to-l from-gray-800 ">
       <div className="relative z-40 w-full p-6 text-left">
         <a
-          href={`https://www.cooparaje.com.ar${hit.url}`}
+          href={`https://www.cooparaje.com.ar/recursos/${hit.slug}`}
           target="_blank"
           rel="noopener noreferrer"
           className="font-serif text-lg font-bold text-yellow-500 duration-700 hover:text-white"
@@ -17,11 +17,11 @@ const PostPreview = ({ hit }) => {
           <GoLinkExternal className="inline-block ml-2" />
         </a>
         <p className="mt-1 font-sans text-lg line-clamp-2">
-          <Highlight hit={hit} attribute="description" tagName="mark" />
+          <Highlight hit={hit} attribute="excerpt.excerpt" tagName="mark" />
         </p>
       </div>
       <a
-        href={`https://www.cooparaje.com.ar${hit.url}`}
+        href={`https://www.cooparaje.com.ar/recursos/${hit.slug}`}
         target="_blank"
         rel="noopener noreferrer"
         className="w-64 h-40 duration-700 opacity-80 hover:opacity-50"
@@ -29,7 +29,7 @@ const PostPreview = ({ hit }) => {
         <img
           className="block object-cover w-full h-full"
           alt={hit.title}
-          src={hit.image}
+          src={`https:${hit.featuredImg.file.url}?w=220&h=220&fm=png&q=80`}
         />
       </a>
     </div>

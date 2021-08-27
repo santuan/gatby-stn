@@ -4,7 +4,6 @@ import React from "react"
 import Headroom from "react-headroom"
 import IsoStn from "../animations/isoWelcome"
 import "../styles/header.css"
-import { GoLinkExternal } from "react-icons/go"
 import { FiSend } from "react-icons/fi"
 import { FaCog } from "react-icons/fa"
 
