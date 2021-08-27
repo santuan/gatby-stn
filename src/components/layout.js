@@ -11,6 +11,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode } from "react-icons/hi"
 import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
+import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   return (
@@ -21,8 +22,10 @@ const Layout = ({ children }) => {
         </SimpleReactLightbox>
         <footer className="relative z-50 py-12 font-mono text-center text-white bg-gray-900">
           <div>
-            STN ©{new Date().getFullYear()}, Realizado con <br /> Gatsby +
-            Contentful + Netlify{" "}
+            <Link to={`/blog/repositorio-de-este-sitio`} className="">
+              STN ©{new Date().getFullYear()}, Realizado con <br /> Gatsby /
+              Tailwind / Contentful / Netlify{" "}
+            </Link>
           </div>
           <a
             target="_blank"

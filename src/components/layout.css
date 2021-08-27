@@ -76,7 +76,6 @@ body.fullpage .inner-wrapper{
   @apply max-w-full ease-in-out py-0 !important;  
 }
 
-
 .backgroundVideo {
   object-fit: cover;
   width: 100vw;
@@ -87,6 +86,19 @@ body.fullpage .inner-wrapper{
   z-index: 0;
   object-position: center;
 }
+
+.backgroundVideoFixed {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  object-position: center;
+}
+
+
 
 
 

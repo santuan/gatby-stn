@@ -9,6 +9,7 @@ import MovingIcons from "../animations/moving-icons"
 import algoliasearch from "algoliasearch/lite"
 import { Hits, InstantSearch, SearchBox } from "react-instantsearch-dom"
 import PostPreview from "../components/algoliaPostPreview"
+import { GoLinkExternal } from "react-icons/go"
 
 const searchClient = algoliasearch(
   "K8WTAMXCZT",
@@ -17,7 +18,7 @@ const searchClient = algoliasearch(
 
 const RecursosPage = () => (
   <Layout>
-    <Seo title="Recursos" pathname={`/recursos/`}/>
+    <Seo title="cooparaje" pathname={`/cooparaje/`} />
     <Helmet>
       <body className="blog" />
     </Helmet>
@@ -27,13 +28,18 @@ const RecursosPage = () => (
           <SVGLogo className="hidden w-8 duration-700 ease-in-out transform -rotate-90 md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
         <Fade bottom>
-          <h2 className="w-full mt-3 font-serif text-lg font-bold text-left text-yellow-400 md:text-center md:text-4xl">
-            Colecciones de recursos gratuitos
-          </h2>
+          <a
+            href="https://www.cooparaje.com.ar/espacios"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mt-3 font-serif text-lg font-bold text-left text-yellow-400 md:text-center md:text-4xl"
+          >
+            www.cooparaje.com.ar
+          </a>
         </Fade>
         <Fade bottom>
           <p className="w-full max-w-lg mt-3 font-sans text-base text-left text-gray-100 md:text-center md:text-2xl">
-            Repositorio interactivo de herramientas libres.
+            Colecciones de recursos y herramientas para usar libremente.
           </p>
         </Fade>
         <Fade duration={1750} delay={250}>
@@ -51,8 +57,17 @@ const RecursosPage = () => (
                     placeholder: "Buscar aquí",
                   }}
                 />
-                <div className="mb-4 font-mono text-xs font-bold text-center text-indigo-300 md:text-sm">
-                  Probá con Juegos, arte, plantas, radios, etc
+                <div className="mb-4 font-mono text-xs font-bold text-center text-indigo-100 md:text-sm">
+                  Probá con Juegos, colores, plantas, radios y <br/>
+                  <a
+                    href="https://www.cooparaje.com.ar/espacios"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-yellow-500 underline"
+                  >
+                    muchos espacios más
+                    <GoLinkExternal className="inline-block ml-2" />
+                  </a>
                 </div>
               </div>
               <div className="relative mx-auto mt-6 max-w-7xl">

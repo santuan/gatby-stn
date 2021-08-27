@@ -65,10 +65,10 @@ export default function IndexPage() {
             <div className="block w-full mt-2 font-bold">
               <TextLoop interval={3500}>
                 <Link
-                  to={`/3d/`}
+                  to={`/galeria/`}
                   className="text-yellow-400 hover:text-yellow-500 hover:opacity-80"
                 >
-                  de todo.
+                  un poco de todo.
                 </Link>
                 <Link
                   to={`/colaboraciones/germinacion-del-camino/`}
@@ -105,11 +105,11 @@ export default function IndexPage() {
             <Fade>
               <AwesomeButton
                 action={() => {
-                  navigate(`/recursos/`)
+                  navigate(`/galeria/`)
                 }}
                 className="w-full "
               >
-                ver Recursos
+                ver Galería
               </AwesomeButton>
             </Fade>
             <Fade>
@@ -120,7 +120,7 @@ export default function IndexPage() {
                 type="secondary"
                 className="w-full !mt-3"
               >
-                ver Blog
+                ver Textos
               </AwesomeButton>
             </Fade>
           </div>

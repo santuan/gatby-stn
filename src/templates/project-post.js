@@ -266,6 +266,7 @@ const options = {
           }`}
         >
           {node.content[0].value}
+          <GoLinkExternal className="inline-block ml-2 text-xs" />
         </a>
       )
     },

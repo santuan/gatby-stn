@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Pager from "../components/pager"
 import Seo from "../components/seo"
-import Wave from "../components/wave"
 import Card from "../components/card"
 import Fade from "react-reveal/Fade"
 import { Helmet } from "react-helmet"
@@ -17,24 +16,45 @@ const BlogArchive = ({ data, pageContext, location }) => {
         <body className="blog" />
       </Helmet>
       <div
-        className="relative flex flex-col items-start justify-center w-full pt-24 pb-20 mb-12 text-center text-white bg-indigo-800 md:pb-64 md:pt-32 md:px-6 md:items-center"
+        className="relative flex flex-col items-center justify-center w-full pt-24 pb-20 mb-12 overflow-hidden text-center text-white bg-gray-800 md:px-6 md:items-center"
         style={{ minHeight: "60vh" }}
       >
         <Fade cascade bottom duration={1200}>
-          <h1 className="px-5 font-serif text-4xl font-bold text-white ">
+          <h1 className="relative z-20 px-5 font-serif text-4xl font-bold text-white ">
             Blog
           </h1>
         </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="px-5 my-3 font-sans text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
-            Artículos en inglés buscando su sentido en el castellano. Historias
-            y recursos relacionados con el mundo del diseño y la
+          <p className="relative z-20 px-5 my-3 font-sans text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
+            Artículos en inglés versionados al castellano.
+            <br/>Historias
+            y recursos desde la perspectiva del diseño y la
             programación&hellip;
           </p>
         </Fade>
-        <Wave />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed z-0 opacity-10 md:opacity-10 backgroundVideo"
+          poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1630030297/stn-renders/rigidbody0001-0180_uz3rd4.jpg"
+        >
+          <source
+            src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1630030297/stn-renders/rigidbody0001-0180_uz3rd4.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1630030297/stn-renders/rigidbody0001-0180_uz3rd4.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1630030297/stn-renders/rigidbody0001-0180_uz3rd4.ogv"
+            type="video/ogg"
+          />
+        </video>
       </div>
-      <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-32 gap-9 lg:grid-cols-2 md:-mt-64">
+      <div className="grid max-w-6xl px-2 py-6 mx-auto -mt-32 gap-9 lg:grid-cols-2 md:-mt-44 ">
         {posts.map(({ node }) => {
           return (
             <Fade key={node.slug} duration={1500}>
@@ -51,7 +71,7 @@ const BlogArchive = ({ data, pageContext, location }) => {
 export default BlogArchive
 
 export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query ($skip: Int!, $limit: Int!) {
     allContentfulBlog(
       sort: { fields: [createdAt], order: DESC }
       limit: $limit

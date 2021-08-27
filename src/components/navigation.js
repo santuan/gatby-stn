@@ -8,9 +8,9 @@ const routes = [
     ariaLabel: "Santuan - Volver al inicio",
   },
   {
-    title: "3D",
-    slug: "/3d/",
-    ariaLabel: "Ver renders en 3d",
+    title: "Galeria",
+    slug: "/galeria/",
+    ariaLabel: "Ver galeria de 3d",
   },
   {
     title: "Textos",
@@ -19,12 +19,12 @@ const routes = [
   },
 
   {
-    title: "web",
+    title: "www",
     slug: "/colaboraciones/",
-    ariaLabel: "Ver los proyectos",
+    ariaLabel: "Ver colaboraciones ",
   },
   {
-    title: "Recursos",
+    title: "Cooparaje",
     slug: "/recursos/",
     ariaLabel: "Ver recursos cooperativos",
   },

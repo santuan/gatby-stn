@@ -58,47 +58,48 @@ const SliderHomeAboutComponent = (props) => {
         defaultWait={4200}
         maxTurns={100} /*wait for 1000 milliseconds*/
       >
+        
         <Fade>
           <div className="relative w-auto h-screen md:w-full md:h-full">
             <StaticImage
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629213756/stn-renders/_h2_oiho30.png"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630030311/stn-renders/345_tw9zas.jpg"
+            />
+          </div>
+        </Fade>
+        <Fade>
+          <div className="relative w-auto h-screen md:w-full md:h-full">
+            <StaticImage
+              title="item"
+              className="object-cover w-auto h-screen md:w-full md:h-full"
+              alt="item"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629213764/stn-renders/_h1_vmxxse.jpg"
+            />
+          </div>
+        </Fade>
+        <Fade>
+          <div className="relative w-auto h-screen md:w-full md:h-full">
+            <StaticImage
+              title="item"
+              className="object-cover w-auto h-screen md:w-full md:h-full"
+              alt="item"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215725/stn-renders/12_vddpy4.jpg"
+            />
+          </div>
+        </Fade>
+        <Fade>
+          <div className="relative w-auto h-screen md:w-full md:h-full">
+            <StaticImage
+              title="item"
+              className="object-cover w-auto h-screen md:w-full md:h-full"
+              alt="item"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215823/stn-renders/02_blemta.jpg"
             />
           </div>
         </Fade>
 
-        <Fade>
-          <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage
-              title="item"
-              className="object-cover w-auto h-screen md:w-full md:h-full"
-              alt="item"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215725/stn-renders/12_vddpy4.png"
-            />
-          </div>
-        </Fade>
-        <Fade>
-          <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage
-              title="item"
-              className="object-cover w-auto h-screen md:w-full md:h-full"
-              alt="item"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215823/stn-renders/02_blemta.png"
-            />
-          </div>
-        </Fade>
-        <Fade>
-          <div className="relative w-auto h-screen md:w-full md:h-full">
-            <StaticImage
-              title="item"
-              className="object-cover w-auto h-screen md:w-full md:h-full"
-              alt="item"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629213764/stn-renders/_h1_vmxxse.png"
-            />
-          </div>
-        </Fade>
       </Carousel>
     </>
   )
