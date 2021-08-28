@@ -25,7 +25,7 @@ const routes = [
   },
   {
     title: "Cooparaje",
-    slug: "/recursos/",
+    slug: "/cooparaje/",
     ariaLabel: "Ver recursos cooperativos",
   },
   {
