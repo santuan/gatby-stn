@@ -95,11 +95,20 @@ const SliderHomeAboutComponent = (props) => {
               title="item"
               className="object-cover w-auto h-screen md:w-full md:h-full"
               alt="item"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630559191/stn-renders/untitled_i27pcx.jpg"
+            />
+          </div>
+        </Fade>
+        <Fade>
+          <div className="relative w-auto h-screen md:w-full md:h-full">
+            <StaticImage
+              title="item"
+              className="object-cover w-auto h-screen md:w-full md:h-full"
+              alt="item"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215823/stn-renders/02_blemta.jpg"
             />
           </div>
         </Fade>
-
       </Carousel>
     </>
   )

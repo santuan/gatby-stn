@@ -5,7 +5,6 @@ import Headroom from "react-headroom"
 import IsoStn from "../animations/isoWelcome"
 import "../styles/header.css"
 import { FiSend } from "react-icons/fi"
-import { FaCog } from "react-icons/fa"
 
 const Header = () => (
   <Headroom disableInlineStyles>
@@ -46,10 +45,13 @@ const Header = () => (
           <Link
             to="/cooparaje/"
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
+            activeClassName="opacity-100 !text-yellow-400 "
           >
-            <FaCog />
-            <span className="hidden">Herramientas</span>
+            <span>Cooparaje</span>
+            <span class="absolute -top-1 -right-2 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
+            </span>
           </Link>
           <Link
             to="/contacto/"

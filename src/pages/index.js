@@ -8,6 +8,8 @@ import Seo from "../components/seo"
 import "../styles/bgPattern.css"
 import Confetti from "react-dom-confetti"
 import TextLoop from "react-text-loop"
+import SVGLogo from "../assets/cooparaje.svg"
+import MovingIcons from "../animations/moving-icons"
 
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
@@ -131,7 +133,7 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-40 md:opacity-90 backgroundVideo"
+        className="opacity-40 md:opacity-90 backgroundVideoFixed"
         poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/herohdsantuan0001-0250_wpgean.jpg"
       >
         <source
@@ -147,6 +149,42 @@ export default function IndexPage() {
           type="video/ogg"
         />
       </video>
+      <div className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="relative z-50 flex flex-col items-start justify-center w-full px-2 py-4 mx-auto my-12 max-w-7xl md:items-center ">
+          <Fade duration={1750} delay={250}>
+            <SVGLogo className="w-8 duration-700 ease-in-out transform -rotate-90 md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
+          </Fade>
+          <Fade bottom>
+            <a
+              href="https://www.cooparaje.com.ar/espacios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 font-serif text-lg font-bold text-left text-yellow-400 md:text-center md:text-4xl"
+            >
+              www.cooparaje.com.ar
+            </a>
+          </Fade>
+          <Fade bottom>
+            <p className="w-full max-w-lg mt-3 mb-6 font-sans text-base text-left text-gray-100 md:text-center md:text-2xl">
+              Colecciones de recursos y herramientas para usar libremente.
+            </p>
+          </Fade>
+          <Fade>
+            <AwesomeButton
+              action={() => {
+                navigate(`/cooparaje/`)
+              }}
+              type="primary"
+              className="w-full !mt-3"
+            >
+              Ver recursos
+            </AwesomeButton>
+          </Fade>
+        </div>
+        <div className="absolute inset-0 z-0 opacity-10">
+          <MovingIcons />
+        </div>
+      </div>
     </Layout>
   )
 }

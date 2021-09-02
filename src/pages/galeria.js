@@ -77,7 +77,7 @@ export default function BackgroundSlider() {
       </div>
       <SRLWrapper options={options}>
         <div className="relative z-20 w-full bg-black bg-pattern ">
-          <div className="grid grid-cols-1 gap-6 p-6 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-20">
+          <div className="grid grid-cols-1 gap-6 p-6 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-24">
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
