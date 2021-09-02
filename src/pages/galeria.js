@@ -231,6 +231,54 @@ export default function BackgroundSlider() {
                 />
               </div>
             </Fade>
+
+
+
+
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556711/stn-renders/03_m7w1gy.jpg"
+                />
+              </div>
+            </Fade>
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556712/stn-renders/02_txgqvw.jpg"
+                />
+              </div>
+            </Fade>
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+                <StaticImage
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556713/stn-renders/01_rnph0p.jpg"
+                />
+              </div>
+            </Fade>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
