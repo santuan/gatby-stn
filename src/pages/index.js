@@ -149,7 +149,7 @@ export default function IndexPage() {
           type="video/ogg"
         />
       </video>
-      <div className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+      <div className="relative flex items-center justify-center min-h-screen overflow-hidden border-t-4 border-red-600 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="relative z-50 flex flex-col items-start justify-center w-full px-2 py-4 mx-auto my-12 max-w-7xl md:items-center ">
           <Fade duration={1750} delay={250}>
             <SVGLogo className="w-8 duration-700 ease-in-out transform -rotate-90 md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
