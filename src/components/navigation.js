@@ -8,18 +8,18 @@ const routes = [
     ariaLabel: "Santuan - Volver al inicio",
   },
   {
-    title: "Galeria",
+    title: "Imágenes",
     slug: "/galeria/",
     ariaLabel: "Ver galeria de 3d",
   },
   {
-    title: "Textos",
+    title: "Escritura",
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
 
   {
-    title: "www",
+    title: "WWW",
     slug: "/colaboraciones/",
     ariaLabel: "Ver colaboraciones ",
   },
@@ -47,7 +47,7 @@ const Navigation = ({ closeMenu }) => (
           title={route.ariaLabel}
           aria-label={route.ariaLabel}
           to={route.slug}
-          className="my-4 font-mono text-white cursor-pointer hover:text-blue-100"
+          className="my-4 font-mono tracking-widest text-white cursor-pointer hover:text-blue-100"
         >
           {route.title}
         </Link>

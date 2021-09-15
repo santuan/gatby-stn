@@ -25,7 +25,7 @@ const Header = () => (
             className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
-            <span>Galería</span>
+            <span>Imágenes</span>
           </Link>
 
           <Link
@@ -33,7 +33,7 @@ const Header = () => (
             className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
-            <span>Textos</span>
+            <span>Escritura</span>
           </Link>
           <Link
             to="/colaboraciones/"
