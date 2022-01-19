@@ -48,26 +48,26 @@ export default function IndexPage() {
               <TextLoop interval={3500}>
                 <Link
                   to={`/galeria/`}
-                  className="text-blue-400 hover:text-blue-500 hover:opacity-80"
+                  className="text-white hover:opacity-75 md:text-blue-400 md:hover:text-blue-500"
                 >
                   Imágenes.
                 </Link>
                 <Link
                   to={`/blog`}
-                  className="font-sans text-red-400 hover:text-red-500 hover:opacity-80"
+                  className="font-sans text-white hover:opacity-75 md:text-red-400 md:hover:text-red-500"
                 >
                   Palabras.
                 </Link>
                 <Link
                   to={`/cooparaje`}
-                  className="font-mono text-yellow-400 hover:text-yellow-500 hover:opacity-80"
+                  className="font-mono text-white hover:opacity-75 md:text-yellow-400 md:hover:text-yellow-500"
                 >
                   Recursos.
                 </Link>
               </TextLoop>
             </div>
           </h2>
-          <div className="fixed bottom-3 left-3">
+          <div className="fixed bottom-3 right-3">
             <button
               onClick={() => {
                 copyToClipboard("santuan.bot@gmail.com")
@@ -84,7 +84,7 @@ export default function IndexPage() {
             >
               <GiPartyPopper />
             </button>
-            <div className="z-0 transform translate-x-12 -translate-y-12">
+            <div className="z-0 transform -translate-x-24 -translate-y-24">
               <Confetti active={isCopied} config={config} />
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function IndexPage() {
         loop
         muted
         playsInline
-        className="opacity-40 md:opacity-90 backgroundVideo"
+        className="opacity-80 md:opacity-100 backgroundVideo"
         poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/herohdsantuan0001-0250_wpgean.jpg"
       >
         <source

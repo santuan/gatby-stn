@@ -23,8 +23,10 @@ const BlogArchive = ({ data, pageContext, location }) => {
           <p className="relative z-20 px-5 my-3 font-serif text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
             Traducciones del inglés al castellano.
             <br />
-            <span className="font-sans text-base">Historias y recursos desde la perspectiva del diseño y la
-            programación&hellip;</span>
+            <span className="font-sans text-base">
+              Historias y recursos desde la perspectiva del diseño y la
+              programación&hellip;
+            </span>
           </p>
         </Fade>
         <video
@@ -83,20 +85,16 @@ export const pageQuery = graphql`
           createdAt(formatString: "MMMM YYYY", locale: "es")
           tags
           featuredImg {
-            fixed(
-              cropFocus: CENTER
-              quality: 80
-              toFormat: JPG
-              width: 420
-              height: 300
-            ) {
-              src
-              srcSet
-            }
-            fluid(maxWidth: 500) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 400
+              height: 400
+              quality: 90
+              formats: JPG
+              backgroundColor: "#ffffff"
+              jpegProgressive: false
+              placeholder: BLURRED
+            )
           }
         }
       }

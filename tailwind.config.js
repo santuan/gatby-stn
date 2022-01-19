@@ -1,13 +1,11 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './src/**/*.js',
     './src/**/*.jsx',
     './src/**/*.css',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ["Vollkorn", "serif"],

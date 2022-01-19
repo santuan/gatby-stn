@@ -33,7 +33,11 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       <Helmet>
         <body className="project-post" />
       </Helmet>
-      <Hero image={post.backgroundImage.fluid} logo={post.logo.fixed} />
+      <Hero
+        text={post.title}
+        image={post.backgroundImage.gatsbyImageData}
+        logo={post.logo.gatsbyImageData}
+      />
       <div className="py-3 mx-auto ">
         <div className="relative z-50 flex items-center justify-center mb-12 -mt-20 text-4xl md:-mt-24 hover:text-blue-400">
           <p className="hidden text-white">{post.title}</p>
@@ -55,7 +59,6 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
           >
             <span className="hidden mr-2 md:inline-block">más </span> proyectos
           </AwesomeButton>
-          
         </div>
         <SRLWrapper options={options}>
           <div className="max-w-full px-3 font-sans prose prose-lg hyphens lg:prose-2xl">
@@ -122,24 +125,24 @@ export const pageQuery = graphql`
         }
       }
       logo {
-        fixed(width: 320, height: 170) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
-        fluid(maxWidth: 500) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 300
+          height: 150
+          quality: 90
+          formats: [AUTO, WEBP, AVIF]
+          placeholder: BLURRED
+        )
       }
       backgroundImage {
-        fixed(width: 2000, height: 1000) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          quality: 90
+          formats: [AUTO, WEBP, AVIF]
+          placeholder: BLURRED
+        )
         file {
           url
-        }
-        fluid(maxWidth: 2300) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
         }
       }
     }

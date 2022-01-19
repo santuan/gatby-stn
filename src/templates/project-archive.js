@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Wave from "../components/wave"
 import Fade from "react-reveal/Fade"
 import Card from "../components/cardProject"
-import { GiPlainCircle } from "react-icons/gi";
+import { GiPlainCircle } from "react-icons/gi"
 import { Helmet } from "react-helmet"
 
 const ProjectArchive = ({ data, pageContext, location }) => {
@@ -28,7 +28,13 @@ const ProjectArchive = ({ data, pageContext, location }) => {
         </Fade>
         <Fade bottom duration={1200} delay={500}>
           <p className="relative z-20 px-5 my-3 font-mono text-sm text-left text-white uppercase lg:max-w-5xl md:text-center">
-            Páginas Web <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse"/> Aplicaciones <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse"/> Porfolios <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse"/> Tienditas
+            Páginas Web{" "}
+            <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse" />{" "}
+            Aplicaciones{" "}
+            <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse" />{" "}
+            Porfolios{" "}
+            <GiPlainCircle className="relative inline-block transform scale-50 opacity-50 animate-pulse" />{" "}
+            Tienditas
           </p>
         </Fade>
         <Wave />
@@ -88,10 +94,16 @@ export const pageQuery = graphql`
           id
           title
           backgroundImage {
-            fluid(maxWidth: 500) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 400
+              height: 400
+              quality: 90
+              formats: JPG
+              backgroundColor: "#ffffff"
+              jpegProgressive: false
+              placeholder: BLURRED
+            )
           }
           techs {
             title
@@ -99,22 +111,26 @@ export const pageQuery = graphql`
           createdAt
           updatedAt
           featuredImg {
-            fixed(width: 500, height: 500) {
-              ...GatsbyContentfulFixed_withWebp
-            }
-            fluid(maxWidth: 360) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              width: 400
+              height: 400
+              quality: 90
+              formats: [AUTO, WEBP, AVIF]
+              jpegProgressive: false
+              placeholder: BLURRED
+            )
           }
           logo {
-            fixed(width: 320, height: 170) {
-              ...GatsbyContentfulFixed_withWebp_noBase64
-            }
-            fluid(maxWidth: 500) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp_noBase64
-            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 300
+              height: 150
+              quality: 90
+              formats: [AUTO, WEBP, AVIF]
+              jpegProgressive: false
+              placeholder: BLURRED
+            )
           }
           slug
           webUrl

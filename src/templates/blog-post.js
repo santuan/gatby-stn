@@ -44,14 +44,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             slug={post.slug}
             readtime={post.readTime}
             excerpt={post.excerpt.excerpt}
-            image={post.featuredImg.fluid}
+            image={post.featuredImg.gatsbyImageData}
           />
         </div>
         <div
           className="relative z-50 w-full px-2 m-auto mt-6 article"
           id={post.slug}
         >
-          
           <SRLWrapper options={options}>
             <div className="max-w-6xl px-3 mx-auto font-sans prose prose-lg hyphens lg:prose-2xl ">
               {article && renderRichText(article, options)}
@@ -59,7 +58,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </SRLWrapper>
           <div className="relative flex items-baseline justify-between p-0">
             <div className="relative z-50 flex flex-wrap justify-start w-full max-w-3xl px-0 py-4 mx-auto mt-12 font-mono tracking-widest uppercase ">
-              <span className="hidden px-3 py-1 mb-1 mr-2 font-semibold text-gray-300 md:inline-block text-md ">etiquetas</span>
+              <span className="hidden px-3 py-1 mb-1 mr-2 font-semibold text-gray-300 md:inline-block text-md ">
+                etiquetas
+              </span>
               {post.tags.map((tag, i) => [
                 <Link
                   to={`/etiquetas/${kebabCase(tag)}/`}
@@ -115,7 +116,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query PostBySlug($slug: String!,$title: String!, $tagline: String) {
+  query PostBySlug($slug: String!, $title: String!, $tagline: String) {
     getSocialCard(title: $title, tagline: $tagline) {
       url
     }
@@ -140,18 +141,6 @@ export const pageQuery = graphql`
               contentType
             }
           }
-          ... on ContentfulWorks {
-            contentful_id
-            __typename
-            title
-            webUrl
-            slug
-            logo {
-              file {
-                url
-              }
-            }
-          }
           ... on ContentfulBlog {
             contentful_id
             __typename
@@ -169,16 +158,14 @@ export const pageQuery = graphql`
         }
       }
       featuredImg {
-        fixed(width: 2000, height: 650) {
-          ...GatsbyContentfulFixed_withWebp_noBase64
-        }
-        file {
-          url
-        }
-        fluid(maxWidth: 2000) {
-          # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-          ...GatsbyContentfulFluid_withWebp_noBase64
-        }
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          quality: 90
+          formats: [AUTO, WEBP, AVIF]
+          backgroundColor: "#ffffff"
+          jpegProgressive: false
+          placeholder: BLURRED
+        )
       }
     }
   }
@@ -195,14 +182,14 @@ const options = {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
     [MARKS.CODE]: (embedded) => (
       <Fade>
-        <div
-          dangerouslySetInnerHTML={{ __html: embedded }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: embedded }} />
       </Fade>
     ),
   },
   renderNode: {
-    [BLOCKS.HEADING_3]: (node, children) => <h3 id={`${kebabCase(children)}`}>{children}</h3>,
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3 id={`${kebabCase(children)}`}>{children}</h3>
+    ),
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       if (!node.data || !node.data.target) {
         return <span className="hidden">Embedded asset is broken</span>

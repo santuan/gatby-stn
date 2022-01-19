@@ -1,14 +1,15 @@
 import React from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { kebabCase } from "lodash"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import Wave from "./wave"
 import { BsDot } from "react-icons/bs"
 
 const Hero = (props) => (
-  <div className="relative">
-    <div className="absolute inset-0 z-50 flex flex-col items-center justify-center">
+  <div className="relative overflow-hidden md:max-h-screen">
+    <div className="absolute inset-0 z-50 flex flex-col items-center justify-center pt-24 md:pt-0">
       <Fade duration={1800} delay={600}>
         <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
           <h1 className="max-w-xl px-4 m-0 font-serif text-4xl text-center text-white md:text-6xl">
@@ -29,14 +30,14 @@ const Hero = (props) => (
         </AnchorLink>
       </Fade>
     </div>
+          
     <div className="overflow-hidden bg-gray-900">
       <Fade duration={200}>
-        <Img
+        <GatsbyImage
           title={props.heading}
-          alt={props.heading}
-          fixed={props.image}
           className="object-cover w-full opacity-20"
-          style={{ minHeight: "70vh" }}
+          alt={props.heading}
+          image={props.image}
         />
       </Fade>
     </div>

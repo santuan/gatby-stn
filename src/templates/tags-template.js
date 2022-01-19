@@ -64,20 +64,16 @@ export const pageQuery = graphql`
             excerpt
           }
           featuredImg {
-            fixed(
-              cropFocus: CENTER
-              quality: 80
-              toFormat: JPG
-              width: 420
-              height: 300
-            ) {
-              src
-              srcSet
-            }
-            fluid(maxWidth: 1500) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 400
+              height: 400
+              quality: 90
+              formats: JPG
+              backgroundColor: "#ffffff"
+              jpegProgressive: false
+              placeholder: BLURRED
+            )
           }
         }
       }
