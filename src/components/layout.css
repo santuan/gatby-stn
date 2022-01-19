@@ -52,7 +52,7 @@ canvas {
 
 .loading-bar {
   height: 3px;
-  @apply bg-gray-100;
+  @apply bg-emerald-500;
 
 }
 body.fullpage footer {

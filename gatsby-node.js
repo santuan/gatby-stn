@@ -9,6 +9,27 @@ const _ = require("lodash")
 const path = require(`path`)
 const { paginate } = require("gatsby-awesome-pagination")
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.gltf$/,
+          use: [
+            `url-loader`,
+          ],
+        },
+      ],
+    },
+  })
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 

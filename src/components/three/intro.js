@@ -1,6 +1,6 @@
 import React, { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
-import { OrbitControls,  useProgress } from "@react-three/drei"
+import { OrbitControls, useProgress } from "@react-three/drei"
 import { a, useTransition } from "react-spring"
 import Stn from "./Stn"
 import { ResizeObserver } from "@juggle/resize-observer"
@@ -30,7 +30,7 @@ const IntroThree = () => (
       camera={{ fov: 70, position: [5, 5, 0] }}
       resize={{ polyfill: ResizeObserver }}
     >
-      <Suspense fallback={<Loader />}>
+      <Suspense fallback={null}>
         <Stn />
       </Suspense>
       <ambientLight />
