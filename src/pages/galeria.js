@@ -75,9 +75,46 @@ export default function BackgroundSlider() {
           <GoLinkExternal className="inline-block" />
         </a>
       </div>
+
       <SRLWrapper options={options}>
         <div className="relative z-20 w-full bg-black bg-pattern ">
           <div className="grid grid-cols-1 gap-6 p-6 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-24">
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
+               
+              </div>
+            </Fade>
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1642599935/stn-renders/1230001-0500_mss0pe.jpg"
+                >
+                  <source
+                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.mp4"
+                    type="video/mp4"
+                  />
+                  <source
+                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1642599935/stn-renders/1230001-0500_mss0pe.ogv"
+                    type="video/ogg"
+                  />
+                </video>
+              </div>
+            </Fade>
+
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
+                
+              </div>
+            </Fade>
+
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
@@ -140,7 +177,7 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
 
-             <Fade>
+            <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
                 <StaticImage
                   title="item"
@@ -181,8 +218,6 @@ export default function BackgroundSlider() {
                 />
               </div>
             </Fade>
-
-
 
             <Fade>
               <div className="relative cursor-pointer">
@@ -245,9 +280,6 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
 
-
-
-
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
@@ -278,19 +310,6 @@ export default function BackgroundSlider() {
                 />
               </div>
             </Fade>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
