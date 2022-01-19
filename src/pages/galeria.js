@@ -80,9 +80,7 @@ export default function BackgroundSlider() {
         <div className="relative z-20 w-full bg-black bg-pattern ">
           <div className="grid grid-cols-1 gap-6 p-6 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-24">
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
-               
-              </div>
+              <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
             </Fade>
             <Fade>
               <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
@@ -110,9 +108,7 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
-                
-              </div>
+              <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
             </Fade>
 
             <Fade>
