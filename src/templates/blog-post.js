@@ -209,7 +209,7 @@ const options = {
       } else {
         if (node.data.target.file.contentType === "video/mp4") {
           return (
-            <div className="max-w-6xl p-0 mx-auto my-6 mb-12 aspect-h-9 aspect-w-16">
+            <div className="p-0 mx-auto my-6 mb-12 max-w-7xl ring-2 ring-green-600 aspect-h-9 aspect-w-16">
               <Player src={node.data.target.file.url} loop={true} autoPlay>
                 <BigPlayButton position="center" />
               </Player>

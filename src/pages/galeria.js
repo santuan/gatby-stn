@@ -62,7 +62,7 @@ export default function BackgroundSlider() {
     <Layout>
       <Seo title="Galería" pathname={`/galeria/`} />
       <Helmet>
-        <body className=" contact" />
+        <body className=" gallery" />
       </Helmet>
       <div className="fixed bottom-0 right-0 z-50 px-3 py-2 font-mono text-sm text-white bg-gray-800 bg-opacity-70 ">
         <a

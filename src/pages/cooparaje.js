@@ -19,25 +19,16 @@ const RecursosPage = () => (
   <Layout>
     <Seo title="cooparaje" pathname={`/cooparaje/`} />
     <Helmet>
-      <body className="blog" />
+      <body className="cooparaje" />
     </Helmet>
     <div className="z-20 flex flex-col items-center justify-center w-full min-h-screen text-center">
       <div className="relative z-50 flex flex-col items-center justify-center w-full px-2 py-4 mx-auto mt-24 ">
         <Fade duration={1750} delay={250}>
-          <SVGLogo className="w-8 duration-700 ease-in-out transform -rotate-90  md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
+          <SVGLogo className="w-8 duration-700 ease-in-out transform -rotate-90 md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
+
         <Fade bottom>
-          <a
-            href="https://www.cooparaje.com.ar/espacios"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 font-serif text-lg font-bold text-center text-yellow-400 md:text-4xl"
-          >
-            www.cooparaje.com.ar
-          </a>
-        </Fade>
-        <Fade bottom>
-          <p className="w-full max-w-lg mt-3 font-sans text-base text-center text-gray-100 md:text-2xl">
+          <p className="w-full max-w-lg mt-3 font-sans text-base text-center text-gray-100 md:text-xl">
             Colecciones de recursos y herramientas para usar libremente.
           </p>
         </Fade>
@@ -45,18 +36,7 @@ const RecursosPage = () => (
           <div className="relative w-full min-h-screen py-6 pt-6 mx-auto mt-2 md:mt-6">
             <InstantSearch searchClient={searchClient} indexName="recursos">
               <div className="relative max-w-xl mx-auto ">
-                <div className="mb-4 font-mono text-xs font-bold text-center text-indigo-100 md:text-sm">
-                  Probá con Juegos, colores, plantas, radios y <br />
-                  <a
-                    href="https://www.cooparaje.com.ar/espacios"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-yellow-500 underline"
-                  >
-                    muchos espacios más
-                    <GoLinkExternal className="inline-block ml-2" />
-                  </a>
-                </div>
+
                 <div>
                   <SearchBox
                     className="w-full mx-auto mb-2"

@@ -7,27 +7,32 @@ const routes = [
     slug: "/",
     ariaLabel: "Santuan - Volver al inicio",
   },
+  // {
+  //   title: "Música",
+  //   slug: "/musica/",
+  //   ariaLabel: "Escuchar músicas",
+  // },
   {
     title: "Imágenes",
     slug: "/galeria/",
     ariaLabel: "Ver galeria de 3d",
   },
   {
-    title: "Escritura",
+    title: "Palabras",
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
 
-  {
-    title: "WWW",
-    slug: "/colaboraciones/",
-    ariaLabel: "Ver colaboraciones ",
-  },
-  {
-    title: "Cooparaje",
-    slug: "/cooparaje/",
-    ariaLabel: "Ver recursos cooperativos",
-  },
+  // {
+  //   title: "WWW",
+  //   slug: "/colaboraciones/",
+  //   ariaLabel: "Ver colaboraciones ",
+  // },
+   {
+     title: "Recursos",
+     slug: "/cooparaje/",
+     ariaLabel: "Ver recursos cooperativos",
+   },
   {
     title: "Contacto",
     slug: "/contacto/",

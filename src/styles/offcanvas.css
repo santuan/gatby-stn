@@ -95,15 +95,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 body.blog .bm-menu {
-  @apply bg-indigo-700;
+  @apply bg-red-700;
 }
 
 body.project .bm-menu {
   @apply bg-red-700;
 }
 
+body.gallery .bm-menu {
+  @apply bg-blue-700;
+}
+
+body.cooparaje .bm-menu {
+  @apply bg-gray-800;
+}
+
 body.contact .bm-menu {
-  @apply bg-yellow-700;
+  @apply bg-gray-800;
 }
 
 body.contact .bm-burger-bars {

@@ -1,6 +1,6 @@
 /* purgecss start ignore */
 body .st0 {
-  @apply transition-all duration-700;
+  @apply transition-all duration-300;
 }
 /*
 body.contact .st0 {
@@ -30,6 +30,7 @@ body.project-post .headroom.headroom--unpinned {
 
 .headroom a:hover span {
   opacity: 1;
+  @apply mx-0;
 }
 
 .headroom-wrapper {
@@ -42,7 +43,7 @@ body.project-post .headroom.headroom--unpinned {
   right: 0;
   z-index: 999;
   position: fixed !important;
-  transition: all 800ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 .headroom--scrolled {
@@ -50,13 +51,20 @@ body.project-post .headroom.headroom--unpinned {
 }
 
 .headroom--unpinned {
-  position: fixed;
-  transform: translateY(0);
+  /* transform: translateY(-100%);*/
+  background: transparent !important;
+  backdrop-filter: blur(0) !important;
+  pointer-events: none;
+}
+
+.headroom--unpinned .inner-wrapper {
+  opacity:0;
+  transition-delay: 0s;
 }
 
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
-  @apply bg-indigo-800 bg-opacity-80 ;
+  @apply bg-gray-800 bg-opacity-80 ;
   backdrop-filter: blur(5px);
 }
 
@@ -65,6 +73,18 @@ body.project .headroom--unpinned {
   @apply bg-gray-900 bg-opacity-50 ;
   backdrop-filter: blur(5px);
 }
+
+body.gallery .headroom--pinned,
+body.gallery .headroom--unpinned {
+  @apply bg-blue-900 bg-opacity-90 ;
+  backdrop-filter: blur(5px);
+}
+body.cooparaje .headroom--pinned,
+body.cooparaje .headroom--unpinned {
+  @apply bg-gray-800 bg-opacity-90 ;
+  backdrop-filter: blur(5px);
+}
+
 
 body.contact .headroom--pinned,
 body.contact .headroom--unpinned {
@@ -75,8 +95,16 @@ body.contact .headroom--unpinned {
 
 @screen md {
   .headroom--unpinned {
-    transform: translateY(-100%);
+    /* transform: translateY(-100%);*/
     background: transparent !important;
+    backdrop-filter: blur(0) !important;
+    pointer-events: none;
+  }
+
+  .headroom--unpinned .inner-wrapper {
+    opacity:0;
+    transition-delay: 0s;
+
   }
 }
 .headroom--pinned {

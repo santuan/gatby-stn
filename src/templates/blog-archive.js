@@ -19,17 +19,12 @@ const BlogArchive = ({ data, pageContext, location }) => {
         className="relative flex flex-col items-center justify-center w-full pt-24 pb-20 mb-12 overflow-hidden text-center text-white bg-gray-800 md:px-6 md:items-center"
         style={{ minHeight: "60vh" }}
       >
-        <Fade cascade bottom duration={1200}>
-          <h1 className="relative z-20 px-5 font-serif text-4xl font-bold text-white ">
-            Blog
-          </h1>
-        </Fade>
         <Fade bottom duration={1200} delay={500}>
-          <p className="relative z-20 px-5 my-3 font-sans text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
-            Artículos en inglés versionados al castellano.
-            <br/>Historias
-            y recursos desde la perspectiva del diseño y la
-            programación&hellip;
+          <p className="relative z-20 px-5 my-3 font-serif text-lg text-left text-indigo-200 lg:max-w-3xl md:text-2xl md:text-center">
+            Traducciones del inglés al castellano.
+            <br />
+            <span className="font-sans text-base">Historias y recursos desde la perspectiva del diseño y la
+            programación&hellip;</span>
           </p>
         </Fade>
         <video

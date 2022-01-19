@@ -6,6 +6,35 @@ import IsoStn from "../animations/isoWelcome"
 import "../styles/header.css"
 import { FiSend } from "react-icons/fi"
 
+const routes = [
+  // {
+  //   title: "sonidos",
+  //   slug: "/musica/",
+  //   ariaLabel: "Escuchar sonidos en guitarra",
+  // },
+  {
+    title: "Imágenes",
+    slug: "/galeria/",
+    ariaLabel: "Ver galeria de 3d",
+  },
+  {
+    title: "Palabras",
+    slug: "/blog/",
+    ariaLabel: "Ver las entradas del blog",
+  },
+
+  // {
+  //   title: "WWW",
+  //   slug: "/colaboraciones/",
+  //   ariaLabel: "Ver colaboraciones ",
+  // },
+  {
+    title: "recursos",
+    slug: "/cooparaje/",
+    ariaLabel: "Ver recursos cooperativos",
+  },
+]
+
 const Header = () => (
   <Headroom disableInlineStyles>
     <div className="flex items-center justify-between w-full px-3 py-3 mx-auto duration-1000 transform max-w-7xl inner-wrapper">
@@ -19,43 +48,25 @@ const Header = () => (
         </Link>
       </div>
       <div className="hidden w-full text-right md:block">
-        <nav className="relative flex items-center justify-end md:space-x-8">
-          <Link
-            to="/galeria/"
-            className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>Imágenes</span>
-          </Link>
-
-          <Link
-            to="/blog/"
-            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>Escritura</span>
-          </Link>
-          <Link
-            to="/colaboraciones/"
-            className="font-mono text-lg font-bold tracking-widest text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100"
-          >
-            <span>www</span>
-          </Link>
-          <Link
-            to="/cooparaje/"
-            className="relative font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
-            activeClassName="opacity-100 !text-yellow-400 "
-          >
-            <span>Cooparaje</span>
-            <span class="absolute -top-1 -right-2 flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
-            </span>
-          </Link>
+        <nav className="relative flex items-center justify-end space-x-8">
+          {routes.map((route, i) => {
+            return (
+              <Link
+                key={i}
+                activeClassName="font-bold"
+                alt={route.ariaLabel}
+                title={route.ariaLabel}
+                aria-label={route.ariaLabel}
+                to={route.slug}
+                className="relative flex items-center justify-center font-mono text-lg font-bold text-center text-gray-100 uppercase hover:opacity-100 opacity-80"
+              >
+                {route.title}
+              </Link>
+            )
+          })}
           <Link
             to="/contacto/"
-            className="font-mono text-lg font-bold text-white uppercase hover:opacity-100 opacity-80"
+            className="relative flex items-center justify-center font-mono text-lg font-bold text-center text-gray-100 uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >
             <span>
