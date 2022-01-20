@@ -2,16 +2,23 @@ import { Link } from "gatsby"
 import React from "react"
 
 const routes = [
+  /*
+  {
+    title: "3D",
+    slug: "/lab/",
+    ariaLabel: "Ver 3d ",
+  },
+  {
+    title: "sonidos",
+    slug: "/musica/",
+    ariaLabel: "Escuchar sonidos en guitarra",
+  },
+  */
   {
     title: "Inicio",
     slug: "/",
     ariaLabel: "Santuan - Volver al inicio",
   },
-  // {
-  //   title: "Música",
-  //   slug: "/musica/",
-  //   ariaLabel: "Escuchar músicas",
-  // },
   {
     title: "Imágenes",
     slug: "/galeria/",
@@ -22,17 +29,11 @@ const routes = [
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
-
-  // {
-  //   title: "WWW",
-  //   slug: "/colaboraciones/",
-  //   ariaLabel: "Ver colaboraciones ",
-  // },
-   {
-     title: "Recursos",
-     slug: "/cooparaje/",
-     ariaLabel: "Ver recursos cooperativos",
-   },
+  {
+    title: "recursos",
+    slug: "/cooparaje/",
+    ariaLabel: "Ver recursos cooperativos",
+  },
   {
     title: "Contacto",
     slug: "/contacto/",

@@ -7,11 +7,18 @@ import "../styles/header.css"
 import { FiSend } from "react-icons/fi"
 
 const routes = [
-  // {
-  //   title: "sonidos",
-  //   slug: "/musica/",
-  //   ariaLabel: "Escuchar sonidos en guitarra",
-  // },
+  /*
+  {
+    title: "3D",
+    slug: "/lab/",
+    ariaLabel: "Ver 3d ",
+  },
+  {
+    title: "sonidos",
+    slug: "/musica/",
+    ariaLabel: "Escuchar sonidos en guitarra",
+  },
+  */
   {
     title: "Imágenes",
     slug: "/galeria/",
@@ -22,12 +29,6 @@ const routes = [
     slug: "/blog/",
     ariaLabel: "Ver las entradas del blog",
   },
-
-  // {
-  //   title: "WWW",
-  //   slug: "/colaboraciones/",
-  //   ariaLabel: "Ver colaboraciones ",
-  // },
   {
     title: "recursos",
     slug: "/cooparaje/",

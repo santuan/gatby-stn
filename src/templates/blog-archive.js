@@ -24,8 +24,8 @@ const BlogArchive = ({ data, pageContext, location }) => {
             Traducciones del inglés al castellano.
             <br />
             <span className="font-sans text-base">
-              Historias y recursos desde la perspectiva del diseño y la
-              programación&hellip;
+              Historias y recursos desde la perspectiva del diseño, la
+              programación y más allá&hellip;
             </span>
           </p>
         </Fade>
