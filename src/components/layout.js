@@ -8,8 +8,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { AiOutlineHeart } from "react-icons/ai"
-import { HiCode } from "react-icons/hi"
-import { FaBrain } from "react-icons/fa"
+import { HiCode,HiEye } from "react-icons/hi"
 
 import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
@@ -29,7 +28,7 @@ const Layout = ({ children }) => {
             </Link>
           </div>
           <div className="block mt-6 space-x-3 font-mono opacity-80 hover:opacity-50">
-            <FaBrain className="inline-block mx-1 mb-1 text-lg text-white" />
+            <HiEye className="inline-block mx-1 mb-1 text-lg text-white" />
             <HiCode className="inline-block mx-1 mb-1 text-lg text-white" />
             <AiOutlineHeart className="inline-block mx-1 mb-1 text-lg text-white" />
           </div>

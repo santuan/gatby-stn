@@ -38,6 +38,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <Seo title="Inicio" />
+      
       <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center bg-gray-900 shadow-sm bg-pattern">
         <div className="relative z-50 w-full px-8 mx-auto mt-24 mb-2 text-left md:mt-8 max-w-7xl">
           <h2
