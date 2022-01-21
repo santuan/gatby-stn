@@ -30,7 +30,7 @@ const routes = [
     ariaLabel: "Ver las entradas del blog",
   },
   {
-    title: "recursos",
+    title: "Recursos",
     slug: "/cooparaje/",
     ariaLabel: "Ver recursos cooperativos",
   },

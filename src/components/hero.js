@@ -8,7 +8,7 @@ import Wave from "./wave"
 import { BsDot } from "react-icons/bs"
 
 const Hero = (props) => (
-  <div className="relative overflow-hidden md:max-h-screen">
+  <div className="relative min-h-screen overflow-hidden md:max-h-screen">
     <div className="absolute inset-0 z-50 flex flex-col items-center justify-center pt-24 md:pt-0">
       <Fade duration={1800} delay={600}>
         <AnchorLink href={`#${kebabCase(props.slug)}`} aria-label={props.text}>
@@ -35,7 +35,7 @@ const Hero = (props) => (
       <Fade duration={200}>
         <GatsbyImage
           title={props.heading}
-          className="object-cover w-full opacity-20"
+          className="object-cover w-full min-h-screen opacity-20"
           alt={props.heading}
           image={props.image}
         />
