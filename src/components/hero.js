@@ -18,13 +18,13 @@ const Hero = (props) => (
           <p className="px-6 mt-6 font-sans text-2xl text-center text-white">
             {props.excerpt}
           </p>
-          <div className="flex items-center justify-center w-full px-4 mx-auto mt-3 ">
+          <div className="flex flex-col items-center justify-center w-full px-4 mx-auto mt-3 ">
+            <BsDot className="mx-3 mb-3 text-2xl text-white opacity-25" />
             <time className="m-0 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">
               {props.date}
             </time>
-            <BsDot className="mx-3 text-2xl text-white" />
             <p className="m-0 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">
-              {props.readtime}
+              Lectura de {props.readtime} 
             </p>
           </div>
         </AnchorLink>
