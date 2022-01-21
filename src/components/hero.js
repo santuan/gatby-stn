@@ -23,14 +23,17 @@ const Hero = (props) => (
             <time className="m-0 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">
               {props.date}
             </time>
-            <p className="m-0 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">
-              Lectura de {props.readtime} 
-            </p>
+
+            {props.readtime && (
+              <p className="m-0 font-mono text-lg text-center text-white uppercase opacity-75 md:text-lg">
+                Lectura de {props.readtime}
+              </p>
+            )}
           </div>
         </AnchorLink>
       </Fade>
     </div>
-          
+
     <div className="overflow-hidden bg-gray-900">
       <Fade duration={200}>
         <GatsbyImage
