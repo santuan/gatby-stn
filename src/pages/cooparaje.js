@@ -7,7 +7,14 @@ import SVGLogo from "../assets/cooparaje.svg"
 // import BackgroundSlider from "../components/backgroundSlider"
 import MovingIcons from "../animations/moving-icons"
 import algoliasearch from "algoliasearch/lite"
-import { Hits, InstantSearch, SearchBox, Stats } from "react-instantsearch-dom"
+import {
+  Hits,
+  InstantSearch,
+  SearchBox,
+  Stats,
+  ClearRefinements,
+  RefinementList,
+} from "react-instantsearch-dom"
 import PostPreview from "../components/algoliaPostPreview"
 import { GoLinkExternal } from "react-icons/go"
 
@@ -26,7 +33,6 @@ const RecursosPage = () => (
         <Fade duration={1750} delay={250}>
           <SVGLogo className="w-8 duration-700 ease-in-out transform -rotate-90 md:block md:w-20 hover:rotate-0 hover:-translate-y-3" />
         </Fade>
-
         <Fade bottom>
           <p className="w-full max-w-lg mt-3 font-sans text-base text-center text-gray-100 md:text-xl">
             Colecciones de recursos y herramientas para usar libremente.
@@ -36,7 +42,6 @@ const RecursosPage = () => (
           <div className="relative w-full min-h-screen py-6 pt-6 mx-auto mt-2 md:mt-6">
             <InstantSearch searchClient={searchClient} indexName="recursos">
               <div className="relative max-w-xl mx-auto ">
-
                 <div>
                   <SearchBox
                     className="w-full mx-auto mb-2"
@@ -47,6 +52,21 @@ const RecursosPage = () => (
                     }}
                   />
                 </div>
+                <RefinementList
+                  attribute="espacio.title"
+                  showMore={true}
+                  operator="and"
+                  showMoreLimit={100}
+                  translations={{
+                    showMore(expanded) {
+                      return expanded ? "Mostrar menos espacios" : "Mostrar más espacios"
+                    },
+                    noResults: "Sin resultados",
+                    submitTitle: "Iniciar búsqueda",
+                    resetTitle: "Reiniciar búsqueda",
+                    placeholder: "Buscador",
+                  }}
+                />
                 <div className="m-2 ">
                   <Stats
                     translations={{
@@ -64,7 +84,7 @@ const RecursosPage = () => (
                   />
                 </div>
               </div>
-              <div className="relative mx-auto mt-6 max-w-7xl">
+              <div className="relative max-w-full mx-auto mt-6 2xl:px-12">
                 <Fade duration={1750} delay={1250}>
                   <Hits className="w-full mx-auto" hitComponent={PostPreview} />
                 </Fade>
@@ -75,7 +95,7 @@ const RecursosPage = () => (
                   href="https://www.cooparaje.com.ar/espacios"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2 text-white bg-yellow-600 rounded"
+                  className="btn yellow"
                 >
                   Ver todos los espacios
                   <GoLinkExternal className="inline-block ml-2" />

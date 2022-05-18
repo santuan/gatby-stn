@@ -1,3 +1,9 @@
+body.searcher footer{
+  @apply hidden;
+}
+
+
+
 .ais-Breadcrumb-list,
 .ais-CurrentRefinements-list,
 .ais-HierarchicalMenu-list,
@@ -78,6 +84,7 @@
 .ais-SearchBox-reset[disabled],
 .ais-VoiceSearch-button[disabled] {
   cursor: default;
+  @apply opacity-0;
 }
 
 .ais-Breadcrumb-list,
@@ -237,17 +244,63 @@ a[class^="ais-"] {
 .ais-SortBy,
 .ais-Stats,
 .ais-ToggleRefinement {
-  color: #3a4570;
+  @apply text-white;
 }
 
-.ais-Stats {
-  @apply font-mono text-white uppercase;
+.ais-RefinementList-label {
+  @apply inline-flex items-center w-full px-2 py-2 font-mono border-b border-gray-700 cursor-pointer;
 }
 
-.ais-Stats-text {
-  font-size: 1rem !important;
+.ais-RefinementList-labelText {
+  @apply w-full px-3 font-serif text-base font-normal text-left;
 }
 
+.ais-RefinementList-count {
+ @apply flex-none px-2 font-mono text-lg; 
+}
+
+.ais-RefinementList-checkbox {
+  @apply  w-4 h-4 cursor-pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-shrink: 0;
+  height: 1rem;
+  width: 1rem;
+  @apply text-green-500 bg-white border-white;
+  border-width: 1px;
+  border-radius: 0.25rem;
+}
+
+.ais-RefinementList-checkbox:checked {
+  background-image: url(data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e);
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ais-RefinementList-item:hover {
+  @apply bg-gray-900;
+
+}
+
+.ais-RefinementList-item {
+  @apply duration-700;
+}
+
+.ais-RefinementList-item--selected .ais-RefinementList-labelText {
+  @apply text-green-500 font-bold !important;
+}
 
 .ais-Breadcrumb-item--selected,
 .ais-HierarchicalMenu-item--selected,
@@ -282,7 +335,6 @@ a[class^="ais-"] {
   color: #0073a8;
 }
 
-.ais-ClearRefinements-button,
 .ais-CurrentRefinements-reset,
 .ais-GeoSearch-redo,
 .ais-GeoSearch-reset,
@@ -292,15 +344,17 @@ a[class^="ais-"] {
 .ais-InfiniteResults-loadMore,
 .ais-Menu-showMore,
 .ais-RefinementList-showMore {
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
-  color: #fff;
-  background-color: #0096db;
-  border-radius: 5px;
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
-  outline: none;
+  @apply block w-full px-5 py-2 font-mono text-sm font-bold text-white uppercase transition-all duration-700 bg-green-600 rounded outline-none;
 }
+.ais-ClearRefinements-button {
+  @apply block w-24 px-1 py-2 font-mono text-xs font-bold text-white transition-all duration-700 bg-red-800 rounded outline-none;
+}
+
+.ais-ClearRefinements-button:hover,
+.ais-ClearRefinements-button:focus {
+  @apply bg-red-600 !important;
+}
+
 .ais-ClearRefinements-button:hover,
 .ais-ClearRefinements-button:focus,
 .ais-CurrentRefinements-reset:hover,
@@ -321,7 +375,7 @@ a[class^="ais-"] {
 .ais-Menu-showMore:focus,
 .ais-RefinementList-showMore:hover,
 .ais-RefinementList-showMore:focus {
-  background-color: #0073a8;
+  @apply bg-green-600;
 }
 
 .ais-ClearRefinements-button--disabled,
@@ -332,8 +386,7 @@ a[class^="ais-"] {
 .ais-InfiniteResults-loadMore--disabled,
 .ais-Menu-showMore--disabled,
 .ais-RefinementList-showMore--disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  @apply cursor-not-allowed bg-opacity-60;
 }
 .ais-ClearRefinements-button--disabled:hover,
 .ais-ClearRefinements-button--disabled:focus,
@@ -351,11 +404,24 @@ a[class^="ais-"] {
 .ais-Menu-showMore--disabled:focus,
 .ais-RefinementList-showMore--disabled:hover,
 .ais-RefinementList-showMore--disabled:focus {
-  background-color: #0096db;
+  @apply bg-green-600;
 }
-
 .ais-InfiniteHits-loadPrevious--disabled {
   display: none;
+}
+
+.ais-RefinementList-showMore {
+  @apply absolute left-0 right-0 bottom-2;
+}
+
+.ais-RefinementList {
+@apply relative
+}
+.ais-RefinementList-list {
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+  @apply pt-2 md:pb-11;
 }
 
 .ais-CurrentRefinements {
@@ -401,7 +467,7 @@ a[class^="ais-"] {
 .ais-CurrentRefinements-categoryLabel,
 .ais-CurrentRefinements-delete {
   white-space: nowrap;
-  font-size: 0.8rem;
+  font-size: 2.8rem;
   color: #fff;
 }
 
@@ -504,17 +570,13 @@ a[class^="ais-"] {
 .ais-Menu-count,
 .ais-RefinementList-count,
 .ais-ToggleRefinement-count {
-  padding: 0.1rem 0.4rem;
-  font-size: 0.8rem;
-  color: #3a4570;
-  background-color: #dfe2ee;
-  border-radius: 8px;
+  @apply px-3 py-1 text-base text-white bg-gray-600 rounded;
 }
 
 .ais-HierarchicalMenu-showMore,
 .ais-Menu-showMore,
 .ais-RefinementList-showMore {
-  margin-top: 0.5rem;
+  @apply mt-0;
 }
 
 .ais-Highlight-highlighted,
@@ -533,13 +595,17 @@ a[class^="ais-"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; */
-  @apply grid grid-cols-1 gap-3 xl:grid-cols-2 2xl:grid-cols-2 md:grid-cols-2;
+  @apply grid grid-cols-1 gap-3 lg:grid-cols-2 2xl:grid-cols-3;
 }
 .ais-Panel-body .ais-InfiniteHits-list,
 .ais-Panel-body .ais-InfiniteResults-list,
 .ais-Panel-body .ais-Hits-list,
 .ais-Panel-body .ais-Results-list {
   margin: 0.5rem 0 0 -1rem;
+}
+
+.ais-Hits-item {
+@apply bg-transparent !important;
 }
 
 .ais-InfiniteHits-item,
@@ -699,7 +765,8 @@ a[class^="ais-"] {
 .rheostat-tooltip,
 .rheostat-value,
 .ais-Stats-text {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  @apply font-mono;
 }
 
 .ais-PoweredBy-logo {
@@ -805,24 +872,23 @@ a[class^="ais-"] {
   -moz-appearance: none;
   appearance: none;
   /*padding: 0.5rem 2rem;*/
-  @apply px-8 py-2 text-base;
+  @apply px-8 py-2 font-mono text-base text-gray-900 bg-gray-100 ring-transparent ring-2 focus:ring-yellow-600;
   width: 100%;
   position: relative;
-  background-color: #fff;
-  border: 1px solid #c4c8d8;
+  /* background-color: #fff; */
   border-radius: 5px;
 }
 .ais-SearchBox-input::-webkit-input-placeholder {
-  color: #333;
+  color: #a5aed1;
 }
 .ais-SearchBox-input::-moz-placeholder {
-  color: #333;
+  color: #a5aed1;
 }
 .ais-SearchBox-input:-ms-input-placeholder {
-  color: #333;
+  color: #a5aed1;
 }
 .ais-SearchBox-input:-moz-placeholder {
-  color: #333;
+  color: #a5aed1;
 }
 
 .ais-SearchBox-submit,
