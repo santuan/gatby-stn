@@ -143,7 +143,7 @@ const DallePage = ({ data }) => {
                   Mismo texto con diferentes estilos.
                 </h3>
               </div>
-              <div className="w-full max-w-lg mx-auto overflow-hidden rounded-br-none rounded-2xl">
+              <div className="w-full max-w-lg mx-auto overflow-hidden font-mono text-xs font-bold rounded-br-none rounded-2xl">
                 <ReactCompareImage
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.png"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.png"
