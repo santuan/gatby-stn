@@ -134,12 +134,8 @@ const DallePage = ({ data }) => {
                 src="/lnq/lnq.webm"
                 type="video/webm"
               />
-              {/*
-            <source
-            src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1628128970/encoder/herohdsantuan0001-0250_wpgean.ogv"
-            type="video/ogg"
-          /> */}
             </video>
+            <div className="pt-2"><span className="font-mono">Music: Sly & The Family Stone · Thank You </span></div>
             <div className="grid gap-3 py-24 lg:grid-cols-2">
               <div className="flex items-center justify-center">
 
@@ -160,7 +156,7 @@ const DallePage = ({ data }) => {
           </div>
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center w-full overflow-hidden bg-gray-900 bg-pattern ">
-          <Fade duration={1750} delay={720}>
+          <Fade duration={1000} delay={300}>
             <div className="relative z-50 max-w-2xl p-8 mx-auto mt-6 mb-6 font-serif prose text-center md:prose-lg ">
               <p className="text-white">
                 Si algo de lo que viste aqui te gustó y te interesaría saber más,
