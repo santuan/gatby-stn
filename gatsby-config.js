@@ -11,17 +11,17 @@ const contentfulConfig = {
 
 const { spaceId, accessToken } = contentfulConfig
 
-if (!spaceId || !accessToken) {
-  throw new Error(
-    "Contentful spaceId and the access token need to be provided."
-  )
-}
+// if (!spaceId || !accessToken) {
+//   throw new Error(
+//     "Contentful spaceId and the access token need to be provided."
+//   )
+// }
 
 module.exports = {
   siteMetadata: {
-    title: `Santuan`,
-    titleTemplate: `%s | Santuan`,
-    description: `Diseño y Desarrollo de páginas web`,
+    title: `stn`,
+    titleTemplate: `%s | stn`,
+    description: `Diseño, Desarrollo y más allá`,
     siteUrl: `https://www.santuan.com.ar`,
     image: `https://www.santuan.com.ar/ogimage.jpg`,
     twitterUsername: `@santuuan`,

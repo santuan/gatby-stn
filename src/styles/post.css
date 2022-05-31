@@ -15,7 +15,7 @@
 }
 
 .prose h3 {
-  @apply md:pr-40
+  @apply md:pr-40;
 }
 
 .prose a {
@@ -45,7 +45,6 @@
   font-family: "vollkornVariable";
   font-variation-settings: "wght" 400;
 }
-
 
 .prose i {
   font-family: "vollkornVariable";
@@ -98,4 +97,13 @@ body {
   background-size: 550px;
   transition: all 0.8s;
   background-position: center center;
+}
+
+.galleryOn {
+  @apply opacity-0 transform -translate-y-20 duration-1000 border-r-2 border-white/20 pr-12 text-white;
+
+}
+
+.gallery .galleryOn {
+  @apply opacity-100 translate-y-0;
 }

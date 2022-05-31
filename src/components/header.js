@@ -50,6 +50,9 @@ const Header = () => (
       </div>
       <div className="hidden w-full text-right md:block">
         <nav className="relative flex items-center justify-end space-x-8">
+          <Link to="/lab/dall-e" className="relative flex items-center justify-center font-mono text-lg font-bold text-center text-gray-100 uppercase galleryOn hover:opacity-100 opacity-80">
+            Dall-E
+          </Link>
           {routes.map((route, i) => {
             return (
               <Link

@@ -64,6 +64,12 @@ export default function IndexPage() {
                 >
                   Recursos.
                 </Link>
+                <Link
+                  to={`/lab/dall-e`}
+                  className="font-mono text-white hover:opacity-75"
+                >
+                  Dall-E.
+                </Link>
               </TextLoop>
             </div>
           </h2>
