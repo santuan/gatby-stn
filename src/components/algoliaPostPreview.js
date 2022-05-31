@@ -45,7 +45,7 @@ const PostPreview = ({ hit }) => {
             <img
               className="object-cover w-full h-full pb-0 mb-0 cardImage"
               alt={hit.title}
-              src={`https:${hit.featuredImg.file.url}?w=500&h=500&fm=png&q=80`}
+              src={`https:${hit.featuredImg.file.url}?w=400&h=400&fm=png&q=70`}
             />
           </a>
         </div>
@@ -55,7 +55,7 @@ const PostPreview = ({ hit }) => {
               rel="noopener noreferrer"
               href={`https://www.cooparaje.com.ar/recursos/${hit.slug}`}
               target="_blank"
-              className="block w-full mb-2 font-serif text-3xl font-bold text-left text-yellow-500 capitalize duration-700 group-hover:opacity-10 group-hover:text-black "
+              className="block w-full mb-2 font-serif text-3xl font-bold text-left text-yellow-500 capitalize duration-700 group-hover:opacity-0 "
             >
               {hit.title}
             </a>
@@ -66,7 +66,7 @@ const PostPreview = ({ hit }) => {
           <div className="absolute duration-700 opacity-0 bottom-4 right-4 group-hover:opacity-100">
             <a
               rel="noopener noreferrer"
-              href={`https://www.cooparaje.com.ar/recursos/${hit.slug}`}
+              href={hit.url}
               target="_blank"
               className="btn yellow !text-xs "
             >
