@@ -79,8 +79,8 @@ const DallePage = ({ data }) => {
         </div>
         <div className="relative grid w-full pb-12 mx-auto xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="self-start xl:sticky top-24">
-            <h3 className="max-w-xl py-24 mx-auto font-serif text-4xl">
-              DALL·E 2 es un nuevo sistema de IA que puede crear imágenes y arte realistas a partir de una imagen preexistente o una descripción en lenguaje natural.
+            <h3 className="max-w-xl px-3 py-24 mx-auto font-serif text-3xl">
+              DALL·E 2 es un nuevo sistema de Inteligencia Artificial que puede crear imágenes y arte realistas a partir de una imagen preexistente o una descripción en lenguaje natural.
             </h3>
           </div>
           <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
@@ -124,6 +124,7 @@ const DallePage = ({ data }) => {
             <video
               controls
               className="relative overflow-hidden rounded-2xl"
+              poster="/lnq/lnq-poster.jpg"
             >
               <source
                 src="/lnq/lnq.mp4"
