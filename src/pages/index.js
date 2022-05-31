@@ -46,6 +46,7 @@ export default function IndexPage() {
           >
             <div className="block w-full mt-2 font-bold">
               <TextLoop interval={3500}>
+                
                 <Link
                   to={`/galeria/`}
                   className="text-white hover:opacity-75 md:text-blue-400 md:hover:text-blue-500"
@@ -64,12 +65,7 @@ export default function IndexPage() {
                 >
                   Recursos.
                 </Link>
-                <Link
-                  to={`/lab/dall-e`}
-                  className="font-mono text-white hover:opacity-75"
-                >
-                  Dall-E.
-                </Link>
+
               </TextLoop>
             </div>
           </h2>
@@ -86,7 +82,7 @@ export default function IndexPage() {
                   ? "bg-green-500 hover:bg-green-600 " + isCopied
                   : "hover:bg-gray-700 bg-gray-800")
               }
-              
+
             >
               <GiPartyPopper />
             </button>
@@ -117,7 +113,7 @@ export default function IndexPage() {
           type="video/ogg"
         />
       </video>
-      
+
     </Layout>
   )
 }

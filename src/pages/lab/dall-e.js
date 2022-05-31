@@ -4,7 +4,35 @@ import Seo from "../../components/seo"
 import ReactCompareImage from 'react-compare-image';
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "gatsby"
-import useEmblaCarousel from 'embla-carousel-react'
+// import useEmblaCarousel from 'embla-carousel-react'
+import Confetti from "react-dom-confetti"
+import Fade from "react-reveal/Fade"
+
+const copyToClipboard = (str) => {
+  const el = document.createElement("textarea")
+  el.value = str
+  el.setAttribute("readonly", "")
+  el.style.position = "absolute"
+  el.style.left = "-9999px"
+  document.body.appendChild(el)
+  el.select()
+  document.execCommand("copy")
+  document.body.removeChild(el)
+}
+
+const config = {
+  angle: 90,
+  spread: 360,
+  startVelocity: 19,
+  elementCount: 70,
+  dragFriction: 0.12,
+  duration: 8000,
+  stagger: 13,
+  width: "10px",
+  height: "10px",
+  perspective: "500px",
+  colors: ["#2f85c0", "#52a3d9", "#e74446", "#d52b2a", "#f8c843", "#f8a834"],
+}
 
 const Loading = () => {
   return (
@@ -25,8 +53,8 @@ const Loading = () => {
 
 
 const DallePage = ({ data }) => {
-  const [emblaRef] = useEmblaCarousel()
-
+  // const [emblaRef] = useEmblaCarousel()
+  const [isCopied, setIsCopied] = React.useState(false)
   return (
     <Layout>
       <Seo title={`Dall-E`}
@@ -58,7 +86,7 @@ const DallePage = ({ data }) => {
           <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
             {dalle.map((i) => {
               return (
-                <div key={i} className="relative overflow-hidden rounded-2xl">
+                <div key={i} className="relative overflow-hidden rounded-br-none rounded-2xl">
                   <div className="relative z-10 flex min-h-[400px] font-mono font-bold text-xs uppercase w-full mx-auto ">
                     <ReactCompareImage
                       leftImage={i.leftSrc}
@@ -114,11 +142,11 @@ const DallePage = ({ data }) => {
             <div className="grid gap-3 py-24 lg:grid-cols-2">
               <div className="flex items-center justify-center">
 
-              <h3 className="max-w-xl py-24 mx-auto font-serif text-4xl">
-                Mismo texto con diferentes estilos.
-              </h3>
+                <h3 className="max-w-xl py-24 mx-auto font-serif text-4xl">
+                  Mismo texto con diferentes estilos.
+                </h3>
               </div>
-              <div className="w-full max-w-lg mx-auto overflow-hidden rounded-2xl">
+              <div className="w-full max-w-lg mx-auto overflow-hidden rounded-br-none rounded-2xl">
                 <ReactCompareImage
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.png"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.png"
@@ -130,7 +158,47 @@ const DallePage = ({ data }) => {
             </div>
           </div>
         </div>
-
+        <div className="relative z-20 flex flex-col items-center justify-center w-full overflow-hidden bg-gray-900 bg-pattern ">
+          <Fade duration={1750} delay={720}>
+            <div className="relative z-50 max-w-2xl p-8 mx-auto mt-6 mb-6 font-serif prose text-center md:prose-lg ">
+              <p className="text-white">
+                Si algo de lo que viste aqui te gustó y te interesaría saber más,
+                sentite libre de contactarte e intentaré contestarlo dentro del
+                tiempo y las posibilidades.
+              </p>
+              <p className="text-white">
+                Y desde ya, muchas gracias por su atención
+              </p>
+              <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:my-6">
+                <button
+                  onClick={() => {
+                    copyToClipboard("santuan.bot@gmail.com")
+                    setIsCopied(true)
+                    setTimeout(() => setIsCopied(false), 3000)
+                  }}
+                  className={
+                    "relative mt-1 mx-2 rounded-md pb-1 font-bold font-sans text-white  transform duration-700 " +
+                    (isCopied
+                      ? "bg-green-800 " + isCopied
+                      : "hover:bg-gray-900 bg-opacity-10")
+                  }
+                >
+                  <div className="relative overflow-hidden">
+                    <Fade bottom duration={700} delay={200}>
+                      <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
+                        santuan.bot@gmail.com
+                      </span>
+                    </Fade>
+                  </div>
+                  {isCopied ? "🎉 Copiado!" : "Click para copiar mail"}
+                  <div className="transform translate-x-64 -translate-y-12">
+                    <Confetti active={isCopied} config={config} />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </Fade>
+        </div>
       </div>
     </Layout>
   )

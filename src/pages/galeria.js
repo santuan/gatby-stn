@@ -7,55 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { CgInstagram } from "react-icons/cg"
 import { GoLinkExternal } from "react-icons/go"
-
-const options = {
-  buttons: {
-    iconPadding: "5px",
-    showDownloadButton: true,
-    backgroundColor: "rgba(0, 0, 0, .5)",
-    iconColor: "rgba(255, 255, 255, 0.8)",
-    showNextButton: true,
-    showPrevButton: true,
-    size: "30px",
-  },
-  caption: {
-    captionFontSize: "15px",
-    captionAlignment: "center",
-    captionColor: "#a7825f",
-    captionFontWeight: 300,
-    showCaption: false,
-  },
-  settings: {
-    overlayColor: "rgba(0, 0, 0, .9)",
-    transitionTimingFunction: "ease-in-out",
-    slideTransitionSpeed: 0.6,
-    slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
-    slideAnimationType: "fade",
-    slideSpringValues: [300, 200],
-    autoplaySpeed: 4000,
-    disablePanzoom: false,
-    hideControlsAfter: true,
-  },
-  translations: {
-    autoplayText: "Play",
-    closeText: "Cerrar",
-    downloadText: "Descargar",
-    fullscreenText: "Pantalla completa",
-    nextText: "Siguiente",
-    pauseText: "Pausa",
-    previousText: "Anterior",
-    thumbnailsText: "Miniaturas",
-    zoomOutText: "Zoom Out",
-  },
-  progressBar: {
-    height: "4px",
-    fillColor: "rgb(0, 0, 0)",
-    backgroundColor: "rgba(255, 255, 255, 1)",
-  },
-  thumbnails: {
-    showThumbnails: true,
-  },
-}
+import { Link } from "gatsby"
 
 export default function BackgroundSlider() {
   return (
@@ -74,6 +26,16 @@ export default function BackgroundSlider() {
           <span className="inline-block">Hecho en</span> Blender{" "}
           <GoLinkExternal className="inline-block" />
         </a>
+      </div>
+
+      <div className="fixed bottom-0 left-0 z-50 px-3 py-2 font-mono text-sm text-white bg-gray-800 bg-opacity-70 ">
+        <Link
+          rel="noopener noreferrer"
+          className="border-b border-white opacity-80 hover:opacity-100"
+          to="/lab/dall-e"
+        >
+          <span className="inline-block"> DALL·E 2</span>
+        </Link>
       </div>
 
       <SRLWrapper options={options}>
@@ -406,4 +368,54 @@ export default function BackgroundSlider() {
       </SRLWrapper>
     </Layout>
   )
+}
+
+
+const options = {
+  buttons: {
+    iconPadding: "5px",
+    showDownloadButton: true,
+    backgroundColor: "rgba(0, 0, 0, .5)",
+    iconColor: "rgba(255, 255, 255, 0.8)",
+    showNextButton: true,
+    showPrevButton: true,
+    size: "30px",
+  },
+  caption: {
+    captionFontSize: "15px",
+    captionAlignment: "center",
+    captionColor: "#a7825f",
+    captionFontWeight: 300,
+    showCaption: false,
+  },
+  settings: {
+    overlayColor: "rgba(0, 0, 0, .9)",
+    transitionTimingFunction: "ease-in-out",
+    slideTransitionSpeed: 0.6,
+    slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
+    slideAnimationType: "fade",
+    slideSpringValues: [300, 200],
+    autoplaySpeed: 4000,
+    disablePanzoom: false,
+    hideControlsAfter: true,
+  },
+  translations: {
+    autoplayText: "Play",
+    closeText: "Cerrar",
+    downloadText: "Descargar",
+    fullscreenText: "Pantalla completa",
+    nextText: "Siguiente",
+    pauseText: "Pausa",
+    previousText: "Anterior",
+    thumbnailsText: "Miniaturas",
+    zoomOutText: "Zoom Out",
+  },
+  progressBar: {
+    height: "4px",
+    fillColor: "rgb(0, 0, 0)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+  },
+  thumbnails: {
+    showThumbnails: true,
+  },
 }
