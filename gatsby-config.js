@@ -18,6 +18,10 @@ const { spaceId, accessToken } = contentfulConfig
 // }
 
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+  },
   siteMetadata: {
     title: `stn`,
     titleTemplate: `%s | stn`,

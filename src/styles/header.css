@@ -19,13 +19,13 @@ body.project-post .headroom {
 }
 
 body.project-post .headroom.headroom--pinned {
-  @apply bg-gray-800 bg-opacity-90;
-  backdrop-filter: blur(5px);
+  @apply bg-gray-800 bg-opacity-90 ;
+  backdrop-filter: blur(5px) saturate(180%);
 }
 
 body.project-post .headroom.headroom--unpinned {
   @apply bg-gray-800 bg-opacity-70;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px) saturate(180%);
 }
 
 .headroom a:hover span {
@@ -65,31 +65,31 @@ body.project-post .headroom.headroom--unpinned {
 body.blog .headroom--pinned,
 body.blog .headroom--unpinned {
   @apply bg-gray-800 bg-opacity-80 ;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(180%);
 }
 
 body.project .headroom--pinned,
 body.project .headroom--unpinned {
   @apply bg-gray-900 bg-opacity-50 ;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(180%);
 }
 
 body.gallery .headroom--pinned,
 body.gallery .headroom--unpinned {
   @apply bg-gray-900 bg-opacity-90 ;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(180%);
 }
 body.cooparaje .headroom--pinned,
 body.cooparaje .headroom--unpinned {
   @apply bg-gray-800 bg-opacity-90 ;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(180%);
 }
 
 
 body.contact .headroom--pinned,
 body.contact .headroom--unpinned {
   @apply bg-gray-900 bg-opacity-50 ;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) saturate(180%);
 }
 
 

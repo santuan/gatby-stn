@@ -1,9 +1,6 @@
-import "../styles/algolia.css"
-import { Link } from "gatsby"
 import React from "react"
 import { Highlight } from "react-instantsearch-dom"
-import { GoLinkExternal } from "react-icons/go"
-import { kebabCase } from "lodash"
+import "../styles/algolia.css"
 const PostPreview = ({ hit }) => {
   return (
     <>
