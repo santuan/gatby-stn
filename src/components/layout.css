@@ -13,6 +13,10 @@ body {
 
 }
 
+.font-mono {
+  font-variant-ligatures: none;
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }
