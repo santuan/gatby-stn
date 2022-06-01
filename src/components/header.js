@@ -39,7 +39,7 @@ const routes = [
 const Header = () => (
   <Headroom disableInlineStyles>
     <div className="flex items-center justify-between w-full px-3 mx-auto duration-1000 transform max-w-7xl inner-wrapper">
-      <div className="w-40 font-mono text-xl font-bold tracking-wider uppercase logo md:w-64">
+      <div className="font-mono text-xl font-bold tracking-wider uppercase w-28 logo md:w-28">
         <Link
           to="/"
           aria-label="Santuan - Volver al inicio"

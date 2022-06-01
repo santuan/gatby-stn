@@ -14,7 +14,7 @@ const WelcomeStnCompoent = () => {
     <>
       <Fade delay={100}>
         <div className="flex justify-center opacity-100 ">
-          <div id="iso-stn" style={{ width: 100, height: 70 }} />
+          <div id="iso-stn" style={{ width: 100, height: 60 }} />
         </div>
       </Fade>
     </>
