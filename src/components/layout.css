@@ -65,8 +65,9 @@ body.fullpage footer {
 } */
 
 body.fullpage .logo {
-  @apply transform scale-95 md:-translate-x-10;
+  @apply transform  md:-translate-x-3;
 }
+
 
 
 body.fullpage .inner-wrapper{
