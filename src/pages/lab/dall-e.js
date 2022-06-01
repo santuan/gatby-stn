@@ -5,7 +5,7 @@ import ReactCompareImage from 'react-compare-image'
 // import useEmblaCarousel from 'embla-carousel-react'
 import Confetti from "react-dom-confetti"
 import { Helmet } from "react-helmet"
-import { BsArrowRight } from "react-icons/bs"
+import { BsArrowRight, BsArrowDownSquareFill } from "react-icons/bs"
 import Fade from "react-reveal/Fade"
 import CarouselTokenOne from "../../components/Carousel/EmblaCarouselDalleTokenOne"
 import CarouselTokenThree from "../../components/Carousel/EmblaCarouselDalleTokenThree"
@@ -28,35 +28,38 @@ const DallePage = ({ data }) => {
         <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-indigo-600">
           <h3 className="relative z-10 flex items-center justify-center w-full px-4 mx-auto font-serif text-lg text-left md:text-3xl group max-w-7xl md:px-12">
             OpenAI
-            <BsArrowRight className="mx-2" />
-            <a href="https://openai.com/dall-e-2/" rel="noopener noreferrer" target="_blank" className="inline-block ml-1.5 underline underline-offset-2 decoration-emerald-500 group-hover:decoration-emerald-300 group-hover:text-emerald-300 duration-300" >
+            <BsArrowRight className="mx-3" />
+            <a href="https://openai.com/dall-e-2/" rel="noopener noreferrer" target="_blank" className="inline-block underline duration-300 underline-offset-2 decoration-emerald-500 group-hover:decoration-emerald-300 group-hover:text-emerald-300" >
               DALL·E 2
             </a>
           </h3>
           <h3 className="max-w-xl px-3 py-6 mx-auto font-mono text-xl">
             DALL·E 2 es un nuevo sistema de Inteligencia Artificial que puede crear imágenes y arte realistas a partir de una descripción en lenguaje natural.
           </h3>
-          <div className="absolute top-0 bottom-0 left-0 right-0 z-0 flex items-center justify-center w-5/12 mx-auto transform -translate-y-4 select-none opacity-5">
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center mb-12">
+          <BsArrowDownSquareFill className="text-3xl animate-pulse"/>
+          </div>
+          <div className="absolute top-0 bottom-0 left-0 right-0 z-0 flex items-center justify-center w-5/12 mx-auto transform select-none opacity-5">
             <svg id="openai" className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M47.21,20.92a12.65,12.65,0,0,0-1.09-10.38A12.78,12.78,0,0,0,32.36,4.41,12.82,12.82,0,0,0,10.64,9a12.65,12.65,0,0,0-8.45,6.13,12.78,12.78,0,0,0,1.57,15A12.64,12.64,0,0,0,4.84,40.51a12.79,12.79,0,0,0,13.77,6.13,12.65,12.65,0,0,0,9.53,4.25A12.8,12.8,0,0,0,40.34,42a12.66,12.66,0,0,0,8.45-6.13A12.8,12.8,0,0,0,47.21,20.92ZM28.14,47.57a9.46,9.46,0,0,1-6.08-2.2l.3-.17,10.1-5.83a1.68,1.68,0,0,0,.83-1.44V23.69l4.27,2.47a.15.15,0,0,1,.08.11v11.8A9.52,9.52,0,0,1,28.14,47.57ZM7.72,38.85a9.45,9.45,0,0,1-1.13-6.37l.3.18L17,38.49a1.63,1.63,0,0,0,1.65,0L31,31.37V36.3a.17.17,0,0,1-.07.13L20.7,42.33A9.51,9.51,0,0,1,7.72,38.85Zm-2.66-22a9.48,9.48,0,0,1,5-4.17v12a1.62,1.62,0,0,0,.82,1.43L23.17,33.2,18.9,35.67a.16.16,0,0,1-.15,0L8.54,29.78A9.52,9.52,0,0,1,5.06,16.8ZM40.14,25,27.81,17.84l4.26-2.46a.16.16,0,0,1,.15,0l10.21,5.9A9.5,9.5,0,0,1,41,38.41v-12A1.67,1.67,0,0,0,40.14,25Zm4.25-6.39-.3-.18L34,12.55a1.64,1.64,0,0,0-1.66,0L20,19.67V14.74a.14.14,0,0,1,.06-.13L30.27,8.72a9.51,9.51,0,0,1,14.12,9.85ZM17.67,27.35,13.4,24.89a.17.17,0,0,1-.08-.12V13a9.51,9.51,0,0,1,15.59-7.3l-.3.17-10.1,5.83a1.68,1.68,0,0,0-.83,1.44Zm2.32-5,5.5-3.17L31,22.35v6.34l-5.49,3.17L20,28.69Z"></path></svg></div>
         </div>
         <div className="relative grid w-full pb-12 mx-auto xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="self-start text-left xl:sticky top-24">
-            <div className="max-w-xl px-3 py-24 pt-40 mx-auto font-mono text-xl">
+            <div className="max-w-lg px-3 py-24 pt-40 mx-auto font-mono text-xl">
               Mismo texto con diferentes estilos.
-              <p className="mt-3 font-serif text-3xl">
-                Un conejo bajando en paracaidas con una zanahoria. <br />
-                <span className="mt-6 text-sm">3d render / Pintura</span>
+              <p className="relative mt-3 font-serif text-6xl">
+              <span className="absolute text-6xl -top-1 -left-7 opacity-60">&ldquo;</span>Un conejo en paracaidas con una zanahoria.&rdquo; <br />
+                <span className="mt-6 font-mono text-sm">3d render / Pintura</span>
               </p>
             </div>
           </div>
-
-
           <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
                 <ReactCompareImage
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.png"
-                  rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.png"
+                  sliderPositionPercentage="0.8"
+                  handleSize="30"
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.png"
+                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
                   sliderLineColor="#fff"
@@ -67,8 +70,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
                 <ReactCompareImage
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654057962/santuan/DALL_E_2022-05-29_10.31.57_zplkhy.png"
-                  rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654058024/santuan/DALL_E_2022-05-29_10.34.29_kn2ffc.png"
+                  sliderPositionPercentage="0.2"
+                  handleSize="30"
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057962/santuan/DALL_E_2022-05-29_10.31.57_zplkhy.jpg"
+                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058047/santuan/DALL_E_2022-05-29_10.34.15_alvgso.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
                   sliderLineColor="#fff"
@@ -79,8 +84,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
                 <ReactCompareImage
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654057983/santuan/DALL_E_2022-05-29_10.31.39_dnspem.png"
-                  rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654058032/santuan/DALL_E_2022-05-29_10.33.57_jadsvm.png"
+                  sliderPositionPercentage="0.33"
+                  handleSize="30"
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057970/santuan/DALL_E_2022-05-29_10.31.50_boam6y.jpg"
+                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058032/santuan/DALL_E_2022-05-29_10.33.57_jadsvm.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
                   sliderLineColor="#fff"
@@ -91,8 +98,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
                 <ReactCompareImage
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/v1654057970/santuan/DALL_E_2022-05-29_10.31.50_boam6y.png"
-                  rightImage="https://res.cloudinary.com/srcouto/image/upload/v1654058047/santuan/DALL_E_2022-05-29_10.34.15_alvgso.png"
+                  sliderPositionPercentage="0.66"
+                  handleSize="30"
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057987/santuan/DALL_E_2022-05-29_10.31.59_hgtqxf.jpg"
+                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058046/santuan/DALL_E_2022-05-29_10.34.00_ekoxis.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
                   sliderLineColor="#fff"
@@ -102,21 +111,20 @@ const DallePage = ({ data }) => {
             </div>
           </div>
         </div>
-
         <div className="relative grid w-full pb-12 mx-auto bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="max-w-xl px-6 pt-12 mx-auto">
             <div className="px-3 pt-24 pb-32 font-serif text-3xl text-center ">
               Tambien se puede subir imágenes de referencia y generar variantes.
             </div>
           </div>
-          <div className="grid max-w-5xl grid-cols-2 gap-12 mx-auto">
+          <div className="grid max-w-lg gap-12 px-6 mx-auto xl:max-w-5xl xl:grid-cols-2">
             <div>
               <p className="mb-6 font-mono text-sm text-center">
                 Original en Blender
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full h-[518px]"
+                  className="object-fill w-full xl:h-[495px]"
                   title="1"
                   alt="1"
                   src="https://www.santuan.com.ar/static/6909ba22c1eb132243cdfcb8116e17af/a764f/13_vrxkt2.jpg"
@@ -135,7 +143,7 @@ const DallePage = ({ data }) => {
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full h-[518px]"
+                  className="object-fill w-full xl:h-[495px]"
                   title="1"
                   alt="1"
                   src="https://www.santuan.com.ar/static/654d14ab112b907a26a0f49c5b5b7e8e/dbd40/untitled_i27pcx.jpg"
@@ -148,14 +156,13 @@ const DallePage = ({ data }) => {
               </p>
               <CarouselTokenTwo />
             </div>
-          
             <div>
               <p className="mb-6 font-mono text-sm text-center">
                 Original en Blender
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full h-[518px]"
+                  className="object-fill w-full xl:h-[495px]"
                   title="1"
                   alt="1"
                   src="https://www.santuan.com.ar/static/03faf63cb42c88b64e228476a0b98b9d/869a6/2_iutptm.jpg"
@@ -169,27 +176,7 @@ const DallePage = ({ data }) => {
               <CarouselTokenThree />
             </div>
           </div>
-
-          {/* <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
-            {dalle.map((i) => {
-              return (
-                <div key={i} className="relative overflow-hidden rounded-br-none rounded-2xl">
-                  <div className="relative z-10 flex min-h-[400px] font-mono font-bold text-xs uppercase w-full mx-auto ">
-                    <ReactCompareImage
-                      leftImage={i.leftSrc}
-                      leftImageLabel="Input"
-                      rightImage={i.rightSrc}
-                      rightImageLabel="Outputs"
-                      sliderLineColor="#fff"
-                    />
-                  </div>
-                  <Loading />
-                </div>
-              )
-            })}
-          </div> */}
         </div>
-
 
         <div className="relative flex items-end justify-center w-full min-h-[40vh] pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-emerald-700">
           <h3 className="relative z-10 flex items-center justify-center w-full px-4 mx-auto font-serif text-lg text-left md:text-3xl group max-w-7xl md:px-12">
