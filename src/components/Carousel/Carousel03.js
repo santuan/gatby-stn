@@ -43,36 +43,36 @@ const Carousel03 = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654747828/santuan/history/01_68_z7izax.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654747825/santuan/history/01_63_ga6ipb.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654747796/santuan/history/01_69_lz2jig.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654747778/santuan/history/01_66_vtipyc.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654747673/santuan/history/01_65_utmpcx.png"
               />
             </div>

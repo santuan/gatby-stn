@@ -43,29 +43,29 @@ const EmblaCarousel = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://www.santuan.com.ar/static/6909ba22c1eb132243cdfcb8116e17af/a764f/13_vrxkt2.jpg"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://www.santuan.com.ar/static/857bdbf30a37313db7d697cf4218caf1/a764f/12_vddpy4.jpg"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://www.santuan.com.ar/static/654d14ab112b907a26a0f49c5b5b7e8e/dbd40/untitled_i27pcx.jpg"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://www.santuan.com.ar/static/3367270de843aa94220b07037e1232bd/dbd40/04_rhcw2f.jpg"
               />
             </div>

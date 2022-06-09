@@ -51,7 +51,8 @@ const DallePage = ({ data }) => {
         </div>
         <div id="text" className="relative grid w-full pb-12 mx-auto scroll-mt-24 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="self-start text-left xl:sticky top-24">
-            <div className="max-w-lg px-3 py-24 pt-40 mx-auto font-mono text-xl">
+            <div className="flex flex-col w-full max-w-lg px-3 py-24 pt-40 mx-auto font-mono text-xl">
+              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">Ejemplo 1</small>
               Mismo texto con diferentes estilos.
               <p className="relative mt-3 font-serif text-6xl">
                 <span className="absolute text-6xl -top-1 -left-7 opacity-60">&ldquo;</span>Un conejo en paracaidas con una zanahoria.&rdquo; <br />
@@ -120,8 +121,9 @@ const DallePage = ({ data }) => {
         </div>
         <div className="relative grid w-full pb-12 mx-auto bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="max-w-xl px-6 pt-12 mx-auto">
-            <div className="px-3 pt-24 pb-32 font-serif text-3xl text-center ">
-              Tambien se puede subir imágenes de referencia y generar variantes.
+            <div className="flex flex-col items-center justify-center w-full px-3 pt-24 pb-32 font-serif text-3xl text-center ">
+              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">Ejemplo 2</small>
+              Subir imágenes de referencia y generar variaciones.
             </div>
           </div>
           <div className="grid max-w-lg gap-3 px-6 mx-auto lg:gap-12 xl:max-w-5xl xl:grid-cols-2">
@@ -132,8 +134,8 @@ const DallePage = ({ data }) => {
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   className="object-fill w-full xl:h-[495px]"
-                  title="1"
-                  alt="1"
+                  title="Una demostración de Dall-E"
+                  alt="Una demostración de Dall-E"
                   src="https://www.santuan.com.ar/static/6909ba22c1eb132243cdfcb8116e17af/a764f/13_vrxkt2.jpg"
                 />
               </div>
@@ -151,8 +153,8 @@ const DallePage = ({ data }) => {
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   className="object-fill w-full xl:h-[495px]"
-                  title="1"
-                  alt="1"
+                  title="Una demostración de Dall-E"
+                  alt="Una demostración de Dall-E"
                   src="https://www.santuan.com.ar/static/654d14ab112b907a26a0f49c5b5b7e8e/dbd40/untitled_i27pcx.jpg"
                 />
               </div>
@@ -170,8 +172,8 @@ const DallePage = ({ data }) => {
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   className="object-fill w-full xl:h-[495px]"
-                  title="1"
-                  alt="1"
+                  title="Una demostración de Dall-E"
+                  alt="Una demostración de Dall-E"
                   src="https://www.santuan.com.ar/static/03faf63cb42c88b64e228476a0b98b9d/869a6/2_iutptm.jpg"
                 />
               </div>
@@ -185,13 +187,14 @@ const DallePage = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative grid w-full pb-12 mx-auto bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-gray-900">
+        <div className="relative grid w-full pb-64 mx-auto bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-gray-900">
           <div className="max-w-xl px-6 pt-12 mx-auto">
-            <div className="px-3 pt-24 pb-6 font-serif text-3xl text-center ">
-              Contar una historia desde multiples perspectividades
+            <div className="flex flex-col items-center justify-center w-full px-3 pt-24 pb-6 font-serif text-3xl text-center ">
+              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">Ejemplo 3</small>
+              Mostrar una historia desde multiples perspectividades
             </div>
           </div>
-          <div className="grid max-w-6xl gap-2 mx-auto md:grid-cols-2">
+          <div className="grid max-w-6xl gap-2 px-6 mx-auto md:grid-cols-2 xl:grid-cols-4">
             <Carousel03 />
             <Carousel01 />
             <Carousel04 />

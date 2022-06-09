@@ -43,36 +43,36 @@ const EmblaCarouselDalleTokenOne = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654059963/santuan/tokens/1/DALL_E_2022-05-29_17.38.22_kcx7sw.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654059953/santuan/tokens/1/DALL_E_2022-05-29_17.38.13_kwe3bj.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654059943/santuan/tokens/1/DALL_E_2022-05-29_17.38.19_uzkkqn.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060517/santuan/tokens/1/DALL_E_2022-05-29_17.39.23_undjh0.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654061130/santuan/tokens/1/DALL_E_2022-05-29_17.39.25_s2co9s.png"
               />
             </div>
