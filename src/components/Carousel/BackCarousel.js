@@ -22,15 +22,15 @@ export default function BackgroundSlider(props) {
             <div>
               <StaticImage
                 className="object-fill w-full min-h-screen"
-                title="Una demostración de Dall-E"
-                alt="Una demostración de Dall-E"
+                title="Una puerta con planetas digital art - Dall-E"
+                alt="Una puerta con planetas digital art - Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654748155/santuan/history/01_23_ccoxk6.jpg"
               />
 
               <StaticImage
                 className="object-fill w-full min-h-screen"
-                title="Una demostración de Dall-E"
-                alt="Una demostración de Dall-E"
+                title="Una puerta con un universo dentro - Dall-E"
+                alt="Una puerta con un universo dentro - Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654748282/santuan/history/01_24_atkuzw.jpg"
               />
             </div>
@@ -39,8 +39,8 @@ export default function BackgroundSlider(props) {
             <div>
               <StaticImage
                 className="object-fill w-full min-h-screen"
-                title="Una demostración de Dall-E"
-                alt="Una demostración de Dall-E"
+                title="Una guitarra con una planta creciendo en su interior - Dall-E"
+                alt="Una guitarra con una planta creciendo en su interior - Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
               />
             </div>
@@ -49,8 +49,8 @@ export default function BackgroundSlider(props) {
             <div>
               <StaticImage
                 className="object-fill w-full min-h-screen"
-                title="Una demostración de Dall-E"
-                alt="Una demostración de Dall-E"
+                title="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
+                alt="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747980/santuan/history/03_5_td0czs.jpg"
               />
             </div>
