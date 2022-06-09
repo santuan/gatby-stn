@@ -43,36 +43,36 @@ const EmblaCarouselDalleTokenThree = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060112/santuan/tokens/4/DALL_E_2022-05-27_22.14.30_to64th.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060112/santuan/tokens/4/DALL_E_2022-05-27_22.14.58_bvkptt.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060102/santuan/tokens/4/DALL_E_2022-05-27_22.15.46_dtsxky.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060117/santuan/tokens/4/DALL_E_2022-05-27_22.14.46_zo2jvn.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
-                title="1"
-                alt="1"
+                title="Una demostración de Dall-E"
+                alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060112/santuan/tokens/4/DALL_E_2022-05-27_22.15.34_zf8vgl.png"
               />
             </div>

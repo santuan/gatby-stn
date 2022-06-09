@@ -1,23 +1,20 @@
 import React, { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import { DotButton, PrevButton, NextButton } from "./EmblaCarouselButtons"
+import { DotButton} from "./EmblaCarouselButtons"
 import { StaticImage } from "gatsby-plugin-image"
 
-Autoplay.globalOptions = { delay: 10000 }
+Autoplay.globalOptions = { delay: 50000 }
 
 const Carousel04 = ({ hit }) => {
   // const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()])
   const [viewportRef, embla] = useEmblaCarousel({ skipSnaps: false, loop: true }, [
-    Autoplay(),
   ])
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState([])
 
-  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
-  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
     (index) => embla && embla.scrollTo(index),
     [embla]
@@ -38,7 +35,7 @@ const Carousel04 = ({ hit }) => {
   }, [embla, setScrollSnaps, onSelect])
   return (
     <>
-      <div className="overflow-hidden bg-gray-900 shadow-2xl rounded-2xl embla">
+      <div className="overflow-hidden bg-gray-900 embla">
         <div className="embla__viewport" ref={viewportRef}>
           <div className=" embla__container">
             <div className="embla__slide ">
@@ -78,8 +75,6 @@ const Carousel04 = ({ hit }) => {
             </div>
           </div>
         </div>
-        <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-        <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
