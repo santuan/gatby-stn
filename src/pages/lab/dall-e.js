@@ -191,7 +191,7 @@ const DallePage = ({ data }) => {
               Contar una historia desde multiples perspectividades
             </div>
           </div>
-          <div className="grid max-w-6xl grid-cols-2 gap-2 mx-auto lg:grid-cols-4">
+          <div className="grid max-w-6xl gap-2 mx-auto md:grid-cols-2">
             <Carousel03 />
             <Carousel01 />
             <Carousel04 />
