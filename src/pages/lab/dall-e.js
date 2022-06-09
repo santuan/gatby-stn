@@ -200,12 +200,12 @@ const DallePage = ({ data }) => {
 
         <div id="ejemplo3" className="relative grid w-full px-6 pb-64 mx-auto scroll-mt-10 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-gray-900">
           <div className="max-w-xl px-6 pt-12 mx-auto">
-            <div className="flex flex-col items-center justify-center w-full px-3 pt-24 pb-6 font-serif text-3xl text-center ">
+            <div className="flex flex-col items-center justify-center w-full px-3 pt-24 pb-6 font-serif text-xl text-center md:text-3xl ">
               <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">Ejemplo 3</small>
               Variaciones de una secuencia de palabras, multiples maneras de percibirlas.
             </div>
           </div>
-          <div className="grid w-full max-w-6xl grid-cols-2 mx-auto overflow-hidden rounded-2xl lg:grid-cols-4">
+          <div className="grid w-full max-w-6xl mx-auto overflow-hidden md:grid-cols-2 rounded-2xl lg:grid-cols-4">
             <Carousel01 />
             <Carousel04 />
             <Carousel02 />
