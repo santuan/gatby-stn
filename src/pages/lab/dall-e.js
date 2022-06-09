@@ -10,9 +10,14 @@ import Fade from "react-reveal/Fade"
 import CarouselTokenOne from "../../components/Carousel/EmblaCarouselDalleTokenOne"
 import CarouselTokenThree from "../../components/Carousel/EmblaCarouselDalleTokenThree"
 import CarouselTokenTwo from "../../components/Carousel/EmblaCarouselDalleTokenTwo"
+import Carousel01 from "../../components/Carousel/Carousel01"
+import Carousel02 from "../../components/Carousel/Carousel02"
+import Carousel03 from "../../components/Carousel/Carousel03"
+import Carousel04 from "../../components/Carousel/Carousel04"
+import BackCarousel from "../../components/Carousel/BackCarousel"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-
+import AnchorLink from "react-anchor-link-smooth-scroll"
 const DallePage = ({ data }) => {
   // const [emblaRef] = useEmblaCarousel()
   const [isCopied, setIsCopied] = React.useState(false)
@@ -33,16 +38,18 @@ const DallePage = ({ data }) => {
               DALL·E 2
             </a>
           </h3>
-          <h3 className="max-w-xl px-3 py-6 mx-auto font-mono text-xl">
+          <h3 className="relative z-10 max-w-xl px-3 py-6 mx-auto font-mono text-xl">
             DALL·E 2 es un nuevo sistema de Inteligencia Artificial que puede crear imágenes y arte realistas a partir de una descripción en lenguaje natural.
           </h3>
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center mb-12">
+          <AnchorLink href="#text" className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center mb-12">
             <BsArrowDownSquareFill className="text-3xl animate-pulse" />
-          </div>
+          </AnchorLink>
+          <BackCarousel />
           <div className="absolute top-0 bottom-0 left-0 right-0 z-0 flex items-center justify-center w-5/12 mx-auto transform select-none opacity-5">
             <svg id="openai" className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M47.21,20.92a12.65,12.65,0,0,0-1.09-10.38A12.78,12.78,0,0,0,32.36,4.41,12.82,12.82,0,0,0,10.64,9a12.65,12.65,0,0,0-8.45,6.13,12.78,12.78,0,0,0,1.57,15A12.64,12.64,0,0,0,4.84,40.51a12.79,12.79,0,0,0,13.77,6.13,12.65,12.65,0,0,0,9.53,4.25A12.8,12.8,0,0,0,40.34,42a12.66,12.66,0,0,0,8.45-6.13A12.8,12.8,0,0,0,47.21,20.92ZM28.14,47.57a9.46,9.46,0,0,1-6.08-2.2l.3-.17,10.1-5.83a1.68,1.68,0,0,0,.83-1.44V23.69l4.27,2.47a.15.15,0,0,1,.08.11v11.8A9.52,9.52,0,0,1,28.14,47.57ZM7.72,38.85a9.45,9.45,0,0,1-1.13-6.37l.3.18L17,38.49a1.63,1.63,0,0,0,1.65,0L31,31.37V36.3a.17.17,0,0,1-.07.13L20.7,42.33A9.51,9.51,0,0,1,7.72,38.85Zm-2.66-22a9.48,9.48,0,0,1,5-4.17v12a1.62,1.62,0,0,0,.82,1.43L23.17,33.2,18.9,35.67a.16.16,0,0,1-.15,0L8.54,29.78A9.52,9.52,0,0,1,5.06,16.8ZM40.14,25,27.81,17.84l4.26-2.46a.16.16,0,0,1,.15,0l10.21,5.9A9.5,9.5,0,0,1,41,38.41v-12A1.67,1.67,0,0,0,40.14,25Zm4.25-6.39-.3-.18L34,12.55a1.64,1.64,0,0,0-1.66,0L20,19.67V14.74a.14.14,0,0,1,.06-.13L30.27,8.72a9.51,9.51,0,0,1,14.12,9.85ZM17.67,27.35,13.4,24.89a.17.17,0,0,1-.08-.12V13a9.51,9.51,0,0,1,15.59-7.3l-.3.17-10.1,5.83a1.68,1.68,0,0,0-.83,1.44Zm2.32-5,5.5-3.17L31,22.35v6.34l-5.49,3.17L20,28.69Z"></path></svg></div>
+            <div className="absolute inset-0 bg-gray-900/80 "/>
         </div>
-        <div className="relative grid w-full pb-12 mx-auto xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
+        <div id="text" className="relative grid w-full pb-12 mx-auto scroll-mt-24 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-emerald-500">
           <div className="self-start text-left xl:sticky top-24">
             <div className="max-w-lg px-3 py-24 pt-40 mx-auto font-mono text-xl">
               Mismo texto con diferentes estilos.
@@ -178,43 +185,22 @@ const DallePage = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative flex items-end justify-center w-full min-h-[40vh] pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-emerald-700">
-          <h3 className="relative z-10 flex items-center justify-center w-full px-4 mx-auto font-serif text-lg text-left md:text-3xl group max-w-7xl md:px-12">
-            <span
-              className="inline-block ml-1.5 group-hover:decoration-indigo-300 group-hover:text-indigo-300 duration-300"
-            >
-              Texto
-            </span>
-            <BsArrowRight className="mx-2" />
-            OpenAI
-            <BsArrowRight className="mx-2" />
-            <a href="https://openai.com/dall-e-2/" rel="noopener noreferrer" target="_blank" className="inline-block ml-1.5 underline underline-offset-2 decoration-emerald-500 group-hover:decoration-emerald-300 group-hover:text-emerald-300 duration-300" >
-              DALL·E 2
-            </a>
-          </h3>
-        </div>
-
-        <div className="relative flex items-end justify-center w-full min-h-[40vh] pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b to-gray-900 from-emerald-700">
-
-          <div className="max-w-5xl px-2 py-24 mx-auto">
-            <video
-              controls
-              className="relative overflow-hidden rounded-2xl"
-              poster="/lnq/lnq-poster.jpg"
-            >
-              <source
-                src="/lnq/lnq.mp4"
-                type="video/mp4"
-              />
-              <source
-                src="/lnq/lnq.webm"
-                type="video/webm"
-              />
-            </video>
-            <div className="pt-2"><span className="font-mono">Music: Sly & The Family Stone · Thank You </span></div>
+        <div className="relative grid w-full pb-12 mx-auto bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-gray-900">
+          <div className="max-w-xl px-6 pt-12 mx-auto">
+            <div className="px-3 pt-24 pb-6 font-serif text-3xl text-center ">
+              Contar una historia desde multiples perspectividades
+            </div>
+          </div>
+          <div className="grid max-w-6xl grid-cols-2 gap-2 mx-auto lg:grid-cols-4">
+            <Carousel03 />
+            <Carousel01 />
+            <Carousel04 />
+            <Carousel02 />
           </div>
         </div>
-        <div className="relative z-20 flex flex-col items-center justify-center w-full overflow-hidden bg-gray-900 bg-pattern ">
+
+
+        <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-gray-900/90 ">
           <Fade duration={1000} delay={300}>
             <div className="relative z-50 max-w-2xl p-8 mx-auto mt-6 mb-6 font-serif prose text-center md:prose-lg ">
               <p className="text-white">
