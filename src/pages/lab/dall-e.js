@@ -77,7 +77,7 @@ const DallePage = ({ data }) => {
                 <ReactCompareImage
                   sliderPositionPercentage="0.8"
                   handleSize="30"
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.png"
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"

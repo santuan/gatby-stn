@@ -31,6 +31,7 @@ export default function BackgroundSlider() {
       <div className="fixed bottom-0 left-0 z-50 px-3 py-2 font-mono text-sm text-white bg-gray-800 bg-opacity-70 ">
         <Link
           rel="noopener noreferrer"
+          ariaLabel="Ver 3d "
           className="border-b border-white opacity-80 hover:opacity-100"
           to="/lab/dall-e"
         >

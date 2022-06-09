@@ -49,28 +49,28 @@ const Carousel04 = ({ hit }) => {
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654747639/santuan/history/01_9_hf4b07.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747639/santuan/history/01_9_hf4b07.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654747637/santuan/history/00_vgnzgw.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747637/santuan/history/00_vgnzgw.jpg"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654748263/santuan/history/01_7_m8vvfb.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748263/santuan/history/01_7_m8vvfb.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654747723/santuan/history/01_11_rfzapy.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747723/santuan/history/01_11_rfzapy.png"
               />
             </div>
           </div>

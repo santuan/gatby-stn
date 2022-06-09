@@ -42,35 +42,35 @@ const Carousel01 = ({ hit }) => {
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654748309/santuan/history/01_51_kw7pv0.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748309/santuan/history/01_51_kw7pv0.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654748308/santuan/history/01_42_jw4b0n.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748308/santuan/history/01_42_jw4b0n.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654748281/santuan/history/01_46_ji4n2k.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748281/santuan/history/01_46_ji4n2k.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654748270/santuan/history/01_43_reejtr.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748270/santuan/history/01_43_reejtr.png"
               />
             </div>
             <div className="embla__slide ">
               <StaticImage
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/v1654747866/santuan/history/01_49_blcwpq.png"
+                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747866/santuan/history/01_49_blcwpq.png"
               />
             </div>
           </div>
