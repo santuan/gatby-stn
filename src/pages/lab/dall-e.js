@@ -30,14 +30,14 @@ const DallePage = ({ data }) => {
       <Seo title={`Dall·E`}
         description={`Imágenes > OpenAI > Dall-E 2`} image="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1653960256/santuan/DALL_E_2022-05-27_22.39.14_unlacv.png" />
       <div className="flex flex-col justify-end w-full min-h-screen mx-auto text-center text-white bg-indigo-900">
-        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-1 space-x-3 bg-gray-900/20">
-          <AnchorLink href="#ejemplo1" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
+        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-1 space-x-3 bg-gray-900/60">
+          <AnchorLink aria-label="Ir al primer ejemplo" href="#ejemplo1" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
             Ejemplo 1
           </AnchorLink>
-          <AnchorLink href="#ejemplo2" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
+          <AnchorLink aria-label="Ir al segundo ejemplo" href="#ejemplo2" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
             Ejemplo 2
           </AnchorLink>
-          <AnchorLink href="#ejemplo3" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
+          <AnchorLink aria-label="Ir al tercer ejemplo" href="#ejemplo3" className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/20">
             Ejemplo 3
           </AnchorLink>
         </div>
@@ -52,7 +52,7 @@ const DallePage = ({ data }) => {
           <h3 className="relative z-10 max-w-xl px-3 py-6 mx-auto font-mono text-xl">
             DALL·E 2 es un nuevo sistema de Inteligencia Artificial que puede crear imágenes y arte realistas a partir de una descripción en lenguaje natural.
           </h3>
-          <AnchorLink href="#ejemplo1" className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center mb-12">
+          <AnchorLink href="#ejemplo1" aria-label="Ir al primer ejemplo" className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center mb-24">
             <BsArrowDownSquareFill className="text-3xl animate-pulse" />
           </AnchorLink>
           <BackCarousel />
@@ -138,60 +138,77 @@ const DallePage = ({ data }) => {
             </div>
           </div>
           <div className="grid max-w-lg gap-3 px-6 mx-auto lg:gap-12 xl:max-w-5xl xl:grid-cols-2">
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
                 Original en Blender
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full xl:h-[495px]"
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
+                  className="object-cover object-center w-full xl:h-[495px]"
                   title="3d render de Cuadrado blanco en cubos rojos"
                   alt="3d render de Cuadrado blanco en cubos rojos"
-                  src="https://www.santuan.com.ar/static/6909ba22c1eb132243cdfcb8116e17af/a764f/13_vrxkt2.jpg"
+                  src="https://res.cloudinary.com/srcouto/image/upload/c_fill,h_495,q_80,w_495/v1654827280/santuan/tokens/14_bmzdy6_i7uuki.jpg"
                 />
               </div>
             </div>
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
-                Dall·E
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
+                Variaciones de Dall·E
               </p>
               <CarouselTokenOne />
             </div>
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
                 Original en Blender
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full xl:h-[495px]"
-                  title="Una demostración de Dall-E"
-                  alt="Una demostración de Dall-E"
-                  src="https://www.santuan.com.ar/static/654d14ab112b907a26a0f49c5b5b7e8e/dbd40/untitled_i27pcx.jpg"
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
+                  className="object-cover object-center w-full xl:h-[495px]"
+                  src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654817028/santuan/tokens/untitled_i27pcx_evplpa.jpg"
                 />
               </div>
             </div>
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
-                Dall·E
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
+                Variaciones de Dall·E
               </p>
               <CarouselTokenTwo />
             </div>
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
                 Original en Blender
               </p>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
-                  className="object-fill w-full xl:h-[495px]"
-                  title="Una demostración de Dall-E"
-                  alt="Una demostración de Dall-E"
-                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654817026/santuan/tokens/2_iutptm_j66y1p.jpg"
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
+                  className="object-cover object-center w-full xl:h-[495px]"
+                  src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_500,w_500/v1654817026/santuan/tokens/2_iutptm_j66y1p.jpg"
                 />
               </div>
             </div>
-            <div>
-              <p className="mb-3 font-mono text-sm text-center">
-                Dall·E
+            <div className="relative z-10">
+              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
+                Variaciones de Dall·E
               </p>
               <CarouselTokenThree />
             </div>

@@ -70,6 +70,7 @@ const Header = () => (
           })}
           <Link
             to="/contacto/"
+            aria-label="Ver como contactar"
             className="relative flex items-center justify-center font-mono text-lg font-bold text-center text-gray-100 uppercase hover:opacity-100 opacity-80"
             activeClassName="opacity-100"
           >

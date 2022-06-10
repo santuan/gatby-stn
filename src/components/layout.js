@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           </div>
           <Link
             to={`/lab`}
-            ariaLabel="Ver 3d "
+            aria-label="Ir a la web con un render en 3d "
             className="block mt-6 space-x-3 font-mono opacity-80 hover:opacity-50"
           >
             <HiEye className="inline-block mx-1 mb-1 text-lg text-white" />

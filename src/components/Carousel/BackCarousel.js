@@ -19,44 +19,72 @@ export default function BackgroundSlider(props) {
           maxTurns={99} /*wait for 1000 milliseconds*/
         >
           <Fade>
-            <div>
-              <StaticImage
-                className="object-fill w-full min-h-screen"
-                title="Una puerta con planetas digital art - Dall-E"
-                alt="Una puerta con planetas digital art - Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654748155/santuan/history/01_23_ccoxk6.jpg"
-              />
-
-              <StaticImage
-                className="object-fill w-full min-h-screen"
-                title="Una puerta con un universo dentro - Dall-E"
-                alt="Una puerta con un universo dentro - Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654748282/santuan/history/01_24_atkuzw.jpg"
-              />
-            </div>
+            <StaticImage
+              className="object-fill w-full min-h-screen"
+              layout="fullWidth"
+              as="div"
+              placeholder="blurred"
+              loading="eager"
+              quality="90"
+              title="Una puerta con planetas digital art - Dall-E"
+              alt="Una puerta con planetas digital art - Dall-E"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747729/santuan/history/01_41_hemlst.png"
+            />
           </Fade>
           <Fade>
-            <div>
-              <StaticImage
-                className="object-fill w-full min-h-screen"
-                title="Una guitarra con una planta creciendo en su interior - Dall-E"
-                alt="Una guitarra con una planta creciendo en su interior - Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
-              />
-            </div>
+            <StaticImage
+              className="object-fill w-full min-h-screen"
+              layout="fullWidth"
+              as="div"
+              placeholder="blurred"
+              loading="eager"
+              quality="90"
+              title="Una puerta con un universo dentro - Dall-E"
+              alt="Una puerta con un universo dentro - Dall-E"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654021168/santuan/brave_sZaKiLy67X_ifqn0e.jpg"
+            />
           </Fade>
           <Fade>
-            <div>
-              <StaticImage
-                className="object-fill w-full min-h-screen"
-                title="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
-                alt="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
-                src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747980/santuan/history/03_5_td0czs.jpg"
-              />
-            </div>
+            <StaticImage
+              className="object-fill w-full min-h-screen"
+              layout="fullWidth"
+              as="div"
+              placeholder="blurred"
+              loading="eager"
+              quality="90"
+              title="Una guitarra con una planta creciendo en su interior - Dall-E"
+              alt="Una guitarra con una planta creciendo en su interior - Dall-E"
+              src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
+            />
           </Fade>
-        </Carousel>
-      </div>
-    </div>
+          <Fade>
+            <StaticImage
+              className="object-fill w-full min-h-screen"
+              layout="fullWidth"
+              as="div"
+              placeholder="blurred"
+              loading="eager"
+              quality="90"
+              title="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
+              alt="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747980/santuan/history/03_5_td0czs.jpg"
+            />
+          </Fade>
+          <Fade>
+            <StaticImage
+              className="object-fill w-full min-h-screen"
+              layout="fullWidth"
+              as="div"
+              placeholder="blurred"
+              loading="eager"
+              quality="90"
+              title="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
+              alt="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747800/santuan/history/ImageSequence032_mkwbse.jpg"
+            />
+          </Fade>
+        </Carousel >
+      </div >
+    </div >
   )
 }

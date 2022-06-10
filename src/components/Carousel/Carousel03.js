@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import { DotButton } from "./EmblaCarouselButtons"
+import { DotButton, PrevButton, NextButton } from "./EmblaCarouselButtons"
 import { StaticImage } from "gatsby-plugin-image"
 
 Autoplay.globalOptions = { delay: 50000 }
@@ -14,7 +14,8 @@ const Carousel03 = ({ hit }) => {
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState([])
-
+  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
+  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
     (index) => embla && embla.scrollTo(index),
     [embla]
@@ -40,6 +41,13 @@ const Carousel03 = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                quality="90"
+                width={495}
+                height={495}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747828/santuan/history/01_68_z7izax.png"
@@ -47,6 +55,13 @@ const Carousel03 = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                quality="90"
+                width={495}
+                height={495}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747825/santuan/history/01_63_ga6ipb.png"
@@ -54,6 +69,13 @@ const Carousel03 = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                quality="90"
+                width={495}
+                height={495}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747796/santuan/history/01_69_lz2jig.png"
@@ -61,6 +83,13 @@ const Carousel03 = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                quality="90"
+                width={495}
+                height={495}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747778/santuan/history/01_66_vtipyc.png"
@@ -68,6 +97,13 @@ const Carousel03 = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                quality="90"
+                width={495}
+                height={495}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747673/santuan/history/01_65_utmpcx.png"
@@ -75,8 +111,9 @@ const Carousel03 = ({ hit }) => {
             </div>
           </div>
         </div>
-     
-        <div className="embla__dots">
+        <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
+        <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+        <div className="!hidden embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}

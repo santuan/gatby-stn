@@ -13,6 +13,7 @@ export const PrevButton = ({ enabled, onClick }) => (
   <button
     className="embla__button embla__button--prev"
     onClick={onClick}
+    aria-label="prev"
     disabled={!enabled}
   >
     <svg className="embla__button__svg" viewBox="137.718 -1.001 366.563 644">
@@ -25,6 +26,7 @@ export const NextButton = ({ enabled, onClick }) => (
   <button
     className="embla__button embla__button--next"
     onClick={onClick}
+    aria-label="next"
     disabled={!enabled}
   >
     <svg className="embla__button__svg" viewBox="0 0 238.003 238.003">
