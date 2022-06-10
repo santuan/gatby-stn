@@ -46,8 +46,8 @@ const Carousel03 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747828/santuan/history/01_68_z7izax.png"
@@ -60,8 +60,8 @@ const Carousel03 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747825/santuan/history/01_63_ga6ipb.png"
@@ -74,8 +74,8 @@ const Carousel03 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747796/santuan/history/01_69_lz2jig.png"
@@ -88,8 +88,8 @@ const Carousel03 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747778/santuan/history/01_66_vtipyc.png"
@@ -102,8 +102,8 @@ const Carousel03 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654747673/santuan/history/01_65_utmpcx.png"

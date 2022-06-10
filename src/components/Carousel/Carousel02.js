@@ -47,8 +47,8 @@ const Carousel02 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748131/santuan/history/01_61_tbi5wb.png"
               />
@@ -61,8 +61,8 @@ const Carousel02 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748104/santuan/history/01_59_twfdch.png"
               />
@@ -75,8 +75,8 @@ const Carousel02 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748069/santuan/history/01_56_sce6xb.png"
               />
@@ -89,8 +89,8 @@ const Carousel02 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748049/santuan/history/01_58_bip9jf.png"
               />
@@ -103,8 +103,8 @@ const Carousel02 = ({ hit }) => {
                 layout="constrained"
                 loading="lazy"
                 quality="90"
-                width={495}
-                height={495}
+                width={440}
+                height={440}
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_600/v1654748037/santuan/history/01_53_eopwxq.png"
               />

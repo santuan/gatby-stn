@@ -43,6 +43,13 @@ const EmblaCarouselDalleTokenTwo = ({ hit }) => {
           <div className=" embla__container">
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                width={500}
+                height={500}
+                quality="90"
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060071/santuan/tokens/3/DALL_E_2022-05-29_10.21.58_iiejdg.png"
@@ -50,6 +57,13 @@ const EmblaCarouselDalleTokenTwo = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                width={500}
+                height={500}
+                quality="90"
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060036/santuan/tokens/3/DALL_E_2022-05-29_10.21.52_mv1nll.png"
@@ -57,6 +71,13 @@ const EmblaCarouselDalleTokenTwo = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                width={500}
+                height={500}
+                quality="90"
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060065/santuan/tokens/3/DALL_E_2022-05-29_10.22.11_ly3yfn.png"
@@ -64,6 +85,13 @@ const EmblaCarouselDalleTokenTwo = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                width={500}
+                height={500}
+                quality="90"
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060077/santuan/tokens/3/DALL_E_2022-05-29_10.22.06_y8xs3x.png"
@@ -71,6 +99,13 @@ const EmblaCarouselDalleTokenTwo = ({ hit }) => {
             </div>
             <div className="embla__slide ">
               <StaticImage
+                as="div"
+                placeholder="blurred"
+                layout="constrained"
+                loading="lazy"
+                width={500}
+                height={500}
+                quality="90"
                 title="Una demostración de Dall-E"
                 alt="Una demostración de Dall-E"
                 src="https://res.cloudinary.com/srcouto/image/upload/v1654060064/santuan/tokens/3/DALL_E_2022-05-29_10.21.27_dkjkao.png"
