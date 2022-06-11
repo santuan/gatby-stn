@@ -22,3 +22,11 @@
 .btn.green {
  @apply bg-emerald-400 text-emerald-700 shadow-emerald-500/50 outline-none ring-emerald-600 print:text-gray-900 print:bg-gray-200 dark:bg-emerald-400 dark:ring-emerald-200;
 } 
+
+.compareImage { 
+  @apply bg-red-600
+}
+
+.compareImage div > div > div {
+@apply rounded-md uppercase
+}

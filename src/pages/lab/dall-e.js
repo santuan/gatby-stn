@@ -25,7 +25,7 @@ const DallePage = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <body className="project" />
+        <body className="gallerys" />
       </Helmet>
       <Seo
         title={`Dall·E`}
@@ -92,46 +92,32 @@ const DallePage = ({ data }) => {
               <path d="M47.21,20.92a12.65,12.65,0,0,0-1.09-10.38A12.78,12.78,0,0,0,32.36,4.41,12.82,12.82,0,0,0,10.64,9a12.65,12.65,0,0,0-8.45,6.13,12.78,12.78,0,0,0,1.57,15A12.64,12.64,0,0,0,4.84,40.51a12.79,12.79,0,0,0,13.77,6.13,12.65,12.65,0,0,0,9.53,4.25A12.8,12.8,0,0,0,40.34,42a12.66,12.66,0,0,0,8.45-6.13A12.8,12.8,0,0,0,47.21,20.92ZM28.14,47.57a9.46,9.46,0,0,1-6.08-2.2l.3-.17,10.1-5.83a1.68,1.68,0,0,0,.83-1.44V23.69l4.27,2.47a.15.15,0,0,1,.08.11v11.8A9.52,9.52,0,0,1,28.14,47.57ZM7.72,38.85a9.45,9.45,0,0,1-1.13-6.37l.3.18L17,38.49a1.63,1.63,0,0,0,1.65,0L31,31.37V36.3a.17.17,0,0,1-.07.13L20.7,42.33A9.51,9.51,0,0,1,7.72,38.85Zm-2.66-22a9.48,9.48,0,0,1,5-4.17v12a1.62,1.62,0,0,0,.82,1.43L23.17,33.2,18.9,35.67a.16.16,0,0,1-.15,0L8.54,29.78A9.52,9.52,0,0,1,5.06,16.8ZM40.14,25,27.81,17.84l4.26-2.46a.16.16,0,0,1,.15,0l10.21,5.9A9.5,9.5,0,0,1,41,38.41v-12A1.67,1.67,0,0,0,40.14,25Zm4.25-6.39-.3-.18L34,12.55a1.64,1.64,0,0,0-1.66,0L20,19.67V14.74a.14.14,0,0,1,.06-.13L30.27,8.72a9.51,9.51,0,0,1,14.12,9.85ZM17.67,27.35,13.4,24.89a.17.17,0,0,1-.08-.12V13a9.51,9.51,0,0,1,15.59-7.3l-.3.17-10.1,5.83a1.68,1.68,0,0,0-.83,1.44Zm2.32-5,5.5-3.17L31,22.35v6.34l-5.49,3.17L20,28.69Z"></path>
             </svg>
           </div>
-          <div className="absolute inset-0 z-0 bg-black/80 md:bg-gray-900/70 " />
+          <div className="absolute inset-0 z-0 bg-black/80 bg-gradient-to-b from-transparent via-transparent to-indigo-800/80 " />
         </div>
         <div
           id="ejemplo1"
           className="relative grid w-full pb-12 mx-auto scroll-mt-10 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-red-600"
         >
           <div className="self-start text-left xl:sticky top-24">
-            <div className="flex flex-col w-full max-w-lg px-3 py-24 pt-40 mx-auto font-mono text-xl">
+            <div className="flex flex-col w-full max-w-lg px-8 py-24 pt-24 mx-auto font-mono text-lg md:text-xl">
               <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">
                 Ejemplo 1
               </small>
               Mismo texto con diferentes estilos.
-              <p className="relative mt-3 font-serif text-6xl">
+              <p className="relative flex flex-col mt-3 font-serif text-4xl md:text-6xl">
                 <span className="absolute text-6xl -top-1 -left-7 opacity-60">
                   &ldquo;
                 </span>
-                Un conejo en paracaidas con una zanahoria.&rdquo; <br />
+                Un conejo en paracaidas con una zanahoria.
                 <span className="mt-6 font-mono text-sm">
-                  3d render / Pintura
+                  3d render | Pintura
                 </span>
               </p>
             </div>
           </div>
           <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
-            <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
-              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
-                <ReactCompareImage
-                  sliderPositionPercentage="0.5"
-                  handleSize="30"
-                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.jpg"
-                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
-                  leftImageLabel="3d Render"
-                  rightImageLabel="Pintura"
-                  sliderLineColor="#fff"
-                />
-              </div>
-              <Loading />
-            </div>
-            <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
-              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
+          <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
+              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
@@ -145,7 +131,23 @@ const DallePage = ({ data }) => {
               <Loading />
             </div>
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
-              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
+              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
+                <ReactCompareImage
+                  sliderPositionPercentage="0.5"
+                  handleSize="30"
+                  className=""
+                  leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.jpg"
+                  rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
+                  leftImageLabel="3d Render"
+                  rightImageLabel="Pintura"
+                  sliderLineColor="#fff"
+                />
+              </div>
+              <Loading />
+            </div>
+
+            <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
+              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
@@ -159,7 +161,7 @@ const DallePage = ({ data }) => {
               <Loading />
             </div>
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
-              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold ">
+              <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"

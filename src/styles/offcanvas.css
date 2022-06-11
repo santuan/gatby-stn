@@ -106,8 +106,12 @@ body.gallery .bm-menu {
   @apply bg-blue-700;
 }
 
+body.gallerys .bm-menu {
+  @apply bg-blue-700;
+}
+
 body.cooparaje .bm-menu {
-  @apply bg-gray-800;
+  @apply bg-yellow-600;
 }
 
 body.contact .bm-menu {

@@ -5,7 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { SRLWrapper } from "simple-react-lightbox"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { CgInstagram } from "react-icons/cg"
 import { GoLinkExternal } from "react-icons/go"
 import { Link } from "gatsby"
 
@@ -16,7 +15,7 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className=" gallery" />
       </Helmet>
-      <div className="fixed bottom-0 right-0 z-50 px-3 py-2 font-mono text-sm text-white bg-gray-800 bg-opacity-70 ">
+      <div className="absolute bottom-0 left-0 right-0 z-50 px-3 py-2 font-mono text-sm text-center text-white bg-gray-800 bg-opacity-70 ">
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -28,14 +27,14 @@ export default function BackgroundSlider() {
         </a>
       </div>
 
-      <div className="fixed bottom-0 left-0 z-50 px-3 py-2 font-mono text-sm text-white bg-gray-800 bg-opacity-70 ">
+      <div className="absolute left-0 right-0 z-50 flex items-center justify-center w-full px-3 py-2 font-mono text-sm text-white top-3/4 md:hidden">
         <Link
           rel="noopener noreferrer"
           ariaLabel="Ver 3d "
-          className="border-b border-white opacity-80 hover:opacity-100"
+          className="relative inline-flex items-center justify-center px-3 py-1 font-mono text-xs font-bold text-center text-white uppercase duration-1000 transform rounded-md bg-gradient-to-br from-emerald-600 to-indigo-600"
           to="/lab/dall-e"
         >
-          <span className="inline-block"> DALL·E 2</span>
+          <span className="inline-block">Ver ejemplos en DALL·E 2</span>
         </Link>
       </div>
 
@@ -52,7 +51,7 @@ export default function BackgroundSlider() {
                   loop
                   muted
                   playsInline
-                  poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1642599935/stn-renders/1230001-0500_mss0pe.jpg"
+                  poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,h_625,q_75/v1642599935/stn-renders/1230001-0500_mss0pe.webp"
                 >
                   <source
                     src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.mp4"
@@ -73,10 +72,16 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
             </Fade>
-
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -87,6 +92,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -97,6 +109,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -107,6 +126,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -117,6 +143,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -128,6 +161,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -139,6 +179,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -150,6 +197,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -160,6 +214,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -170,6 +231,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -181,6 +249,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative cursor-pointer">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -191,6 +266,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -201,6 +283,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -211,6 +300,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -221,6 +317,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -231,6 +334,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -242,6 +352,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -252,6 +369,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -262,6 +386,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -273,6 +404,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -284,6 +422,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -294,6 +439,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -305,6 +457,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -316,6 +475,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -327,6 +493,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -338,6 +511,13 @@ export default function BackgroundSlider() {
             <Fade>
               <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
                 <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  width={495}
+                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -347,15 +527,6 @@ export default function BackgroundSlider() {
             </Fade>
           </div>
           <div className="relative flex flex-col items-center justify-center w-full p-3 py-64 overflow-hidden font-mono text-xl text-center text-yellow-700 duration-200 bg-fixed md:text-6xl opacity-80 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
-            <a
-              href="https://www.instagram.com/stn9000/"
-              className="relative z-20 flex items-center justify-center px-6 py-3 duration-200 border-2 border-yellow-700 rounded-md hover:border-indigo-600 hover:text-indigo-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CgInstagram className="mr-3" />
-              STN9000
-            </a>
             <div className="absolute inset-0 z-10">
               <StaticImage
                 title="instagram @stn9000"

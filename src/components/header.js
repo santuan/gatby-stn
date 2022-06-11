@@ -51,7 +51,7 @@ const Header = () => (
       <div className="hidden w-full text-right md:block">
         <nav className="relative flex items-center justify-end space-x-8">
           <Link to="/lab/dall-e" className=" galleryOn">
-            Dall-E
+            DALL·E·2
           </Link>
           {routes.map((route, i) => {
             return (

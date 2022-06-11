@@ -46,7 +46,7 @@ export default function IndexPage() {
           >
             <div className="block w-full mt-2 font-bold">
               <TextLoop interval={3500}>
-                
+
                 <Link
                   to={`/galeria/`}
                   className="text-white hover:opacity-75 md:text-blue-400 md:hover:text-blue-500"
@@ -71,6 +71,7 @@ export default function IndexPage() {
           </h2>
           <div className="fixed bottom-3 right-3">
             <button
+              aria-label="Tirar confetis"
               onClick={() => {
                 copyToClipboard("santuan.bot@gmail.com")
                 setIsCopied(true)
@@ -98,7 +99,7 @@ export default function IndexPage() {
         muted
         playsInline
         className="opacity-80 md:opacity-100 backgroundVideo"
-        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_100,w_1600/v1628128970/encoder/herohdsantuan0001-0250_wpgean.jpg"
+        poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,q_auto:eco,w_763/v1628508273/encoder/herohdsantuan0001-0250_wpgean.webp"
       >
         <source
           src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1628057438/encoder/herohdsantuan0001-0250_wpgean.mp4"
