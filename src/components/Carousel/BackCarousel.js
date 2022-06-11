@@ -28,7 +28,7 @@ export default function BackgroundSlider(props) {
               quality="90"
               title="Una puerta con planetas digital art - Dall-E"
               alt="Una puerta con planetas digital art - Dall-E"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747729/santuan/history/01_41_hemlst.png"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747810/santuan/history/01_19_jh8ikd.jpg"
             />
           </Fade>
           <Fade>
@@ -67,7 +67,7 @@ export default function BackgroundSlider(props) {
               quality="90"
               title="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
               alt="Un cuadro abstracto de figuras a en colores primarios - Dall-E"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747980/santuan/history/03_5_td0czs.jpg"
+              src="https://res.cloudinary.com/srcouto/image/upload/v1654747878/santuan/history/ImageSequence030_wupe68.png"
             />
           </Fade>
           <Fade>
