@@ -12,7 +12,6 @@ import {
   InstantSearch,
   SearchBox,
   Stats,
-  ClearRefinements,
   RefinementList,
 } from "react-instantsearch-dom"
 import PostPreview from "../components/algoliaPostPreview"
