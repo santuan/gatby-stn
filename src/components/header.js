@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import Headroom from "react-headroom"
 import IsoStn from "../animations/isoWelcome"
-import "../styles/header.css"
 import { FiSend } from "react-icons/fi"
 
 const routes = [

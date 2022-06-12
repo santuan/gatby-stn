@@ -79,6 +79,12 @@ body.gallery .headroom--unpinned {
   @apply bg-gray-900 bg-opacity-90 ;
   backdrop-filter: blur(5px) saturate(180%);
 }
+
+body.gallerys .headroom--pinned,
+body.gallerys .headroom--unpinned {
+  @apply bg-indigo-800 bg-opacity-90 ;
+}
+
 body.cooparaje .headroom--pinned,
 body.cooparaje .headroom--unpinned {
   @apply bg-gray-800 bg-opacity-90 ;

@@ -5,7 +5,6 @@ import { GiPartyPopper } from "react-icons/gi"
 import TextLoop from "react-text-loop"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import "../styles/bgPattern.css"
 
 
 const copyToClipboard = (str) => {

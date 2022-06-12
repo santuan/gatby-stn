@@ -26,7 +26,19 @@
 .compareImage { 
   @apply bg-red-600
 }
-
+/* 
 .compareImage div > div > div {
 @apply rounded-md uppercase
+} */
+
+
+
+div[data-testid="container"] div:last-child div{
+  @apply rounded-md uppercase
+  /* style rules here */
 }
+
+/* 
+div[data-testid="container"] div:nth-child(2) div {
+  @apply rounded-md uppercase
+} */

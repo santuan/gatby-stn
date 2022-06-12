@@ -1,6 +1,5 @@
 import React from "react"
 import { Highlight } from "react-instantsearch-dom"
-import "../styles/algolia.css"
 const PostPreview = ({ hit }) => {
   return (
     <>

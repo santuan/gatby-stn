@@ -33,7 +33,7 @@ const DallePage = ({ data }) => {
         image="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1653960256/santuan/DALL_E_2022-05-27_22.39.14_unlacv.png"
       />
       <div className="flex flex-col justify-end w-full min-h-screen mx-auto text-center text-white bg-indigo-900">
-        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-3 space-x-3 duration-300 bg-gray-900/5 group hover:bg-gray-900/40">
+        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-3 space-x-3 duration-300 bg-gradient-to-b from-gray-900/60 to-gray-900/90 group hover:bg-gray-900/50">
           <AnchorLink
             aria-label="Ir al primer ejemplo"
             href="#ejemplo1"
@@ -56,7 +56,7 @@ const DallePage = ({ data }) => {
             Ejemplo 3
           </AnchorLink>
         </div>
-        <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-emerald-500 to-indigo-600">
+        <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-600">
           <h3 className="relative z-10 flex items-center justify-center w-full px-4 mx-auto font-serif text-lg text-left md:text-3xl group max-w-7xl md:px-12">
             OpenAI
             <BsArrowRight className="mx-3" />
@@ -77,7 +77,7 @@ const DallePage = ({ data }) => {
           <AnchorLink
             href="#ejemplo1"
             aria-label="Ir al primer ejemplo"
-            className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center mb-24"
+            className="z-10 flex items-center justify-center"
           >
             <BsArrowDownSquareFill className="text-3xl animate-pulse" />
           </AnchorLink>
@@ -92,11 +92,11 @@ const DallePage = ({ data }) => {
               <path d="M47.21,20.92a12.65,12.65,0,0,0-1.09-10.38A12.78,12.78,0,0,0,32.36,4.41,12.82,12.82,0,0,0,10.64,9a12.65,12.65,0,0,0-8.45,6.13,12.78,12.78,0,0,0,1.57,15A12.64,12.64,0,0,0,4.84,40.51a12.79,12.79,0,0,0,13.77,6.13,12.65,12.65,0,0,0,9.53,4.25A12.8,12.8,0,0,0,40.34,42a12.66,12.66,0,0,0,8.45-6.13A12.8,12.8,0,0,0,47.21,20.92ZM28.14,47.57a9.46,9.46,0,0,1-6.08-2.2l.3-.17,10.1-5.83a1.68,1.68,0,0,0,.83-1.44V23.69l4.27,2.47a.15.15,0,0,1,.08.11v11.8A9.52,9.52,0,0,1,28.14,47.57ZM7.72,38.85a9.45,9.45,0,0,1-1.13-6.37l.3.18L17,38.49a1.63,1.63,0,0,0,1.65,0L31,31.37V36.3a.17.17,0,0,1-.07.13L20.7,42.33A9.51,9.51,0,0,1,7.72,38.85Zm-2.66-22a9.48,9.48,0,0,1,5-4.17v12a1.62,1.62,0,0,0,.82,1.43L23.17,33.2,18.9,35.67a.16.16,0,0,1-.15,0L8.54,29.78A9.52,9.52,0,0,1,5.06,16.8ZM40.14,25,27.81,17.84l4.26-2.46a.16.16,0,0,1,.15,0l10.21,5.9A9.5,9.5,0,0,1,41,38.41v-12A1.67,1.67,0,0,0,40.14,25Zm4.25-6.39-.3-.18L34,12.55a1.64,1.64,0,0,0-1.66,0L20,19.67V14.74a.14.14,0,0,1,.06-.13L30.27,8.72a9.51,9.51,0,0,1,14.12,9.85ZM17.67,27.35,13.4,24.89a.17.17,0,0,1-.08-.12V13a9.51,9.51,0,0,1,15.59-7.3l-.3.17-10.1,5.83a1.68,1.68,0,0,0-.83,1.44Zm2.32-5,5.5-3.17L31,22.35v6.34l-5.49,3.17L20,28.69Z"></path>
             </svg>
           </div>
-          <div className="absolute inset-0 z-0 bg-black/80 bg-gradient-to-b from-transparent via-transparent to-indigo-800/80 " />
+          <div className="absolute inset-0 z-0 bg-black/80 bg-gradient-to-b from-transparent via-transparent to-indigo-700" />
         </div>
         <div
           id="ejemplo1"
-          className="relative grid w-full pb-12 mx-auto scroll-mt-10 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-600 to-red-600"
+          className="relative grid w-full pb-12 mx-auto scroll-mt-10 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-700 to-red-700"
         >
           <div className="self-start text-left xl:sticky top-24">
             <div className="flex flex-col w-full max-w-lg px-8 py-24 pt-24 mx-auto font-mono text-lg md:text-xl">
@@ -121,11 +121,12 @@ const DallePage = ({ data }) => {
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
+                  hover="true"
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057962/santuan/DALL_E_2022-05-29_10.31.57_zplkhy.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058047/santuan/DALL_E_2022-05-29_10.34.15_alvgso.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#fff"
+                  sliderLineColor="#3a30a6"
                 />
               </div>
               <Loading />
@@ -135,12 +136,12 @@ const DallePage = ({ data }) => {
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
-                  className=""
+                  hover="true"
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#fff"
+                  sliderLineColor="#3a30a6"
                 />
               </div>
               <Loading />
@@ -151,11 +152,12 @@ const DallePage = ({ data }) => {
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
+                  hover="true"
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057970/santuan/DALL_E_2022-05-29_10.31.50_boam6y.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058032/santuan/DALL_E_2022-05-29_10.33.57_jadsvm.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#fff"
+                  sliderLineColor="#3a30a6"
                 />
               </div>
               <Loading />
@@ -165,11 +167,12 @@ const DallePage = ({ data }) => {
                 <ReactCompareImage
                   sliderPositionPercentage="0.5"
                   handleSize="30"
+                  hover="true"
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057987/santuan/DALL_E_2022-05-29_10.31.59_hgtqxf.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058046/santuan/DALL_E_2022-05-29_10.34.00_ekoxis.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#fff"
+                  sliderLineColor="#3a30a6"
                 />
               </div>
               <Loading />
@@ -178,7 +181,7 @@ const DallePage = ({ data }) => {
         </div>
         <div
           id="ejemplo2"
-          className="relative grid w-full pb-12 mx-auto scroll-mt-10 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-red-600 to-amber-600"
+          className="relative grid w-full pb-12 mx-auto scroll-mt-10 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-red-700 to-amber-600"
         >
           <div className="max-w-xl px-6 pt-12 mx-auto">
             <div className="flex flex-col items-center justify-center w-full px-3 pt-24 pb-12 font-serif text-3xl text-center ">
@@ -291,7 +294,7 @@ const DallePage = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-gray-900/90 ">
+        <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-gray-900 bg-pattern ">
           <Fade duration={1000} delay={300}>
             <div className="relative z-50 max-w-2xl p-8 mx-auto mt-6 mb-6 font-serif prose text-center md:prose-lg ">
               <p className="text-white">

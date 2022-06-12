@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 import { slide as Menu } from "react-burger-menu"
-import "../styles/offcanvas.css"
-
 import Navigation from "../components/navigation"
 
 class Offcanvas extends Component {

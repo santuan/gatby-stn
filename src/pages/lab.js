@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import "../styles/bgPattern.css"
 import { Helmet } from "react-helmet"
 import IntroThree from "../components/three/intro"
 

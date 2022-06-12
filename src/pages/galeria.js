@@ -15,7 +15,7 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className=" gallery" />
       </Helmet>
-      <div className="absolute bottom-0 left-0 right-0 z-50 px-3 py-2 font-mono text-sm text-center text-white bg-gray-800 bg-opacity-70 ">
+      <div className="fixed bottom-0 left-0 right-0 z-50 px-3 py-2 font-mono text-sm text-center text-white bg-gray-800 bg-opacity-70 ">
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -79,9 +79,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -96,9 +96,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -113,9 +113,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -130,9 +130,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -147,9 +147,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -165,9 +165,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="900"
+                  width="900"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -184,8 +184,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="749"
+                  width="1332"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -202,8 +202,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -219,8 +219,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -236,8 +236,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -254,8 +254,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-full duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -271,8 +271,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -288,8 +288,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -305,8 +305,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -322,8 +322,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -339,8 +339,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -357,8 +357,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -374,8 +374,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -391,8 +391,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="900"
+                  width="900"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -408,9 +408,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="864"
+                  width="1536"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -426,9 +426,9 @@ export default function BackgroundSlider() {
                   placeholder="blurred"
                   layout="constrained"
                   loading="lazy"
+                  height="864"
+                  width="1536"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -444,8 +444,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="864"
+                  width="1536"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -462,8 +462,8 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
+                  height="864"
+                  width="1536"
                   title="item"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
@@ -480,9 +480,9 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
+                  height="864"
+                  width="1536"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233952/stn-renders/04_rhcw2f.jpg"
@@ -498,9 +498,9 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
+                  height="864"
+                  width="1536"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215823/stn-renders/02_blemta.jpg"
@@ -516,25 +516,32 @@ export default function BackgroundSlider() {
                   layout="constrained"
                   loading="lazy"
                   quality="90"
-                  width={495}
-                  height={495}
                   title="item"
+                  height="864"
+                  width="1536"
                   className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233957/stn-renders/01_ujdfvc.jpg"
                 />
               </div>
             </Fade>
-          </div>
-          <div className="relative flex flex-col items-center justify-center w-full p-3 py-64 overflow-hidden font-mono text-xl text-center text-yellow-700 duration-200 bg-fixed md:text-6xl opacity-80 hover:opacity-100 bg-gradient-to-br from-gray-800 to-gray-900">
-            <div className="absolute inset-0 z-10">
-              <StaticImage
-                title="instagram @stn9000"
-                className="object-cover w-full h-full duration-200 md:w-full hover:opacity-60"
-                alt="instagram @stn9000"
-                src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.jpg"
-              />
-            </div>
+            <Fade>
+              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
+                <StaticImage
+                  as="div"
+                  placeholder="blurred"
+                  layout="constrained"
+                  loading="lazy"
+                  quality="90"
+                  height="864"
+                  width="1536"
+                  title="item"
+                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  alt="item"
+                  src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.jpg"
+                />
+              </div>
+            </Fade>
           </div>
         </div>
       </SRLWrapper>

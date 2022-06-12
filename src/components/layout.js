@@ -9,8 +9,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import { AiOutlineHeart } from "react-icons/ai"
 import { HiCode, HiEye } from "react-icons/hi"
-
-import "./layout.css"
 import SimpleReactLightbox from "simple-react-lightbox"
 import { Link } from "gatsby"
 

@@ -12,7 +12,7 @@ export default function BackgroundSlider(props) {
   )
   const Carousel = makeCarousel(CarouselUI)
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center py-32 overflow-hidden text-center text-white bg-gray-900 ">
+    <div className="absolute inset-0 flex flex-col items-center justify-center py-32 overflow-hidden text-center text-white bg-gray-900 md:opacity-75 opacity-10 ">
       <div className="absolute inset-0 min-h-screen">
         <Carousel
           defaultWait={4000}
