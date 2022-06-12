@@ -94,7 +94,7 @@ const DallePage = ({ data }) => {
           <div className="absolute top-0 bottom-0 left-0 right-0 z-0 flex items-center justify-center w-1/5 mx-auto text-transparent transform opacity-100 select-none ">
             <svg
               id="openai"
-              className="relative z-10 fill-current -translate-y-7 text-gray-100/30"
+              className="relative z-10 fill-current animate-pulse -translate-y-7 text-gray-100/30"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 51 51"
             >
@@ -307,7 +307,7 @@ const DallePage = ({ data }) => {
           </div>
         </div>
         <SRLWrapper options={options}>
-          <div className="grid grid-cols-2 gap-1 p-1 bg-yellow-400 md:grid-cols-3" id="ejemplo4">
+          <div className="grid grid-cols-2 gap-1 p-1 bg-yellow-400 scroll-mt-24 md:grid-cols-3" id="ejemplo4">
             <StaticImage
               as="div"
               placeholder="blurred"
@@ -316,9 +316,9 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              className="object-cover rounded-tr-2xl overflow-hidden object-center w-full xl:h-[495px]"
+              alt="Render - Un oceano repleto de barquitos bajo una constelación de galaxias"
+              title="Render - Un oceano repleto de barquitos bajo una constelación de galaxias"
+              className="object-cover hover:opacity-80 duration-300 rounded-tr-2xl overflow-hidden cursor-pointer object-center w-full xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747810/santuan/history/01_19_jh8ikd.jpg"
             />
             <div className="flex flex-col items-center justify-center w-full px-3 font-serif text-xl leading-loose text-center text-gray-700 md:text-5xl">
@@ -335,9 +335,9 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              className="object-cover md:rounded-tl-2xl overflow-hidden object-center w-full xl:h-[495px]"
+              alt="Un conejo escuchando la radio - arte digital "
+              title="Un conejo escuchando la radio - arte digital "
+              className="object-cover hover:opacity-80 duration-300 md:rounded-tl-2xl cursor-pointer overflow-hidden object-center w-full xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747651/santuan/history/01_4_fitcxc.png"
             />
             <StaticImage
@@ -348,9 +348,9 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              className="object-cover object-center w-full xl:h-[495px]"
+              alt="Arte digital de una niña sobre una casa en el arbol."
+              title="Arte digital de una niña sobre una casa en el arbol."
+              className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747800/santuan/history/ImageSequence032_mkwbse.jpg"
             />
             <StaticImage
@@ -361,9 +361,9 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              className="object-cover object-center w-full xl:h-[495px]"
+              alt="Una guitarra con una planta creciendo en su interior"
+              title="Una guitarra con una planta creciendo en su interior"
+              className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
             />
             <StaticImage
@@ -374,9 +374,9 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
-              className="object-cover object-center w-full xl:h-[495px]"
+              alt="Arte digital de una habitacion con una ventana gigante"
+              title="Arte digital de una habitacion con una ventana gigante"
+              className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/v1654747878/santuan/history/ImageSequence030_wupe68.png"
             />
           </div>
