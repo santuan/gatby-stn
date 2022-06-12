@@ -141,7 +141,7 @@ const DallePage = ({ data }) => {
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#3a30a6"
+                  sliderLineColor="#6e2d8a"
                 />
               </div>
               <Loading />
@@ -157,7 +157,7 @@ const DallePage = ({ data }) => {
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058032/santuan/DALL_E_2022-05-29_10.33.57_jadsvm.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#3a30a6"
+                  sliderLineColor="#8b265f"
                 />
               </div>
               <Loading />
@@ -172,7 +172,7 @@ const DallePage = ({ data }) => {
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058046/santuan/DALL_E_2022-05-29_10.34.00_ekoxis.jpg"
                   leftImageLabel="3d Render"
                   rightImageLabel="Pintura"
-                  sliderLineColor="#3a30a6"
+                  sliderLineColor="#a62037"
                 />
               </div>
               <Loading />
