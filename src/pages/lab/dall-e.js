@@ -18,6 +18,8 @@ import BackCarousel from "../../components/Carousel/BackCarousel"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import { BsArrowsExpand } from "react-icons/bs";
+import { SRLWrapper } from "simple-react-lightbox"
 const DallePage = ({ data }) => {
   // const [emblaRef] = useEmblaCarousel()
   const [isCopied, setIsCopied] = React.useState(false)
@@ -33,7 +35,7 @@ const DallePage = ({ data }) => {
         image="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1653960256/santuan/DALL_E_2022-05-27_22.39.14_unlacv.png"
       />
       <div className="flex flex-col justify-end w-full min-h-screen mx-auto text-center text-white bg-indigo-900">
-        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-3 space-x-3 duration-300 bg-gradient-to-b from-gray-900/60 to-gray-900/90 group hover:bg-gray-900/50">
+        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-3 space-x-2 duration-300 bg-gradient-to-b from-gray-900/60 to-gray-900/90 group hover:bg-gray-900/50">
           <AnchorLink
             aria-label="Ir al primer ejemplo"
             href="#ejemplo1"
@@ -54,6 +56,13 @@ const DallePage = ({ data }) => {
             className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
           >
             Ejemplo 3
+          </AnchorLink>
+          <AnchorLink
+            aria-label="Ir al tercer ejemplo"
+            href="#ejemplo4"
+            className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
+          >
+            Ejemplo 4
           </AnchorLink>
         </div>
         <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-600">
@@ -96,14 +105,14 @@ const DallePage = ({ data }) => {
         </div>
         <div
           id="ejemplo1"
-          className="relative grid w-full pb-12 mx-auto scroll-mt-10 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-700 to-red-700"
+          className="relative grid w-full pb-12 mx-auto scroll-mt-20 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-700 to-red-700"
         >
           <div className="self-start text-left xl:sticky top-24">
             <div className="flex flex-col w-full max-w-lg px-8 py-24 pt-24 mx-auto font-mono text-lg md:text-xl">
               <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">
                 Ejemplo 1
               </small>
-              Mismo texto con diferentes estilos.
+              Generación de texto con diferentes estilos
               <p className="relative flex flex-col mt-3 font-serif text-4xl md:text-6xl">
                 <span className="absolute text-6xl -top-1 -left-7 opacity-60">
                   &ldquo;
@@ -116,12 +125,13 @@ const DallePage = ({ data }) => {
             </div>
           </div>
           <div className="grid w-full max-w-xl gap-12 px-2 py-12 mx-auto">
-          <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
+            <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
-                  sliderPositionPercentage="0.5"
+                  sliderPositionPercentage="0.28"
                   handleSize="30"
                   hover="true"
+                  handle={<button type="button" aria-label="Manija de comparación de imágenes" className="flex items-center justify-center w-12 h-12 overflow-hidden text-2xl text-[#3a30a6] rotate-90 border-4 border-current rounded-full bg-gray-100/95"><BsArrowsExpand /></button>}
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057962/santuan/DALL_E_2022-05-29_10.31.57_zplkhy.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058047/santuan/DALL_E_2022-05-29_10.34.15_alvgso.jpg"
                   leftImageLabel="3d Render"
@@ -134,9 +144,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
-                  sliderPositionPercentage="0.5"
+                  sliderPositionPercentage="0.28"
                   handleSize="30"
                   hover="true"
+                  handle={<button type="button" aria-label="Manija de comparación de imágenes" className="flex items-center justify-center w-12 h-12 overflow-hidden text-2xl text-[#6e2d8a] rotate-90 border-4 border-current rounded-full bg-gray-100/95"><BsArrowsExpand /></button>}
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018509/santuan/DALL_E_2022-05-29_10.31.54_rgditm.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_auto:eco,w_650/v1654018485/santuan/DALL_E_2022-05-29_10.34.24_dnxu0u.jpg"
                   leftImageLabel="3d Render"
@@ -150,9 +161,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
-                  sliderPositionPercentage="0.5"
+                  sliderPositionPercentage="0.28"
                   handleSize="30"
                   hover="true"
+                  handle={<button type="button" aria-label="Manija de comparación de imágenes" className="flex items-center justify-center w-12 h-12 overflow-hidden text-2xl text-[#8b265f] rotate-90 border-4 border-current rounded-full bg-gray-100/95"><BsArrowsExpand /></button>}
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057970/santuan/DALL_E_2022-05-29_10.31.50_boam6y.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058032/santuan/DALL_E_2022-05-29_10.33.57_jadsvm.jpg"
                   leftImageLabel="3d Render"
@@ -165,9 +177,10 @@ const DallePage = ({ data }) => {
             <div className="relative max-w-lg overflow-hidden rounded-br-none rounded-2xl">
               <div className="relative z-10 w-full mx-auto overflow-hidden font-mono text-xs font-bold compareImage ">
                 <ReactCompareImage
-                  sliderPositionPercentage="0.5"
+                  sliderPositionPercentage="0.28"
                   handleSize="30"
                   hover="true"
+                  handle={<button type="button" aria-label="Manija de comparación de imágenes" className="flex items-center justify-center w-12 h-12 overflow-hidden text-2xl text-[#a62037] rotate-90 border-4 border-current rounded-full bg-gray-100/95"><BsArrowsExpand /></button>}
                   leftImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654057987/santuan/DALL_E_2022-05-29_10.31.59_hgtqxf.jpg"
                   rightImage="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_650,q_auto:eco/v1654058046/santuan/DALL_E_2022-05-29_10.34.00_ekoxis.jpg"
                   leftImageLabel="3d Render"
@@ -293,6 +306,81 @@ const DallePage = ({ data }) => {
             <Carousel03 />
           </div>
         </div>
+        <SRLWrapper options={options}>
+          <div className="grid grid-cols-2 gap-1 p-1 bg-yellow-400 md:grid-cols-3" id="ejemplo4">
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              className="object-cover rounded-tr-2xl overflow-hidden object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747810/santuan/history/01_19_jh8ikd.jpg"
+            />
+            <div className="flex flex-col items-center justify-center w-full px-3 font-serif text-xl leading-loose text-center text-gray-700 md:text-5xl">
+              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center text-white uppercase rounded-md shadow bg-gray-900/50">
+                Ejemplo 4
+              </small>
+              Galería de generaciones espontaneas <span role="img">😊</span>
+            </div>
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              className="object-cover md:rounded-tl-2xl overflow-hidden object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747651/santuan/history/01_4_fitcxc.png"
+            />
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              className="object-cover object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747800/santuan/history/ImageSequence032_mkwbse.jpg"
+            />
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              className="object-cover object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
+            />
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              title="Render - un monumento observando a  un triangulo, un cuadrado y una esfera sobre un fondo blanco en un dia con nubes."
+              className="object-cover object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/v1654747878/santuan/history/ImageSequence030_wupe68.png"
+            />
+          </div>
+        </SRLWrapper>
 
         <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-gray-900 bg-pattern ">
           <Fade duration={1000} delay={300}>
@@ -367,6 +455,56 @@ const config = {
   perspective: "500px",
   colors: ["#2f85c0", "#52a3d9", "#e74446", "#d52b2a", "#f8c843", "#f8a834"],
 }
+
+
+const options = {
+  buttons: {
+    iconPadding: "5px",
+    showDownloadButton: false,
+    backgroundColor: "rgba(0, 0, 0, .5)",
+    iconColor: "rgba(255, 255, 255, 0.8)",
+    showNextButton: true,
+    showPrevButton: true,
+  },
+  caption: {
+    captionFontSize: "15px",
+    captionAlignment: "center",
+    captionColor: "#a7825f",
+    captionFontWeight: 300,
+    showCaption: false,
+  },
+  settings: {
+    overlayColor: "rgba(0, 0, 0, .9)",
+    transitionTimingFunction: "ease-in-out",
+    slideTransitionSpeed: 0.6,
+    slideTransitionTimingFunction: [0.25, 0.75, 0.5, 1],
+    slideAnimationType: "fade",
+    slideSpringValues: [300, 200],
+    autoplaySpeed: 4000,
+    disablePanzoom: true,
+    hideControlsAfter: true,
+  },
+  translations: {
+    autoplayText: "Play",
+    closeText: "Cerrar",
+    downloadText: "Descargar",
+    fullscreenText: "Pantalla completa",
+    nextText: "Siguiente",
+    pauseText: "Pausa",
+    previousText: "Anterior",
+    thumbnailsText: "Miniaturas",
+    zoomOutText: "Zoom Out",
+  },
+  progressBar: {
+    height: "4px",
+    fillColor: "rgb(0, 0, 0)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+  },
+  thumbnails: {
+    showThumbnails: true,
+  },
+}
+
 
 const Loading = () => {
   return (

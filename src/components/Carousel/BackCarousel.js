@@ -20,12 +20,11 @@ export default function BackgroundSlider(props) {
         >
           <Fade>
             <StaticImage
-              className="object-fill w-full min-h-screen"
               layout="fullWidth"
               as="div"
               placeholder="blurred"
               loading="eager"
-              quality="90"
+              quality="50"
               title="Una puerta con planetas digital art"
               alt="Una puerta con planetas digital art"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747810/santuan/history/01_19_jh8ikd.jpg"
@@ -33,12 +32,11 @@ export default function BackgroundSlider(props) {
           </Fade>
           <Fade>
             <StaticImage
-              className="object-fill object-left-top w-full min-h-screen"
               layout="fullWidth"
               as="div"
               placeholder="blurred"
               loading="eager"
-              quality="90"
+              quality="50"
               title="Un conejo escuchando la radio - arte digital "
               alt="Un conejo escuchando la radio - arte digital "
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747651/santuan/history/01_4_fitcxc.png"
@@ -46,12 +44,11 @@ export default function BackgroundSlider(props) {
           </Fade>
           <Fade>
             <StaticImage
-              className="object-fill w-full min-h-screen"
               layout="fullWidth"
               as="div"
               placeholder="blurred"
               loading="eager"
-              quality="90"
+              quality="50"
               title="Una guitarra con una planta creciendo en su interior"
               alt="Una guitarra con una planta creciendo en su interior"
               src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
@@ -59,12 +56,11 @@ export default function BackgroundSlider(props) {
           </Fade>
           <Fade>
             <StaticImage
-              className="object-fill w-full min-h-screen"
               layout="fullWidth"
               as="div"
               placeholder="blurred"
               loading="eager"
-              quality="90"
+              quality="50"
               title="Arte digital de una habitacion con una ventana gigante"
               alt="Arte digital de una habitacion con una ventana gigante"
               src="https://res.cloudinary.com/srcouto/image/upload/v1654747878/santuan/history/ImageSequence030_wupe68.png"
@@ -72,12 +68,11 @@ export default function BackgroundSlider(props) {
           </Fade>
           <Fade>
             <StaticImage
-              className="object-fill w-full min-h-screen"
               layout="fullWidth"
               as="div"
               placeholder="blurred"
               loading="eager"
-              quality="90"
+              quality="50"
               title="Un cuadro abstracto de figuras a en colores primarios"
               alt="Un cuadro abstracto de figuras a en colores primarios"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747800/santuan/history/ImageSequence032_mkwbse.jpg"
