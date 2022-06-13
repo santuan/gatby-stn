@@ -27,45 +27,45 @@ export default function Example() {
                 <a
                   aria-label="Ir al primer ejemplo"
                   href="#intro"
-                  className="btn  !text-xs w-full !justify-end"
+                  className="btn  !text-xs w-full !justify-between"
                 >
-                  Introducción
+                   Introducción <span>0</span>
                 </a>
               </Menu.Item>
               <Menu.Item>
                 <a
                   aria-label="Ir al primer ejemplo"
                   href="#ejemplo1"
-                  className="btn blue !text-xs w-full !justify-end"
+                  className="btn blue !text-xs w-full !justify-between"
                 >
-                  Comparar estilos
+                  Comparar estilos <span>1</span>
                 </a>
               </Menu.Item>
               <Menu.Item>
                 <a
                   aria-label="Ir al primer ejemplo"
                   href="#ejemplo2"
-                  className="btn red !text-xs w-full !justify-end"
+                  className="btn red !text-xs w-full !justify-between"
                 >
-                  Variaciones de una imagen
+                 Variaciones de una imagen <span>2</span>
                 </a>
               </Menu.Item>
               <Menu.Item>
                 <a
                   aria-label="Ir al primer ejemplo"
                   href="#ejemplo3"
-                  className="btn yellow !text-xs w-full !justify-end"
+                  className="btn yellow !text-xs w-full !justify-between"
                 >
-                  Variaciones de textos
+                  Variaciones de textos <span>3</span>
                 </a>
               </Menu.Item>
               <Menu.Item>
                 <a
                   aria-label="Ir al primer ejemplo"
                   href="#ejemplo4"
-                  className="btn green !text-xs w-full !justify-end"
+                  className="btn green !text-xs w-full !justify-between"
                 >
-                  Generación espontánea
+                  Generación espontánea <span>4</span>
                 </a>
               </Menu.Item>
             </div>
