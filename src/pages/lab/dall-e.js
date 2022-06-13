@@ -1,29 +1,22 @@
 import { StaticImage } from "gatsby-plugin-image"
-// import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import React from "react"
 import ReactCompareImage from "react-compare-image"
-// import useEmblaCarousel from 'embla-carousel-react'
-import Confetti from "react-dom-confetti"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { Helmet } from "react-helmet"
-import { BsArrowRight, BsArrowDownSquareFill } from "react-icons/bs"
-import Fade from "react-reveal/Fade"
-import CarouselTokenOne from "../../components/Carousel/EmblaCarouselDalleTokenOne"
-import CarouselTokenThree from "../../components/Carousel/EmblaCarouselDalleTokenThree"
-import CarouselTokenTwo from "../../components/Carousel/EmblaCarouselDalleTokenTwo"
+import { BsArrowDownSquareFill, BsArrowRight, BsArrowsExpand } from "react-icons/bs"
+import { SRLWrapper } from "simple-react-lightbox"
+import BackCarousel from "../../components/Carousel/BackCarousel"
 import Carousel01 from "../../components/Carousel/Carousel01"
 import Carousel02 from "../../components/Carousel/Carousel02"
 import Carousel03 from "../../components/Carousel/Carousel03"
 import Carousel04 from "../../components/Carousel/Carousel04"
-import BackCarousel from "../../components/Carousel/BackCarousel"
+import MenuDropdownPages from "../../components/headlessui/MenuDropdownPages"
+import CarouselTokenOne from "../../components/Carousel/EmblaCarouselDalleTokenOne"
+import CarouselTokenThree from "../../components/Carousel/EmblaCarouselDalleTokenThree"
+import CarouselTokenTwo from "../../components/Carousel/EmblaCarouselDalleTokenTwo"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import AnchorLink from "react-anchor-link-smooth-scroll"
-import { BsArrowsExpand } from "react-icons/bs";
-import { SRLWrapper } from "simple-react-lightbox"
 const DallePage = ({ data }) => {
-  // const [emblaRef] = useEmblaCarousel()
-  const [isCopied, setIsCopied] = React.useState(false)
-
   return (
     <Layout>
       <Helmet>
@@ -34,37 +27,8 @@ const DallePage = ({ data }) => {
         description={`Imágenes > OpenAI > Dall-E 2`}
         image="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1653960256/santuan/DALL_E_2022-05-27_22.39.14_unlacv.png"
       />
-      <div className="flex flex-col justify-end w-full min-h-screen mx-auto text-center text-white bg-indigo-900">
-        <div className="fixed bottom-0 left-0 right-0 z-20 flex items-center justify-center py-3 space-x-2 duration-300 bg-gradient-to-b from-gray-900/60 to-gray-900/90 group hover:bg-gray-900/50">
-          <AnchorLink
-            aria-label="Ir al primer ejemplo"
-            href="#ejemplo1"
-            className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
-          >
-            Ejemplo 1
-          </AnchorLink>
-          <AnchorLink
-            aria-label="Ir al segundo ejemplo"
-            href="#ejemplo2"
-            className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
-          >
-            Ejemplo 2
-          </AnchorLink>
-          <AnchorLink
-            aria-label="Ir al tercer ejemplo"
-            href="#ejemplo3"
-            className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
-          >
-            Ejemplo 3
-          </AnchorLink>
-          <AnchorLink
-            aria-label="Ir al tercer ejemplo"
-            href="#ejemplo4"
-            className="w-24 px-2 py-1 font-mono text-xs font-medium text-center uppercase rounded-md shadow hover:bg-gray-900/50 bg-gray-900/90"
-          >
-            Ejemplo 4
-          </AnchorLink>
-        </div>
+      <MenuDropdownPages />
+      <div id="intro" className="flex flex-col justify-end w-full min-h-screen mx-auto text-center text-white bg-indigo-900">
         <div className="relative flex flex-col items-center justify-center w-full min-h-screen pb-6 mx-auto overflow-hidden bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-600">
           <h3 className="relative z-10 flex items-center justify-center w-full px-4 mx-auto font-serif text-lg text-left md:text-3xl group max-w-7xl md:px-12">
             OpenAI
@@ -108,11 +72,11 @@ const DallePage = ({ data }) => {
           className="relative grid w-full pb-12 mx-auto scroll-mt-20 xl:grid-cols-2 bg-gray-900/50 bg-opacity-30 bg-gradient-to-b from-indigo-700 to-red-700"
         >
           <div className="self-start text-left xl:sticky top-24">
-            <div className="flex flex-col w-full max-w-lg px-8 py-24 pt-24 mx-auto font-mono text-lg md:text-xl">
+            <div className="flex flex-col w-full max-w-xl px-8 py-24 pt-24 mx-auto font-mono text-lg md:text-xl">
               <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center uppercase rounded-md shadow bg-gray-900/20">
                 Ejemplo 1
               </small>
-              Generación de texto con diferentes estilos
+              Generar textos con diferentes estilos.
               <p className="relative flex flex-col mt-3 font-serif text-4xl md:text-6xl">
                 <span className="absolute text-6xl -top-1 -left-7 opacity-60">
                   &ldquo;
@@ -206,9 +170,9 @@ const DallePage = ({ data }) => {
           </div>
           <div className="grid max-w-lg gap-3 px-6 mx-auto lg:gap-12 xl:max-w-5xl xl:grid-cols-2">
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Original en Blender
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-red-900/80">Original en Blender</p>
+              </div>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   as="div"
@@ -226,15 +190,15 @@ const DallePage = ({ data }) => {
               </div>
             </div>
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Variaciones de Dall·E
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-red-900/80">Variaciones de Dall·E</p>
+              </div>
               <CarouselTokenOne />
             </div>
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Original en Blender
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-blue-900/80">Original en Blender</p>
+              </div>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   as="div"
@@ -252,15 +216,15 @@ const DallePage = ({ data }) => {
               </div>
             </div>
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Variaciones de Dall·E
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-blue-900/80">Variaciones de Dall·E</p>
+              </div>
               <CarouselTokenTwo />
             </div>
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Original en Blender
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-amber-900/80">Original en Blender</p>
+              </div>
               <div className="relative overflow-hidden shadow-2xl rounded-2xl">
                 <StaticImage
                   as="div"
@@ -278,9 +242,9 @@ const DallePage = ({ data }) => {
               </div>
             </div>
             <div className="relative z-10">
-              <p className="absolute top-0 z-10 px-3 py-1 m-2 font-mono text-sm font-medium rounded-md bg-gray-900/80">
-                Variaciones de Dall·E
-              </p>
+              <div className="absolute top-0 right-0 z-10 flex items-center justify-center m-2">
+                <p className="px-3 py-1 font-mono text-xs rounded-full bg-amber-900/80">Variaciones de Dall·E</p>
+              </div>
               <CarouselTokenThree />
             </div>
           </div>
@@ -299,15 +263,68 @@ const DallePage = ({ data }) => {
               percibirlas.
             </div>
           </div>
-          <div className="grid w-full max-w-6xl mx-auto overflow-hidden md:grid-cols-2 rounded-2xl lg:grid-cols-4">
-            <Carousel01 />
-            <Carousel04 />
-            <Carousel02 />
-            <Carousel03 />
+          <div className="grid w-full max-w-6xl gap-3 mx-auto md:grid-cols-1 lg:grid-cols-2">
+            <div className="relative grid grid-cols-2 gap-0 overflow-hidden duration-300 shadow-lg hover:ring-2 ring-0 hover:ring-offset-2 hover:ring-offset-yellow-700 ring-amber-700 rounded-2xl">
+              <div className="flex flex-col items-center justify-center w-full p-5 text-gray-900 bg-amber-200/80">
+                <p className="w-full font-serif text-lg font-bold text-left md:text-2xl ">En un castillo flotando en el cielo.</p>
+              </div>
+              <Carousel01 />
+            </div>
+            <div className="relative grid grid-cols-2 gap-0 overflow-hidden duration-300 shadow-lg hover:ring-2 ring-0 hover:ring-offset-2 hover:ring-offset-yellow-700 ring-amber-700 rounded-2xl">
+              <div className="flex flex-col items-center justify-center w-full p-5 text-gray-900 bg-amber-200/80">
+                <p className="w-full font-serif text-lg font-bold text-left md:text-2xl ">Un rey conejo.</p>
+              </div>
+              <Carousel04 />
+            </div>
+            <div className="relative grid grid-cols-2 gap-0 overflow-hidden duration-300 shadow-lg hover:ring-2 ring-0 hover:ring-offset-2 hover:ring-offset-yellow-700 ring-amber-700 rounded-2xl">
+              <div className="flex flex-col items-center justify-center w-full p-5 text-gray-900 bg-amber-200/80">
+                <p className="w-full font-serif text-lg font-bold text-left md:text-2xl ">Dos roedores disfrutaban una taza de té junto al fuego del hogar.</p>
+              </div>
+              <Carousel02 />
+            </div>
+            <div className="relative grid grid-cols-2 gap-0 overflow-hidden duration-300 shadow-lg hover:ring-2 ring-0 hover:ring-offset-2 hover:ring-offset-yellow-700 ring-amber-700 rounded-2xl">
+              <div className="flex flex-col items-center justify-center w-full p-5 text-gray-900 bg-amber-200/80">
+                <p className="w-full font-serif text-lg font-bold text-left md:text-2xl ">Un conejo en paracaidas con una zanahoria.</p>
+              </div>
+              <Carousel03 />
+            </div>
           </div>
         </div>
         <SRLWrapper options={options}>
-          <div className="grid grid-cols-2 gap-1 p-1 bg-yellow-400 scroll-mt-24 md:grid-cols-3" id="ejemplo4">
+          <div className="grid grid-cols-2 gap-1 p-1 from-yellow-400 bg-gradient-to-b via-yellow-500 to-gray-900 scroll-mt-24 md:grid-cols-3" id="ejemplo4">
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Pintura de un rey conejo"
+              title="Pintura de un rey conejo"
+              className="object-cover hover:opacity-80 duration-300 rounded-tl-2xl md:rounded-tl-none rounded-tr-2xl overflow-hidden object-center w-full cursor-pointer xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654748378/santuan/history/01_13_spdx0t.png"
+            />
+
+            <div className="flex flex-col items-center justify-center w-full px-3 font-serif text-2xl text-center text-gray-700 md:text-4xl">
+              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center text-white uppercase rounded-md shadow bg-gray-900/50">
+                Ejemplo 4
+              </small>
+              Por generación espontánea <span role="img" className="duration-300 transform translate-y-3 hover:translate-y-6 cursor-grab active:cursor-grabbing active:scale-110">😊</span>
+            </div>
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Un congreso de gatos votando meow "
+              title="Un congreso de gatos votando meow "
+              className="object-cover hover:opacity-80 duration-300 md:rounded-tl-2xl cursor-pointer overflow-hidden object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747690/santuan/history/01_0_tes00q.png"
+            />
             <StaticImage
               as="div"
               placeholder="blurred"
@@ -318,15 +335,10 @@ const DallePage = ({ data }) => {
               height={800}
               alt="Render - Un oceano repleto de barquitos bajo una constelación de galaxias"
               title="Render - Un oceano repleto de barquitos bajo una constelación de galaxias"
-              className="object-cover hover:opacity-80 duration-300 rounded-tr-2xl overflow-hidden cursor-pointer object-center w-full xl:h-[495px]"
+              className="object-cover hover:opacity-80 duration-300  cursor-pointer object-center w-full xl:h-[495px]"
               src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747810/santuan/history/01_19_jh8ikd.jpg"
             />
-            <div className="flex flex-col items-center justify-center w-full px-3 font-serif text-xl leading-loose text-center text-gray-700 md:text-5xl">
-              <small className="w-24 px-2 py-1 mb-3 font-mono text-xs font-medium text-center text-white uppercase rounded-md shadow bg-gray-900/50">
-                Ejemplo 4
-              </small>
-              Galería de generaciones espontaneas <span role="img">😊</span>
-            </div>
+
             <StaticImage
               as="div"
               placeholder="blurred"
@@ -335,10 +347,23 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Un conejo escuchando la radio - arte digital "
-              title="Un conejo escuchando la radio - arte digital "
-              className="object-cover hover:opacity-80 duration-300 md:rounded-tl-2xl cursor-pointer overflow-hidden object-center w-full xl:h-[495px]"
-              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747651/santuan/history/01_4_fitcxc.png"
+              alt="Una guitarra con una planta creciendo en su interior"
+              title="Una guitarra con una planta creciendo en su interior"
+              className="object-cover hover:opacity-80 duration-300 col-span-2 md:col-span-1 object-center w-full cursor-pointer xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
+            />
+            <StaticImage
+              as="div"
+              placeholder="blurred"
+              layout="constrained"
+              loading="lazy"
+              quality="90"
+              width={800}
+              height={800}
+              alt="Pintura de Una ciudad de tardenoche con una luna brillando como un sol"
+              title="Pintura de Una ciudad de tardenoche con una luna brillando como un sol"
+              className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748221/santuan/history/01_79_bewrli.png"
             />
             <StaticImage
               as="div"
@@ -361,11 +386,12 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Una guitarra con una planta creciendo en su interior"
-              title="Una guitarra con una planta creciendo en su interior"
-              className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
-              src="https://res.cloudinary.com/srcouto/image/upload/c_scale,h_1024,q_auto:eco/v1654748288/santuan/history/01_75_giaebn.jpg"
+              alt="Un conejo escuchando la radio - arte digital "
+              title="Un conejo escuchando la radio - arte digital "
+              className="object-cover hover:opacity-80 duration-300  cursor-pointer overflow-hidden object-center w-full xl:h-[495px]"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747651/santuan/history/01_4_fitcxc.png"
             />
+
             <StaticImage
               as="div"
               placeholder="blurred"
@@ -374,87 +400,21 @@ const DallePage = ({ data }) => {
               quality="90"
               width={800}
               height={800}
-              alt="Arte digital de una habitacion con una ventana gigante"
-              title="Arte digital de una habitacion con una ventana gigante"
+              alt="Arte digital de una habitacion con una ventana gigante con una persona flotando en una nube"
+              title="Arte digital de una habitacion con una ventana gigante con una persona flotando en una nube"
               className="object-cover hover:opacity-80 duration-300 object-center w-full cursor-pointer xl:h-[495px]"
-              src="https://res.cloudinary.com/srcouto/image/upload/v1654747878/santuan/history/ImageSequence030_wupe68.png"
+              src="https://res.cloudinary.com/srcouto/image/upload/q_auto:eco/v1654747878/santuan/history/ImageSequence030_wupe68.png"
             />
           </div>
         </SRLWrapper>
 
-        <div className="relative z-20 flex flex-col items-center justify-center w-full min-h-screen overflow-hidden bg-gray-900 bg-pattern ">
-          <Fade duration={1000} delay={300}>
-            <div className="relative z-50 max-w-2xl p-8 mx-auto mt-6 mb-6 font-serif prose text-center md:prose-lg ">
-              <p className="text-white">
-                Si algo de lo que viste aqui te gustó y te interesaría saber
-                más, sentite libre de contactarte e intentaré contestarlo dentro
-                del tiempo y las posibilidades.
-              </p>
-              <p className="text-white">
-                Y desde ya, muchas gracias por su atención
-              </p>
-              <div className="relative z-50 flex flex-col justify-center w-full max-w-xl px-0 py-4 mx-auto mt-6 md:my-6">
-                <button
-                  onClick={() => {
-                    copyToClipboard("santuan.bot@gmail.com")
-                    setIsCopied(true)
-                    setTimeout(() => setIsCopied(false), 3000)
-                  }}
-                  className={
-                    "relative mt-1 mx-2 rounded-md pb-1 font-bold font-sans text-white  transform duration-700 " +
-                    (isCopied
-                      ? "bg-green-800 " + isCopied
-                      : "hover:bg-gray-900 bg-opacity-10")
-                  }
-                >
-                  <div className="relative overflow-hidden">
-                    <Fade bottom duration={700} delay={200}>
-                      <span className="block p-2 mb-3 font-sans text-2xl font-light tracking-wider text-gray-100 duration-700 bg-blue-300 cursor-pointer select-all bg-opacity-10">
-                        santuan.bot@gmail.com
-                      </span>
-                    </Fade>
-                  </div>
-                  {isCopied ? "🎉 Copiado!" : "Click para copiar mail"}
-                  <div className="transform translate-x-64 -translate-y-12">
-                    <Confetti active={isCopied} config={config} />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </Fade>
-        </div>
+
       </div>
     </Layout>
   )
 }
 
 export default DallePage
-
-const copyToClipboard = (str) => {
-  const el = document.createElement("textarea")
-  el.value = str
-  el.setAttribute("readonly", "")
-  el.style.position = "absolute"
-  el.style.left = "-9999px"
-  document.body.appendChild(el)
-  el.select()
-  document.execCommand("copy")
-  document.body.removeChild(el)
-}
-
-const config = {
-  angle: 90,
-  spread: 360,
-  startVelocity: 19,
-  elementCount: 70,
-  dragFriction: 0.12,
-  duration: 8000,
-  stagger: 13,
-  width: "10px",
-  height: "10px",
-  perspective: "500px",
-  colors: ["#2f85c0", "#52a3d9", "#e74446", "#d52b2a", "#f8c843", "#f8a834"],
-}
 
 
 const options = {
@@ -501,7 +461,7 @@ const options = {
     backgroundColor: "rgba(255, 255, 255, 1)",
   },
   thumbnails: {
-    showThumbnails: true,
+    showThumbnails: false,
   },
 }
 

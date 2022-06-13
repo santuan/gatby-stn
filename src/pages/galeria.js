@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GoLinkExternal } from "react-icons/go"
 import { Link } from "gatsby"
-
+import AnchorLink from "react-anchor-link-smooth-scroll"
 export default function BackgroundSlider() {
   return (
     <Layout>
@@ -15,65 +15,89 @@ export default function BackgroundSlider() {
       <Helmet>
         <body className=" gallery" />
       </Helmet>
-      <div className="fixed bottom-0 left-0 right-0 z-50 px-3 py-2 font-mono text-sm text-center text-white bg-gray-800 bg-opacity-70 ">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className="border-b border-white opacity-80 hover:opacity-100"
-          href="https://www.blender.org/"
-        >
-          <span className="inline-block">Hecho en</span> Blender{" "}
-          <GoLinkExternal className="inline-block" />
-        </a>
-      </div>
 
-      <div className="absolute left-0 right-0 z-50 flex items-center justify-center w-full px-3 py-2 font-mono text-sm text-white top-3/4 md:hidden">
-        <Link
-          rel="noopener noreferrer"
-          ariaLabel="Ver 3d "
-          className="relative inline-flex items-center justify-center px-3 py-1 font-mono text-xs font-bold text-center text-white uppercase duration-1000 transform rounded-md bg-gradient-to-br from-emerald-600 to-indigo-600"
-          to="/lab/dall-e"
-        >
-          <span className="inline-block">Ver ejemplos en DALL·E 2</span>
-        </Link>
+      <div className="w-full p-3 pt-24 mx-auto bg-black">
+        <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-1 md:grid-cols-3 md:gap-1">
+          <Fade>
+            <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
+          </Fade>
+          <Fade>
+            <div className="relative w-auto h-auto col-span-3 md:w-full md:h-full md:col-span-1">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,h_625,q_75/v1642599935/stn-renders/1230001-0500_mss0pe.webp"
+              >
+                <source
+                  src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.mp4"
+                  type="video/mp4"
+                />
+                <source
+                  src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1642599935/stn-renders/1230001-0500_mss0pe.ogv"
+                  type="video/ogg"
+                />
+              </video>
+            </div>
+          </Fade>
+
+          <Fade>
+            <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
+          </Fade>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full py-6 space-y-3 md:space-y-0 md:space-x-3 md:flex-row">
+          <div className="flex flex-col items-center justify-center">
+            <AnchorLink
+              aria-label="Ir al segundo ejemplo"
+              href="#ejemploBlender"
+              className="btn yellow w-64 !text-sm"
+            >
+              Realizados en Blender
+            </AnchorLink>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.blender.org/"
+              className="py-3 font-serif text-xs underline text-white/70 underline-offset-4"
+            >
+              Visitar Blender <GoLinkExternal className="inline-block ml-3" />
+            </a>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <Link
+              rel="noopener noreferrer"
+              ariaLabel="Ver 3d "
+              className="btn yellow w-64 !text-sm"
+              to="/lab/dall-e"
+            >
+              Ejemplos en DALL·E
+            </Link>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://openai.com/dall-e-2/"
+              className="py-3 font-serif text-xs underline text-white/70 underline-offset-4"
+            >
+              Conocer Dall·E 2 <GoLinkExternal className="inline-block ml-3" />
+            </a>
+          </div>
+        </div>
       </div>
 
       <SRLWrapper options={options}>
-        <div className="relative z-20 w-full bg-black bg-pattern ">
-          <div className="grid grid-cols-1 gap-3 p-3 pt-24 mx-auto sm:grid-cols-1 md:grid-cols-3 md:gap-1 md:p-0 md:pt-24">
+        <div
+          className="relative z-20 w-full bg-black bg-pattern "
+          id="ejemploBlender"
+        >
+          <div className="grid grid-cols-3 gap-1 p-3 mx-auto md:p-0 md:pt-1">
             <Fade>
-              <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
-            </Fade>
-            <Fade>
-              <div className="relative w-auto h-screen col-span-3 md:w-full md:h-full md:col-span-1">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  poster="https://res.cloudinary.com/srcouto/video/upload/c_scale,h_625,q_75/v1642599935/stn-renders/1230001-0500_mss0pe.webp"
-                >
-                  <source
-                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.mp4"
-                    type="video/mp4"
-                  />
-                  <source
-                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:eco/v1642599935/stn-renders/1230001-0500_mss0pe.webm"
-                    type="video/webm"
-                  />
-                  <source
-                    src="https://res.cloudinary.com/srcouto/video/upload/q_auto:low/v1642599935/stn-renders/1230001-0500_mss0pe.ogv"
-                    type="video/ogg"
-                  />
-                </video>
-              </div>
-            </Fade>
-
-            <Fade>
-              <div className="relative hidden w-auto h-screen col-span-3 md:block md:w-full md:h-full md:col-span-1"></div>
-            </Fade>
-            <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -90,7 +114,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -107,7 +132,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -124,7 +150,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -141,7 +168,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -159,7 +187,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -177,7 +206,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
+              <div className="col-span-3">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -187,7 +217,7 @@ export default function BackgroundSlider() {
                   height="749"
                   width="1332"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630559191/stn-renders/untitled_i27pcx.jpg"
                 />
@@ -195,7 +225,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -212,7 +243,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -222,14 +254,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629476563/stn-renders/2_iutptm.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -239,7 +272,7 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629476562/stn-renders/3_nveu2c.jpg"
                 />
@@ -247,7 +280,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative cursor-pointer">
+              <div className="">
+                {/* <div className="relative cursor-pointer"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -264,7 +298,8 @@ export default function BackgroundSlider() {
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -274,14 +309,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629213756/stn-renders/_h2_oiho30.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -291,14 +327,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233372/stn-renders/_h3_xjzkrc.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -308,14 +345,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215360/stn-renders/k_vjbeow.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -325,14 +363,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233211/stn-renders/k3_arwhkt.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -342,7 +381,7 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233248/stn-renders/k5_nzy74z.jpg"
                 />
@@ -350,7 +389,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -360,14 +400,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556711/stn-renders/03_m7w1gy.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -377,14 +418,15 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556712/stn-renders/02_txgqvw.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -394,7 +436,7 @@ export default function BackgroundSlider() {
                   height="900"
                   width="900"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1630556713/stn-renders/01_rnph0p.jpg"
                 />
@@ -402,7 +444,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -412,7 +455,7 @@ export default function BackgroundSlider() {
                   width="1536"
                   quality="90"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215725/stn-renders/12_vddpy4.jpg"
                 />
@@ -420,7 +463,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -430,14 +474,15 @@ export default function BackgroundSlider() {
                   width="1536"
                   quality="90"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629232392/stn-renders/14_bmzdy6.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -447,7 +492,7 @@ export default function BackgroundSlider() {
                   height="864"
                   width="1536"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629232389/stn-renders/13_vrxkt2.jpg"
                 />
@@ -455,7 +500,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
+              <div className="col-span-3">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -465,7 +511,7 @@ export default function BackgroundSlider() {
                   height="864"
                   width="1536"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629232358/stn-renders/18_ec7kli.jpg"
                 />
@@ -473,7 +519,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -483,7 +530,7 @@ export default function BackgroundSlider() {
                   title="item"
                   height="864"
                   width="1536"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233952/stn-renders/04_rhcw2f.jpg"
                 />
@@ -491,7 +538,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -501,7 +549,7 @@ export default function BackgroundSlider() {
                   title="item"
                   height="864"
                   width="1536"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629215823/stn-renders/02_blemta.jpg"
                 />
@@ -509,7 +557,8 @@ export default function BackgroundSlider() {
             </Fade>
 
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1">
+              <div className="col-span-3 md:col-span-1">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full md:col-span-1"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -519,14 +568,15 @@ export default function BackgroundSlider() {
                   title="item"
                   height="864"
                   width="1536"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629233957/stn-renders/01_ujdfvc.jpg"
                 />
               </div>
             </Fade>
             <Fade>
-              <div className="relative w-auto h-screen col-span-3 cursor-pointer md:w-full md:h-full">
+              <div className="col-span-3">
+                {/* <div className="relative w-auto h-auto col-span-3 cursor-pointer md:w-full md:h-full"> */}
                 <StaticImage
                   as="div"
                   placeholder="blurred"
@@ -536,7 +586,7 @@ export default function BackgroundSlider() {
                   height="864"
                   width="1536"
                   title="item"
-                  className="object-cover w-auto h-screen duration-200 md:w-full md:h-full hover:opacity-60"
+                  className="object-cover w-auto h-auto duration-200 md:w-full md:h-full hover:opacity-60"
                   alt="item"
                   src="https://res.cloudinary.com/srcouto/image/upload/q_auto:good/v1629238430/stn-renders/11_vhlp38.jpg"
                 />
@@ -548,7 +598,6 @@ export default function BackgroundSlider() {
     </Layout>
   )
 }
-
 
 const options = {
   buttons: {
@@ -595,6 +644,6 @@ const options = {
     backgroundColor: "rgba(255, 255, 255, 1)",
   },
   thumbnails: {
-    showThumbnails: true,
+    showThumbnails: false,
   },
 }

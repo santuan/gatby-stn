@@ -7,6 +7,7 @@
 .embla__slide {
   position: relative;
   flex: 0 0 100%;
+  @apply cursor-grab active:cursor-grabbing;
 }
 .embla {
   position: relative;
