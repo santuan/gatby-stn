@@ -22,14 +22,14 @@ export default function Example() {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute right-0 mt-2 text-white origin-top-right divide-y divide-gray-100 rounded-md shadow-lg w-72 bg-gray-800/80 bottom-12 ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="flex flex-col items-center justify-center px-4 py-5 space-y-3 ">
+            <div className="flex flex-col items-center justify-center px-1 py-1 pb-2 space-y-3 ">
               <Menu.Item>
                 {({ active }) => (
                   <a
                     aria-label="Ir al primer ejemplo"
                     href="#intro"
-                    className={`${active ? ' blue ' : ''
-                      } btn !text-xs w-full !justify-between`}
+                    className={`${active ? ' black ' : ''
+                      } btn !text-xs w-full !justify-between !px-2`}
                   >
                     0<span> Introducción </span>
                   </a>
@@ -41,7 +41,7 @@ export default function Example() {
                     aria-label="Ir al primer ejemplo"
                     href="#ejemplo1"
                     className={`${active ? ' blue' : ''
-                      } btn  !text-xs w-full !justify-between`}
+                      } btn !text-xs w-full !justify-between !px-2`}
                   >
                     1<span> Comparar estilos </span>
                   </a>
@@ -53,7 +53,7 @@ export default function Example() {
                     aria-label="Ir al primer ejemplo"
                     href="#ejemplo2"
                     className={`${active ? ' red' : ''
-                      } btn  !text-xs w-full !justify-between`}
+                      } btn !text-xs w-full !justify-between !px-2`}
                   >
                     2<span> Variaciones de una imagen </span>
                   </a>
@@ -65,7 +65,7 @@ export default function Example() {
                     aria-label="Ir al primer ejemplo"
                     href="#ejemplo3"
                     className={`${active ? ' yellow' : ''
-                      } btn  !text-xs w-full !justify-between`}
+                      } btn !text-xs w-full !justify-between !px-2`}
                   >
                     3<span> Variaciones de textos </span>
                   </a>
@@ -77,7 +77,7 @@ export default function Example() {
                     aria-label="Ir al primer ejemplo"
                     href="#ejemplo4"
                     className={`${active ? ' green' : ''
-                      } btn  !text-xs w-full !justify-between`}
+                      } btn !text-xs w-full !justify-between !px-2`}
                   >
                     4<span> Generación espontánea </span>
                   </a>
