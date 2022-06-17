@@ -72,14 +72,8 @@ body.fullpage footer {
     auto;
 } */
 
-body.fullpage .logo {
-  @apply transform  md:-translate-x-3;
-}
-
-
-
 body.fullpage .inner-wrapper{
-  @apply max-w-full ease-in-out py-0 !important;  
+  @apply max-w-full px-3 ease-in-out py-0 !important;  
 }
 
 .backgroundVideo {

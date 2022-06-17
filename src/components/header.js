@@ -42,7 +42,7 @@ const Header = () => (
         <Link
           to="/"
           aria-label="Santuan - Volver al inicio"
-          className="block pt-2 transition-all duration-700 ease-in-out transform motion-safe:hover:scale-105"
+          className="block transition-all duration-700 ease-in-out transform motion-safe:hover:scale-105"
         >
           <IsoStn />
         </Link>

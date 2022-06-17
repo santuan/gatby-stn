@@ -248,15 +248,16 @@ a[class^="ais-"] {
 }
 
 .ais-RefinementList-label {
-  @apply inline-flex items-center w-full px-2 py-2 font-mono border-b border-gray-700 cursor-pointer;
+  @apply inline-flex items-center w-full px-2 py-2 font-mono cursor-pointer ;
+  @apply bg-gray-800 rounded-md;
 }
 
 .ais-RefinementList-labelText {
-  @apply w-full px-3 font-serif text-base font-normal text-left;
+  @apply w-full px-3 font-mono text-base font-normal text-left;
 }
 
 .ais-RefinementList-count {
- @apply flex-none px-2 font-mono text-lg; 
+ @apply flex-none px-2 font-serif text-lg; 
 }
 
 .ais-RefinementList-checkbox {
@@ -411,7 +412,6 @@ a[class^="ais-"] {
 }
 
 .ais-RefinementList-showMore {
-  @apply absolute left-0 right-0 bottom-2;
 }
 
 .ais-RefinementList {
@@ -421,7 +421,7 @@ a[class^="ais-"] {
   overflow-y: auto;
   position: relative;
   height: 100%;
-  @apply pt-2 md:pb-11;
+  @apply md:pb-2 grid gap-1;
 }
 
 .ais-CurrentRefinements {
@@ -570,7 +570,7 @@ a[class^="ais-"] {
 .ais-Menu-count,
 .ais-RefinementList-count,
 .ais-ToggleRefinement-count {
-  @apply px-3 py-1 text-base text-white bg-gray-600 rounded;
+  @apply px-3 py-1 text-sm uppercase text-white bg-gray-600 rounded;
 }
 
 .ais-HierarchicalMenu-showMore,
@@ -595,7 +595,7 @@ a[class^="ais-"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; */
-  @apply grid grid-cols-1 gap-3 lg:grid-cols-2 2xl:grid-cols-3;
+  @apply grid grid-cols-1 gap-3 xl:grid-cols-2 2xl:grid-cols-2;
 }
 .ais-Panel-body .ais-InfiniteHits-list,
 .ais-Panel-body .ais-InfiniteResults-list,
@@ -766,7 +766,7 @@ a[class^="ais-"] {
 .rheostat-value,
 .ais-Stats-text {
   font-size: 1rem;
-  @apply font-mono;
+  @apply font-mono text-gray-900;
 }
 
 .ais-PoweredBy-logo {
@@ -872,11 +872,11 @@ a[class^="ais-"] {
   -moz-appearance: none;
   appearance: none;
   /*padding: 0.5rem 2rem;*/
-  @apply px-8 py-2 font-mono text-base text-gray-900 bg-gray-100 ring-transparent ring-2 focus:ring-yellow-600;
+  @apply px-8 py-2 font-mono text-base text-gray-900 bg-gray-100 ring-transparent ring-2 focus:ring-yellow-600 rounded-xl;
   width: 100%;
   position: relative;
   /* background-color: #fff; */
-  border-radius: 5px;
+  
 }
 .ais-SearchBox-input::-webkit-input-placeholder {
   color: #a5aed1;

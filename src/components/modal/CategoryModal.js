@@ -1,8 +1,8 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
-
-export default function MyModal() {
-  let [isOpen, setIsOpen] = useState(true)
+import React, { Fragment, useState } from 'react'
+import { StaticImage } from "gatsby-plugin-image"
+export default function MyModal({ item }) {
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
     setIsOpen(false)
@@ -14,15 +14,13 @@ export default function MyModal() {
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={openModal}
+        className="btn blue !text-xs"
+      >
+        Ver más
+      </button>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -35,7 +33,7 @@ export default function MyModal() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 bg-gray-800/80 backdrop-blur-md" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -49,27 +47,54 @@ export default function MyModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Payment successful
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
-                  </div>
-
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
+                <Dialog.Panel className="w-full max-w-md overflow-hidden text-left align-middle transition-all transform bg-gray-900 shadow-xl rounded-2xl">
+                  <div className='p-6'>
+                    <Dialog.Title
+                      as="h3"
+                      className="flex items-center justify-start pt-2 font-serif text-4xl leading-6 text-yellow-500 "
                     >
-                      Got it, thanks!
+                      {item.title}
+                    </Dialog.Title>
+                    <div className="object-cover w-full mt-6">
+                      <StaticImage
+                        as="div"
+                        placeholder="blurred"
+                        layout="constrained"
+                        loading="lazy"
+                        quality="90"
+                        width={440}
+                        height={440}
+                        title={item.title}
+                        alt={item.title}
+                        src={`https:${item.featuredImg.file.url}?w=450&fm=png&q=80`}
+                      />
+                    </div>
+                    <div className="mt-5">
+                      <p className="font-mono prose text-gray-100">
+                        {item.excerpt.excerpt}
+                      </p>
+                      <div className="grid mt-5">
+                        <a
+                          rel="noopener noreferrer"
+                          href={item.url}
+                          target="_blank"
+                          className="btn yellow !text-xs "
+                        >
+                          Ir a la web de {item.title}
+                        </a>
+                      </div>
+                    </div>
+                    <button type="button" className="absolute top-0 right-0 flex items-center justify-center w-12 h-12 cursor-pointer opacity-80 hover:opacity-100" onClick={closeModal}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
                     </button>
                   </div>
                 </Dialog.Panel>
