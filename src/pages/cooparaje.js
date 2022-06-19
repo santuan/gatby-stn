@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet"
 import Seo from "../components/seo"
 import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
-import SVGLogo from "../assets/cooparaje.svg"
 import algoliasearch from "algoliasearch/lite"
 import {
   Hits,
@@ -13,13 +12,11 @@ import {
 } from "react-instantsearch-dom"
 import PostPreview from "../components/algoliaPostPreview"
 
-import { GoLinkExternal } from "react-icons/go"
-
-
 const searchClient = algoliasearch(
   "K8WTAMXCZT",
   "91627040f2b233f6958fdbdbe2b6193d"
 )
+
 const RecursosPage = () => (
   <Layout>
     <Seo title="cooparaje" pathname={`/cooparaje/`} />

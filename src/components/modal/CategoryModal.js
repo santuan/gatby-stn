@@ -56,17 +56,10 @@ export default function MyModal({ item }) {
                       {item.title}
                     </Dialog.Title>
                     <div className="object-cover w-full mt-6">
-                      <StaticImage
-                        as="div"
-                        placeholder="blurred"
-                        layout="constrained"
-                        loading="lazy"
-                        quality="90"
-                        width={440}
-                        height={440}
-                        title={item.title}
-                        alt={item.title}
-                        src={`https:${item.featuredImg.file.url}?w=450&fm=png&q=80`}
+                      <img
+                        className="object-cover w-64 h-40 pb-0 mb-0 "
+                        alt={hit.title}
+                        src={`https:${hit.featuredImg.file.url}?w=450&h=450&fm=png&q=80`}
                       />
                     </div>
                     <div className="mt-5">
