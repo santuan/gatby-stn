@@ -10,7 +10,7 @@
     "@fontsource/vollkorn": "^4.5.1",
     "@fontsource/vollkorn-sc": "^4.5.1",
     "@fontsource/yeseva-one": "^4.4.2",
-    "@headlessui/react": "^1.6.4",
+    "@headlessui/react": "^1.7.17",
     "@juggle/resize-observer": "^3.2.0",
     "@react-spring/three": "^9.4.2",
     "@react-spring/web": "^9.4.2",
