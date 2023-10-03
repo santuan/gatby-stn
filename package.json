@@ -62,7 +62,7 @@
     "react-reveal": "^1.2.2",
     "react-text-loop": "^2.3.0",
     "simple-react-lightbox": "^3.6.9-0",
-    "three": "^0.136.0",
+    "three": "^0.156.1",
     "video-react": "^0.15.0"
   },
   "devDependencies": {
